@@ -1,0 +1,25 @@
+﻿# .NET build files
+bin/
+obj/
+
+# User-specific files
+.idea/
+.vscode/
+*.user
+*.suo
+*.csproj.user
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# Logs
+*.log
+
+# Configuration files
+appsettings.json
+
+# Visual Studio temporary files
+.vs/

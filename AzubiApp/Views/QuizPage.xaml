@@ -1,0 +1,24 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AzubiApp.Views.QuizPage">
+    <VerticalStackLayout Padding="20">
+        <Label x:Name="QuestionLabel" FontSize="20"/>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="Answer1" CheckedChanged="OnAnswerChecked"/>
+            <Label x:Name="Answer1Text"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="Answer2" CheckedChanged="OnAnswerChecked"/>
+            <Label x:Name="Answer2Text"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="Answer3" CheckedChanged="OnAnswerChecked"/>
+            <Label x:Name="Answer3Text"/>
+        </HorizontalStackLayout>
+
+        <Button Text="Next" Clicked="OnNextClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
