@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Maui.Controls;
-using AzubiApp.Models;
+﻿using AzubiApp.Models;
 
 namespace AzubiApp.Views
 {
@@ -21,11 +17,11 @@ namespace AzubiApp.Views
 
             if (questions == null || questions.Count == 0)
             {
-                DisplayAlert("Ошибка", "Список вопросов пуст. Проверьте базу данных!", "ОК");
+                DisplayAlert("Error", "The list of questions is empty. Check the database!", "ОК");
                 return;
             }
 
-            _questions = questions.OrderBy(q => Guid.NewGuid()).ToList(); // Перемешивание вопросов
+            _questions = questions.OrderBy(q => Guid.NewGuid()).ToList(); // Mixing up questions
             _currentSelectedAnswers = new List<string>();
             _selectedAnswers.Clear();
             ShowQuestion();
@@ -41,10 +37,10 @@ namespace AzubiApp.Views
 
             var question = _questions[_currentIndex];
 
-            // Устанавливаем текст вопроса
+            // Set the text of the question
             QuestionLabel.Text = question.Text;
 
-            // Перемешивание ответов
+            // Shuffling answers
             _shuffledAnswers = new List<string> { question.Answer1, question.Answer2, question.Answer3 }
                 .OrderBy(a => Guid.NewGuid()).ToList();
 
@@ -52,7 +48,7 @@ namespace AzubiApp.Views
             Answer2Text.Text = _shuffledAnswers[1];
             Answer3Text.Text = _shuffledAnswers[2];
 
-            // Сбрасываем чекбоксы
+            // Resetting checkboxes
             Answer1.IsChecked = false;
             Answer2.IsChecked = false;
             Answer3.IsChecked = false;
@@ -91,7 +87,7 @@ namespace AzubiApp.Views
         {
             if (_currentSelectedAnswers.Count == 0)
             {
-                await DisplayAlert("Ошибка", "Выберите хотя бы один ответ!", "ОК");
+                await DisplayAlert("Error", "Please select at least one answer!", "ОК");
                 return;
             }
 

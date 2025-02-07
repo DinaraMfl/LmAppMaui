@@ -1,8 +1,5 @@
 ﻿using AzubiApp.Services;
 using AzubiApp.Models;
-using System;
-using System.Collections.Generic;
-using Microsoft.Maui.Controls;
 
 namespace AzubiApp.Views
 {
@@ -13,22 +10,22 @@ namespace AzubiApp.Views
         public MainPage()
         {
             InitializeComponent();
-            _database = new DatabaseService();  // Инициализация базы данных
+            _database = new DatabaseService();  // Initializing the database
 
-            // Заполняем базу данных при старте приложения
+            // Filling the database when the application starts
             Task.Run(async () => await SeedData.Initialize(_database)).Wait();
         }
 
         private async void OnStartQuizClicked(object sender, EventArgs e)
         {
-            List<Question> questions = await _database.GetShuffledQuestionsAsync(); // Загружаем вопросы
+            List<Question> questions = await _database.GetShuffledQuestionsAsync(); // Loading questions
             if (questions.Count == 0)
             {
-                await DisplayAlert("Ошибка", "Нет доступных вопросов!", "OK");
+                await DisplayAlert("Error", "No questions available!", "OK");
                 return;
             }
 
-            await Navigation.PushAsync(new QuizPage(questions)); // Передаем вопросы в QuizPage
+            await Navigation.PushAsync(new QuizPage(questions)); // Submitting questions to QuizPage
         }
     }
 }

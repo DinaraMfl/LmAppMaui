@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Maui.Controls;
-using AzubiApp.Models;
+﻿using AzubiApp.Models;
 
 namespace AzubiApp.Views
 {
@@ -16,7 +12,7 @@ namespace AzubiApp.Views
 
         private void ShowResults(List<List<string>> userAnswers, List<Question> questions)
         {
-            ResultsLayout.Children.Clear(); // Теперь `ResultsLayout` существует!
+            ResultsLayout.Children.Clear();
 
             for (int i = 0; i < questions.Count; i++)
             {
@@ -28,26 +24,26 @@ namespace AzubiApp.Views
 
                 var resultText = new Label
                 {
-                    Text = isCorrect ? "✅ Верно" : "❌ Ошибка",
+                    Text = isCorrect ? "✅ True" : "❌ False",
                     TextColor = isCorrect ? Colors.Green : Colors.Red,
                     FontSize = 18
                 };
 
                 var questionText = new Label
                 {
-                    Text = $"Вопрос {i + 1}: {question.Text}",
+                    Text = $"Question {i + 1}: {question.Text}",
                     FontAttributes = FontAttributes.Bold
                 };
 
                 var userAnswerText = new Label
                 {
-                    Text = $"Ваш ответ: {string.Join(", ", userSelected)}",
+                    Text = $"Your answer: {string.Join(", ", userSelected)}",
                     TextColor = Colors.Blue
                 };
 
                 var correctAnswerText = new Label
                 {
-                    Text = $"Правильный ответ: {string.Join(", ", correctAnswers)}",
+                    Text = $"Right answer: {string.Join(", ", correctAnswers)}",
                     TextColor = Colors.Green
                 };
 
