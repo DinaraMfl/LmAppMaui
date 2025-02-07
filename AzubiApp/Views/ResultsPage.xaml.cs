@@ -53,5 +53,10 @@ namespace AzubiApp.Views
                 ResultsLayout.Children.Add(resultText);
             }
         }
+
+        private async void OnBackToStartClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync(); // Returns the user to the main page (MainPage)
+        }
     }
 }
