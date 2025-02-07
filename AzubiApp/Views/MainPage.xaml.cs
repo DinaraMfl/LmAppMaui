@@ -14,6 +14,9 @@ namespace AzubiApp.Views
         {
             InitializeComponent();
             _database = new DatabaseService();  // Инициализация базы данных
+
+            // Заполняем базу данных при старте приложения
+            Task.Run(async () => await SeedData.Initialize(_database)).Wait();
         }
 
         private async void OnStartQuizClicked(object sender, EventArgs e)
