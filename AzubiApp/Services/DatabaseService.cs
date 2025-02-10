@@ -14,6 +14,12 @@ namespace AzubiApp.Services
             _database.CreateTableAsync<Question>().Wait();
         }
 
+        // Method to clear the database (need to be called in SeedData)
+        public async Task ClearQuestionsAsync()
+        {
+            await _database.DeleteAllAsync<Question>();
+        }
+
         public async Task<List<Question>> GetShuffledQuestionsAsync()
         {
             var questions = await _database.Table<Question>().ToListAsync();
