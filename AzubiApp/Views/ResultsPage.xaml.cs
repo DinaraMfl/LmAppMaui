@@ -13,6 +13,7 @@ namespace AzubiApp.Views
         private void ShowResults(List<List<string>> userAnswers, List<Question> questions)
         {
             ResultsLayout.Children.Clear();
+            int correctCount = 0; // Counting correct answers
 
             for (int i = 0; i < questions.Count; i++)
             {
@@ -21,6 +22,7 @@ namespace AzubiApp.Views
                 var userSelected = userAnswers[i];
 
                 bool isCorrect = correctAnswers.All(userSelected.Contains) && correctAnswers.Count == userSelected.Count;
+                if (isCorrect) correctCount++; // Increase the counter of correct answers
 
                 var resultText = new Label
                 {
@@ -52,6 +54,9 @@ namespace AzubiApp.Views
                 ResultsLayout.Children.Add(correctAnswerText);
                 ResultsLayout.Children.Add(resultText);
             }
+
+            // Displaying the number of correct answers
+            ScoreLabel.Text = $"Correct answers: {correctCount} / {questions.Count}";
         }
 
         private async void OnBackToStartClicked(object sender, EventArgs e)
