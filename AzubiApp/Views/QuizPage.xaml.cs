@@ -17,7 +17,7 @@ namespace AzubiApp.Views
 
             if (questions == null || questions.Count == 0)
             {
-                DisplayAlert("Error", "The list of questions is empty. Check the database!", "ОК");
+                DisplayAlert("Error", "The list of questions is empty. Check the database!", "OK");
                 return;
             }
 
@@ -36,6 +36,9 @@ namespace AzubiApp.Views
             }
 
             var question = _questions[_currentIndex];
+
+            // Setting up a progress indicator
+            QuestionCounterLabel.Text = $"{_currentIndex + 1} / {_questions.Count}";
 
             // Set the text of the question
             QuestionLabel.Text = question.Text;
@@ -87,7 +90,7 @@ namespace AzubiApp.Views
         {
             if (_currentSelectedAnswers.Count == 0)
             {
-                await DisplayAlert("Error", "Please select at least one answer!", "ОК");
+                await DisplayAlert("Error", "Please select at least one answer!", "OK");
                 return;
             }
 
@@ -95,7 +98,7 @@ namespace AzubiApp.Views
 
             _currentIndex++;
 
-            if (_currentIndex <= _questions.Count)
+            if (_currentIndex < _questions.Count)
             {
                 ShowQuestion();
             }

@@ -2,7 +2,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AzubiApp.Views.QuizPage">
     <VerticalStackLayout Padding="20">
-        <Label x:Name="QuestionLabel" FontSize="20"/>
+
+        <!-- Current question indicator -->
+        <Label x:Name="QuestionCounterLabel" FontSize="18" TextColor="Gray" HorizontalOptions="Center"/>
+
+        <!-- Question text -->
+        <Label x:Name="QuestionLabel" FontSize="20" FontAttributes="Bold"/>
 
         <HorizontalStackLayout>
             <CheckBox x:Name="Answer1" CheckedChanged="OnAnswerChecked"/>
