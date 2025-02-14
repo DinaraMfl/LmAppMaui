@@ -30,10 +30,36 @@ namespace AzubiApp.Services
                     CorrectAnswers = "Er zeigt den Zeitraum an in dem Bestellvorschläge generiert werden können"
                 });
 
+                await database.AddQuestionAsync(new Question
+                {
+                    Text = "Wie wird der Planungshorizont berechnet?",
+                    Answer1 = "HEUTE + Eingetragener Planungshorizont in Werktagen",
+                    Answer2 = "Nächster Bestelltag + Eingetragener Planungshorizont",
+                    Answer3 = "HEUTE + Eingetragener Planungshorizont in Kalendertagen",
+                    CorrectAnswers = "HEUTE + Eingetragener Planungshorizont in Kalendertagen"
+                });
+
+                await database.AddQuestionAsync(new Question
+                {
+                    Text = "Mit welcher Periodenlänge hat man die niedrigste Standardabweichung bei der Prognose?",
+                    Answer1 = "Tagesperiode",
+                    Answer2 = "Wochenperiode",
+                    Answer3 = "Monatsperiode",
+                    CorrectAnswers = "Monatsperiode"
+                });
+
+                await database.AddQuestionAsync(new Question
+                {
+                    Text = "Was passiert beim Berechnungstyp „nur Prognose, nicht disponieren“?",
+                    Answer1 = "Es wird nur nur eine Prognose gerechnet, aber keine Dispo",
+                    Answer2 = "Es wird eine Prognose gerechnet & Bestellvorschläge generiert",
+                    Answer3 = "Es wird nur eine Prognose und Reichweite berechnet",
+                    CorrectAnswers = "Es wird nur nur eine Prognose gerechnet, aber keine Dispo"
+                });
+
                 // After adding, updated questions are loadedы
                 questions = await database.GetShuffledQuestionsAsync();
             }
-
         }
     }
 }
