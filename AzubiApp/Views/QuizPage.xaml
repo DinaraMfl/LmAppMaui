@@ -1,29 +1,58 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AzubiApp.Views.QuizPage">
-    <VerticalStackLayout Padding="20">
+             x:Class="AzubiApp.Views.QuizPage"
+             BackgroundColor="Black">
+    <Grid RowDefinitions="Auto, * , Auto" Padding="30">
 
-        <!-- Current question indicator -->
-        <Label x:Name="QuestionCounterLabel" FontSize="18" TextColor="Gray" HorizontalOptions="Center"/>
+        <!-- Logo and Question Counter -->
+        <VerticalStackLayout Grid.Row="0" Spacing="30">
+            <Image x:Name="LogoImage" Source="logo_white.png" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" />
+            <Label x:Name="QuestionCounterLabel" FontSize="18" TextColor="Gray" HorizontalOptions="End" Padding="20"/>
+        </VerticalStackLayout>
 
-        <!-- Question text -->
-        <Label x:Name="QuestionLabel" FontSize="20" FontAttributes="Bold"/>
+        <!-- Main Content (Question and Answers) -->
+        <VerticalStackLayout Grid.Row="1" Spacing="30">
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="Answer1" CheckedChanged="OnAnswerChecked"/>
-            <Label x:Name="Answer1Text"/>
+            <Frame BackgroundColor="#80808080" CornerRadius="20" Padding="10" HasShadow="False">
+                <Label x:Name="QuestionLabel" FontSize="20" FontAttributes="Bold" TextColor="White"
+                    HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Frame>
+
+            <VerticalStackLayout Spacing="40">
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <CheckBox x:Name="Answer1" CheckedChanged="OnAnswerChecked"/>
+                    <Label x:Name="Answer1Text" TextColor="White" FontSize="18" VerticalOptions="Center" LineBreakMode="WordWrap" WidthRequest="300">
+                           <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnAnswerTapped"/>
+                            </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <CheckBox x:Name="Answer2" CheckedChanged="OnAnswerChecked"/>
+                    <Label x:Name="Answer2Text" TextColor="White" FontSize="18" VerticalOptions="Center" LineBreakMode="WordWrap" WidthRequest="300">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnAnswerTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <CheckBox x:Name="Answer3" CheckedChanged="OnAnswerChecked"/>
+                    <Label x:Name="Answer3Text" TextColor="White" FontSize="18" VerticalOptions="Center" LineBreakMode="WordWrap" WidthRequest="300">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnAnswerTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+
+        <!-- Fixed Button Panel -->
+        <HorizontalStackLayout Grid.Row="2" HorizontalOptions="Center" Spacing="150" Margin="20,0,20,150">
+
+            <Button Text="Back" BackgroundColor="White" TextColor="Black" Padding="10,5" FontSize="18" CornerRadius="18" WidthRequest="80"/>
+            <Button Text="Next" Clicked="OnNextClicked" BackgroundColor="White" TextColor="Black" Padding="10,5" FontSize="18" CornerRadius="18" WidthRequest="80"/>
         </HorizontalStackLayout>
-
-        <HorizontalStackLayout>
-            <CheckBox x:Name="Answer2" CheckedChanged="OnAnswerChecked"/>
-            <Label x:Name="Answer2Text"/>
-        </HorizontalStackLayout>
-
-        <HorizontalStackLayout>
-            <CheckBox x:Name="Answer3" CheckedChanged="OnAnswerChecked"/>
-            <Label x:Name="Answer3Text"/>
-        </HorizontalStackLayout>
-
-        <Button Text="Next" Clicked="OnNextClicked"/>
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>

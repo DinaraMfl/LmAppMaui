@@ -107,5 +107,16 @@ namespace AzubiApp.Views
                 await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions));
             }
         }
+        private void OnAnswerTapped(object sender, EventArgs e)
+        {
+            if (sender is Label label && label.Parent is HorizontalStackLayout parent)
+            {
+                var checkBox = parent.Children.OfType<CheckBox>().FirstOrDefault();
+                if (checkBox != null)
+                {
+                    checkBox.IsChecked = !checkBox.IsChecked;
+                }
+            }
+        }
     }
 }
