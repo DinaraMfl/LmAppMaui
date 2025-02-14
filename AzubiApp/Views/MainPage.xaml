@@ -1,11 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AzubiApp.Views.MainPage">
+             x:Class="AzubiApp.Views.MainPage"
+             BackgroundColor="Black">
 
-    <VerticalStackLayout BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="Center">
-        <Label Text="Welcome!" FontSize="32" TextColor="White"/>
-        <Button Text="Start Quiz" Clicked="OnStartQuizClicked"/>
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+        <Label Text="Welcome!" 
+               FontSize="36" 
+               TextColor="White"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <Button Text="Start Quiz" 
+                Clicked="OnStartQuizClicked"
+                BackgroundColor="White" 
+                TextColor="Black"
+                Padding="15,10"
+                FontSize="18"
+                CornerRadius="10"
+                WidthRequest="200"
+                HorizontalOptions="Center"/>
     </VerticalStackLayout>
-
 </ContentPage>
