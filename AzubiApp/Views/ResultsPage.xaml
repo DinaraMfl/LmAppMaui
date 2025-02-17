@@ -1,21 +1,53 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AzubiApp.Views.ResultsPage">
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="AzubiApp.Views.ResultsPage"
+             BackgroundColor="Black">
+
     <VerticalStackLayout Padding="20">
-        <Label Text="Results" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+        <Label Text="Results" FontSize="24" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
 
         <!-- Label to display the total number of correct answers -->
-        <Label x:Name="ScoreLabel" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black"/>
+        <Label x:Name="ScoreLabel" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White"/>
 
         <ScrollView>
-            <StackLayout x:Name="ResultsLayout"/>
+            <CollectionView ItemsSource="{Binding Results}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Black" Padding="10" Margin="5" BackgroundColor="Gray">
+                            <VerticalStackLayout>
+                                <!-- TRUE / FALSE  -->
+                                <Label Text="{Binding ResultText}" 
+                                       TextColor="{Binding ResultColor}"
+                                       FontSize="18"
+                                       FontAttributes="Bold" 
+                                       HorizontalOptions="End"/>
+
+                                <toolkit:Expander>
+                                    <toolkit:Expander.Header>
+                                        <Label Text="{Binding QuestionText}" FontAttributes="Bold" TextColor="White"/>
+                                    </toolkit:Expander.Header>
+                                    <toolkit:Expander.Content>
+                                        <VerticalStackLayout Padding="5">
+                                            <Label Text="{Binding UserAnswerText}" TextColor="Blue"/>
+                                            <Label Text="{Binding CorrectAnswerText}" TextColor="Green" IsVisible="{Binding ShowCorrectAnswer}"/>
+                                        </VerticalStackLayout>
+                                    </toolkit:Expander.Content>
+                                </toolkit:Expander>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </ScrollView>
 
         <Button Text="Back to Start"
-                BackgroundColor="LightGray"
+                BackgroundColor="White"
                 TextColor="Black"
                 Clicked="OnBackToStartClicked"
+                CornerRadius="18"
+                FontSize="18"
+                WidthRequest="160"
                 Margin="0,20,0,0"/>
-
     </VerticalStackLayout>
 </ContentPage>

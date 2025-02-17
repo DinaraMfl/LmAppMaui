@@ -1,19 +1,24 @@
 ﻿using AzubiApp.Models;
+using System.Collections.ObjectModel;
 
 namespace AzubiApp.Views
 {
     public partial class ResultsPage : ContentPage
     {
+        public ObservableCollection<ResultItem> Results { get; set; }
+
         public ResultsPage(List<List<string>> userAnswers, List<Question> questions)
         {
             InitializeComponent();
+            Results = new ObservableCollection<ResultItem>();
+            BindingContext = this;
             ShowResults(userAnswers, questions);
         }
 
         private void ShowResults(List<List<string>> userAnswers, List<Question> questions)
         {
-            ResultsLayout.Children.Clear();
-            int correctCount = 0; // Counting correct answers
+            Results.Clear();
+            int correctCount = 0;
 
             for (int i = 0; i < questions.Count; i++)
             {
@@ -22,46 +27,35 @@ namespace AzubiApp.Views
                 var userSelected = userAnswers[i];
 
                 bool isCorrect = correctAnswers.All(userSelected.Contains) && correctAnswers.Count == userSelected.Count;
-                if (isCorrect) correctCount++; // Increase the counter of correct answers
+                if (isCorrect) correctCount++;
 
-                var resultText = new Label
+                Results.Add(new ResultItem
                 {
-                    Text = isCorrect ? "✅ True" : "❌ False",
-                    TextColor = isCorrect ? Colors.Green : Colors.Red,
-                    FontSize = 18
-                };
-
-                var questionText = new Label
-                {
-                    Text = $"Question {i + 1}: {question.Text}",
-                    FontAttributes = FontAttributes.Bold
-                };
-
-                var userAnswerText = new Label
-                {
-                    Text = $"Your answer: {string.Join(", ", userSelected)}",
-                    TextColor = Colors.Blue
-                };
-
-                var correctAnswerText = new Label
-                {
-                    Text = $"Right answer: {string.Join(", ", correctAnswers)}",
-                    TextColor = Colors.Green
-                };
-
-                ResultsLayout.Children.Add(questionText);
-                ResultsLayout.Children.Add(userAnswerText);
-                ResultsLayout.Children.Add(correctAnswerText);
-                ResultsLayout.Children.Add(resultText);
+                    QuestionText = $"Question {i + 1}: {question.Text}",
+                    UserAnswerText = $"Your answer: {string.Join(", ", userSelected)}",
+                    CorrectAnswerText = $"Right answer: {string.Join(", ", correctAnswers)}",
+                    ResultText = isCorrect ? "✅" : "❌",
+                    ResultColor = isCorrect ? Colors.Green : Colors.Red,
+                    ShowCorrectAnswer = !isCorrect // Shows the correct answer only if there is an error
+                });
             }
 
-            // Displaying the number of correct answers
             ScoreLabel.Text = $"Correct answers: {correctCount} / {questions.Count}";
         }
 
         private async void OnBackToStartClicked(object sender, EventArgs e)
         {
-            await Navigation.PopToRootAsync(); // Returns the user to the main page (MainPage)
+            await Navigation.PopToRootAsync();
         }
+    }
+
+    public class ResultItem
+    {
+        public string QuestionText { get; set; }
+        public string UserAnswerText { get; set; }
+        public string CorrectAnswerText { get; set; }
+        public string ResultText { get; set; }
+        public Color ResultColor { get; set; }
+        public bool ShowCorrectAnswer { get; set; }
     }
 }
