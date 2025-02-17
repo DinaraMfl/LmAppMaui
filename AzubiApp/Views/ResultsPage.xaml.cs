@@ -32,7 +32,7 @@ namespace AzubiApp.Views
                 Results.Add(new ResultItem
                 {
                     QuestionText = $" {i + 1}. {question.Text}",
-                    UserAnswerText = $"Your answer: {string.Join(", ", userSelected)}",
+                    UserAnswerText = $"Your answer: {string.Join("\n", userSelected)}",
                     CorrectAnswerText = $"Right answer: {string.Join(", ", correctAnswers)}",
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red, 
