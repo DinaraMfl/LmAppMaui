@@ -31,11 +31,11 @@ namespace AzubiApp.Views
 
                 Results.Add(new ResultItem
                 {
-                    QuestionText = $"Question {i + 1}: {question.Text}",
+                    QuestionText = $" {i + 1}. {question.Text}",
                     UserAnswerText = $"Your answer: {string.Join(", ", userSelected)}",
                     CorrectAnswerText = $"Right answer: {string.Join(", ", correctAnswers)}",
-                    ResultText = isCorrect ? "✅" : "❌",
-                    ResultColor = isCorrect ? Colors.Green : Colors.Red,
+                    ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
+                    ResultColor = isCorrect ? Colors.Green : Colors.Red, 
                     ShowCorrectAnswer = !isCorrect // Shows the correct answer only if there is an error
                 });
             }

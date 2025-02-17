@@ -3,51 +3,57 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="AzubiApp.Views.ResultsPage"
              BackgroundColor="Black">
-
+             
     <VerticalStackLayout Padding="20">
-        <Label Text="Results" FontSize="24" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+  
+        <Image x:Name="LogoImage" Source="logo_white.png" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" />
+            <Label Text="Ergebnis" FontSize="38" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,60,0,20"/>
+      
+        <!--Das ist für den txt Results?-->
 
         <!-- Label to display the total number of correct answers -->
-        <Label x:Name="ScoreLabel" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White"/>
+        <Label x:Name="ScoreLabel" Text="Richtige Antworten"  FontSize="18"  HorizontalOptions="Center" TextColor="White"   Margin="205,0,0,20"/>     <!--Das ist für das score label-->
 
         <ScrollView>
             <CollectionView ItemsSource="{Binding Results}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BorderColor="Black" Padding="10" Margin="5" BackgroundColor="Gray">
-                            <VerticalStackLayout>
-                                <!-- TRUE / FALSE  -->
-                                <Label Text="{Binding ResultText}" 
-                                       TextColor="{Binding ResultColor}"
-                                       FontSize="18"
-                                       FontAttributes="Bold" 
-                                       HorizontalOptions="End"/>
 
-                                <toolkit:Expander>
-                                    <toolkit:Expander.Header>
-                                        <Label Text="{Binding QuestionText}" FontAttributes="Bold" TextColor="White"/>
-                                    </toolkit:Expander.Header>
-                                    <toolkit:Expander.Content>
-                                        <VerticalStackLayout Padding="5">
-                                            <Label Text="{Binding UserAnswerText}" TextColor="Blue"/>
-                                            <Label Text="{Binding CorrectAnswerText}" TextColor="Green" IsVisible="{Binding ShowCorrectAnswer}"/>
-                                        </VerticalStackLayout>
-                                    </toolkit:Expander.Content>
-                                </toolkit:Expander>
+                        <Frame BorderColor="Black" Padding="10" Margin="5" BackgroundColor="{Binding ResultColor}">
+                                <!--das ist für die box?-->
+
+                                <VerticalStackLayout>
+                       
+                                    <!-- TRUE / FALSE  -->
+                                    
+
+                                    <toolkit:Expander>
+                                        <toolkit:Expander.Header>
+                                            <Label Text="{Binding QuestionText}" FontAttributes="Bold" TextColor="White" Padding="0,0,0,0" VerticalTextAlignment="Start"/>
+                                        </toolkit:Expander.Header>
+                                        <toolkit:Expander.Content>
+                                            <VerticalStackLayout Padding="5">
+                                                <Label Text="{Binding UserAnswerText}" TextColor="Black"/>
+                                                <Label Text="{Binding CorrectAnswerText}" TextColor="DarkGreen" IsVisible="{Binding ShowCorrectAnswer}"/>
+                                            </VerticalStackLayout>
+                                        </toolkit:Expander.Content>
+                                    </toolkit:Expander>
+                                
                             </VerticalStackLayout>
-                        </Frame>
+                            </Frame>
+                       
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </ScrollView>
 
-        <Button Text="Back to Start"
+        <Button Text="Zurück zum Start"
                 BackgroundColor="White"
                 TextColor="Black"
                 Clicked="OnBackToStartClicked"
                 CornerRadius="18"
                 FontSize="18"
-                WidthRequest="160"
+                WidthRequest="200"
                 Margin="0,20,0,0"/>
     </VerticalStackLayout>
 </ContentPage>
