@@ -32,15 +32,15 @@ namespace AzubiApp.Views
                 Results.Add(new ResultItem
                 {
                     QuestionText = $" {i + 1}. {question.Text}",
-                    UserAnswerText = $"Your answer: {string.Join("\n", userSelected)}",
-                    CorrectAnswerText = $"Right answer: {string.Join(", ", correctAnswers)}",
+                    UserAnswerText = $"Ihre Antwort: {string.Join("\n", userSelected)}",
+                    CorrectAnswerText = $"Richtige Antwort: {string.Join(", ", correctAnswers)}",
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red, 
                     ShowCorrectAnswer = !isCorrect // Shows the correct answer only if there is an error
                 });
             }
 
-            ScoreLabel.Text = $"Correct answers: {correctCount} / {questions.Count}";
+            ScoreLabel.Text = $"Richtige Antworten: {correctCount} / {questions.Count}";
         }
 
         private async void OnBackToStartClicked(object sender, EventArgs e)
@@ -57,5 +57,6 @@ namespace AzubiApp.Views
         public string ResultText { get; set; }
         public Color ResultColor { get; set; }
         public bool ShowCorrectAnswer { get; set; }
+        public string ScoreLabel { get; set; }
     }
 }

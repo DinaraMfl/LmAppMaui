@@ -25,10 +25,10 @@
                        TextColor="White"/>
 
             <!-- Quiz Container -->
-            <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10">
+            <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
                 <VerticalStackLayout Spacing="20">
                     <Label Text="Quiz" FontSize="20" FontAttributes="Bold" TextColor="White" />
-                    <Label Text="Welcome Back\nStart from where you left off"
+                    <Label Text="Start from where you left off"
                                FontSize="14" TextColor="LightGray" />
                     <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="Gray" />
                     <Button Text="Continue" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"/>
@@ -36,7 +36,7 @@
             </Frame>
 
             <!-- Use-Cases Container -->
-            <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10">
+            <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
                 <VerticalStackLayout Spacing="20">
                     <Label Text="Use-Cases" FontSize="20" FontAttributes="Bold" TextColor="White" />
                     <Label Text="Lerne Neues über Logomate"
