@@ -9,9 +9,24 @@ namespace AzubiApp.Services
 
         public DatabaseService()
         {
-            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "quiz.db");
+            string appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string dbPath = Path.Combine(appDataDirectory, "quiz.db");
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Question>().Wait();
+
+            // Open the file (for example, to read its contents)
+            try
+            {
+                using (StreamReader reader = new StreamReader(dbPath))
+                {
+                    string content = reader.ReadToEnd();
+                    Console.WriteLine(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
 
         // Method to clear the database (need to be called in SeedData)
