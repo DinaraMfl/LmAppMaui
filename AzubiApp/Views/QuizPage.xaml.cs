@@ -86,6 +86,8 @@ namespace AzubiApp.Views
             }
         }
 
+
+
         private async void OnNextClicked(object sender, EventArgs e)
         {
             if (_currentSelectedAnswers.Count == 0)

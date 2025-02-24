@@ -6,7 +6,7 @@ namespace AzubiApp.Views
     public partial class ResultsPage : ContentPage
     {
         public ObservableCollection<ResultItem> Results { get; set; }
-
+        
         public ResultsPage(List<List<string>> userAnswers, List<Question> questions)
         {
             InitializeComponent();

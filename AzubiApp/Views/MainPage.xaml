@@ -10,7 +10,7 @@
         <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
             <!-- Logo oben links -->
             <Image Source="logo_white.png" 
-        WidthRequest="200" HeightRequest="200" 
+        WidthRequest="200" HeightRequest="200" Margin="70,0,0,0"
         Grid.Row="0" Grid.Column="0"/>
         </Grid>
         <!-- ScrollView für den restlichen Inhalt -->
