@@ -18,7 +18,7 @@ namespace AzubiApp.Services
                     Answer1 = "Bestellungen werden auf den heutigen Tag vorgezogen",
                     Answer2 = "Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf",
                     Answer3 = "Es werden zusätzliche Bestellvorschläge für heute generiert",
-                    CorrectAnswers = "Bestellungen werden auf den heutigen Tag vorgezogen| Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf"
+                    CorrectAnswers = "Bestellungen werden auf den heutigen Tag vorgezogen|  Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf"
                 });
 
                 await database.AddQuestionAsync(new Question

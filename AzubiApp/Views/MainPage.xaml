@@ -42,7 +42,7 @@
                     <Label Text="Lerne Neues über Logomate"
                                FontSize="14" TextColor="LightGray" />
                     <ProgressBar Progress="0.3" HeightRequest="5" BackgroundColor="Gray" />
-                    <Button Text="Explore" BackgroundColor="#FFCD00" TextColor="Black" />
+                    <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
                 </VerticalStackLayout>
             </Frame>
 

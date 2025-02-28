@@ -27,5 +27,24 @@ namespace AzubiApp.Views
 
             await Navigation.PushAsync(new QuizPage(questions)); // Submitting questions to QuizPage
         }
-    }
+
+
+        private async void OnStartUseClicked(object sender, EventArgs e)
+        {
+            
+
+            await Navigation.PushAsync(new UseMainPage()); // Submitting questions to QuizPage
+        }
+
+
+        
+
+
+
+
+
+
+
+
+    }   
 }

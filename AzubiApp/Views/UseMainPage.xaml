@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AzubiApp.Views.UseMainPage"
+             Title="UseMainPage">
+    
+    <!-- Grid Layout für die Positionierung des Logos und des Inhalts -->
+    <Grid BackgroundColor="Black" RowDefinitions="*" ColumnDefinitions="*" >
+
+        <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
+            <!-- Logo oben links -->
+            <Image Source="logo_white.png" 
+        WidthRequest="200" HeightRequest="200" Margin="70,0,0,0"
+        Grid.Row="0" Grid.Column="0"/>
+        </Grid>
+        <!-- ScrollView für den restlichen Inhalt -->
+
+
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50">
+
+  
+           
+
+            <!-- Use Case Container -->
+            <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350" >
+                <VerticalStackLayout Spacing="20">
+                    
+                    <Label Text="Use Cases" FontSize="30"  FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"  VerticalOptions="Center" />
+                   
+                    <!--<ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="Gray" />-->
+                    <Button Text="Lerne neues"  BackgroundColor="#FFCD00" Clicked="OnStartUseCaseClicked" TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Module -->
+            <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="Module" FontSize="30" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"  VerticalOptions="Center"   />
+                 <!--   <Label Text="Lerne Neues über Logomate" FontSize="14" TextColor="LightGray" /> -->
+                               
+                    <!--<ProgressBar Progress="0.3" HeightRequest="5" BackgroundColor="Gray" />-->
+                    <Button Text="Übung macht den Meister" BackgroundColor="#FFCD00" TextColor="Black" Clicked="OnModuleClick"/>
+                </VerticalStackLayout>
+            </Frame>
+
+
+
+
+            <Button Text="Zurück"
+            BackgroundColor="#FFCD00"
+            TextColor="Black"
+            CornerRadius="18"
+            FontSize="18"
+            WidthRequest="200"
+            Margin="0,0,0,0"
+            Clicked="OnBackUseMain"/>
+
+        </VerticalStackLayout>
+
+    </Grid>
+
+</ContentPage>
