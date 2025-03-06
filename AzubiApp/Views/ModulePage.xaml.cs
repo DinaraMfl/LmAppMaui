@@ -1,3 +1,8 @@
+using AzubiApp.Services;
+using AzubiApp.Models;
+
+
+
 namespace AzubiApp.Views;
 
 public partial class ModulePage : ContentPage
@@ -6,4 +11,11 @@ public partial class ModulePage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private async void OnBackModuleMain(object sender, EventArgs e)
+	{
+		await Navigation.PopAsync();
+	}
+
+    
 }

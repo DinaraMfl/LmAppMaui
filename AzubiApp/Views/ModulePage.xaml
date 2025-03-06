@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AzubiApp.Views.ModulePage"
              Title="ModulePage">
+    <ScrollView>
 
-
-
+        
 
     <!--Background-->
     <Grid BackgroundColor="Black" RowDefinitions="*" ColumnDefinitions="*">
@@ -19,82 +19,82 @@
         </Grid>
 
 
+            
+                <VerticalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="25" Padding="0,100,0,0">
 
-        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="25" Padding="0,20,0,0">
+                    <VerticalStackLayout Spacing="25">
 
-            <VerticalStackLayout Spacing="25">
-
-                <!--Box -->
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10" WidthRequest="400" 
-               
+                        <!--Box -->
+                        <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"          
                     
                         Text="Bestellungen"  
                         FontAttributes="Bold"
                         VerticalOptions="Center" 
-                        HorizontalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
                         FontSize="25"
                         TextColor="White"
                         />
 
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10" WidthRequest="400" 
+                        <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10" 
                     Text="Parameter"
                     VerticalOptions="Center" 
-                    HorizontalOptions="Center" 
+                    HorizontalOptions="FillAndExpand" 
                     FontAttributes="Bold"
                     FontSize="25"
                     TextColor="White"  />
 
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10" WidthRequest="400" 
-               
+                        <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10" 
                     Text="Konditionen"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
                     FontSize="25"
                     FontAttributes="Bold"
                     TextColor="White"  />
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10" WidthRequest="400"  
-                
+                        <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"  
                     Text="Prognose"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
                     FontSize="25"  
                     FontAttributes="Bold" 
                     TextColor="White"  
                                     />
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"   WidthRequest="400"              
+                        <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"      MaximumHeightRequest="400"
                     Text="Filter"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
                     FontSize="25"
                     FontAttributes="Bold" 
                     TextColor="White"   />
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"          
+                        <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"     
                     Text="Allgemein"
-                    VerticalOptions="FillAndExpand" 
+                    VerticalOptions="Center" 
                     HorizontalOptions="FillAndExpand"
                     FontSize="25"
                     FontAttributes="Bold"
                     TextColor="White" />
 
 
-            </VerticalStackLayout>
+                    </VerticalStackLayout>
 
-            <Button Text="Zurück"
+                    <Button Text="Zurück"
                     BackgroundColor="#FFCD00"
                     TextColor="Black"
                     CornerRadius="18"
                     FontSize="18"
                     WidthRequest="200"
-                    Margin="0,0,0,0"
+                    Margin="0,0,0,50"
+                    Clicked="OnBackModuleMain"
                     />
 
 
 
-        </VerticalStackLayout>
-    </Grid>
+                </VerticalStackLayout>
+            
+        </Grid>
+    </ScrollView>
 </ContentPage>

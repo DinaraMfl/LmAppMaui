@@ -33,7 +33,7 @@ namespace AzubiApp.Views
                 {
                     QuestionText = $" {i + 1}. {question.Text}",
                     UserAnswerText = $"Ihre Antwort: {string.Join("\n", userSelected)}",
-                    CorrectAnswerText = $"Richtige Antwort: {string.Join(", ", correctAnswers)}",
+                    CorrectAnswerText = $"Richtige Antwort: {string.Join("\n", correctAnswers)}",
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red, 
                     ShowCorrectAnswer = !isCorrect // Shows the correct answer only if there is an error

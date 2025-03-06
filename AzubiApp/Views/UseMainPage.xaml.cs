@@ -12,6 +12,7 @@ public partial class UseMainPage : ContentPage
 		InitializeComponent();
 	}
 
+	// Usecaes Button
 	private async void OnStartUseCaseClicked(object sender, EventArgs e)
 	{
 
@@ -22,7 +23,7 @@ public partial class UseMainPage : ContentPage
 
 
 
-
+	// UseCases to UseMainPage
 	private async void OnBackUseMain(object sender, EventArgs e)
 	{
 
@@ -43,7 +44,8 @@ public partial class UseMainPage : ContentPage
 
 
 
-	
+
+    
 
 
 

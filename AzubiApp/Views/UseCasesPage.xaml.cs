@@ -14,10 +14,8 @@ public partial class UseCasesPage : ContentPage
     {
 
         await Navigation.PopAsync();
-
+        
     }
-
-
 
 
 }
