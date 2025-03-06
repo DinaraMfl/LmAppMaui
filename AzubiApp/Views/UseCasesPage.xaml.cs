@@ -1,6 +1,5 @@
 namespace AzubiApp.Views;
 
-
 public partial class UseCasesPage : ContentPage
 {
     public UseCasesPage()
@@ -8,14 +7,8 @@ public partial class UseCasesPage : ContentPage
         InitializeComponent();
     }
 
-
-
     private async void OnBackUseClicked(object sender, EventArgs e)
     {
-
-        await Navigation.PopAsync();
-        
+        await Navigation.PopAsync();   
     }
-
-
 }

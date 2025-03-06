@@ -15,18 +15,12 @@
         </Grid>
         <!-- ScrollView für den restlichen Inhalt -->
 
-
         <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50">
-
-  
-           
 
             <!-- Use Case Container -->
             <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350" >
                 <VerticalStackLayout Spacing="20">
-                    
                     <Label Text="Use Cases" FontSize="30"  FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"  VerticalOptions="Center" />
-                   
                     <!--<ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="Gray" />-->
                     <Button Text="Lerne neues"  BackgroundColor="#FFCD00" Clicked="OnStartUseCaseClicked" TextColor="Black"/>
                 </VerticalStackLayout>
@@ -36,15 +30,11 @@
             <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
                 <VerticalStackLayout Spacing="20">
                     <Label Text="Module" FontSize="30" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"  VerticalOptions="Center"   />
-                 <!--   <Label Text="Lerne Neues über Logomate" FontSize="14" TextColor="LightGray" /> -->
-                               
-                    <!--<ProgressBar Progress="0.3" HeightRequest="5" BackgroundColor="Gray" />-->
+                    <!--<Label Text="Lerne Neues über Logomate" FontSize="14" TextColor="LightGray"/>-->
+                    <!--<ProgressBar Progress="0.3" HeightRequest="5" BackgroundColor="Gray"/>-->
                     <Button Text="Übung macht den Meister" BackgroundColor="#FFCD00" TextColor="Black" Clicked="OnModuleClick"/>
                 </VerticalStackLayout>
             </Frame>
-
-
-
 
             <Button Text="Zurück"
             BackgroundColor="#FFCD00"
@@ -56,7 +46,5 @@
             Clicked="OnBackUseMain"/>
 
         </VerticalStackLayout>
-
     </Grid>
-
 </ContentPage>

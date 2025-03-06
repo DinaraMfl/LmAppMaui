@@ -43,10 +43,8 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-
 		<MauiIcon Include="Resources\MipMap\remira_figurative_mark_white.png" />
 	
-		
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Images\logo_white.png" Color="#000000" />
 
@@ -93,11 +91,22 @@
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="11.1.0" />
+		<PackageReference Include="EntityFramework" Version="6.5.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.30" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 		<PackageReference Include="Microsoft.VisualStudio.LiveShare" Version="1.1.57" />
-		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
-		<PackageReference Include="SQLite.Net-PCL" Version="3.1.1" />
+		<PackageReference Include="ServiceStack.Interfaces" Version="8.6.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiAsset Update="Resources\Raw\QuestionsCatalog.db">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiAsset>
 	</ItemGroup>
 
 	<ItemGroup>

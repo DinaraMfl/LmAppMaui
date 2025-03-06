@@ -15,7 +15,6 @@
         </Grid>
         <!-- ScrollView für den restlichen Inhalt -->
 
-
         <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50">
 
             <!-- Titel in der Mitte -->
@@ -45,9 +44,6 @@
                     <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
                 </VerticalStackLayout>
             </Frame>
-
         </VerticalStackLayout>
-
     </Grid>
-
 </ContentPage>

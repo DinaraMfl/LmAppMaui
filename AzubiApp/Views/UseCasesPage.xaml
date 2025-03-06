@@ -12,76 +12,85 @@
             <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*" >
                 <!-- Logo oben links -->
                 <Image Source="logo_white.png" 
-                WidthRequest="200" HeightRequest="200" Margin="80,0,0,0"
-              Grid.Row="0" Grid.Column="0"/>
-              </Grid>
-
-
-
+                       WidthRequest="200" HeightRequest="200" Margin="80,0,0,0"
+                       Grid.Row="0" Grid.Column="0"/>
+            </Grid>
+          
             <VerticalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="25" Padding="0,50,0,0">
 
                <Label Text="Use Cases" FontSize="32" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,60,0,20"/>
                 <VerticalStackLayout Spacing="25">
 
-                    <!--Box -->
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"    MaximumWidthRequest="300"
-               
-                    
+                <!--Box -->
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"    
+                        MaximumWidthRequest="300"
                         Text="Bestellungen"  
                         FontAttributes="Bold"
                         VerticalOptions="Center" 
                         HorizontalOptions="FillAndExpand"
                         FontSize="20"
-                        TextColor="White"
-                        />
+                        TextColor="White"/>
 
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"     MaximumWidthRequest="300"
-                    Text="Parameter"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="FillAndExpand" 
-                    FontAttributes="Bold"
-                    FontSize="20"
-                    TextColor="White"  />
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"     
+                        MaximumWidthRequest="300"
+                        Text="Parameter"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand" 
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        TextColor="White"/>
 
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"      MaximumWidthRequest="300"
-               
-                    Text="Konditionen"
-                    VerticalOptions="Center"
-                    HorizontalOptions="FillAndExpand"
-                    FontSize="20"
-                    FontAttributes="Bold"
-                    TextColor="White"  />
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"      
+                        MaximumWidthRequest="300"
+                        Text="Konditionen"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"        MaximumWidthRequest="300"
-                
-                    Text="Prognose"
-                    VerticalOptions="Center"
-                    HorizontalOptions="FillAndExpand"
-                    FontSize="20"  
-                    FontAttributes="Bold" 
-                    TextColor="White"  
-                                    />
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"        
+                        MaximumWidthRequest="300"
+                        Text="Prognose"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"  
+                        FontAttributes="Bold" 
+                        TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"    MaximumWidthRequest="300"
-                    Text="Filter"
-                    VerticalOptions="Center"
-                    HorizontalOptions="FillAndExpand"
-                    FontSize="20"
-                    FontAttributes="Bold" 
-                    TextColor="White"   />
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"    
+                        MaximumWidthRequest="300"
+                        Text="Filter"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold" 
+                        TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"   MaximumWidthRequest="300"
-                    Text="Allgemein"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="FillAndExpand"
-                    FontSize="20"
-                    FontAttributes="Bold"
-                    TextColor="White" />
-
-
-                </VerticalStackLayout>
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Allgemein"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+                  
+            </VerticalStackLayout>
 
                 <Button Text="Zurück"
                     BackgroundColor="#FFCD00"
@@ -91,8 +100,6 @@
                     WidthRequest="200"
                     Margin="0,0,0,50"
                     Clicked="OnBackUseClicked"/>
-
-
 
             </VerticalStackLayout>
         </Grid>
