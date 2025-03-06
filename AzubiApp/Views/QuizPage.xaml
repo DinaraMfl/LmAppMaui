@@ -14,12 +14,12 @@
         <!-- Main Content (Question and Answers) -->
         <VerticalStackLayout Grid.Row="1" Spacing="30">
 
-            <Frame BackgroundColor="#80808080" CornerRadius="20" Padding="10" HasShadow="False">
-                <Label x:Name="QuestionLabel" FontSize="20" FontAttributes="Bold" TextColor="White"
+            <Frame BackgroundColor="#80808080" CornerRadius="20" Padding="7" HasShadow="False">
+                <Label x:Name="QuestionLabel" FontSize="18" FontAttributes="Bold" TextColor="White"
                     HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             </Frame>
 
-            <VerticalStackLayout Spacing="40">
+            <VerticalStackLayout Spacing="30">
                 <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
                     <CheckBox x:Name="Answer1" CheckedChanged="OnAnswerChecked"/>
                     <Label x:Name="Answer1Text" TextColor="White" FontSize="18" VerticalOptions="Center" LineBreakMode="WordWrap" WidthRequest="300">
@@ -38,7 +38,7 @@
                     </Label>
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center"> 
                     <CheckBox x:Name="Answer3" CheckedChanged="OnAnswerChecked"/>
                     <Label x:Name="Answer3Text" TextColor="White" FontSize="18" VerticalOptions="Center" LineBreakMode="WordWrap" WidthRequest="300">
                         <Label.GestureRecognizers>
