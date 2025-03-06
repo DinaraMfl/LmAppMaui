@@ -1,5 +1,4 @@
 ﻿using AzubiApp.Services;
-using AzubiApp.Models;
 
 namespace AzubiApp.Views
 {
@@ -10,15 +9,15 @@ namespace AzubiApp.Views
         public MainPage()
         {
             InitializeComponent();
-            _database = new DatabaseService();  // Initializing the database
-
-            // Filling the database when the application starts
-            Task.Run(async () => await SeedData.Initialize(_database)).Wait();
+            _database = Application.Current.Handler.MauiContext.Services.GetService<DatabaseService>();
         }
 
         private async void OnStartQuizClicked(object sender, EventArgs e)
         {
-            List<Question> questions = await _database.GetShuffledQuestionsAsync(); // Loading questions
+            int numberOfQuestions = 5;
+
+            var questions = await _database.GetShuffledQuestionsAsync(numberOfQuestions); // Loading questions
+
             if (questions.Count == 0)
             {
                 await DisplayAlert("Error", "No questions available!", "OK");
