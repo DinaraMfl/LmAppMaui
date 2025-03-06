@@ -9,7 +9,7 @@ namespace AzubiApp.Views
         private readonly List<List<string>> _selectedAnswers = new();
         private List<string> _currentSelectedAnswers;
         private Dictionary<CheckBox, Label> _answerMap;
-        private List<string> _shuffledAnswers;
+        private List<List<string>> _shuffledAnswersList;
 
         public QuizPage(List<Question> questions)
         {
@@ -21,9 +21,16 @@ namespace AzubiApp.Views
                 return;
             }
 
-            _questions = questions.OrderBy(q => Guid.NewGuid()).ToList(); // Mixing up questions
+            _questions = questions.OrderBy(q => Guid.NewGuid()).ToList();
+            _shuffledAnswersList = _questions.Select(q => new List<string> { q.Answer1, q.Answer2, q.Answer3 }
+                .OrderBy(a => Guid.NewGuid()).ToList()).ToList();
+
             _currentSelectedAnswers = new List<string>();
             _selectedAnswers.Clear();
+            for (int i = 0; i < _questions.Count; i++)
+            {
+                _selectedAnswers.Add(new List<string>());
+            }
             ShowQuestion();
         }
 
@@ -37,24 +44,17 @@ namespace AzubiApp.Views
 
             var question = _questions[_currentIndex];
 
-            // Setting up a progress indicator
             QuestionCounterLabel.Text = $"{_currentIndex + 1} / {_questions.Count}";
-
-            // Set the text of the question
             QuestionLabel.Text = question.Text;
 
-            // Shuffling answers
-            _shuffledAnswers = new List<string> { question.Answer1, question.Answer2, question.Answer3 }
-                .OrderBy(a => Guid.NewGuid()).ToList();
+            var shuffledAnswers = _shuffledAnswersList[_currentIndex];
+            Answer1Text.Text = shuffledAnswers[0];
+            Answer2Text.Text = shuffledAnswers[1];
+            Answer3Text.Text = shuffledAnswers[2];
 
-            Answer1Text.Text = _shuffledAnswers[0];
-            Answer2Text.Text = _shuffledAnswers[1];
-            Answer3Text.Text = _shuffledAnswers[2];
-
-            // Resetting checkboxes
-            Answer1.IsChecked = false;
-            Answer2.IsChecked = false;
-            Answer3.IsChecked = false;
+            Answer1.IsChecked = _selectedAnswers[_currentIndex].Contains(Answer1Text.Text);
+            Answer2.IsChecked = _selectedAnswers[_currentIndex].Contains(Answer2Text.Text);
+            Answer3.IsChecked = _selectedAnswers[_currentIndex].Contains(Answer3Text.Text);
 
             _answerMap = new Dictionary<CheckBox, Label>
             {
@@ -63,26 +63,23 @@ namespace AzubiApp.Views
                 { Answer3, Answer3Text }
             };
 
-            _currentSelectedAnswers.Clear();
+            _currentSelectedAnswers = new List<string>(_selectedAnswers[_currentIndex]);
         }
 
         private void OnAnswerChecked(object sender, CheckedChangedEventArgs e)
         {
-            var checkBox = sender as CheckBox;
-            if (checkBox == null || !_answerMap.ContainsKey(checkBox)) return;
-
-            string selectedText = _answerMap[checkBox].Text;
-
-            if (e.Value)
+            if (sender is CheckBox checkBox && _answerMap.ContainsKey(checkBox))
             {
-                if (!_currentSelectedAnswers.Contains(selectedText))
+                string selectedText = _answerMap[checkBox].Text;
+                if (e.Value)
                 {
-                    _currentSelectedAnswers.Add(selectedText);
+                    if (!_currentSelectedAnswers.Contains(selectedText))
+                        _currentSelectedAnswers.Add(selectedText);
                 }
-            }
-            else
-            {
-                _currentSelectedAnswers.Remove(selectedText);
+                else
+                {
+                    _currentSelectedAnswers.Remove(selectedText);
+                }
             }
         }
 
@@ -90,12 +87,11 @@ namespace AzubiApp.Views
         {
             if (_currentSelectedAnswers.Count == 0)
             {
-                await DisplayAlert("Error", "Please select at least one answer!", "OK");
+                await DisplayAlert("", "Bitte wählen Sie mindestens eine Antwort aus!", "OK");
                 return;
             }
 
-            _selectedAnswers.Add(new List<string>(_currentSelectedAnswers));
-
+            _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
             _currentIndex++;
 
             if (_currentIndex < _questions.Count)
@@ -105,6 +101,24 @@ namespace AzubiApp.Views
             else
             {
                 await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions));
+            }
+        }
+
+        private async void OnBackClicked(object sender, EventArgs e)
+        {
+            if (_currentIndex == 0)
+            {
+                bool confirmExit = await DisplayAlert("", "Möchten Sie das Quiz verlassen?", "Ja", "Nein");
+                if (confirmExit)
+                {
+                    await Navigation.PopToRootAsync();
+                }
+            }
+            else
+            {
+                _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
+                _currentIndex--;
+                ShowQuestion();
             }
         }
 
