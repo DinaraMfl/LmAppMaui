@@ -27,7 +27,7 @@
                 <VerticalStackLayout Spacing="25">
 
                         <!--Box -->
-                        <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"          MaximumWidthRequest="350"
+                        <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"          MaximumWidthRequest="300"
                     
                         Text="Bestellungen"  
                         FontAttributes="Bold"
@@ -38,7 +38,7 @@
                         />
 
 
-                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"         MaximumWidthRequest="350"
+                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"         MaximumWidthRequest="300"
                     Text="Parameter"
                     VerticalOptions="Center" 
                     HorizontalOptions="FillAndExpand" 
@@ -47,7 +47,7 @@
                     TextColor="White"  />
 
 
-                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"                    MaximumWidthRequest="350"
+                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"                    MaximumWidthRequest="300"
                     Text="Konditionen"
                     VerticalOptions="Center"
                     HorizontalOptions="FillAndExpand"
@@ -55,7 +55,7 @@
                     FontAttributes="Bold"
                     TextColor="White"  />
 
-                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"                    MaximumWidthRequest="350"
+                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"                    MaximumWidthRequest="300"
                     Text="Prognose"
                     VerticalOptions="Center"
                     HorizontalOptions="FillAndExpand"
@@ -64,7 +64,7 @@
                     TextColor="White"  
                                     />
 
-                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"                MaximumWidthRequest="350"
+                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"                MaximumWidthRequest="300"
                     Text="Filter"
                     VerticalOptions="Center"
                     HorizontalOptions="FillAndExpand"
@@ -72,7 +72,7 @@
                     FontAttributes="Bold" 
                     TextColor="White"   />
 
-                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"            MaximumWidthRequest="350"
+                    <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"            MaximumWidthRequest="300"
                     Text="Allgemein"
                     VerticalOptions="Center" 
                     HorizontalOptions="FillAndExpand"
