@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="AzubiApp.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AzubiApp.Views"
-    Shell.FlyoutBehavior="Flyout"
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:AzubiApp.Views"
+       x:Class="AzubiApp.AppShell"
+       Shell.FlyoutBehavior="Disabled"
+       Shell.NavBarIsVisible="False"
     Title="AzubiApp"
-    Shell.NavBarIsVisible="False">
+       Style="{StaticResource CustomTabBarStyle}"
+         Padding="20,10,20,10">
+    <TabBar>
+        <Tab Title="Home" Icon="home.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+        </Tab>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        <Tab Title="Study" Icon="study.svg" >
+            <ShellContent Title=""
+     ContentTemplate="{DataTemplate local:UseCasesPage}" Route="UseCasesPage" />
+        </Tab>
+
+        <Tab Title="Einstellungen" Icon="einstellungen.svg" >
+            <ShellContent Title=""
+     ContentTemplate="{DataTemplate local:ProfilePage}" Route="EinstellungPage" />
+        </Tab>
+    </TabBar>
 
 </Shell>

@@ -43,8 +43,8 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\MipMap\remira_figurative_mark_white.png" />
+	
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Images\logo_white.png" Color="#000000" />
 
@@ -57,6 +57,36 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\AppIcon\REMIRA_figurative_mark_white.png" />
+	  <None Remove="Resources\Icons\home.svg" />
+	  <None Remove="Resources\Icons\quiz.svg" />
+	  <None Remove="Resources\Icons\study.svg" />
+	  <None Remove="Resources\Icons\user.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Icons\einstellungen.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Include="Resources\Icons\home.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <CustomToolNamespace>home.svg</CustomToolNamespace>
+	  </MauiImage>
+	  <MauiImage Include="Resources\Icons\quiz.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <CustomToolNamespace>quiz.svg</CustomToolNamespace>
+	  </MauiImage>
+	  <MauiImage Include="Resources\Icons\study.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <CustomToolNamespace>study.svg</CustomToolNamespace>
+	  </MauiImage>
+	  <MauiImage Include="Resources\Icons\user.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <CustomToolNamespace>user.svg</CustomToolNamespace>
+	  </MauiImage>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -80,13 +110,31 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\EinstellungPage.xaml.cs">
+	    <DependentUpon>EinstellungPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ModulePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EinstellungPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\QuizPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ResultsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\UseCasesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\UseMainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

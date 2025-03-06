@@ -10,11 +10,10 @@
         <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
             <!-- Logo oben links -->
             <Image Source="logo_white.png" 
-        WidthRequest="200" HeightRequest="200" 
+        WidthRequest="200" HeightRequest="200" Margin="70,0,0,0"
         Grid.Row="0" Grid.Column="0"/>
         </Grid>
         <!-- ScrollView für den restlichen Inhalt -->
-
 
         <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50">
 
@@ -42,12 +41,9 @@
                     <Label Text="Lerne Neues über Logomate"
                                FontSize="14" TextColor="LightGray" />
                     <ProgressBar Progress="0.3" HeightRequest="5" BackgroundColor="Gray" />
-                    <Button Text="Explore" BackgroundColor="#FFCD00" TextColor="Black" />
+                    <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
                 </VerticalStackLayout>
             </Frame>
-
         </VerticalStackLayout>
-
     </Grid>
-
 </ContentPage>
