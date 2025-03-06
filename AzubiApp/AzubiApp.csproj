@@ -70,6 +70,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Resources\Icons\einstellungen.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
 	  <MauiImage Include="Resources\Icons\home.svg">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	    <CustomToolNamespace>home.svg</CustomToolNamespace>

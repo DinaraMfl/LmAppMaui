@@ -18,7 +18,7 @@
      ContentTemplate="{DataTemplate local:UseCasesPage}" Route="UseCasesPage" />
         </Tab>
 
-        <Tab Title="Einstellungen" Icon="user.svg" >
+        <Tab Title="Einstellungen" Icon="einstellungen.svg" >
             <ShellContent Title=""
      ContentTemplate="{DataTemplate local:ProfilePage}" Route="EinstellungPage" />
         </Tab>
