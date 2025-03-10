@@ -15,7 +15,7 @@
 
         <Tab Title="Study" Icon="study.svg" >
             <ShellContent Title=""
-     ContentTemplate="{DataTemplate local:UseCasesPage}" Route="UseCasesPage" />
+     ContentTemplate="{DataTemplate local:UseMainPage}" Route="UseMainPage" />
         </Tab>
 
         <Tab Title="Einstellungen" Icon="einstellungen.svg" >

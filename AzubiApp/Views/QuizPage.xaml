@@ -2,7 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AzubiApp.Views.QuizPage"
              BackgroundColor="Black">
-    <Grid RowDefinitions="Auto, * , Auto" Padding="30">
+    <ScrollView>
+        <Grid RowDefinitions="Auto, * , Auto" Padding="30">
 
         <!-- Logo and Question Counter -->
         <VerticalStackLayout Grid.Row="0" Spacing="30">
@@ -54,4 +55,5 @@
             <Button Text="Weiter" Clicked="OnNextClicked" BackgroundColor="#FFCD00" TextColor="Black" Padding="10,5" FontSize="18" CornerRadius="18" WidthRequest="80"/>
         </HorizontalStackLayout>
     </Grid>
+        </ScrollView>
 </ContentPage>

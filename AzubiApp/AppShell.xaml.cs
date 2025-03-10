@@ -1,4 +1,5 @@
-﻿using AzubiApp.Views;
+﻿using System.Threading.Tasks;
+using AzubiApp.Views;
 
 namespace AzubiApp
 {
@@ -8,6 +9,15 @@ namespace AzubiApp
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(QuizPage), typeof(QuizPage)); //´Register the route
+
+
         }
-    }
+
+
+
+   }
+
 }
+
+
+

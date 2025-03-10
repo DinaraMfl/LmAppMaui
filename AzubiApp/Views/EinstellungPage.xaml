@@ -3,10 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AzubiApp.Views.ProfilePage"
              Title="ProfilePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+   
+      <Grid  BackgroundColor="Black" RowDefinitions="*" ColumnDefinitions="*">
+
+        <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*" >
+            <Image Source="logo_white.png" 
+              WidthRequest="200" HeightRequest="200" Margin="80,0,0,0"
+              Grid.Row="0" Grid.Column="0"/>
+        </Grid>
+
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50">
+
+            <Label Text="Einstellungen" 
+             Style="{StaticResource Headline}"
+             HorizontalOptions="Center" 
+             TextColor="White"
+             Padding="0,0,0,470"/>
+            
+        </VerticalStackLayout>
+
+    </Grid>
+    
 </ContentPage>

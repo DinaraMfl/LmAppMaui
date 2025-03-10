@@ -1,3 +1,5 @@
+using Microsoft.Maui.Platform;
+
 namespace AzubiApp.Views;
 
 public partial class UseMainPage : ContentPage
@@ -16,8 +18,8 @@ public partial class UseMainPage : ContentPage
 	// UseCases to UseMainPage
 	private async void OnBackUseMain(object sender, EventArgs e)
 	{
-		await Navigation.PopAsync();
-	}
+        await Shell.Current.GoToAsync("//MainPage");
+    }
 
 	private async void OnModuleClick(object sender, EventArgs e)
 	{

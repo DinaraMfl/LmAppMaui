@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AzubiApp.Views.MainPage"
              Title="Home">
+    <ScrollView>
 
     <!-- Grid Layout für die Positionierung des Logos und des Inhalts -->
     <Grid BackgroundColor="Black" RowDefinitions="*" ColumnDefinitions="*" >
@@ -21,7 +22,8 @@
             <Label Text="Welcome back, User" 
                        Style="{StaticResource Headline}"
                        HorizontalOptions="Center" 
-                       TextColor="White"/>
+                       TextColor="White"
+                           Padding="0,90,0,0"/>
 
             <!-- Quiz Container -->
             <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
@@ -29,7 +31,7 @@
                     <Label Text="Quiz" FontSize="20" FontAttributes="Bold" TextColor="White" />
                     <Label Text="Start from where you left off"
                                FontSize="14" TextColor="LightGray" />
-                    <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="Gray" />
+                    <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
                     <Button Text="Continue" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"/>
                 </VerticalStackLayout>
             </Frame>
@@ -37,13 +39,14 @@
             <!-- Use-Cases Container -->
             <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
                 <VerticalStackLayout Spacing="20">
-                    <Label Text="Use-Cases" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                    <Label Text="Study" FontSize="20" FontAttributes="Bold" TextColor="White" />
                     <Label Text="Lerne Neues über Logomate"
                                FontSize="14" TextColor="LightGray" />
-                    <ProgressBar Progress="0.3" HeightRequest="5" BackgroundColor="Gray" />
+                    <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
                     <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
                 </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>
     </Grid>
+    </ScrollView>
 </ContentPage>
