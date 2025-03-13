@@ -1,15 +1,28 @@
-﻿using AzubiApp.Services;
+﻿using AzubiApp.Resources.Translate;
+using AzubiApp.Services;
+using System.Globalization;
 
+using System.Globalization;
 namespace AzubiApp.Views
 {
     public partial class MainPage : ContentPage
     {
         private readonly DatabaseService _database;
+        private string currentLanguage = "en";
+        private readonly string defaultLanguage = "en"; // Die Standard-/neutrale Sprache (z. B. Englisch)
 
         public MainPage()
         {
             InitializeComponent();
             _database = Application.Current.Handler.MauiContext.Services.GetService<DatabaseService>();
+
+            MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
+            {
+                Device.BeginInvokeOnMainThread(() => UpdateUI());
+            });
+
+            UpdateUI();
+
         }
 
         private async void OnStartQuizClicked(object sender, EventArgs e)
@@ -25,6 +38,19 @@ namespace AzubiApp.Views
             }
 
             await Navigation.PushAsync(new QuizPage(questions)); // Submitting questions to QuizPage
+        }
+
+        private void UpdateUI()
+        {
+            // Labels manuell mit den neuen Sprachressourcen aktualisieren
+            TitleQuizs.Text = AppResources.QuizLabelTitle;
+         
+        }
+
+        private void OnLanguageButtonClicked(object sender, EventArgs e)
+        {
+            // Sprache umschalten
+            LanguageManager.ToggleLanguage();
         }
 
         private async void OnStartUseClicked(object sender, EventArgs e)

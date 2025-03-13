@@ -13,11 +13,6 @@
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
         </Tab>
 
-        <Tab Title="Study" Icon="study.svg" >
-            <ShellContent Title=""
-     ContentTemplate="{DataTemplate local:UseMainPage}" Route="UseMainPage" />
-        </Tab>
-
         <Tab Title="Einstellungen" Icon="einstellungen.svg" >
             <ShellContent Title=""
      ContentTemplate="{DataTemplate local:ProfilePage}" Route="EinstellungPage" />
