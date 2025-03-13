@@ -131,4 +131,7 @@
     <value>Start from where you left off 
 </value>
   </data>
+  <data name="TitleUseCases" xml:space="preserve">
+    <value>Logomateについてもっと知る</value>
+  </data>
 </root>

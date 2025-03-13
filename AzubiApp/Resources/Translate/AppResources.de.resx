@@ -130,4 +130,7 @@
   <data name="QuizLabelTitle" xml:space="preserve">
     <value>Starte von dort, wo Sie aufgehören haben</value>
   </data>
+  <data name="TitleUseCases" xml:space="preserve">
+    <value>Lerne Neues über Logomate</value>
+  </data>
 </root>

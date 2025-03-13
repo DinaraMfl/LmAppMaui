@@ -95,5 +95,14 @@ namespace AzubiApp.Resources.Translate {
                 return ResourceManager.GetString("QuizLabelTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die sdadsa ähnelt.
+        /// </summary>
+        internal static string TitleUseCases {
+            get {
+                return ResourceManager.GetString("TitleUseCases", resourceCulture);
+            }
+        }
     }
 }

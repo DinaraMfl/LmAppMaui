@@ -44,6 +44,8 @@ namespace AzubiApp.Views
         {
             // Labels manuell mit den neuen Sprachressourcen aktualisieren
             TitleQuizs.Text = AppResources.QuizLabelTitle;
+            TitleUseCases.Text = AppResources.TitleUseCases;
+            ContinueQuizButtons.Text = AppResources.ContinueButton;
          
         }
 

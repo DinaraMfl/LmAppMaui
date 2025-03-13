@@ -32,7 +32,7 @@
                        
                         <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
 
-                        <Button x:Name="ContinueQuizButton"  Text="{x:Static resx:AppResources.ContinueButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"/>
+                        <Button x:Name="ContinueQuizButtons"  Text="{x:Static resx:AppResources.ContinueButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"/>
                 </VerticalStackLayout>
                 
                 </Frame>
@@ -41,7 +41,7 @@
             <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
                 <VerticalStackLayout Spacing="20">
                     <Label Text="Study" FontSize="20" FontAttributes="Bold" TextColor="White" />
-                    <Label Text="Lerne Neues über Logomate"
+                        <Label x:Name="TitleUseCases" Text="{x:Static resx:AppResources.TitleUseCases}"
                                FontSize="14" TextColor="LightGray" />
                     <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
                     <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
