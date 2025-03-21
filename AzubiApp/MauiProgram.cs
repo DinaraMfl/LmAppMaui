@@ -23,3 +23,4 @@ namespace AzubiApp
         }
     }
 }
+// without EntityFramework, with clear database every time
