@@ -1,18 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using SQLite;
 
 namespace AzubiApp.Models
 {
-    [Table("QuestionsCatalog")]
     public class Question
     {
-        [Key]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        [Required]
-        public required string Text { get; set; }
-        public required string Answer1 { get; set; }
-        public required string Answer2 { get; set; }
-        public required string Answer3 { get; set; }
-        public required string CorrectAnswers { get; set; } // Store the correct answer(s) separated by a separator, for example, "|"
+        public string Text { get; set; }
+        public string Answer1 { get; set; }
+        public string Answer2 { get; set; }
+        public string Answer3 { get; set; }
+        public string CorrectAnswers { get; set; } // Store the correct answer as text
     }
 }

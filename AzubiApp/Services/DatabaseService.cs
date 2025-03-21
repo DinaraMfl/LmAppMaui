@@ -1,23 +1,49 @@
-﻿using AzubiApp.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using SQLite;
+using AzubiApp.Models;
 
 namespace AzubiApp.Services
 {
     public class DatabaseService
     {
-        private readonly QuizDbContext _context;
+        private readonly SQLiteAsyncConnection _database;
 
-        public DatabaseService(QuizDbContext context)
+        public DatabaseService()
         {
-            _context = context;
+            string appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string dbPath = Path.Combine(appDataDirectory, "quiz.db");
+            _database = new SQLiteAsyncConnection(dbPath);
+            _database.CreateTableAsync<Question>().Wait();
+
+            // Open the file (for example, to read its contents)
+            try
+            {
+                using (StreamReader reader = new StreamReader(dbPath))
+                {
+                    string content = reader.ReadToEnd();
+                    Console.WriteLine(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
 
-        public async Task<List<Question>> GetShuffledQuestionsAsync(int numberOfQuestions = 15)
+        // Method to clear the database (need to be called in SeedData)
+        public async Task ClearQuestionsAsync()
         {
-            return await _context.QuestionsCatalog 
-                .OrderBy(q => EF.Functions.Random()) // Database level shufflingxc
-                .Take(numberOfQuestions)
-                .ToListAsync();
+            await _database.DeleteAllAsync<Question>();
+        }
+
+        public async Task<List<Question>> GetShuffledQuestionsAsync()
+        {
+            var questions = await _database.Table<Question>().ToListAsync();
+            return questions.OrderBy(q => Guid.NewGuid()).ToList(); //  Randomize the list of questions
+        }
+
+        public Task<int> AddQuestionAsync(Question question)
+        {
+            return _database.InsertAsync(question);
         }
     }
 }
