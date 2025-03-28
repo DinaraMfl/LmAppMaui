@@ -22,35 +22,33 @@
                 <VerticalStackLayout Spacing="25">
 
                 <!--Box -->
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#1E1E1E" 
                         Padding="20" 
                         CornerRadius="10"    
                         MaximumWidthRequest="300"
-                        Text="Bestellungen"  
+                        Text="Auto-Store-Verfahren"  
                         FontAttributes="Bold"
                         VerticalOptions="Center" 
                         HorizontalOptions="FillAndExpand"
                         FontSize="20"
                         TextColor="White"/>
 
-
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#1E1E1E" 
                         Padding="20" 
                         CornerRadius="10"     
                         MaximumWidthRequest="300"
-                        Text="Parameter"
+                        Text="Umlagerung"
                         VerticalOptions="Center" 
                         HorizontalOptions="FillAndExpand" 
                         FontAttributes="Bold"
                         FontSize="20"
                         TextColor="White"/>
 
-
                 <Button BackgroundColor="#1E1E1E" 
                         Padding="20" 
                         CornerRadius="10"      
                         MaximumWidthRequest="300"
-                        Text="Konditionen"
+                        Text="Container-Optimierung"
                         VerticalOptions="Center"
                         HorizontalOptions="FillAndExpand"
                         FontSize="20"
@@ -61,7 +59,7 @@
                         Padding="20" 
                         CornerRadius="10"        
                         MaximumWidthRequest="300"
-                        Text="Prognose"
+                        Text="Split-Konditionen*"
                         VerticalOptions="Center"
                         HorizontalOptions="FillAndExpand"
                         FontSize="20"  
@@ -72,25 +70,168 @@
                         Padding="20" 
                         CornerRadius="10"    
                         MaximumWidthRequest="300"
-                        Text="Filter"
+                        Text="Partitionen/Chargen"
                         VerticalOptions="Center"
                         HorizontalOptions="FillAndExpand"
                         FontSize="20"
                         FontAttributes="Bold" 
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#1E1E1E" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
-                        Text="Allgemein"
+                        Text="Filter(-Klassen)"
                         VerticalOptions="Center" 
                         HorizontalOptions="FillAndExpand"
                         FontSize="20"
                         FontAttributes="Bold"
                         TextColor="White"/>
-                  
-            </VerticalStackLayout>
+
+                    <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="kontrakte"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                    <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="SiB-Typen"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Bestellrhytmus"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Wiedervorlage"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Allgemeine Handhabung"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"   
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Vorläufer"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Pufferlager-Logik"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="ABC-Analyse"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Vererbung"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Aktionen "
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Verbundbestellung"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Sporadische Verfahren"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Button BackgroundColor="#1E1E1E" 
+                        Padding="20" 
+                        CornerRadius="10"   
+                        MaximumWidthRequest="300"
+                        Text="Stichtage/Saison"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                </VerticalStackLayout>
 
                 <Button Text="Zurück"
                     BackgroundColor="#FFCD00"
