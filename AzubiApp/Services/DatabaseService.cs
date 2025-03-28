@@ -45,5 +45,11 @@ namespace AzubiApp.Services
         {
             return _database.InsertAsync(question);
         }
+
+        public async Task<List<Question>> GetAllQuestionsAsync()
+        {
+            return await _database.Table<Question>().ToListAsync();
+        }
+
     }
 }
