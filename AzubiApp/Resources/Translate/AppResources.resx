@@ -118,45 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BackButton" xml:space="preserve">
-    <value />
+    <value>BackButton</value>
   </data>
   <data name="BackToStartButton" xml:space="preserve">
-    <value />
+    <value>BackToStartButton</value>
   </data>
   <data name="ChangeLanguageButton" xml:space="preserve">
     <value>ChangeLanguageButton</value>
   </data>
   <data name="ContinueButton" xml:space="preserve">
-    <value>Continue</value>
+    <value>ContinueButton</value>
   </data>
   <data name="CorrectAnswersTitle" xml:space="preserve">
-    <value />
+    <value>CorrectAnswersTitle</value>
   </data>
   <data name="Einstellungen" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="FilterButton" xml:space="preserve">
-    <value />
+    <value>FilterButton</value>
   </data>
   <data name="GeneralButton" xml:space="preserve">
-    <value />
+    <value>GeneralButton</value>
   </data>
   <data name="LearnSomethingNewButton" xml:space="preserve">
-    <value />
+    <value>LearnSomethingNewButton</value>
   </data>
   <data name="OrderButton" xml:space="preserve">
-    <value />
+    <value>OrderButton</value>
   </data>
   <data name="ParameterButton" xml:space="preserve">
-    <value />
+    <value>ParameterButton</value>
   </data>
   <data name="QuizLabelTitle" xml:space="preserve">
-    <value>S</value>
+    <value>QuizLabelTitle</value>
   </data>
   <data name="ResultTitle" xml:space="preserve">
-    <value />
+    <value>ResultTitle</value>
   </data>
   <data name="TitleUseCases" xml:space="preserve">
-    <value>sdadsa</value>
+    <value>TitleUseCases</value>
   </data>
 </root>
