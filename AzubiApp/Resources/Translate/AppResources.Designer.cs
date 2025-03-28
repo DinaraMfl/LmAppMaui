@@ -61,6 +61,24 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string BackButton {
+            get {
+                return ResourceManager.GetString("BackButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string BackToStartButton {
+            get {
+                return ResourceManager.GetString("BackToStartButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die ChangeLanguageButton ähnelt.
         /// </summary>
         internal static string ChangeLanguageButton {
@@ -79,6 +97,15 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string CorrectAnswersTitle {
+            get {
+                return ResourceManager.GetString("CorrectAnswersTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Settings ähnelt.
         /// </summary>
         internal static string Einstellungen {
@@ -88,11 +115,65 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string FilterButton {
+            get {
+                return ResourceManager.GetString("FilterButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string GeneralButton {
+            get {
+                return ResourceManager.GetString("GeneralButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string LearnSomethingNewButton {
+            get {
+                return ResourceManager.GetString("LearnSomethingNewButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string OrderButton {
+            get {
+                return ResourceManager.GetString("OrderButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string ParameterButton {
+            get {
+                return ResourceManager.GetString("ParameterButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die S ähnelt.
         /// </summary>
         internal static string QuizLabelTitle {
             get {
                 return ResourceManager.GetString("QuizLabelTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string ResultTitle {
+            get {
+                return ResourceManager.GetString("ResultTitle", resourceCulture);
             }
         }
         

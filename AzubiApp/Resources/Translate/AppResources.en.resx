@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BackButton" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BackToStartButton" xml:space="preserve">
+    <value>Back to start</value>
+  </data>
   <data name="ChangeLanguageButton" xml:space="preserve">
     <value>Change Language
 </value>
@@ -124,14 +130,35 @@
   <data name="ContinueButton" xml:space="preserve">
     <value>Continue</value>
   </data>
+  <data name="CorrectAnswersTitle" xml:space="preserve">
+    <value>Correct answers</value>
+  </data>
   <data name="Einstellungen" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="FilterButton" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="GeneralButton" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="LearnSomethingNewButton" xml:space="preserve">
+    <value>Learn something new</value>
+  </data>
+  <data name="OrderButton" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="ParameterButton" xml:space="preserve">
+    <value>Forecast</value>
   </data>
   <data name="QuizLabelTitle" xml:space="preserve">
     <value>Start from where you left off 
 </value>
   </data>
+  <data name="ResultTitle" xml:space="preserve">
+    <value>Result</value>
+  </data>
   <data name="TitleUseCases" xml:space="preserve">
-    <value>Logomateについてもっと知る</value>
+    <value>Learn more about Logomate</value>
   </data>
 </root>
