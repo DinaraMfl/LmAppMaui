@@ -1,8 +1,7 @@
 ﻿using AzubiApp.Resources.Translate;
 using AzubiApp.Services;
-using System.Globalization;
+using AzubiApp.Models;
 
-using System.Globalization;
 namespace AzubiApp.Views
 {
     public partial class MainPage : ContentPage
@@ -14,22 +13,22 @@ namespace AzubiApp.Views
         public MainPage()
         {
             InitializeComponent();
-            _database = Application.Current.Handler.MauiContext.Services.GetService<DatabaseService>();
 
             MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
             {
                 Device.BeginInvokeOnMainThread(() => UpdateUI());
             });
-
             UpdateUI();
 
+            _database = new DatabaseService();  // Initializing the database
+            // Filling the database when the application starts
+            Task.Run(async () => await SeedData.Initialize(_database)).Wait();
         }
 
         private async void OnStartQuizClicked(object sender, EventArgs e)
         {
             int numberOfQuestions = 5;
-
-            var questions = await _database.GetShuffledQuestionsAsync(numberOfQuestions); // Loading questions
+            List<Question> questions = await _database.GetShuffledQuestionsAsync(numberOfQuestions); // Loading questions
 
             if (questions.Count == 0)
             {
@@ -46,7 +45,6 @@ namespace AzubiApp.Views
             TitleQuizs.Text = AppResources.QuizLabelTitle;
             TitleUseCases.Text = AppResources.TitleUseCases;
             ContinueQuizButtons.Text = AppResources.ContinueButton;
-         
         }
 
         private void OnLanguageButtonClicked(object sender, EventArgs e)
@@ -59,5 +57,5 @@ namespace AzubiApp.Views
         {
             await Navigation.PushAsync(new UseMainPage()); // Submitting questions to QuizPage
         }
-    }   
+    }
 }
