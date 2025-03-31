@@ -193,11 +193,92 @@ namespace AzubiApp.Services
                 new Question
                 {
                     Id = 21,
-                    Text = "Was bedeuten grüne  Zeilen in der Export-Tabelle?",
+                    Text = "Was bedeuten grüne Zeilen in der Export-Tabelle?",
                     Answer1 = "Muss nichts bedeuten da die Farbe angepasst werden kann",
                     Answer2 = "Das Lieferdatum ist fällig",
                     Answer3 = "Die gezeigte Bestellung wurde nach Erstellung/Berechnung geändert",
                     CorrectAnswers = "Muss nichts bedeuten da die Farbe angepasst werden kann| Die gezeigte Bestellung wurde nach Erstellung/Berechnung geändert"
+                },
+                new Question
+                {
+                    Id = 22,
+                    Text = "Darf ich eine SKU löschen?",
+                    Answer1 = "Nein, SKUs darf man nur auf inaktiv setzen",
+                    Answer2 = "Ja, um Rechenleistung zu sparen",
+                    Answer3 = "Ja, wenn diese entsprechend gefiltert werden",
+                    CorrectAnswers = "Nein, SKUs darf man nur auf inaktiv setzen"
+                },
+                 new Question
+                {
+                    Id = 23,
+                    Text = "Was sind Ausreißer?",
+                    Answer1 = "Ausreißer erkennen SKUs die doppelt vorhanden sind",
+                    Answer2 = "Ausreißer löschen Abgänge die dazu führen das Bestände unter den SiB fallen",
+                    Answer3 = "Ausreißer sind Extrem-Werte in der Historie",
+                    CorrectAnswers = "Ausreißer sind Extrem-Werte in der Historie"
+                },
+                  new Question
+                {
+                    Id = 24,
+                    Text = "Woran erkenne ich wie lang eine Saison ist?",
+                    Answer1 = "Die Anzahl der Perioden vor und nach dem Stichtag definiert die Länge der Saison",
+                    Answer2 = "Die Anzahl der Perioden bezieht sich ausschließlich auf die letzten zwei Jahre",
+                    Answer3 = "Perioden sind Zeiträume in  denen kein Ereignisse stattfinden",
+                    CorrectAnswers = "Die Anzahl der Perioden vor und nach dem Stichtag definiert die Länge der Saison"
+                },
+                new Question
+                {
+                    Id = 25,
+                    Text = "Wie viele Historienwerte sind erforderlich um einen Strukturbruch zu erkennen?",
+                    Answer1 = "Mindestens 2 Historienwerte",
+                    Answer2 = "Mindestens 8 Historienwerte",
+                    Answer3 = "Mindestens 5 Historienwerte",
+                    CorrectAnswers = "Mindestens 8 Historienwerte"
+                },
+                new Question
+                {
+                    Id = 26,
+                    Text = "Was korrigiert die Behandlungsgrenze?",
+                    Answer1 = "Ausreißer",
+                    Answer2 = "Ungültige Planwerte",
+                    Answer3 = "Zu wenig Liefertermine",
+                    CorrectAnswers = "Ausreißer"
+                },
+                new Question
+                {
+                    Id = 27,
+                    Text = "Welche Grenze sollte höher sein bei den Ausreißern, damit diese korrigiert wird?                                              ",
+                    Answer1 = "Behandlungsgrenze",
+                    Answer2 = "Warnungsgrenze",
+                    Answer3 = "Max.-Grenze",
+                    CorrectAnswers = "Behandlungsgrenze"
+                },
+                new Question
+                {
+                    Id = 28,
+                    Text = "Wann kommen Vorläufer (normalerweise) zum Einsatz?",
+                    Answer1 = "Neue SKUs ohne Historie",
+                    Answer2 = "Neu Artikel-Variation-SKUs ohne Historie",
+                    Answer3 = "Ablöse-Artikel-SKUs ohne Historie",
+                    CorrectAnswers = "Neu Artikel-Variation-SKUs ohne Historie| Ablöse-Artikel-SKUs ohne Historie"
+                },
+                new Question
+                {
+                    Id = 29,
+                    Text = "Was bewirkt ein eingetragener Vorläufer?",
+                    Answer1 = "Die Vorläufer-SKU wird ab dem eingetragenen Datum inaktiv gelöscht & wird dann ersetzt mit der SKU, die diese SKU als Vorläufer eingetragen hat",
+                    Answer2 = "Die Historie vom Vorläufer wird übertragen auf die SKU",
+                    Answer3 = "Die SKU wird inaktiviert und erhält eine „Info“-Warnung, die „Vorläufer-SKU“ heißt",
+                    CorrectAnswers = "Die Historie vom Vorläufer wird übertragen auf die SKU"
+                },
+                new Question
+                {
+                    Id = 30,
+                    Text = "Wie kann man LOGOMATE dazu bringen nur einen bestimmten Zeitraum der Historie für die Berechnung zu nutzen?",
+                    Answer1 = "Bei den Parametern unter dem Reiter „Prognose“ den Kasten „Zu verwendende Historie“ befüllen",
+                    Answer2 = "Bei den Parametern unter dem Reiter „Vorgabe“ das Feld „Plan verwenden“ befüllen",
+                    Answer3 = "Bei den Konditionen unter dem Reiter „Zeiten“ das Feld „Rhythmus“ befüllen",
+                    CorrectAnswers = "Bei den Parametern unter dem Reiter „Prognose“ den Kasten „Zu verwendende Historie“ befüllen"
                 },
             };
 
