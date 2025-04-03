@@ -1,10 +1,15 @@
 ﻿using AzubiApp.Models;
 using System.Collections.ObjectModel;
+using AzubiApp.Resources.Translate;
+using AzubiApp.Services;
 
 namespace AzubiApp.Views
 {
     public partial class ResultsPage : ContentPage
     {
+        private readonly DatabaseService _database;
+        private string currentLanguage = "en";
+        private readonly string defaultLanguage = "en";
         public ObservableCollection<ResultItem> Results { get; set; }
         
         public ResultsPage(List<List<string>> userAnswers, List<Question> questions)
@@ -13,6 +18,11 @@ namespace AzubiApp.Views
             Results = new ObservableCollection<ResultItem>();
             BindingContext = this;
             ShowResults(userAnswers, questions);
+            MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
+            {
+                Device.BeginInvokeOnMainThread(() => UpdateUI());
+            });
+            UpdateUI();
         }
 
         private void ShowResults(List<List<string>> userAnswers, List<Question> questions)
@@ -40,13 +50,20 @@ namespace AzubiApp.Views
                 });
             }
 
-            ScoreLabel.Text = $"Richtige Antworten: {correctCount} / {questions.Count}";
+            ScoreLabel.Text = $" {correctCount} / {questions.Count}";
         }
 
         private async void OnBackToStartClicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
         }
+
+       private void UpdateUI()
+       {
+            ResultTitles.Text = AppResources.ResultTitle;
+            CorrectAnswerTitles.Text = AppResources.CorrectAnswersTitle;
+            BackToStart.Text = AppResources.BackToStartButton;
+       }
     }
 
     public class ResultItem

@@ -156,7 +156,13 @@
   <data name="ResultTitle" xml:space="preserve">
     <value>ResultTitle</value>
   </data>
+  <data name="TopicsTitle" xml:space="preserve">
+    <value />
+  </data>
   <data name="TitleUseCases" xml:space="preserve">
     <value>TitleUseCases</value>
+  </data>
+  <data name="LearnApplyMaster" xml:space="preserve">
+    <value />
   </data>
 </root>

@@ -131,7 +131,7 @@
     <value>Continue</value>
   </data>
   <data name="CorrectAnswersTitle" xml:space="preserve">
-    <value>Correct answers</value>
+    <value>Correct answers:</value>
   </data>
   <data name="Einstellungen" xml:space="preserve">
     <value>Settings</value>
@@ -158,7 +158,13 @@
   <data name="ResultTitle" xml:space="preserve">
     <value>Result</value>
   </data>
+  <data name="TopicsTitle" xml:space="preserve">
+    <value>Topics</value>
+  </data>
   <data name="TitleUseCases" xml:space="preserve">
     <value>Learn more about Logomate</value>
+  </data>
+  <data name="LearnApplyMaster" xml:space="preserve">
+    <value>Learn. Apply. Master.</value>
   </data>
 </root>

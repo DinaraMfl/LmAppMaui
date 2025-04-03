@@ -61,7 +61,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die BackButton ähnelt.
         /// </summary>
         internal static string BackButton {
             get {
@@ -70,7 +70,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die BackToStartButton ähnelt.
         /// </summary>
         internal static string BackToStartButton {
             get {
@@ -88,7 +88,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Continue ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die ContinueButton ähnelt.
         /// </summary>
         internal static string ContinueButton {
             get {
@@ -97,7 +97,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die CorrectAnswersTitle ähnelt.
         /// </summary>
         internal static string CorrectAnswersTitle {
             get {
@@ -115,7 +115,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die FilterButton ähnelt.
         /// </summary>
         internal static string FilterButton {
             get {
@@ -124,7 +124,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die GeneralButton ähnelt.
         /// </summary>
         internal static string GeneralButton {
             get {
@@ -135,6 +135,15 @@ namespace AzubiApp.Resources.Translate {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
         /// </summary>
+        internal static string LearnApplyMaster {
+            get {
+                return ResourceManager.GetString("LearnApplyMaster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die LearnSomethingNewButton ähnelt.
+        /// </summary>
         internal static string LearnSomethingNewButton {
             get {
                 return ResourceManager.GetString("LearnSomethingNewButton", resourceCulture);
@@ -142,7 +151,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die OrderButton ähnelt.
         /// </summary>
         internal static string OrderButton {
             get {
@@ -151,7 +160,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die ParameterButton ähnelt.
         /// </summary>
         internal static string ParameterButton {
             get {
@@ -160,7 +169,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die S ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die QuizLabelTitle ähnelt.
         /// </summary>
         internal static string QuizLabelTitle {
             get {
@@ -169,7 +178,7 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die ResultTitle ähnelt.
         /// </summary>
         internal static string ResultTitle {
             get {
@@ -178,11 +187,20 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die sdadsa ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die TitleUseCases ähnelt.
         /// </summary>
         internal static string TitleUseCases {
             get {
                 return ResourceManager.GetString("TitleUseCases", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string TopicsTitle {
+            get {
+                return ResourceManager.GetString("TopicsTitle", resourceCulture);
             }
         }
     }
