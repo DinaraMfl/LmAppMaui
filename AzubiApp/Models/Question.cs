@@ -11,5 +11,13 @@ namespace AzubiApp.Models
         public string Answer2 { get; set; }
         public string Answer3 { get; set; }
         public string CorrectAnswers { get; set; } // Store the correct answer as text
+        public int Level { get; set; } = 0; // 1 false -> Level + 1
+        public int Points { get; set; } = 0; // 1 true -> Level - 1 AND Point + 1   -->    if Points == 3 AND Level == 0 -> "hide" questions. Points for progress
+
+        public const int MaxLevel = 3;
+        public const int MaxPoints = 3;
+
+        public bool IsMaxPoints() => Points >= MaxPoints;
+        public bool IsMaxLevel() => Level >= MaxLevel;
     }
 }

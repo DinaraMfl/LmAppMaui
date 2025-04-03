@@ -1,4 +1,5 @@
 ﻿using AzubiApp.Models;
+using AzubiApp.Services;
 
 namespace AzubiApp.Views
 {
@@ -10,10 +11,14 @@ namespace AzubiApp.Views
         private List<string> _currentSelectedAnswers;
         private Dictionary<CheckBox, Label> _answerMap;
         private List<List<string>> _shuffledAnswersList;
+        private readonly DatabaseService _database;
+        private readonly List<(int QuestionId, bool IsCorrect)> _results = new();
 
-        public QuizPage(List<Question> questions)
+        public QuizPage(DatabaseService database, List<Question> questions)
         {
             InitializeComponent();
+            _database = database ?? throw new ArgumentNullException(nameof(database));
+
 
             if (questions == null || questions.Count == 0)
             {
@@ -36,14 +41,19 @@ namespace AzubiApp.Views
 
         private void ShowQuestion()
         {
+            if (_questions == null || _questions.Count == 0)
+            {
+                DisplayAlert("Fehler", "Keine Fragen gefunden!", "OK");
+                return;
+            }
+
             if (_currentIndex >= _questions.Count)
             {
-                Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions));
+                Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, _results));
                 return;
             }
 
             var question = _questions[_currentIndex];
-
             QuestionCounterLabel.Text = $"{_currentIndex + 1} / {_questions.Count}";
             QuestionLabel.Text = question.Text;
 
@@ -72,14 +82,9 @@ namespace AzubiApp.Views
             {
                 string selectedText = _answerMap[checkBox].Text;
                 if (e.Value)
-                {
-                    if (!_currentSelectedAnswers.Contains(selectedText))
-                        _currentSelectedAnswers.Add(selectedText);
-                }
+                    _currentSelectedAnswers.Add(selectedText);
                 else
-                {
                     _currentSelectedAnswers.Remove(selectedText);
-                }
             }
         }
 
@@ -91,6 +96,7 @@ namespace AzubiApp.Views
                 return;
             }
 
+            // Save the user's current answers
             _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
             _currentIndex++;
 
@@ -100,7 +106,7 @@ namespace AzubiApp.Views
             }
             else
             {
-                await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions));
+                await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, new List<(int, bool)>())); // Pass an empty list of results
             }
         }
 
