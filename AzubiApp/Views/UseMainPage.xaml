@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AzubiApp.Views.UseMainPage"
+             xmlns:resx="clr-namespace:AzubiApp.Resources.Translate"
              Title="UseMainPage">
     
     <!-- Grid Layout für die Positionierung des Logos und des Inhalts -->
@@ -22,21 +23,21 @@
                 <VerticalStackLayout Spacing="20">
                     <Label Text="Use Cases" FontSize="30"  FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"  VerticalOptions="Center" />
                     <!--<ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="Gray" />-->
-                    <Button Text="Lerne neues"  BackgroundColor="#FFCD00" Clicked="OnStartUseCaseClicked" TextColor="Black"/>
+                    <Button x:Name="LearnSomethingNew"  Text="{x:Static resx:AppResources.LearnSomethingNewButton}"  BackgroundColor="#FFCD00" Clicked="OnStartUseCaseClicked" TextColor="Black"/>
                 </VerticalStackLayout>
             </Frame>
 
             <!-- Module -->
             <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
                 <VerticalStackLayout Spacing="20">
-                    <Label Text="Module" FontSize="30" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"  VerticalOptions="Center"   />
+                    <Label x:Name="TopicTitle" Text="{x:Static resx:AppResources.TopicsTitle}" FontSize="30" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"  VerticalOptions="Center"   />
                     <!--<Label Text="Lerne Neues über Logomate" FontSize="14" TextColor="LightGray"/>-->
                     <!--<ProgressBar Progress="0.3" HeightRequest="5" BackgroundColor="Gray"/>-->
-                    <Button Text="Übung macht den Meister" BackgroundColor="#FFCD00" TextColor="Black" Clicked="OnModuleClick"/>
+                    <Button x:Name="LearnApplyMastering"  Text="{x:Static resx:AppResources.LearnApplyMaster}" BackgroundColor="#FFCD00" TextColor="Black" Clicked="OnModuleClick"/>
                 </VerticalStackLayout>
             </Frame>
 
-            <Button Text="Zurück"
+            <Button x:Name="BackButtons"  Text="{x:Static resx:AppResources.BackButton}"
             BackgroundColor="#FFCD00"
             TextColor="Black"
             CornerRadius="18"

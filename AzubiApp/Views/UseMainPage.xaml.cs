@@ -1,12 +1,22 @@
-using Microsoft.Maui.Platform;
+using AzubiApp.Resources.Translate;
+using AzubiApp.Services;
 
 namespace AzubiApp.Views;
 
 public partial class UseMainPage : ContentPage
 {
+	private readonly DatabaseService _database;
+	private string currentLanguage = "en";
+	private readonly string defaultLanguage = "en";
 	public UseMainPage()
 	{
 		InitializeComponent();
+
+		MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
+		{
+			Device.BeginInvokeOnMainThread(() => UpdateUI());
+		});
+		UpdateUI();
 	}
 
 	// Usecaes Button
@@ -24,5 +34,13 @@ public partial class UseMainPage : ContentPage
 	private async void OnModuleClick(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new ModulePage());
+    }
+
+	private void UpdateUI()
+	{
+        TopicTitle.Text = AppResources.TopicsTitle;
+        LearnApplyMastering.Text = AppResources.LearnApplyMaster;
+		BackButtons.Text = AppResources.BackButton;
+		LearnSomethingNew.Text = AppResources.LearnSomethingNewButton;
     }
 }	
