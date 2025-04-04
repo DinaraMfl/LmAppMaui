@@ -16,7 +16,7 @@ namespace AzubiApp.Views
             // Höre auf Sprachwechsel
             MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
             {
-                Device.BeginInvokeOnMainThread(() => UpdateUI());
+                MainThread.BeginInvokeOnMainThread(() => UpdateUI());
             });
         }
 
