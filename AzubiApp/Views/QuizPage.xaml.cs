@@ -14,6 +14,7 @@ namespace AzubiApp.Views
         private readonly DatabaseService _database;
         private readonly List<(int QuestionId, bool IsCorrect)> _results = new();
         private readonly List<bool> _answeredQuestions;
+        private bool _isAnswerRevealed = false;
 
         public QuizPage(DatabaseService database, List<Question> questions)
         {
@@ -85,8 +86,9 @@ namespace AzubiApp.Views
             {
                 pair.Key.IsEnabled = !isLocked;
                 pair.Key.Color = isLocked ? Colors.Gray : Colors.White;
-                pair.Value.TextColor = Colors.White; // всегда белый
+                pair.Value.TextColor = Colors.White;
             }
+            _isAnswerRevealed = false;
         }
 
         private void OnAnswerChecked(object sender, CheckedChangedEventArgs e)
@@ -106,16 +108,51 @@ namespace AzubiApp.Views
 
         private async void OnNextClicked(object sender, EventArgs e)
         {
-            if (_currentSelectedAnswers.Count == 0)
+            if (!_isAnswerRevealed)
             {
-                await DisplayAlert("", "Bitte wählen Sie mindestens eine Antwort aus!", "OK");
-                return;
+                if (_currentSelectedAnswers.Count == 0)
+                {
+                    await DisplayAlert("", "Bitte wählen Sie mindestens eine Antwort aus!", "OK");
+                    return;
+                }
+
+                // Saving answers
+                _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
+                _answeredQuestions[_currentIndex] = true;
+
+                // Show only correct answers in green
+                var question = _questions[_currentIndex];
+                var correctAnswers = question.CorrectAnswers.Split("| ").ToList();
+
+
+                foreach (var pair in _answerMap)
+                {
+                    var checkBox = pair.Key;
+                    var label = pair.Value;
+
+                    if (correctAnswers.Contains(label.Text))
+                    {
+                        label.TextColor = Colors.LimeGreen;
+                    }
+
+                    checkBox.IsEnabled = false;
+                    checkBox.Color = Colors.Gray;
+                }
+
+                // Change the button text
+                NextButton.Text = "Weiter";
+
+                _isAnswerRevealed = true;
+                return; // Waiting for the second press
             }
 
-            // Save the user's current answers
-            _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
-            _answeredQuestions[_currentIndex] = true;
+            // Second press - go to the next question
             _currentIndex++;
+
+            // Change the button text back
+            NextButton.Text = "Uberprüfen";
+
+            _isAnswerRevealed = false;
 
             if (_currentIndex < _questions.Count)
             {
@@ -123,7 +160,7 @@ namespace AzubiApp.Views
             }
             else
             {
-                await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, new List<(int, bool)>())); // Pass an empty list of results
+                await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, new List<(int, bool)>())); // результаты
             }
         }
 
