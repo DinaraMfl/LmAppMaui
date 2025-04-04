@@ -13,12 +13,12 @@ namespace AzubiApp.Views
         private List<List<string>> _shuffledAnswersList;
         private readonly DatabaseService _database;
         private readonly List<(int QuestionId, bool IsCorrect)> _results = new();
+        private readonly List<bool> _answeredQuestions;
 
         public QuizPage(DatabaseService database, List<Question> questions)
         {
             InitializeComponent();
             _database = database ?? throw new ArgumentNullException(nameof(database));
-
 
             if (questions == null || questions.Count == 0)
             {
@@ -27,7 +27,8 @@ namespace AzubiApp.Views
             }
 
             _questions = questions.OrderBy(q => Guid.NewGuid()).ToList();
-            _shuffledAnswersList = _questions.Select(q => new List<string> { q.Answer1, q.Answer2, q.Answer3 }
+            _shuffledAnswersList = _questions
+                .Select(q => new List<string> { q.Answer1, q.Answer2, q.Answer3 }
                 .OrderBy(a => Guid.NewGuid()).ToList()).ToList();
 
             _currentSelectedAnswers = new List<string>();
@@ -36,6 +37,9 @@ namespace AzubiApp.Views
             {
                 _selectedAnswers.Add(new List<string>());
             }
+
+            _answeredQuestions = Enumerable.Repeat(false, _questions.Count).ToList();
+
             ShowQuestion();
         }
 
@@ -74,10 +78,22 @@ namespace AzubiApp.Views
             };
 
             _currentSelectedAnswers = new List<string>(_selectedAnswers[_currentIndex]);
+
+            bool isLocked = _answeredQuestions[_currentIndex];
+
+            foreach (var pair in _answerMap)
+            {
+                pair.Key.IsEnabled = !isLocked;
+                pair.Key.Color = isLocked ? Colors.Gray : Colors.White;
+                pair.Value.TextColor = Colors.White; // всегда белый
+            }
         }
 
         private void OnAnswerChecked(object sender, CheckedChangedEventArgs e)
         {
+            if (_answeredQuestions[_currentIndex])
+                return;
+
             if (sender is CheckBox checkBox && _answerMap.ContainsKey(checkBox))
             {
                 string selectedText = _answerMap[checkBox].Text;
@@ -98,6 +114,7 @@ namespace AzubiApp.Views
 
             // Save the user's current answers
             _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
+            _answeredQuestions[_currentIndex] = true;
             _currentIndex++;
 
             if (_currentIndex < _questions.Count)
@@ -130,6 +147,9 @@ namespace AzubiApp.Views
 
         private void OnAnswerTapped(object sender, EventArgs e)
         {
+            if (_answeredQuestions[_currentIndex])
+                return;
+
             if (sender is Label label && label.Parent is HorizontalStackLayout parent)
             {
                 var checkBox = parent.Children.OfType<CheckBox>().FirstOrDefault();
