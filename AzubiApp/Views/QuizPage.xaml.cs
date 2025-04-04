@@ -1,4 +1,7 @@
-﻿using AzubiApp.Models;
+﻿using System.Data.Entity;
+using AzubiApp.Models;
+using AzubiApp.Services;
+using AzubiApp.Resources.Translate;
 
 namespace AzubiApp.Views
 {
@@ -10,7 +13,9 @@ namespace AzubiApp.Views
         private List<string> _currentSelectedAnswers;
         private Dictionary<CheckBox, Label> _answerMap;
         private List<List<string>> _shuffledAnswersList;
-
+        private readonly DatabaseService _database;
+        private string currentLanguage = "en";
+        private readonly string defaultLanguage = "en";
         public QuizPage(List<Question> questions)
         {
             InitializeComponent();
@@ -32,6 +37,12 @@ namespace AzubiApp.Views
                 _selectedAnswers.Add(new List<string>());
             }
             ShowQuestion();
+
+            MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
+            {
+                MainThread.BeginInvokeOnMainThread(() => UpdateUI());
+            });
+            UpdateUI();
         }
 
         private void ShowQuestion()
@@ -133,5 +144,14 @@ namespace AzubiApp.Views
                 }
             }
         }
+    
+        private void UpdateUI()
+        {
+            BackButtons.Text = AppResources.BackButton;
+            ContinueButtons.Text = AppResources.ContinueButton;
+
+
+        }
+    
     }
 }
