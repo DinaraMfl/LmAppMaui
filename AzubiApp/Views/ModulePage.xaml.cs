@@ -26,12 +26,12 @@ public partial class ModulePage : ContentPage
 
 	private void UpdateUI()
 	{
-		BackButtons.Text = AppResources.BackButton;
-		GeneralsButton.Text = AppResources.GeneralButton;
-		FiltersButton.Text = AppResources.FilterButton;
-		ParametersButton.Text = AppResources.ParameterButton;
-		ConditionssButton.Text = AppResources.ConditionsButton;
-		OrdersButtons.Text = AppResources.OrderButton;
-		ForcastsButton.Text = AppResources.ForecastButton;
-	}
+        OrderButton.Text = AppResources.OrderButton;
+        ParameterButton.Text = AppResources.ParameterButton;
+        ConditionsButton.Text = AppResources.ConditionsButton;
+        ForecastButton.Text = AppResources.ForecastButton;
+        FilterButton.Text = AppResources.FilterButton;       
+        GeneralButton.Text = AppResources.GeneralButton;
+        BackModuleButton.Text = AppResources.BackModuleButton;
+    }
 }

@@ -50,10 +50,10 @@ namespace AzubiApp.Views
         private void UpdateUI()
         {
             // Labels manuell mit den neuen Sprachressourcen aktualisieren
-            TitleQuizs.Text = AppResources.QuizLabelTitle;
-            TitleUseCases.Text = AppResources.TitleUseCases;
-            ContinueQuizButtons.Text = AppResources.ContinueButton;
-            TopicssTitle.Text = AppResources.TopicsTitle;
+            QuizSubtitle.Text = AppResources.QuizSubtitle; // Start from where you left off 
+            UseCasesSubtitle.Text = AppResources.UseCasesSubtitle; // Learn more about Logomate
+            ContinueQuizButton.Text = AppResources.ContinueQuizButton; // Continue
+            TopicsQuizButton.Text = AppResources.TopicsQuizButton;
         }
 
         private void OnLanguageButtonClicked(object sender, EventArgs e)

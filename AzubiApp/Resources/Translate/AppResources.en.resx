@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BackButton" xml:space="preserve">
+  <data name="BackQuizButton" xml:space="preserve">
     <value>Back</value>
   </data>
   <data name="BackToStartButton" xml:space="preserve">
@@ -127,13 +127,10 @@
     <value>Change Language
 </value>
   </data>
-  <data name="ContinueButton" xml:space="preserve">
-    <value>Continue</value>
-  </data>
-  <data name="CorrectAnswersTitle" xml:space="preserve">
+  <data name="CorrectAnswerTitle" xml:space="preserve">
     <value>Correct answers:</value>
   </data>
-  <data name="Einstellungen" xml:space="preserve">
+  <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="FilterButton" xml:space="preserve">
@@ -142,35 +139,44 @@
   <data name="GeneralButton" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="LearnSomethingNewButton" xml:space="preserve">
-    <value>Learn something new</value>
-  </data>
   <data name="OrderButton" xml:space="preserve">
     <value>Order</value>
   </data>
   <data name="ParameterButton" xml:space="preserve">
     <value>Forecast</value>
   </data>
-  <data name="QuizLabelTitle" xml:space="preserve">
+  <data name="QuizSubtitle" xml:space="preserve">
     <value>Start from where you left off 
 </value>
   </data>
   <data name="ResultTitle" xml:space="preserve">
     <value>Result</value>
   </data>
-  <data name="TopicsTitle" xml:space="preserve">
+  <data name="TopicsQuizButton" xml:space="preserve">
     <value>Topics</value>
   </data>
-  <data name="TitleUseCases" xml:space="preserve">
+  <data name="UseCasesSubtitle" xml:space="preserve">
     <value>Learn more about Logomate</value>
   </data>
-  <data name="LearnApplyMaster" xml:space="preserve">
-    <value>Learn. Apply. Master.</value>
+  <data name="ContinueQuizButton" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="ForecastButton" xml:space="preserve">
+    <value>Forecast</value>
+  </data>
+  <data name="NextQuizButton" xml:space="preserve">
+    <value>Next</value>
   </data>
   <data name="ConditionsButton" xml:space="preserve">
     <value>Conditions</value>
   </data>
-  <data name="ForecastButton" xml:space="preserve">
-    <value>Forecast</value>
+  <data name="BackModuleButton" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="CheckButton" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="FinishButton" xml:space="preserve">
+    <value>Finish</value>
   </data>
 </root>

@@ -70,9 +70,9 @@ namespace AzubiApp.Views
 
         private void UpdateUI()
         {
-            ResultTitles.Text = AppResources.ResultTitle;
-            CorrectAnswerTitles.Text = AppResources.CorrectAnswersTitle;
-            BackToStart.Text = AppResources.BackToStartButton;
+            ResultTitle.Text = AppResources.ResultTitle;
+            CorrectAnswerTitle.Text = AppResources.CorrectAnswerTitle;
+            BackToStartButton.Text = AppResources.BackToStartButton;
         }
     }
 

@@ -9,11 +9,11 @@
         <VerticalStackLayout Padding="20">
   
         <Image x:Name="LogoImage" Source="logo_white.png" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" />
-        <Label x:Name="ResultTitles"  Text="{x:Static resx:AppResources.ResultTitle}" FontSize="38" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,60,0,20"/>
+            <Label x:Name="ResultTitle"  Text="{x:Static resx:AppResources.ResultTitle}" FontSize="38" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,60,0,20"/>
       
         <!-- Label to display the total number of correct answers -->
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
-                <Label x:Name="CorrectAnswerTitles" FontSize="18" TextColor="White" Text="Score:" />
+                <Label x:Name="CorrectAnswerTitle" FontSize="18" TextColor="White" Text="Score:" />
                 <Label x:Name="ScoreLabel" FontSize="18" TextColor="White" />
             </HorizontalStackLayout>
 
@@ -63,7 +63,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <Button x:Name="BackToStart" Text="{x:Static resx:AppResources.BackToStartButton}"
+            <Button x:Name="BackToStartButton" Text="{x:Static resx:AppResources.BackToStartButton}"
                 BackgroundColor="#FFCD00"
                 TextColor="Black"
                 Clicked="OnBackToStartClicked"

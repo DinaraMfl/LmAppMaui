@@ -1,5 +1,4 @@
-﻿ ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AzubiApp.Views.MainPage"
              xmlns:resx="clr-namespace:AzubiApp.Resources.Translate"
@@ -27,14 +26,14 @@
                 <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
                     <VerticalStackLayout Spacing="20">
                         <Label Text="Quiz" FontSize="20" FontAttributes="Bold" TextColor="White" />
-                        <Label x:Name="TitleQuizs" Text="{x:Static resx:AppResources.QuizLabelTitle}"
+                        <Label x:Name="QuizSubtitle" Text="{x:Static resx:AppResources.QuizSubtitle}"
                                FontSize="14" TextColor="LightGray" />
 
                         <Label x:Name="ProgressLabel" FontSize="14" TextColor="White"/>
                         <ProgressBar x:Name="ProgressBar" HeightRequest="5" BackgroundColor="Gray" />
 
-                        <Button x:Name="ContinueQuizButtons"  Text="{x:Static resx:AppResources.ContinueButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"  />
-                        <Button x:Name="TopicssTitle" Text="{x:Static resx:AppResources.TopicsTitle}" Clicked="OnModuleClick" BackgroundColor="#FFCD00" TextColor="Black"   />
+                        <Button x:Name="ContinueQuizButton"  Text="{x:Static resx:AppResources.ContinueQuizButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"  />
+                        <Button x:Name="TopicsQuizButton" Text="{x:Static resx:AppResources.TopicsQuizButton}" Clicked="OnModuleClick" BackgroundColor="#FFCD00" TextColor="Black"   />
                     </VerticalStackLayout>
                 </Frame>
 
@@ -42,7 +41,7 @@
                 <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
                     <VerticalStackLayout Spacing="20">
                         <Label Text="Study" FontSize="20" FontAttributes="Bold" TextColor="White" />
-                        <Label x:Name="TitleUseCases" Text="{x:Static resx:AppResources.TitleUseCases}"
+                        <Label x:Name="UseCasesSubtitle" Text="{x:Static resx:AppResources.UseCasesSubtitle}"
                                FontSize="14" TextColor="LightGray" />
                         <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
                         <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />

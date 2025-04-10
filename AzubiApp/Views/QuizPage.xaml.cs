@@ -111,11 +111,11 @@ namespace AzubiApp.Views
             // Adjust the button text based on whether the question was already answered
             if (isLocked)
             {
-                NextButton.Text = (_currentIndex == _questions.Count - 1) ? "Fertig" : "Weiter";
+                NextQuizButton.Text = (_currentIndex == _questions.Count - 1) ? AppResources.FinishButton : AppResources.NextQuizButton;
             }
             else
             {
-                NextButton.Text = "Überprüfen";
+                NextQuizButton.Text = AppResources.CheckButton;
             }
 
             _isAnswerRevealed = isLocked;
@@ -170,7 +170,7 @@ namespace AzubiApp.Views
                 }
 
                 // Change the button text
-                NextButton.Text = (_currentIndex == _questions.Count - 1) ? "Fertig" : "Weiter";
+                NextQuizButton.Text = (_currentIndex == _questions.Count - 1) ? AppResources.FinishButton : AppResources.NextQuizButton;
 
                 _isAnswerRevealed = true;
                 return; // Waiting for the second press
@@ -226,8 +226,7 @@ namespace AzubiApp.Views
 
         private void UpdateUI()
         {
-            BackButtons.Text = AppResources.BackButton;
-            ContinueButtons.Text = AppResources.ContinueButton;
+            BackQuizButton.Text = AppResources.BackQuizButton; // Back / Zurück
         }
     }
 }

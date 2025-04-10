@@ -15,15 +15,13 @@
 
         <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50">
 
-            <Label  
-             x:Name="MyLabel"   
-             Text="{x:Static resx:AppResources.Einstellungen}" 
-             Style="{StaticResource Headline}"
-             HorizontalOptions="Center" 
-             TextColor="White"
-             Padding="0,0,0,300"/>
-            <Button x:Name="LanguageButton" 
-                    Text="Sprache wechseln" 
+            <Label x:Name="Settings"   
+                   Text="{x:Static resx:AppResources.Settings}" 
+                   Style="{StaticResource Headline}"
+                   HorizontalOptions="Center" 
+                   TextColor="White"
+                   Padding="0,0,0,300"/>
+            <Button x:Name="ChangeLanguageButton"            
                     Clicked="OnLanguageButtonClicked" />
 
         </VerticalStackLayout>

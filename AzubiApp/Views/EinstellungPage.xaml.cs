@@ -1,8 +1,5 @@
 using System.Globalization;
-using System.Threading;
-using AzubiApp.Resources; // Stelle sicher, dass du den richtigen Namespace für AppResources verwendest
 using AzubiApp.Resources.Translate;
-using Microsoft.Maui.Controls;
 
 namespace AzubiApp.Views
 {
@@ -43,8 +40,8 @@ namespace AzubiApp.Views
 
         private void UpdateUI()
         {
-            LanguageButton.Text = AppResources.ChangeLanguageButton;
-            MyLabel.Text = AppResources.Einstellungen;
+            ChangeLanguageButton.Text = AppResources.ChangeLanguageButton;
+            Settings.Text = AppResources.Settings;
         }
     }
 }
