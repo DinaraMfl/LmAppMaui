@@ -157,18 +157,18 @@
     <value>ResultTitle</value>
   </data>
   <data name="TopicsTitle" xml:space="preserve">
-    <value />
+    <value>TopicsTitle</value>
   </data>
   <data name="TitleUseCases" xml:space="preserve">
     <value>TitleUseCases</value>
   </data>
   <data name="LearnApplyMaster" xml:space="preserve">
-    <value />
+    <value>LearnApplyMaster</value>
   </data>
   <data name="ConditionsButton" xml:space="preserve">
-    <value />
+    <value>ConditionsButton</value>
   </data>
   <data name="ForecastButton" xml:space="preserve">
-    <value />
+    <value>ForecastButton</value>
   </data>
 </root>
