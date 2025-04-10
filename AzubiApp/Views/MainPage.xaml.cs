@@ -45,6 +45,7 @@ namespace AzubiApp.Views
             TitleQuizs.Text = AppResources.QuizLabelTitle;
             TitleUseCases.Text = AppResources.TitleUseCases;
             ContinueQuizButtons.Text = AppResources.ContinueButton;
+            TopicssTitle.Text = AppResources.TopicsTitle;
         }
 
         private void OnLanguageButtonClicked(object sender, EventArgs e)
@@ -55,7 +56,12 @@ namespace AzubiApp.Views
 
         private async void OnStartUseClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new UseMainPage()); // Submitting questions to QuizPage
+            await Navigation.PushAsync(new UseCasesPage()); // Submitting questions to QuizPage
+        }
+
+        private async void OnModuleClick(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ModulePage());
         }
     }
 }

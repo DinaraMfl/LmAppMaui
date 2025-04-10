@@ -167,4 +167,10 @@
   <data name="LearnApplyMaster" xml:space="preserve">
     <value>Learn. Apply. Master.</value>
   </data>
+  <data name="ConditionsButton" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="ForecastButton" xml:space="preserve">
+    <value>Forecast</value>
+  </data>
 </root>

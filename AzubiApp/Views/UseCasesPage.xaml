@@ -22,7 +22,7 @@
                 <VerticalStackLayout Spacing="25">
 
                 <!--Box -->
-                    <Button BackgroundColor="#1E1E1E" 
+                <Button BackgroundColor="#1E1E1E" 
                         Padding="20" 
                         CornerRadius="10"    
                         MaximumWidthRequest="300"
@@ -33,7 +33,7 @@
                         FontSize="20"
                         TextColor="White"/>
 
-                    <Button BackgroundColor="#1E1E1E" 
+                <Button BackgroundColor="#1E1E1E" 
                         Padding="20" 
                         CornerRadius="10"     
                         MaximumWidthRequest="300"
@@ -59,7 +59,7 @@
                         Padding="20" 
                         CornerRadius="10"        
                         MaximumWidthRequest="300"
-                        Text="Split-Konditionen*"
+                        Text="Split-Konditionen"
                         VerticalOptions="Center"
                         HorizontalOptions="FillAndExpand"
                         FontSize="20"  
@@ -92,7 +92,7 @@
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
-                        Text="kontrakte"
+                        Text="Kontrakte"
                         VerticalOptions="Center" 
                         HorizontalOptions="FillAndExpand"
                         FontSize="20"

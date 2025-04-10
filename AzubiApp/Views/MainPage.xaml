@@ -27,13 +27,14 @@
                 <VerticalStackLayout Spacing="20">
                     <Label Text="Quiz" FontSize="20" FontAttributes="Bold" TextColor="White" />
                         <Label x:Name="TitleQuizs" Text="{x:Static resx:AppResources.QuizLabelTitle}"
-                               FontSize="14" TextColor="LightGray" />
+                               FontSize="14" TextColor="LightGray" /> 
                         <!-- Button für den Sprachwechsel -->
                        
                         <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
 
-                        <Button x:Name="ContinueQuizButtons"  Text="{x:Static resx:AppResources.ContinueButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"/>
-                </VerticalStackLayout>
+                        <Button x:Name="ContinueQuizButtons"  Text="{x:Static resx:AppResources.ContinueButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"  />
+                        <Button x:Name="TopicssTitle" Text="{x:Static resx:AppResources.TopicsTitle}" Clicked="OnModuleClick" BackgroundColor="#FFCD00" TextColor="Black"   />
+                 </VerticalStackLayout>
                 
                 </Frame>
 

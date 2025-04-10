@@ -88,6 +88,15 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string ConditionsButton {
+            get {
+                return ResourceManager.GetString("ConditionsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die ContinueButton ähnelt.
         /// </summary>
         internal static string ContinueButton {
@@ -120,6 +129,15 @@ namespace AzubiApp.Resources.Translate {
         internal static string FilterButton {
             get {
                 return ResourceManager.GetString("FilterButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string ForecastButton {
+            get {
+                return ResourceManager.GetString("ForecastButton", resourceCulture);
             }
         }
         

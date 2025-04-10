@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resx="clr-namespace:AzubiApp.Resources.Translate"
              x:Class="AzubiApp.Views.ModulePage"
              Title="ModulePage">
     <ScrollView>
@@ -23,7 +24,8 @@
                       <!--Box -->
                       <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"          
                               MaximumWidthRequest="300"
-                              Text="Bestellungen"  
+                              Text="{x:Static resx:AppResources.OrderButton}"
+                              x:Name="OrdersButtons"
                               FontAttributes="Bold"
                               VerticalOptions="Center" 
                               HorizontalOptions="FillAndExpand"
@@ -34,7 +36,8 @@
                               Padding="20" 
                               CornerRadius="10"         
                               MaximumWidthRequest="300"
-                              Text="Parameter"
+                              Text="{x:Static resx:AppResources.ParameterButton}"
+                              x:Name="ParametersButton"
                               VerticalOptions="Center" 
                               HorizontalOptions="FillAndExpand" 
                               FontAttributes="Bold"
@@ -45,7 +48,8 @@
                               Padding="20" 
                               CornerRadius="10"                   
                               MaximumWidthRequest="300"
-                              Text="Konditionen"
+                              Text="{x:Static resx:AppResources.ConditionsButton}"
+                              x:Name="ConditionssButton"
                               VerticalOptions="Center"
                               HorizontalOptions="FillAndExpand"
                               FontSize="20"
@@ -56,7 +60,8 @@
                               Padding="20" 
                               CornerRadius="10"                    
                               MaximumWidthRequest="300"
-                              Text="Prognose"
+                              Text="{x:Static resx:AppResources.ForecastButton}"
+                              x:Name="ForcastsButton"
                               VerticalOptions="Center"
                               HorizontalOptions="FillAndExpand"
                               FontSize="20"  
@@ -67,7 +72,8 @@
                               Padding="20" 
                               CornerRadius="10"                
                               MaximumWidthRequest="300"
-                              Text="Filter"
+                              Text="{x:Static resx:AppResources.FilterButton}"
+                              x:Name="FiltersButton"
                               VerticalOptions="Center"
                               HorizontalOptions="FillAndExpand"
                               FontSize="20"
@@ -78,7 +84,8 @@
                               Padding="20" 
                               CornerRadius="10"           
                               MaximumWidthRequest="300"
-                              Text="Allgemein"
+                              Text="{x:Static resx:AppResources.GeneralButton}"
+                              x:Name="GeneralsButton"
                               VerticalOptions="Center" 
                               HorizontalOptions="FillAndExpand"
                               FontSize="20"
@@ -86,8 +93,9 @@
                               TextColor="White"/>
 
                 </VerticalStackLayout>
-
-                <Button Text="Zurück"
+                        
+                <Button Text="{x:Static resx:AppResources.BackButton}"
+                        x:Name="BackButtons"
                         BackgroundColor="#FFCD00"
                         TextColor="Black"
                         CornerRadius="18"

@@ -166,4 +166,10 @@
   <data name="LearnApplyMaster" xml:space="preserve">
     <value>Lernen. Anwenden. Meistern.</value>
   </data>
+  <data name="ConditionsButton" xml:space="preserve">
+    <value>Konditionen</value>
+  </data>
+  <data name="ForecastButton" xml:space="preserve">
+    <value>Prognose</value>
+  </data>
 </root>
