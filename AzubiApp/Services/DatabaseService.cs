@@ -30,8 +30,9 @@ namespace AzubiApp.Services
         }
 
         public async Task<List<Question>> GetShuffledQuestionsAsync(int numberOfQuestions = 15)
-        { 
-            var query = $"SELECT * FROM Question ORDER BY RANDOM() LIMIT {numberOfQuestions}";
+        {
+            // excludes questions with Point = 3 AND Level = 0 
+            var query = $" SELECT * FROM Question WHERE NOT (Points = 3 AND Level = 0) ORDER BY (Level + 1) * RANDOM() DESC LIMIT {numberOfQuestions}";
             return await _database.QueryAsync<Question>(query);
         }
 
@@ -45,5 +46,38 @@ namespace AzubiApp.Services
             return await _database.Table<Question>().ToListAsync();
         }
 
+        public async Task UpdateQuestionAsync(Question question)
+        {
+            await _database.UpdateAsync(question);
+        }
+
+        public async Task UpdateQuestionStatsAsync(List<(int QuestionId, bool IsCorrect)> results)
+
+        {
+            foreach (var result in results)
+            {
+                var question = await _database.Table<Question>().Where(q => q.Id == result.QuestionId).FirstOrDefaultAsync();
+                if (question != null)
+                {
+                    if (result.IsCorrect)
+                    {
+                        if (question.Points == 3 && question.Level != 0)
+                        {
+                            question.Level = Math.Max(0, question.Level - 1);
+                        } 
+                        else 
+                        {
+                            question.Points = Math.Max(0, question.Points + 1);
+                            question.Level = Math.Max(0, question.Level - 1);
+                        }
+                    }
+                    else // if result.IsFalse
+                    {
+                        question.Level = Math.Min(Question.MaxLevel, question.Level + 1);
+                    }
+                    await UpdateQuestionAsync(question);
+                }
+            }
+        }
     }
 }

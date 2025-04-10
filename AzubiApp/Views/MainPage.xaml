@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿ ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AzubiApp.Views.MainPage"
@@ -6,49 +6,49 @@
              Title="Home">
     <ScrollView>
 
-    <!-- Grid Layout für die Positionierung des Logos und des Inhalts -->
-    <Grid BackgroundColor="Black" RowDefinitions="*" ColumnDefinitions="*" >
+        <!-- Grid Layout für die Positionierung des Logos und des Inhalts -->
+        <Grid BackgroundColor="Black" RowDefinitions="*" ColumnDefinitions="*" >
 
-        <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
-            <!-- Logo oben links -->
-            <Image Source="logo_white.png" 
-        WidthRequest="200" HeightRequest="200" Margin="70,0,0,0"
-        Grid.Row="0" Grid.Column="0"/>
-        </Grid>
-        <!-- ScrollView für den restlichen Inhalt -->
+            <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
 
-        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50">
+                <!-- Logo oben links -->
+                <Image Source="logo_white.png" 
+                   WidthRequest="200" 
+                   HeightRequest="200" 
+                   Margin="70,0,0,0"
+                   Grid.Row="0" 
+                   Grid.Column="0"/>
+            </Grid>
 
-            <!-- Titel in der Mitte -->
-            
+            <!-- ScrollView für den restlichen Inhalt -->
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50">
 
-            <!-- Quiz Container -->
-            <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
-                <VerticalStackLayout Spacing="20">
-                    <Label Text="Quiz" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                <!-- Quiz Container -->
+                <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="Quiz" FontSize="20" FontAttributes="Bold" TextColor="White" />
                         <Label x:Name="TitleQuizs" Text="{x:Static resx:AppResources.QuizLabelTitle}"
-                               FontSize="14" TextColor="LightGray" /> 
-                        <!-- Button für den Sprachwechsel -->
-                       
-                        <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
+                               FontSize="14" TextColor="LightGray" />
+
+                        <Label x:Name="ProgressLabel" FontSize="14" TextColor="White"/>
+                        <ProgressBar x:Name="ProgressBar" HeightRequest="5" BackgroundColor="Gray" />
 
                         <Button x:Name="ContinueQuizButtons"  Text="{x:Static resx:AppResources.ContinueButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"  />
                         <Button x:Name="TopicssTitle" Text="{x:Static resx:AppResources.TopicsTitle}" Clicked="OnModuleClick" BackgroundColor="#FFCD00" TextColor="Black"   />
-                 </VerticalStackLayout>
-                
+                    </VerticalStackLayout>
                 </Frame>
 
-            <!-- Use-Cases Container -->
-            <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
-                <VerticalStackLayout Spacing="20">
-                    <Label Text="Study" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                <!-- Use-Cases Container -->
+                <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="Study" FontSize="20" FontAttributes="Bold" TextColor="White" />
                         <Label x:Name="TitleUseCases" Text="{x:Static resx:AppResources.TitleUseCases}"
                                FontSize="14" TextColor="LightGray" />
-                    <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
-                    <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
-                </VerticalStackLayout>
-            </Frame>
-        </VerticalStackLayout>
-    </Grid>
+                        <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
+                        <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 </ContentPage>

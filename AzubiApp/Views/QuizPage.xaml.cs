@@ -1,5 +1,4 @@
-﻿using System.Data.Entity;
-using AzubiApp.Models;
+﻿using AzubiApp.Models;
 using AzubiApp.Services;
 using AzubiApp.Resources.Translate;
 
@@ -14,11 +13,16 @@ namespace AzubiApp.Views
         private Dictionary<CheckBox, Label> _answerMap;
         private List<List<string>> _shuffledAnswersList;
         private readonly DatabaseService _database;
+        private readonly List<(int QuestionId, bool IsCorrect)> _results = new();
+        private readonly List<bool> _answeredQuestions;
+        private bool _isAnswerRevealed = false;
         private string currentLanguage = "en";
         private readonly string defaultLanguage = "en";
-        public QuizPage(List<Question> questions)
+
+        public QuizPage(DatabaseService database, List<Question> questions)
         {
             InitializeComponent();
+            _database = database ?? throw new ArgumentNullException(nameof(database));
 
             if (questions == null || questions.Count == 0)
             {
@@ -27,15 +31,20 @@ namespace AzubiApp.Views
             }
 
             _questions = questions.OrderBy(q => Guid.NewGuid()).ToList();
-            _shuffledAnswersList = _questions.Select(q => new List<string> { q.Answer1, q.Answer2, q.Answer3 }
+            _shuffledAnswersList = _questions
+                .Select(q => new List<string> { q.Answer1, q.Answer2, q.Answer3 }
                 .OrderBy(a => Guid.NewGuid()).ToList()).ToList();
 
             _currentSelectedAnswers = new List<string>();
             _selectedAnswers.Clear();
+
             for (int i = 0; i < _questions.Count; i++)
             {
                 _selectedAnswers.Add(new List<string>());
             }
+
+            _answeredQuestions = Enumerable.Repeat(false, _questions.Count).ToList();
+
             ShowQuestion();
 
             MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
@@ -47,14 +56,19 @@ namespace AzubiApp.Views
 
         private void ShowQuestion()
         {
+            if (_questions == null || _questions.Count == 0)
+            {
+                DisplayAlert("Fehler", "Keine Fragen gefunden!", "OK");
+                return;
+            }
+
             if (_currentIndex >= _questions.Count)
             {
-                Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions));
+                Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, _results));
                 return;
             }
 
             var question = _questions[_currentIndex];
-
             QuestionCounterLabel.Text = $"{_currentIndex + 1} / {_questions.Count}";
             QuestionLabel.Text = question.Text;
 
@@ -62,10 +76,6 @@ namespace AzubiApp.Views
             Answer1Text.Text = shuffledAnswers[0];
             Answer2Text.Text = shuffledAnswers[1];
             Answer3Text.Text = shuffledAnswers[2];
-
-            Answer1.IsChecked = _selectedAnswers[_currentIndex].Contains(Answer1Text.Text);
-            Answer2.IsChecked = _selectedAnswers[_currentIndex].Contains(Answer2Text.Text);
-            Answer3.IsChecked = _selectedAnswers[_currentIndex].Contains(Answer3Text.Text);
 
             _answerMap = new Dictionary<CheckBox, Label>
             {
@@ -75,35 +85,101 @@ namespace AzubiApp.Views
             };
 
             _currentSelectedAnswers = new List<string>(_selectedAnswers[_currentIndex]);
+            bool isLocked = _answeredQuestions[_currentIndex];
+            var correctAnswers = question.CorrectAnswers.Split("| ").ToList();
+
+            foreach (var pair in _answerMap)
+            {
+                var checkBox = pair.Key;
+                var label = pair.Value;
+
+                checkBox.IsChecked = _selectedAnswers[_currentIndex].Contains(label.Text);
+                checkBox.IsEnabled = !isLocked;
+                checkBox.Color = isLocked ? Colors.Gray : Colors.White;
+                label.TextColor = Colors.White;
+
+                if (isLocked)
+                {
+                    // Show correct answers in green
+                    if (correctAnswers.Contains(label.Text))
+                    {
+                        label.TextColor = Colors.LimeGreen;
+                    }
+                }
+            }
+
+            // Adjust the button text based on whether the question was already answered
+            if (isLocked)
+            {
+                NextButton.Text = (_currentIndex == _questions.Count - 1) ? "Fertig" : "Weiter";
+            }
+            else
+            {
+                NextButton.Text = "Überprüfen";
+            }
+
+            _isAnswerRevealed = isLocked;
         }
 
         private void OnAnswerChecked(object sender, CheckedChangedEventArgs e)
         {
+            if (_answeredQuestions[_currentIndex])
+                return;
+
             if (sender is CheckBox checkBox && _answerMap.ContainsKey(checkBox))
             {
                 string selectedText = _answerMap[checkBox].Text;
                 if (e.Value)
-                {
-                    if (!_currentSelectedAnswers.Contains(selectedText))
-                        _currentSelectedAnswers.Add(selectedText);
-                }
+                    _currentSelectedAnswers.Add(selectedText);
                 else
-                {
                     _currentSelectedAnswers.Remove(selectedText);
-                }
             }
         }
 
         private async void OnNextClicked(object sender, EventArgs e)
         {
-            if (_currentSelectedAnswers.Count == 0)
+            if (!_isAnswerRevealed)
             {
-                await DisplayAlert("", "Bitte wählen Sie mindestens eine Antwort aus!", "OK");
-                return;
+                if (_currentSelectedAnswers.Count == 0)
+                {
+                    await DisplayAlert("", "Bitte wählen Sie mindestens eine Antwort aus!", "OK");
+                    return;
+                }
+
+                // Saving answers
+                _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
+                _answeredQuestions[_currentIndex] = true;
+
+                // Show only correct answers in green
+                var question = _questions[_currentIndex];
+                var correctAnswers = question.CorrectAnswers.Split("| ").ToList();
+
+
+                foreach (var pair in _answerMap)
+                {
+                    var checkBox = pair.Key;
+                    var label = pair.Value;
+
+                    if (correctAnswers.Contains(label.Text))
+                    {
+                        label.TextColor = Colors.LimeGreen;
+                    }
+
+                    checkBox.IsEnabled = false;
+                    checkBox.Color = Colors.Gray;
+                }
+
+                // Change the button text
+                NextButton.Text = (_currentIndex == _questions.Count - 1) ? "Fertig" : "Weiter";
+
+                _isAnswerRevealed = true;
+                return; // Waiting for the second press
             }
 
-            _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
+            // Second press - go to the next question
             _currentIndex++;
+
+            _isAnswerRevealed = false;
 
             if (_currentIndex < _questions.Count)
             {
@@ -111,7 +187,7 @@ namespace AzubiApp.Views
             }
             else
             {
-                await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions));
+                await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, new List<(int, bool)>()));
             }
         }
 
@@ -135,6 +211,9 @@ namespace AzubiApp.Views
 
         private void OnAnswerTapped(object sender, EventArgs e)
         {
+            if (_answeredQuestions[_currentIndex])
+                return;
+
             if (sender is Label label && label.Parent is HorizontalStackLayout parent)
             {
                 var checkBox = parent.Children.OfType<CheckBox>().FirstOrDefault();
@@ -144,14 +223,11 @@ namespace AzubiApp.Views
                 }
             }
         }
-    
+
         private void UpdateUI()
         {
             BackButtons.Text = AppResources.BackButton;
             ContinueButtons.Text = AppResources.ContinueButton;
-
-
         }
-    
     }
 }
