@@ -172,4 +172,22 @@
   <data name="ForecastButton" xml:space="preserve">
     <value>Prognose</value>
   </data>
+  <data name="AlertLeaveQuiz" xml:space="preserve">
+    <value>Möchten Sie das Quiz verlassen?</value>
+  </data>
+  <data name="AlertError" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="AlertYes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="AlertNo" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="AlertSelect" xml:space="preserve">
+    <value>Bitte wählen Sie mindestens eine Antwort aus!</value>
+  </data>
+  <data name="SelectedAnswerText" xml:space="preserve">
+    <value>Ihre Antwort:</value>
+  </data>
 </root>

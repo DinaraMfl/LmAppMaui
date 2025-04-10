@@ -29,7 +29,7 @@ namespace AzubiApp.Views
         {
             Results.Clear();
             int correctCount = 0;
-
+            string übersetzung = AppResources.SelectedAnswerText;
             for (int i = 0; i < questions.Count; i++)
             {
                 var question = questions[i];
@@ -42,7 +42,7 @@ namespace AzubiApp.Views
                 Results.Add(new ResultItem
                 {
                     QuestionText = $" {i + 1}. {question.Text}",
-                    UserAnswerText = $"Ihre Antwort: {string.Join("\n", userSelected)}",
+                    UserAnswerText = $"{übersetzung} {string.Join("\n", userSelected)}",
                     CorrectAnswerText = $"Richtige Antwort: {string.Join("\n", correctAnswers)}",
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red, 

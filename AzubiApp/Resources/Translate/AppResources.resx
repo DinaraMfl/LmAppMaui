@@ -171,4 +171,22 @@
   <data name="ForecastButton" xml:space="preserve">
     <value />
   </data>
+  <data name="AlertLeaveQuiz" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AlertError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AlertYes" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AlertNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AlertSelect" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedAnswerText" xml:space="preserve">
+    <value />
+  </data>
 </root>

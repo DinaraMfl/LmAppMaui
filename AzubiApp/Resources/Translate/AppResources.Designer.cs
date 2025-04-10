@@ -61,6 +61,51 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string AlertError {
+            get {
+                return ResourceManager.GetString("AlertError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string AlertLeaveQuiz {
+            get {
+                return ResourceManager.GetString("AlertLeaveQuiz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string AlertNo {
+            get {
+                return ResourceManager.GetString("AlertNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string AlertSelect {
+            get {
+                return ResourceManager.GetString("AlertSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string AlertYes {
+            get {
+                return ResourceManager.GetString("AlertYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die BackButton ähnelt.
         /// </summary>
         internal static string BackButton {
@@ -201,6 +246,15 @@ namespace AzubiApp.Resources.Translate {
         internal static string ResultTitle {
             get {
                 return ResourceManager.GetString("ResultTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string SelectedAnswerText {
+            get {
+                return ResourceManager.GetString("SelectedAnswerText", resourceCulture);
             }
         }
         

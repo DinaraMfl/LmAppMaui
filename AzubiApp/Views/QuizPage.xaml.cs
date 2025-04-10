@@ -98,7 +98,7 @@ namespace AzubiApp.Views
         {
             if (_currentSelectedAnswers.Count == 0)
             {
-                await DisplayAlert("", "Bitte wählen Sie mindestens eine Antwort aus!", "OK");
+                await DisplayAlert(AppResources.AlertError,AppResources.AlertSelect, "OK");
                 return;
             }
 
@@ -119,7 +119,7 @@ namespace AzubiApp.Views
         {
             if (_currentIndex == 0)
             {
-                bool confirmExit = await DisplayAlert("", "Möchten Sie das Quiz verlassen?", "Ja", "Nein");
+                bool confirmExit = await DisplayAlert(AppResources.AlertError, AppResources.AlertLeaveQuiz,AppResources.AlertYes,AppResources.AlertNo);
                 if (confirmExit)
                 {
                     await Navigation.PopToRootAsync();
