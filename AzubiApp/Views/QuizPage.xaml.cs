@@ -67,10 +67,6 @@ namespace AzubiApp.Views
             Answer2Text.Text = shuffledAnswers[1];
             Answer3Text.Text = shuffledAnswers[2];
 
-            Answer1.IsChecked = _selectedAnswers[_currentIndex].Contains(Answer1Text.Text);
-            Answer2.IsChecked = _selectedAnswers[_currentIndex].Contains(Answer2Text.Text);
-            Answer3.IsChecked = _selectedAnswers[_currentIndex].Contains(Answer3Text.Text);
-
             _answerMap = new Dictionary<CheckBox, Label>
             {
                 { Answer1, Answer1Text },
@@ -79,16 +75,40 @@ namespace AzubiApp.Views
             };
 
             _currentSelectedAnswers = new List<string>(_selectedAnswers[_currentIndex]);
-
             bool isLocked = _answeredQuestions[_currentIndex];
+            var correctAnswers = question.CorrectAnswers.Split("| ").ToList();
 
             foreach (var pair in _answerMap)
             {
-                pair.Key.IsEnabled = !isLocked;
-                pair.Key.Color = isLocked ? Colors.Gray : Colors.White;
-                pair.Value.TextColor = Colors.White;
+                var checkBox = pair.Key;
+                var label = pair.Value;
+
+                checkBox.IsChecked = _selectedAnswers[_currentIndex].Contains(label.Text);
+                checkBox.IsEnabled = !isLocked;
+                checkBox.Color = isLocked ? Colors.Gray : Colors.White;
+                label.TextColor = Colors.White;
+
+                if (isLocked)
+                {
+                    // Show correct answers in green
+                    if (correctAnswers.Contains(label.Text))
+                    {
+                        label.TextColor = Colors.LimeGreen;
+                    }
+                }
             }
-            _isAnswerRevealed = false;
+
+            // Adjust the button text based on whether the question was already answered
+            if (isLocked)
+            {
+                NextButton.Text = (_currentIndex == _questions.Count - 1) ? "Fertig" : "Weiter";
+            }
+            else
+            {
+               NextButton.Text = "Überprüfen";
+            }
+
+            _isAnswerRevealed = isLocked;
         }
 
         private void OnAnswerChecked(object sender, CheckedChangedEventArgs e)
@@ -140,7 +160,7 @@ namespace AzubiApp.Views
                 }
 
                 // Change the button text
-                NextButton.Text = "Weiter";
+                NextButton.Text = (_currentIndex == _questions.Count - 1) ? "Fertig" : "Weiter";
 
                 _isAnswerRevealed = true;
                 return; // Waiting for the second press
@@ -148,9 +168,6 @@ namespace AzubiApp.Views
 
             // Second press - go to the next question
             _currentIndex++;
-
-            // Change the button text back
-            NextButton.Text = "Uberprüfen";
 
             _isAnswerRevealed = false;
 
