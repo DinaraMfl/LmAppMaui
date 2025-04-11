@@ -6,11 +6,21 @@ namespace AzubiApp.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string Text { get; set; }
-        public string Answer1 { get; set; }
-        public string Answer2 { get; set; }
-        public string Answer3 { get; set; }
-        public string CorrectAnswers { get; set; } // Store the correct answer as text
+
+        // Deutsch
+        public string TextDe { get; set; }
+        public string Answer1De { get; set; }
+        public string Answer2De { get; set; }
+        public string Answer3De { get; set; }
+        public string CorrectAnswersDe { get; set; } // Store the correct answer as text
+
+        // English
+        public string TextEn { get; set; }
+        public string Answer1En { get; set; }
+        public string Answer2En { get; set; }
+        public string Answer3En { get; set; }
+        public string CorrectAnswersEn { get; set; }
+
         public int Level { get; set; } = 0; // 1 false -> Level + 1
         public int Points { get; set; } = 0; // 1 true -> Level - 1 AND Point + 1   -->    if Points == 3 AND Level == 0 -> "hide" questions. Points for progress
 

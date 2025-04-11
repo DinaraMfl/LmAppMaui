@@ -29,6 +29,15 @@ namespace AzubiApp.Services
             }
         }
 
+        public async Task<List<Question>> GetQuestionsForLanguageAsync(string languageCode, int numberOfQuestions = 15)
+        {
+            var questions = await GetShuffledQuestionsAsync(numberOfQuestions);
+            return questions.Where(q =>
+                (languageCode == "de" && !string.IsNullOrWhiteSpace(q.TextDe)) ||
+                (languageCode == "en" && !string.IsNullOrWhiteSpace(q.TextEn))
+            ).ToList();
+        }
+
         public async Task<List<Question>> GetShuffledQuestionsAsync(int numberOfQuestions = 15)
         {
             // excludes questions with Point = 3 AND Level = 0 

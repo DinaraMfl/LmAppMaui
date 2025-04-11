@@ -36,7 +36,7 @@ namespace AzubiApp.Views
             int numberOfQuestions = 5;
             var database = new DatabaseService(); 
 
-            List<Question> questions = await _database.GetShuffledQuestionsAsync(numberOfQuestions); // Loading questions
+            List<Question> questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions); // Loading questions
 
             if (questions.Count == 0)
             {

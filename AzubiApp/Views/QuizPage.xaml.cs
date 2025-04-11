@@ -33,9 +33,19 @@ namespace AzubiApp.Views
             }
 
             _questions = questions.OrderBy(q => Guid.NewGuid()).ToList();
-            _shuffledAnswersList = _questions
-                .Select(q => new List<string> { q.Answer1, q.Answer2, q.Answer3 }
-                .OrderBy(a => Guid.NewGuid()).ToList()).ToList();
+
+            _shuffledAnswersList = new List<List<string>>();
+
+            foreach (var question in _questions)
+            {
+                string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+                var answerOptions = lang == "de"
+                    ? new List<string> { question.Answer1De, question.Answer2De, question.Answer3De }
+                    : new List<string> { question.Answer1En, question.Answer2En, question.Answer3En };
+
+                var shuffled = answerOptions.OrderBy(a => Guid.NewGuid()).ToList();
+                _shuffledAnswersList.Add(shuffled);
+            }
 
             _currentSelectedAnswers = new List<string>();
             _selectedAnswers.Clear();
@@ -72,9 +82,17 @@ namespace AzubiApp.Views
 
             var question = _questions[_currentIndex];
             QuestionCounterLabel.Text = $"{_currentIndex + 1} / {_questions.Count}";
-            QuestionLabel.Text = question.Text;
+
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+
+            QuestionLabel.Text = lang == "de" ? question.TextDe : question.TextEn;
+
+            var answerOptions = lang == "de"
+                ? new List<string> { question.Answer1De, question.Answer2De, question.Answer3De }
+                : new List<string> { question.Answer1En, question.Answer2En, question.Answer3En };
 
             var shuffledAnswers = _shuffledAnswersList[_currentIndex];
+
             Answer1Text.Text = shuffledAnswers[0];
             Answer2Text.Text = shuffledAnswers[1];
             Answer3Text.Text = shuffledAnswers[2];
@@ -88,7 +106,10 @@ namespace AzubiApp.Views
 
             _currentSelectedAnswers = new List<string>(_selectedAnswers[_currentIndex]);
             bool isLocked = _answeredQuestions[_currentIndex];
-            var correctAnswers = question.CorrectAnswers.Split("| ").ToList();
+
+            var correctAnswers = (lang == "de" ? question.CorrectAnswersDe : question.CorrectAnswersEn)
+                .Split("|", StringSplitOptions.TrimEntries)
+                .ToList();
 
             foreach (var pair in _answerMap)
             {
@@ -154,8 +175,11 @@ namespace AzubiApp.Views
 
                 // Show only correct answers in green
                 var question = _questions[_currentIndex];
-                var correctAnswers = question.CorrectAnswers.Split("| ").ToList();
+                string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
 
+                var correctAnswers = (lang == "de" ? question.CorrectAnswersDe : question.CorrectAnswersEn)
+                    .Split("|", StringSplitOptions.TrimEntries)
+                    .ToList();
 
                 foreach (var pair in _answerMap)
                 {

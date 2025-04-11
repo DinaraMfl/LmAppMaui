@@ -15,6 +15,7 @@ namespace AzubiApp.Views
         public ResultsPage(List<List<string>> userAnswers, List<Question> questions, List<(int QuestionId, bool IsCorrect)> results)
         {
             InitializeComponent();
+            Shell.SetTabBarIsVisible(this, false);
             Results = new ObservableCollection<ResultItem>();
             BindingContext = this;
             ShowResults(userAnswers, questions);
@@ -31,10 +32,15 @@ namespace AzubiApp.Views
             int correctCount = 0;
             var results = new List<(int QuestionId, bool IsCorrect)>();
 
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+
             for (int i = 0; i < questions.Count; i++)
             {
                 var question = questions[i];
-                var correctAnswers = question.CorrectAnswers.Split("| ").ToList();
+                var correctAnswers = (lang == "de" ? question.CorrectAnswersDe : question.CorrectAnswersEn)
+                            .Split("|", StringSplitOptions.TrimEntries)
+                            .ToList(); 
+                
                 var userSelected = userAnswers[i];
 
                 bool isCorrect = correctAnswers.All(userSelected.Contains) && correctAnswers.Count == userSelected.Count;
@@ -42,18 +48,20 @@ namespace AzubiApp.Views
 
                 results.Add((question.Id, isCorrect)); // Create a result for each question
 
+                var questionText = lang == "de" ? question.TextDe : question.TextEn;
+
                 Results.Add(new ResultItem
                 {
-                    QuestionText = $" {i + 1}. {question.Text}",
+                    QuestionText = $" {i + 1}. {questionText}",
                     UserAnswerText = $"Ihre Antwort: {string.Join("\n", userSelected)}",
-                    CorrectAnswerText = $"Richtige Antwort: {string.Join("\n", correctAnswers)}",
+                    CorrectAnswerText = string.Join("\n", correctAnswers),
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red,
                     ShowCorrectAnswer = !isCorrect
                 });
             }
 
-            ScoreLabel.Text = $"Richtige Antworten: {correctCount} / {questions.Count}";
+            ScoreLabel.Text = $"{correctCount} / {questions.Count}";
             UpdateStats(results);
         }
 
