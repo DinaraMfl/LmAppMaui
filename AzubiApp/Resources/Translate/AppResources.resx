@@ -189,4 +189,70 @@
   <data name="SelectedAnswerText" xml:space="preserve">
     <value />
   </data>
+  <data name="UseCaseAutoStoreButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseContainerOptimizationButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseSplitConditionsButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCasePartitionButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseFilterClassesButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseContractsButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseSftTypesButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseOrderRhythmButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseResubmissionButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseGeneralHandlingButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCasePrecursorButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseAbcAnalysisButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseInheritanceButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCasePromotionsButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseCompositeOrderButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseDueDatesButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseBufferStoreButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseTransferButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseSporadicProcedureButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UseCaseBackButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AppShellSettingsButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AppShellHomeButton" xml:space="preserve">
+    <value />
+  </data>
 </root>

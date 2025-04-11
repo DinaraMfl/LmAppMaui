@@ -2,6 +2,7 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:AzubiApp.Views"
+       xmlns:resx="clr-namespace:AzubiApp.Resources.Translate"
        x:Class="AzubiApp.AppShell"
        Shell.FlyoutBehavior="Disabled"
        Shell.NavBarIsVisible="False"
@@ -9,11 +10,11 @@
        Style="{StaticResource CustomTabBarStyle}"
          Padding="20,10,20,10">
     <TabBar>
-        <Tab Title="Home" Icon="home.svg">
+        <Tab Title="{x:Static resx:AppResources.AppShellHomeButton}" Icon="home.svg" x:Name="AppShellHomeButton">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
         </Tab>
 
-        <Tab Title="Einstellungen" Icon="einstellungen.svg" >
+        <Tab Title="{x:Static resx:AppResources.AppShellSettingsButton}" Icon="einstellungen.svg" x:Name="AppShellSettingsButton">
             <ShellContent Title=""
      ContentTemplate="{DataTemplate local:ProfilePage}" Route="EinstellungPage" />
         </Tab>

@@ -106,6 +106,24 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string AppShellHomeButton {
+            get {
+                return ResourceManager.GetString("AppShellHomeButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string AppShellSettingsButton {
+            get {
+                return ResourceManager.GetString("AppShellSettingsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die BackButton ähnelt.
         /// </summary>
         internal static string BackButton {
@@ -273,6 +291,186 @@ namespace AzubiApp.Resources.Translate {
         internal static string TopicsTitle {
             get {
                 return ResourceManager.GetString("TopicsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseAbcAnalysisButton {
+            get {
+                return ResourceManager.GetString("UseCaseAbcAnalysisButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseAutoStoreButton {
+            get {
+                return ResourceManager.GetString("UseCaseAutoStoreButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseBackButton {
+            get {
+                return ResourceManager.GetString("UseCaseBackButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseBufferStoreButton {
+            get {
+                return ResourceManager.GetString("UseCaseBufferStoreButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseCompositeOrderButton {
+            get {
+                return ResourceManager.GetString("UseCaseCompositeOrderButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseContainerOptimizationButton {
+            get {
+                return ResourceManager.GetString("UseCaseContainerOptimizationButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseContractsButton {
+            get {
+                return ResourceManager.GetString("UseCaseContractsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseDueDatesButton {
+            get {
+                return ResourceManager.GetString("UseCaseDueDatesButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseFilterClassesButton {
+            get {
+                return ResourceManager.GetString("UseCaseFilterClassesButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseGeneralHandlingButton {
+            get {
+                return ResourceManager.GetString("UseCaseGeneralHandlingButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseInheritanceButton {
+            get {
+                return ResourceManager.GetString("UseCaseInheritanceButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseOrderRhythmButton {
+            get {
+                return ResourceManager.GetString("UseCaseOrderRhythmButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCasePartitionButton {
+            get {
+                return ResourceManager.GetString("UseCasePartitionButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCasePrecursorButton {
+            get {
+                return ResourceManager.GetString("UseCasePrecursorButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCasePromotionsButton {
+            get {
+                return ResourceManager.GetString("UseCasePromotionsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseResubmissionButton {
+            get {
+                return ResourceManager.GetString("UseCaseResubmissionButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseSftTypesButton {
+            get {
+                return ResourceManager.GetString("UseCaseSftTypesButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseSplitConditionsButton {
+            get {
+                return ResourceManager.GetString("UseCaseSplitConditionsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseSporadicProcedureButton {
+            get {
+                return ResourceManager.GetString("UseCaseSporadicProcedureButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string UseCaseTransferButton {
+            get {
+                return ResourceManager.GetString("UseCaseTransferButton", resourceCulture);
             }
         }
     }

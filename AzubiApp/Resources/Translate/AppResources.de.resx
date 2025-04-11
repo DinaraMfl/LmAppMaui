@@ -190,4 +190,70 @@
   <data name="SelectedAnswerText" xml:space="preserve">
     <value>Ihre Antwort:</value>
   </data>
+  <data name="UseCaseAutoStoreButton" xml:space="preserve">
+    <value>Auto-Store-Verfahren</value>
+  </data>
+  <data name="UseCaseContainerOptimizationButton" xml:space="preserve">
+    <value>Container-Optimierung</value>
+  </data>
+  <data name="UseCaseSplitConditionsButton" xml:space="preserve">
+    <value>Split-Konditionen</value>
+  </data>
+  <data name="UseCasePartitionButton" xml:space="preserve">
+    <value>Partitionen</value>
+  </data>
+  <data name="UseCaseFilterClassesButton" xml:space="preserve">
+    <value>Filter-(Klassen)</value>
+  </data>
+  <data name="UseCaseContractsButton" xml:space="preserve">
+    <value>Kontrakte</value>
+  </data>
+  <data name="UseCaseSftTypesButton" xml:space="preserve">
+    <value>SiB-Typen</value>
+  </data>
+  <data name="UseCaseOrderRhythmButton" xml:space="preserve">
+    <value>Bestellrhytmus</value>
+  </data>
+  <data name="UseCaseResubmissionButton" xml:space="preserve">
+    <value>Wiedervorlage</value>
+  </data>
+  <data name="UseCaseGeneralHandlingButton" xml:space="preserve">
+    <value>Allgemeine Handhabung</value>
+  </data>
+  <data name="UseCasePrecursorButton" xml:space="preserve">
+    <value>Vorläufer</value>
+  </data>
+  <data name="UseCaseAbcAnalysisButton" xml:space="preserve">
+    <value>ABC-Analyse</value>
+  </data>
+  <data name="UseCaseInheritanceButton" xml:space="preserve">
+    <value>Vererbung</value>
+  </data>
+  <data name="UseCasePromotionsButton" xml:space="preserve">
+    <value>Aktionen</value>
+  </data>
+  <data name="UseCaseCompositeOrderButton" xml:space="preserve">
+    <value>Verbundbestellung</value>
+  </data>
+  <data name="UseCaseDueDatesButton" xml:space="preserve">
+    <value>Sitchtage / Saison</value>
+  </data>
+  <data name="UseCaseBufferStoreButton" xml:space="preserve">
+    <value>PufferLager</value>
+  </data>
+  <data name="UseCaseTransferButton" xml:space="preserve">
+    <value>Umlagerung</value>
+  </data>
+  <data name="UseCaseSporadicProcedureButton" xml:space="preserve">
+    <value>Sporadisches Verfahren</value>
+  </data>
+  <data name="UseCaseBackButton" xml:space="preserve">
+    <value>Zurück</value>
+  </data>
+  <data name="AppShellSettingsButton" xml:space="preserve">
+    <value>Einstellung</value>
+  </data>
+  <data name="AppShellHomeButton" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
 </root>
