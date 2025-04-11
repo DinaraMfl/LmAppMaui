@@ -179,4 +179,88 @@
   <data name="FinishButton" xml:space="preserve">
     <value>Finish</value>
   </data>
+  <data name="AlertLeaveQuiz" xml:space="preserve">
+    <value>Would you like to leave the quiz?</value>
+  </data>
+  <data name="AlertError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="AlertYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="AlertNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="AlertSelect" xml:space="preserve">
+    <value>Please select at least one answer!</value>
+  </data>
+  <data name="SelectedAnswerText" xml:space="preserve">
+    <value>Your Answer:</value>
+  </data>
+  <data name="UseCaseAutoStoreButton" xml:space="preserve">
+    <value>Auto-Store-Method</value>
+  </data>
+  <data name="UseCaseContainerOptimizationButton" xml:space="preserve">
+    <value>Container Optimization</value>
+  </data>
+  <data name="UseCaseSplitConditionsButton" xml:space="preserve">
+    <value>Split Conditions</value>
+  </data>
+  <data name="UseCasePartitionButton" xml:space="preserve">
+    <value>Partition</value>
+  </data>
+  <data name="UseCaseFilterClassesButton" xml:space="preserve">
+    <value>Filter-(Classes)</value>
+  </data>
+  <data name="UseCaseContractsButton" xml:space="preserve">
+    <value>Contracts</value>
+  </data>
+  <data name="UseCaseSftTypesButton" xml:space="preserve">
+    <value>SFT Types</value>
+  </data>
+  <data name="UseCaseOrderRhythmButton" xml:space="preserve">
+    <value>Order Rhythm</value>
+  </data>
+  <data name="UseCaseResubmissionButton" xml:space="preserve">
+    <value>Resubmission</value>
+  </data>
+  <data name="UseCaseGeneralHandlingButton" xml:space="preserve">
+    <value>General Handling</value>
+  </data>
+  <data name="UseCasePrecursorButton" xml:space="preserve">
+    <value>Precursor</value>
+  </data>
+  <data name="UseCaseAbcAnalysisButton" xml:space="preserve">
+    <value>ABC Analysis</value>
+  </data>
+  <data name="UseCaseInheritanceButton" xml:space="preserve">
+    <value>Inheritance</value>
+  </data>
+  <data name="UseCasePromotionsButton" xml:space="preserve">
+    <value>Promotions</value>
+  </data>
+  <data name="UseCaseCompositeOrderButton" xml:space="preserve">
+    <value>Composite Order</value>
+  </data>
+  <data name="UseCaseDueDatesButton" xml:space="preserve">
+    <value>Due Dates / Season</value>
+  </data>
+  <data name="UseCaseBufferStoreButton" xml:space="preserve">
+    <value>Buffer Store</value>
+  </data>
+  <data name="UseCaseTransferButton" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="UseCaseSporadicProcedureButton" xml:space="preserve">
+    <value>Sporadic Procedure</value>
+  </data>
+  <data name="UseCaseBackButton" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="AppShellSettingsButton" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="AppShellHomeButton" xml:space="preserve">
+    <value>Home</value>
+  </data>
 </root>
