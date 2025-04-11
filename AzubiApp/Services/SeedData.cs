@@ -17,7 +17,8 @@ namespace AzubiApp.Services
                     Answer1 = "Bestellungen werden auf den heutigen Tag vorgezogen",
                     Answer2 = "Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf",
                     Answer3 = "Es werden zusätzliche Bestellvorschläge für heute generiert",
-                    CorrectAnswers = "Bestellungen werden auf den heutigen Tag vorgezogen| Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf"
+                    CorrectAnswers = "Bestellungen werden auf den heutigen Tag vorgezogen| Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf",
+                    QuizCategory = new List<string> { "Bestellung", "Filter", "Allgemein" }
                 },
                 new Question
                 {
@@ -26,7 +27,9 @@ namespace AzubiApp.Services
                     Answer1 = "Er zeigt den letzten Bestellvorschlag an",
                     Answer2 = "Er zeigt den Zeitraum an in dem Bestellvorschläge generiert werden können",
                     Answer3 = "Er zeigt den Zeitraum an in die Planwerte eingestellt wurden",
-                    CorrectAnswers = "Er zeigt den Zeitraum an in dem Bestellvorschläge generiert werden können"
+                    CorrectAnswers = "Er zeigt den Zeitraum an in dem Bestellvorschläge generiert werden können",
+                    QuizCategory = new List<string> { "Parameter" }
+
                 },
                 new Question
                 {
@@ -35,7 +38,9 @@ namespace AzubiApp.Services
                     Answer1 = "HEUTE + Eingetragener Planungshorizont in Werktagen",
                     Answer2 = "Nächster Bestelltag + Eingetragener Planungshorizont",
                     Answer3 = "HEUTE + Eingetragener Planungshorizont in Kalendertagen",
-                    CorrectAnswers = "HEUTE + Eingetragener Planungshorizont in Kalendertagen"
+                    CorrectAnswers = "HEUTE + Eingetragener Planungshorizont in Kalendertagen",
+                    QuizCategory = new List<string> { "Parameter" }
+
                 },
                 new Question
                 {
@@ -44,7 +49,9 @@ namespace AzubiApp.Services
                     Answer1 = "Tagesperiode",
                     Answer2 = "Wochenperiode",
                     Answer3 = "Monatsperiode",
-                    CorrectAnswers = "Monatsperiode"
+                    CorrectAnswers = "Monatsperiode",
+                    QuizCategory = new List<string> { "Prognose" }
+
                 },
                 new Question
                 {
@@ -53,7 +60,8 @@ namespace AzubiApp.Services
                     Answer1 = "Es wird nur nur eine Prognose gerechnet, aber keine Dispo",
                     Answer2 = "Es wird eine Prognose gerechnet & Bestellvorschläge generiert",
                     Answer3 = "Es wird nur eine Prognose und Reichweite berechnet",
-                    CorrectAnswers = "Es wird nur nur eine Prognose gerechnet, aber keine Dispo"
+                    CorrectAnswers = "Es wird nur nur eine Prognose gerechnet, aber keine Dispo",
+                    QuizCategory = new List<string> { "Parameter", "Prognose" }
                 },
                 new Question
                 {
@@ -62,7 +70,8 @@ namespace AzubiApp.Services
                     Answer1 = "Die Max. Reichweite gibt an wie lange die Lieferroute von Lager bis Filiale sein darf",
                     Answer2 = "Das dort die Out-of-Stock Bereinigung stattfindet",
                     Answer3 = "Die Max. Reichweite (Menge) limitiert den Bestand einer SKU auf x Tage, ohne eine weitere Bestellung zu erwarten im diesen Zeitraum",
-                    CorrectAnswers = "Die Max. Reichweite (Menge) limitiert den Bestand einer SKU auf x Tage, ohne eine weitere Bestellung zu erwarten im diesen Zeitraum"
+                    CorrectAnswers = "Die Max. Reichweite (Menge) limitiert den Bestand einer SKU auf x Tage, ohne eine weitere Bestellung zu erwarten im diesen Zeitraum",
+                    QuizCategory = new List<string> { "Parameter" }
                 },
                 new Question
                 {
@@ -71,7 +80,8 @@ namespace AzubiApp.Services
                     Answer1 = "Weil eine SKU keine Bestandsdaten hat",
                     Answer2 = "Wenn ich einen Bestand von 0 habe jedoch der Bedarf > 0 ist",
                     Answer3 = "Weil ein Standort seinen Bestand aufgebraucht hat",
-                    CorrectAnswers = "Wenn ich einen Bestand von 0 habe jedoch der Bedarf > 0 ist"
+                    CorrectAnswers = "Wenn ich einen Bestand von 0 habe jedoch der Bedarf > 0 ist",
+                    QuizCategory = new List<string> { "Prognose" }
                 },
                 new Question
                 {
@@ -80,7 +90,8 @@ namespace AzubiApp.Services
                     Answer1 = "Parameter>Dispo>Bestellmenge",
                     Answer2 = "Konditionen>Lieferant>Lieferantenpriorität",
                     Answer3 = "Parameter>Vorgabe>Saison verwenden von",
-                    CorrectAnswers = "Parameter>Dispo>Bestellmenge"
+                    CorrectAnswers = "Parameter>Dispo>Bestellmenge",
+                    QuizCategory = new List<string> { "Parameter" }
                 },
                 new Question
                 {
@@ -89,7 +100,8 @@ namespace AzubiApp.Services
                     Answer1 = "Es wird nur eine Prognose ohne Dispo gerechnet",
                     Answer2 = "Es wird sowohl eine Prognose als auch eine Dispo-Rechnung durchgeführt",
                     Answer3 = "Es wird keine Prognose und keine Dispo gerechnet",
-                    CorrectAnswers = "Es wird sowohl eine Prognose als auch eine Dispo-Rechnung durchgeführt"
+                    CorrectAnswers = "Es wird sowohl eine Prognose als auch eine Dispo-Rechnung durchgeführt",
+                    QuizCategory = new List<string> { "Parameter", "Prognose" }
                 },
                 new Question
                 {
@@ -98,7 +110,8 @@ namespace AzubiApp.Services
                     Answer1 = "Es werden keine Bestellvorschläge generiert, wenn es eine Bestandsimulation gibt",
                     Answer2 = "Es werden keine Bestellvorschläge & Bestandssimulation generiert",
                     Answer3 = "Es werden keine Bestellvorschläge, aber eine Bestandssimulation generiert",
-                    CorrectAnswers = "Es werden keine Bestellvorschläge, aber eine Bestandssimulation generiert"
+                    CorrectAnswers = "Es werden keine Bestellvorschläge, aber eine Bestandssimulation generiert",
+                    QuizCategory = new List<string> { "Bestellung", "Parameter" }
                 },
                 new Question
                 {

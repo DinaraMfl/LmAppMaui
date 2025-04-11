@@ -14,6 +14,15 @@ namespace AzubiApp.Models
         public int Level { get; set; } = 0; // 1 false -> Level + 1
         public int Points { get; set; } = 0; // 1 true -> Level - 1 AND Point + 1   -->    if Points == 3 AND Level == 0 -> "hide" questions. Points for progress
 
+        public string CategoriesSerialized
+        {
+            get => string.Join(";", QuizCategory);
+            set => QuizCategory = string.IsNullOrWhiteSpace(value) ? new List<string>() : value.Split(';').ToList();
+        }
+
+        [Ignore]
+        public List<string> QuizCategory { get; set; } = new List<string>(); // Category of the question
+
         public const int MaxLevel = 3;
         public const int MaxPoints = 3;
 
