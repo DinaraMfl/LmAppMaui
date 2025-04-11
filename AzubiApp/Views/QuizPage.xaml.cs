@@ -24,6 +24,8 @@ namespace AzubiApp.Views
             InitializeComponent();
             _database = database ?? throw new ArgumentNullException(nameof(database));
 
+            Shell.SetTabBarIsVisible(this, false);
+
             if (questions == null || questions.Count == 0)
             {
                 DisplayAlert("Error", "The list of questions is empty. Check the database!", "OK");

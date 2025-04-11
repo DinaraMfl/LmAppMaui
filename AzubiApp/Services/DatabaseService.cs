@@ -61,7 +61,7 @@ namespace AzubiApp.Services
                 {
                     if (result.IsCorrect)
                     {
-                        if (question.Points == 3 && question.Level != 0)
+                        if (question.Points == Question.MaxPoints && question.Level != 0)
                         {
                             question.Level = Math.Max(0, question.Level - 1);
                         } 
