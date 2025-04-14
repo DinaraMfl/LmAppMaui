@@ -12,13 +12,17 @@ namespace AzubiApp.Views
         private readonly string defaultLanguage = "en";
         public ObservableCollection<ResultItem> Results { get; set; }
 
-        public ResultsPage(List<List<string>> userAnswers, List<Question> questions, List<(int QuestionId, bool IsCorrect)> results)
+        public ResultsPage(List<List<string>> userAnswers, List<Question> questions, List<(int QuestionId, bool IsCorrect)> results, bool category = false)
         {
             InitializeComponent();
+            _database = new DatabaseService();
             Shell.SetTabBarIsVisible(this, false);
             Results = new ObservableCollection<ResultItem>();
             BindingContext = this;
-            ShowResults(userAnswers, questions);
+
+            if (category) { ShowResults(userAnswers, questions, category); } // without progress
+            else { ShowResults(userAnswers, questions); } // with progress
+
             MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
             {
                 MainThread.BeginInvokeOnMainThread(() => UpdateUI());
@@ -26,15 +30,17 @@ namespace AzubiApp.Views
             UpdateUI();
         }
 
-        private void ShowResults(List<List<string>> userAnswers, List<Question> questions)
+        private void ShowResults(List<List<string>> userAnswers, List<Question> questions, bool category = false)
         {
             Results.Clear();
             int correctCount = 0;
-            var results = new List<(int QuestionId, bool IsCorrect)>();
+
+            List<(int QuestionId, bool IsCorrect)> resultsToUpdate = category ? null : new List<(int QuestionId, bool IsCorrect)>();
+
 
             string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-
             string yourAnswerTranlsate = AppResources.SelectedAnswerText;
+
             for (int i = 0; i < questions.Count; i++)
             {
                 var question = questions[i];
@@ -47,7 +53,10 @@ namespace AzubiApp.Views
                 bool isCorrect = correctAnswers.All(userSelected.Contains) && correctAnswers.Count == userSelected.Count;
                 if (isCorrect) correctCount++;
 
-                results.Add((question.Id, isCorrect)); // Create a result for each question
+                if (!category)
+                {
+                    resultsToUpdate.Add((question.Id, isCorrect));
+                }
 
                 var questionText = lang == "de" ? question.TextDe : question.TextEn;
 
@@ -63,13 +72,16 @@ namespace AzubiApp.Views
             }
 
             ScoreLabel.Text = $"{correctCount} / {questions.Count}";
-            UpdateStats(results);
+
+            if (!category)
+            {
+                UpdateStats(resultsToUpdate);
+            }
         }
 
         private async void UpdateStats(List<(int QuestionId, bool IsCorrect)> results)
-        {
-            var database = new DatabaseService();
-            await database.UpdateQuestionStatsAsync(results);
+        {            
+            await _database.UpdateQuestionStatsAsync(results);
         }
 
         private async void OnBackToStartClicked(object sender, EventArgs e)

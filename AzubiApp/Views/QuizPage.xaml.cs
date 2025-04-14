@@ -16,10 +16,11 @@ namespace AzubiApp.Views
         private readonly List<(int QuestionId, bool IsCorrect)> _results = new();
         private readonly List<bool> _answeredQuestions;
         private bool _isAnswerRevealed = false;
+        private readonly bool _category;
         private string currentLanguage = "en";
         private readonly string defaultLanguage = "en";
 
-        public QuizPage(DatabaseService database, List<Question> questions)
+        public QuizPage(DatabaseService database, List<Question> questions, bool category = false)
         {
             InitializeComponent();
             _database = database ?? throw new ArgumentNullException(nameof(database));
@@ -32,6 +33,7 @@ namespace AzubiApp.Views
                 return;
             }
 
+            _category = category;
             _questions = questions.OrderBy(q => Guid.NewGuid()).ToList();
 
             _shuffledAnswersList = new List<List<string>>();
@@ -57,7 +59,8 @@ namespace AzubiApp.Views
 
             _answeredQuestions = Enumerable.Repeat(false, _questions.Count).ToList();
 
-            ShowQuestion();
+            if (category) ShowQuestion(category);
+            else ShowQuestion();
 
             MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
             {
@@ -66,7 +69,7 @@ namespace AzubiApp.Views
             UpdateUI();
         }
 
-        private void ShowQuestion()
+        private void ShowQuestion(bool category = false)
         {
             if (_questions == null || _questions.Count == 0)
             {
@@ -76,7 +79,7 @@ namespace AzubiApp.Views
 
             if (_currentIndex >= _questions.Count)
             {
-                Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, _results));
+                Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, _results, category));
                 return;
             }
 
@@ -123,7 +126,6 @@ namespace AzubiApp.Views
 
                 if (isLocked)
                 {
-                    // Show correct answers in green
                     if (correctAnswers.Contains(label.Text))
                     {
                         label.TextColor = Colors.LimeGreen;
@@ -131,7 +133,6 @@ namespace AzubiApp.Views
                 }
             }
 
-            // Adjust the button text based on whether the question was already answered
             if (isLocked)
             {
                 NextQuizButton.Text = (_currentIndex == _questions.Count - 1) ? AppResources.FinishButton : AppResources.NextQuizButton;
@@ -169,11 +170,9 @@ namespace AzubiApp.Views
                     return;
                 }
 
-                // Saving answers
                 _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
                 _answeredQuestions[_currentIndex] = true;
 
-                // Show only correct answers in green
                 var question = _questions[_currentIndex];
                 string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
 
@@ -199,10 +198,9 @@ namespace AzubiApp.Views
                 NextQuizButton.Text = (_currentIndex == _questions.Count - 1) ? AppResources.FinishButton : AppResources.NextQuizButton;
 
                 _isAnswerRevealed = true;
-                return; // Waiting for the second press
+                return;
             }
 
-            // Second press - go to the next question
             _currentIndex++;
 
             _isAnswerRevealed = false;
@@ -213,7 +211,7 @@ namespace AzubiApp.Views
             }
             else
             {
-                await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, new List<(int, bool)>()));
+                await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, new List<(int, bool)>(), _category));
             }
         }
 

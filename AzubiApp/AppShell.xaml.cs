@@ -12,24 +12,20 @@ namespace AzubiApp
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(QuizPage), typeof(QuizPage)); //´Register the route
+            Routing.RegisterRoute(nameof(QuizPage), typeof(QuizPage)); // Register the route
 
             MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
             {
                 MainThread.BeginInvokeOnMainThread(() => UpdateUI());
             });
             UpdateUI();
-
-
         }
 
         private void UpdateUI() 
         {
             AppShellHomeButton.Title = AppResources.AppShellHomeButton;
             AppShellSettingsButton.Title = AppResources.AppShellSettingsButton;
-
-        }
-       
+        }   
     }
 }
 
