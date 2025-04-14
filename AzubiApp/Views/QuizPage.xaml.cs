@@ -214,9 +214,9 @@ namespace AzubiApp.Views
                 await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, new List<(int, bool)>(), _category));
             }
         }
+
         protected override bool OnBackButtonPressed()
-        {
-            
+        {   
             _ = OnAndroidBackPressed();
             return true; 
         }

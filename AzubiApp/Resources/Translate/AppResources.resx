@@ -178,99 +178,102 @@
     <value>FinishButton</value>
   </data>
   <data name="AlertLeaveQuiz" xml:space="preserve">
-    <value />
+    <value>AlertLeaveQuiz</value>
   </data>
   <data name="AlertError" xml:space="preserve">
-    <value />
+    <value>AlertError</value>
   </data>
   <data name="AlertYes" xml:space="preserve">
-    <value />
+    <value>AlertYes</value>
   </data>
   <data name="AlertNo" xml:space="preserve">
-    <value />
+    <value>AlertNo</value>
   </data>
   <data name="AlertSelect" xml:space="preserve">
-    <value />
+    <value>AlertSelect</value>
   </data>
   <data name="UseCaseAutoStoreButton" xml:space="preserve">
-    <value />
+    <value>UseCaseAutoStoreButton</value>
   </data>
   <data name="UseCaseContainerOptimizationButton" xml:space="preserve">
-    <value />
+    <value>UseCaseContainerOptimizationButton</value>
   </data>
   <data name="UseCaseSplitConditionsButton" xml:space="preserve">
-    <value />
+    <value>UseCaseSplitConditionsButton</value>
   </data>
   <data name="UseCasePartitionButton" xml:space="preserve">
-    <value />
+    <value>UseCasePartitionButton</value>
   </data>
   <data name="UseCaseFilterClassesButton" xml:space="preserve">
-    <value />
+    <value>UseCaseFilterClassesButton</value>
   </data>
   <data name="UseCaseContractsButton" xml:space="preserve">
-    <value />
+    <value>UseCaseContractsButton</value>
   </data>
   <data name="UseCaseSftTypesButton" xml:space="preserve">
-    <value />
+    <value>UseCaseSftTypesButton</value>
   </data>
   <data name="UseCaseOrderRhythmButton" xml:space="preserve">
-    <value />
+    <value>UseCaseOrderRhythmButton</value>
   </data>
   <data name="UseCaseResubmissionButton" xml:space="preserve">
-    <value />
+    <value>UseCaseResubmissionButton</value>
   </data>
   <data name="UseCaseGeneralHandlingButton" xml:space="preserve">
-    <value />
+    <value>UseCaseGeneralHandlingButton</value>
   </data>
   <data name="UseCasePrecursorButton" xml:space="preserve">
-    <value />
+    <value>UseCasePrecursorButton</value>
   </data>
   <data name="UseCaseAbcAnalysisButton" xml:space="preserve">
-    <value />
+    <value>UseCaseAbcAnalysisButton</value>
   </data>
   <data name="UseCaseInheritanceButton" xml:space="preserve">
-    <value />
+    <value>UseCaseInheritanceButton</value>
   </data>
   <data name="UseCasePromotionsButton" xml:space="preserve">
-    <value />
+    <value>UseCasePromotionsButton</value>
   </data>
   <data name="UseCaseCompositeOrderButton" xml:space="preserve">
-    <value />
+    <value>UseCaseCompositeOrderButton</value>
   </data>
   <data name="UseCaseDueDatesButton" xml:space="preserve">
-    <value />
+    <value>UseCaseDueDatesButton</value>
   </data>
   <data name="UseCaseBufferStoreButton" xml:space="preserve">
-    <value />
+    <value>UseCaseBufferStoreButton</value>
   </data>
   <data name="UseCaseTransferButton" xml:space="preserve">
-    <value />
+    <value>UseCaseTransferButton</value>
   </data>
   <data name="UseCaseSporadicProcedureButton" xml:space="preserve">
-    <value />
+    <value>UseCaseSporadicProcedureButton</value>
   </data>
   <data name="UseCaseBackButton" xml:space="preserve">
-    <value />
+    <value>UseCaseBackButton</value>
   </data>
   <data name="AppShellSettingsButton" xml:space="preserve">
-    <value />
+    <value>AppShellSettingsButton</value>
   </data>
   <data name="AppShellHomeButton" xml:space="preserve">
-    <value />
+    <value>AppShellHomeButton</value>
   </data>
   <data name="MainPageOpenButton" xml:space="preserve">
-    <value />
+    <value>MainPageOpenButton</value>
   </data>
   <data name="MainPageUseCaseTitle" xml:space="preserve">
-    <value />
+    <value>MainPageUseCaseTitle</value>
   </data>
   <data name="MainPageProgressText" xml:space="preserve">
-    <value />
+    <value>MainPageProgressText</value>
   </data>
   <data name="ResultPageYourAnswersText" xml:space="preserve">
-    <value />
+    <value>ResultPageYourAnswersText</value>
   </data>
   <data name="ResultPageCorrectAnswersText" xml:space="preserve">
-    <value />
+    <value>ResultPageCorrectAnswersText</value>
+  </data>
+  <data name="AlertResetProgress" xml:space="preserve">
+    <value>AlertResetProgress</value>
   </data>
 </root>

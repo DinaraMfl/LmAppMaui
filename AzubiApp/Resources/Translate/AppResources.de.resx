@@ -274,4 +274,7 @@
   <data name="ResultPageCorrectAnswersText" xml:space="preserve">
     <value>Richtige Antworten:</value>
   </data>
+  <data name="AlertResetProgress" xml:space="preserve">
+    <value>Du hast den gesamten Test bestanden. Möchtest du noch einmal von vorne beginnen? Der Fortschritt wird zurückgesetzt</value>
+  </data>
 </root>

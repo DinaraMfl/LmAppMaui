@@ -41,7 +41,7 @@ namespace AzubiApp.Services
         public async Task<List<Question>> GetShuffledQuestionsAsync(int numberOfQuestions = 15)
         {
             // excludes questions with Point = 3 AND Level = 0 
-            var query = $" SELECT * FROM Question WHERE NOT (Points = 3 AND Level = 0) ORDER BY (Level + 1) * RANDOM() DESC LIMIT {numberOfQuestions}";
+            var query = $" SELECT * FROM Question WHERE NOT (Points = {Question.MaxPoints} AND Level = 0) ORDER BY (Level + 1) * RANDOM() DESC LIMIT {numberOfQuestions}";
             return await _database.QueryAsync<Question>(query);
         }
 
@@ -61,7 +61,6 @@ namespace AzubiApp.Services
         }
 
         public async Task UpdateQuestionStatsAsync(List<(int QuestionId, bool IsCorrect)> results)
-
         {
             foreach (var result in results)
             {
@@ -86,6 +85,16 @@ namespace AzubiApp.Services
                     }
                     await UpdateQuestionAsync(question);
                 }
+            }
+        }
+
+        public async Task ClearUserProgressAsync()
+        {
+            var questions = await _database.Table<Question>().ToListAsync();
+            foreach (var question in questions)
+            {
+                question.Points = 0;
+                await _database.UpdateAsync(question);
             }
         }
     }

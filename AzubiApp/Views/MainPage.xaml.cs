@@ -34,17 +34,36 @@ namespace AzubiApp.Views
         private async void OnStartQuizClicked(object sender, EventArgs e)
         {
             int numberOfQuestions = 5;
-            var database = new DatabaseService(); 
 
             List<Question> questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions); // Loading questions
 
             if (questions.Count == 0)
             {
-                await DisplayAlert("Error", "No questions available!", "OK");
+                bool restart = await DisplayAlert(
+                            "",
+                            AppResources.AlertResetProgress,
+                            AppResources.AlertYes,
+                            AppResources.AlertNo
+                        );
+
+                if (restart)
+                {
+                    await _database.ClearUserProgressAsync();
+                    await SeedData.Initialize(_database);
+                    await DisplayAlert("", "Test restarted!", "OK");
+
+                    questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions);
+
+                    if (questions.Count > 0)
+                    {
+                        await Navigation.PushAsync(new QuizPage(_database, questions));
+                    }
+                }
+
                 return;
             }
 
-            await Navigation.PushAsync(new QuizPage(database, questions)); // Submitting questions to QuizPage
+            await Navigation.PushAsync(new QuizPage(_database, questions)); // Submitting questions to QuizPage
         }
 
         private void UpdateUI()

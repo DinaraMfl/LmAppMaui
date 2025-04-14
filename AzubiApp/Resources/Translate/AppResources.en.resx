@@ -146,8 +146,7 @@
     <value>Forecast</value>
   </data>
   <data name="QuizSubtitle" xml:space="preserve">
-    <value>Start from where you left off 
-</value>
+    <value>Start from where you left off </value>
   </data>
   <data name="ResultTitle" xml:space="preserve">
     <value>Result</value>
@@ -274,5 +273,8 @@
   </data>
   <data name="ResultPageCorrectAnswersText" xml:space="preserve">
     <value>Correct answers:</value>
+  </data>
+  <data name="AlertResetProgress" xml:space="preserve">
+    <value>You passed the whole test. Do you want to start again? Progress will be reset</value>
   </data>
 </root>

@@ -34,7 +34,7 @@ namespace AzubiApp.Models
         public List<string> QuizCategory { get; set; } = new List<string>(); // Category of the question
 
         public const int MaxLevel = 3;
-        public const int MaxPoints = 3;
+        public const int MaxPoints = 1;
 
         public bool IsMaxPoints() => Points >= MaxPoints;
         public bool IsMaxLevel() => Level >= MaxLevel;
