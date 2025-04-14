@@ -214,8 +214,32 @@ namespace AzubiApp.Views
                 await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, new List<(int, bool)>(), _category));
             }
         }
+        protected override bool OnBackButtonPressed()
+        {
+            
+            _ = OnAndroidBackPressed();
+            return true; 
+        }
 
-        private async void OnBackClicked(object sender, EventArgs e)
+        private async Task OnAndroidBackPressed() // Die funktion ist für die zurück fuktion vom Andriod handy mit alert
+        {
+            if (_currentIndex == 0)
+            {
+                bool confirmExit = await DisplayAlert(AppResources.AlertError, AppResources.AlertLeaveQuiz, AppResources.AlertYes, AppResources.AlertNo);
+                if (confirmExit)
+                {
+                    await Navigation.PopToRootAsync();
+                }
+            }
+            else
+            {
+                _selectedAnswers[_currentIndex] = new List<string>(_currentSelectedAnswers);
+                _currentIndex--;
+                ShowQuestion();
+            }
+        }
+
+        private async void OnBackClicked(object sender, EventArgs e) // Die funktion ist normale zurück button mit alert
         {
             if (_currentIndex == 0)
             {
