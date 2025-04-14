@@ -18,7 +18,7 @@
 
             <VerticalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="25" Padding="0,50,0,0">
                 
-               <Label Text="Module" FontSize="32" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,60,0,20"/>
+               <Label Text="{x:Static resx:AppResources.ModulePageTopicTitle}" x:Name="ModulePageTopicTitle" FontSize="32" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,60,0,20"/>
                 <VerticalStackLayout Spacing="25">
 
                       <!--Box -->

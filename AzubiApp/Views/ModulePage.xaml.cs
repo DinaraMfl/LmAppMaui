@@ -68,5 +68,6 @@ public partial class ModulePage : ContentPage
         FilterButton.Text = AppResources.FilterButton;       
         GeneralButton.Text = AppResources.GeneralButton;
         BackModuleButton.Text = AppResources.BackModuleButton;
+        ModulePageTopicTitle.Text = AppResources.ModulePageTopicTitle;
     }
 }

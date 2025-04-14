@@ -277,4 +277,7 @@
   <data name="AlertResetProgress" xml:space="preserve">
     <value>You passed the whole test. Do you want to start again? Progress will be reset</value>
   </data>
+  <data name="ModulePageTopicTitle" xml:space="preserve">
+    <value>Topics</value>
+  </data>
 </root>

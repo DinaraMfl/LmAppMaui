@@ -268,6 +268,15 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string ModulePageTopicTitle {
+            get {
+                return ResourceManager.GetString("ModulePageTopicTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die NextQuizButton ähnelt.
         /// </summary>
         internal static string NextQuizButton {
