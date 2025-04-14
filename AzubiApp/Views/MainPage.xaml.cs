@@ -50,7 +50,6 @@ namespace AzubiApp.Views
                 {
                     await _database.ClearUserProgressAsync();
                     await SeedData.Initialize(_database);
-                    await DisplayAlert("", "Test restarted!", "OK");
 
                     questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions);
 
