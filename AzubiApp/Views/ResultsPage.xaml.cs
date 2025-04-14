@@ -39,7 +39,9 @@ namespace AzubiApp.Views
 
 
             string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-            string yourAnswerTranlsate = AppResources.SelectedAnswerText;
+
+            string yourAnswerTranlsate = AppResources.ResultPageYourAnswersText;// your answers text 
+            string correctAnswersTranlatetText = AppResources.ResultPageCorrectAnswersText; // right answers
 
             for (int i = 0; i < questions.Count; i++)
             {
@@ -63,8 +65,8 @@ namespace AzubiApp.Views
                 Results.Add(new ResultItem
                 {
                     QuestionText = $" {i + 1}. {questionText}",
-                    UserAnswerText = $"{yourAnswerTranlsate} {string.Join("\n", userSelected)}",
-                    CorrectAnswerText = string.Join("\n", correctAnswers),
+                    UserAnswerText = $"{yourAnswerTranlsate} {string.Join("\n", userSelected)}", // answers from user - 'Your questions'
+                    CorrectAnswerText = $"{correctAnswersTranlatetText} { string.Join("\n", correctAnswers)}", // correct answers from database 'Right questions'
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red,
                     ShowCorrectAnswer = !isCorrect
@@ -92,7 +94,7 @@ namespace AzubiApp.Views
         private void UpdateUI()
         {
             ResultTitle.Text = AppResources.ResultTitle;
-            CorrectAnswerTitle.Text = AppResources.CorrectAnswerTitle;
+            CorrectAnswerTitle.Text = AppResources.CorrectAnswerTitle; // correct answers Subtitle (.../...)
             BackToStartButton.Text = AppResources.BackToStartButton;
         }
     }

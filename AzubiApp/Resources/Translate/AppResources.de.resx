@@ -146,7 +146,7 @@
     <value>Parameter</value>
   </data>
   <data name="QuizSubtitle" xml:space="preserve">
-    <value>Starte von dort, wo Sie aufgehören haben</value>
+    <value>Starten Sie von dort, wo Sie aufgehört haben</value>
   </data>
   <data name="ResultTitle" xml:space="preserve">
     <value>Ergebnis</value>
@@ -192,9 +192,6 @@
   </data>
   <data name="AlertSelect" xml:space="preserve">
     <value>Bitte wählen Sie mindestens eine Antwort aus!</value>
-  </data>
-  <data name="SelectedAnswerText" xml:space="preserve">
-    <value>Ihre Antwort:</value>
   </data>
   <data name="UseCaseAutoStoreButton" xml:space="preserve">
     <value>Auto-Store-Verfahren</value>
@@ -261,5 +258,20 @@
   </data>
   <data name="AppShellHomeButton" xml:space="preserve">
     <value>Startseite</value>
+  </data>
+  <data name="MainPageOpenButton" xml:space="preserve">
+    <value>Öffnen</value>
+  </data>
+  <data name="MainPageUseCaseTitle" xml:space="preserve">
+    <value>Use Case</value>
+  </data>
+  <data name="MainPageProgressText" xml:space="preserve">
+    <value>Fortschritt</value>
+  </data>
+  <data name="ResultPageYourAnswersText" xml:space="preserve">
+    <value>Ihre Antworten:</value>
+  </data>
+  <data name="ResultPageCorrectAnswersText" xml:space="preserve">
+    <value>Richtige Antworten:</value>
   </data>
 </root>

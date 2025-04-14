@@ -192,9 +192,6 @@
   <data name="AlertSelect" xml:space="preserve">
     <value />
   </data>
-  <data name="SelectedAnswerText" xml:space="preserve">
-    <value />
-  </data>
   <data name="UseCaseAutoStoreButton" xml:space="preserve">
     <value />
   </data>
@@ -259,6 +256,21 @@
     <value />
   </data>
   <data name="AppShellHomeButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MainPageOpenButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MainPageUseCaseTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MainPageProgressText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResultPageYourAnswersText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResultPageCorrectAnswersText" xml:space="preserve">
     <value />
   </data>
 </root>

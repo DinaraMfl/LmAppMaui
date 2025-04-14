@@ -40,11 +40,10 @@
                 <!-- Use-Cases Container -->
                 <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
                     <VerticalStackLayout Spacing="20">
-                        <Label Text="Study" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                        <Label Text="{x:Static resx:AppResources.MainPageUseCaseTitle}" x:Name="MainPageUseCaseTitle" FontSize="20" FontAttributes="Bold" TextColor="White" />
                         <Label x:Name="UseCasesSubtitle" Text="{x:Static resx:AppResources.UseCasesSubtitle}"
                                FontSize="14" TextColor="LightGray" />
-                        <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
-                        <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
+                        <Button Text="{x:Static resx:AppResources.MainPageOpenButton}" x:Name="MainPageOpenButton" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>

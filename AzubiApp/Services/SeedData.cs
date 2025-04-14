@@ -21,7 +21,7 @@ namespace AzubiApp.Services
                     CorrectAnswersDe = "Bestellungen werden auf den heutigen Tag vorgezogen| Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf",
 
                     TextEn = "What happens if the “Order Now” option is selected?",
-                    Answer1En = " Orders will be brought forward to today",
+                    Answer1En = "Orders will be brought forward to today",
                     Answer2En = "Order quantities are reduced where possible, depending on demand",
                     Answer3En = "Additional order proposals are generated for today",
                     CorrectAnswersEn = "Orders will be brought forward to today| Order quantities are reduced where possible, depending on demand",
@@ -160,7 +160,7 @@ namespace AzubiApp.Services
                     Answer1En = "Parameter>Dispo>Order quantity",
                     Answer2En = "Conditions>Supplier>Supplier priority",
                     Answer3En = "Parameter>Default>Use season from",
-                    CorrectAnswersEn = "Parameter>Dispo>Bestellmenge",
+                    CorrectAnswersEn = "Parameter>Dispo>Order quantity",
 
                     QuizCategory = new List<string> { "Parameter" }
                 },

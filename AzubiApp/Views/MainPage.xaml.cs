@@ -54,6 +54,8 @@ namespace AzubiApp.Views
             UseCasesSubtitle.Text = AppResources.UseCasesSubtitle; // Learn more about Logomate
             ContinueQuizButton.Text = AppResources.ContinueQuizButton; // Continue
             TopicsQuizButton.Text = AppResources.TopicsQuizButton;
+            MainPageOpenButton.Text = AppResources.MainPageOpenButton;
+            MainPageUseCaseTitle.Text = AppResources.MainPageUseCaseTitle;
         }
 
         private void OnLanguageButtonClicked(object sender, EventArgs e)
@@ -74,11 +76,12 @@ namespace AzubiApp.Views
 
         private async void UpdateProgress()
         {
+            string mainPageProgressText = AppResources.MainPageProgressText;
             var questions = await _database.GetAllQuestionsAsync();
             int completed = questions.Count(q => q.Points >= Question.MaxPoints);
             double progress = (double)completed / questions.Count;
             ProgressBar.Progress = progress;
-            ProgressLabel.Text = $"Fortschritt: {Math.Round(progress * 100)}%";
+            ProgressLabel.Text = $"{mainPageProgressText}: {Math.Round(progress * 100)}%";
         }
     }
 }
