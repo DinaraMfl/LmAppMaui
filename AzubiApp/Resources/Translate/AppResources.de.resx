@@ -124,8 +124,7 @@
     <value>Zurück zum Start</value>
   </data>
   <data name="ChangeLanguageButton" xml:space="preserve">
-    <value>Sprache wechseln
-</value>
+    <value>Sprache wechseln auf Englisch</value>
   </data>
   <data name="CorrectAnswerTitle" xml:space="preserve">
     <value>Richtige Antworten:</value>
@@ -173,7 +172,7 @@
     <value>Zurück</value>
   </data>
   <data name="CheckButton" xml:space="preserve">
-    <value>Überprüfen</value>
+    <value>Prüfen</value>
   </data>
   <data name="FinishButton" xml:space="preserve">
     <value>Fertig</value>

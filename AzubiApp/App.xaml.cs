@@ -5,6 +5,7 @@
         public App()
         {
             InitializeComponent();
+            LanguageManager.InitializeLanguage();
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

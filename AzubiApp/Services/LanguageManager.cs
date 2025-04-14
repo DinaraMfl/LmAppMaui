@@ -8,6 +8,16 @@ namespace AzubiApp
     {
         private static string currentLanguage = "en"; // Standard-Sprache
 
+        public static void InitializeLanguage()
+        {
+            string deviceLanguage = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+
+            if (deviceLanguage == "de" || deviceLanguage == "en")
+                SetLanguage(deviceLanguage);
+            else
+                SetLanguage("en");
+        }
+
         public static void ToggleLanguage()
         {
             // Wechsel zwischen Englisch und Deutsch
@@ -27,5 +37,7 @@ namespace AzubiApp
             // Die UI wird benachrichtigt, damit die Labels aktualisiert werden
             MessagingCenter.Send<object>(new object(), "LanguageChanged");
         }
+
+        public static string GetCurrentLanguage() => currentLanguage;
     }
 }
