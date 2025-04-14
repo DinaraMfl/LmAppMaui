@@ -228,7 +228,7 @@ namespace AzubiApp.Views
                 bool confirmExit = await DisplayAlert(AppResources.AlertError, AppResources.AlertLeaveQuiz, AppResources.AlertYes, AppResources.AlertNo);
                 if (confirmExit)
                 {
-                    await Navigation.PopToRootAsync();
+                    await Navigation.PopAsync();
                 }
             }
             else
@@ -246,7 +246,7 @@ namespace AzubiApp.Views
                 bool confirmExit = await DisplayAlert(AppResources.AlertError, AppResources.AlertLeaveQuiz,AppResources.AlertYes,AppResources.AlertNo);
                 if (confirmExit)
                 {
-                    await Navigation.PopToRootAsync();
+                    await Navigation.PopAsync();
                 }
             }
             else
