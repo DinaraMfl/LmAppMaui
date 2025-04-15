@@ -20,7 +20,7 @@
                    Style="{StaticResource Headline}"
                    HorizontalOptions="Center" 
                    TextColor="White"
-                   Padding="0,0,0,300"/>
+                   Padding="0,0,0,30"/>
             <Button x:Name="ChangeLanguageButton"            
                     Clicked="OnLanguageButtonClicked" />
 
