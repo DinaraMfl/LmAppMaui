@@ -13,10 +13,12 @@ namespace AzubiApp.Services
             string appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string dbPath = Path.Combine(appDataDirectory, "quiz.db");
 
-        /*  if (File.Exists(dbPath))
+        /*  
+         *  if (File.Exists(dbPath))
          {
                File.Delete(dbPath);
-} */
+         } 
+        */
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Question>().Wait();
 
