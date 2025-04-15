@@ -55,6 +55,7 @@
                         Text="{x:Static resx:AppResources.UseCaseContainerOptimizationButton}"
                         VerticalOptions="Center"
                         HorizontalOptions="FillAndExpand"
+                        Clicked="OnUseCaseClicked"
                         FontSize="20"
                         FontAttributes="Bold"
                         TextColor="White"/>

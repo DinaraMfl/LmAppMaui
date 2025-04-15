@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using AzubiApp.Models;
+using ServiceStack;
 
 namespace AzubiApp.Services
 {
@@ -11,6 +12,11 @@ namespace AzubiApp.Services
         {
             string appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string dbPath = Path.Combine(appDataDirectory, "quiz.db");
+
+        /*  if (File.Exists(dbPath))
+         {
+               File.Delete(dbPath);
+} */
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Question>().Wait();
 
@@ -60,6 +66,7 @@ namespace AzubiApp.Services
             await _database.UpdateAsync(question);
         }
 
+    
         public async Task UpdateQuestionStatsAsync(List<(int QuestionId, bool IsCorrect)> results)
 
         {

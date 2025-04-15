@@ -19,6 +19,12 @@ public partial class UseCasesPage : ContentPage
 
     }
 
+    private async void OnUseCaseClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new UseCasePage());
+    }
+
+
     private async void OnBackUseClicked(object sender, EventArgs e)
     {
         await Navigation.PopAsync();   
