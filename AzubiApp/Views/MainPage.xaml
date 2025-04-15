@@ -43,7 +43,6 @@
                         <Label Text="Study" FontSize="20" FontAttributes="Bold" TextColor="White" />
                         <Label x:Name="UseCasesSubtitle" Text="{x:Static resx:AppResources.UseCasesSubtitle}"
                                FontSize="14" TextColor="LightGray" />
-                        <ProgressBar Progress="0.5" HeightRequest="5" BackgroundColor="White" />
                         <Button Text="Explore" Clicked="OnStartUseClicked" BackgroundColor="#FFCD00" TextColor="Black" />
                     </VerticalStackLayout>
                 </Frame>

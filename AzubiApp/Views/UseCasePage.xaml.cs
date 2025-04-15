@@ -9,23 +9,30 @@ public partial class UseCasePage : ContentPage
     public UseCasePage()
     {
         InitializeComponent();
-        LoadHtmlWithCssAndImages();
+        LoadHtmlForAndroidAndWindows();
     }
 
-    private async void LoadHtmlWithCssAndImages()
+    private async void LoadHtmlForAndroidAndWindows()
     {
+        // Kopiere alle Dateien wie gehabt
         await CopyAssetsToLocalFolder();
 
-        var htmlFilePath = Path.Combine(FileSystem.AppDataDirectory, "html", "index.html");
+        string htmlFolder = Path.Combine(FileSystem.AppDataDirectory, "html");
+        string htmlFile = Path.Combine(htmlFolder, "index.html");
 
-        // 🔥 WICHTIG: WebView braucht "file://" + Slashs
-        string url = $"file://{htmlFilePath.Replace("\\", "/")}";
+        // Lade HTML-Inhalt als String
+        string htmlContent = await File.ReadAllTextAsync(htmlFile);
 
-        webView.Source = new UrlWebViewSource
+        // Setze baseUrl als "file:///..." (für Android/WebView-Zugriff)
+        string baseUrl = $"file://{htmlFolder.Replace("\\", "/")}/";
+
+        webView.Source = new HtmlWebViewSource
         {
-            Url = url
+            Html = htmlContent,
+            BaseUrl = baseUrl
         };
     }
+
 
     private async Task CopyAssetsToLocalFolder()
     {
