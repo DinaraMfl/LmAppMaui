@@ -38,12 +38,13 @@
                 </Frame>
 
                 <!-- Use-Cases Container -->
-                <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
+                <Frame BackgroundColor="Transparent" Padding="25" CornerRadius="10" WidthRequest="350" >
                     <VerticalStackLayout Spacing="20">
-                        <Label Text="{x:Static resx:AppResources.MainPageUseCaseTitle}" x:Name="MainPageUseCaseTitle" FontSize="20" FontAttributes="Bold" TextColor="White" />
-                        <Label x:Name="UseCasesSubtitle" Text="{x:Static resx:AppResources.UseCasesSubtitle}"
-                               FontSize="14" TextColor="LightGray" />
-                        <Button Text="{x:Static resx:AppResources.MainPageOpenButton}" x:Name="MainPageOpenButton"   BackgroundColor="#FFCD00" TextColor="Black" />  <!--Clicked="OnStartUseClicked"-->
+                        <Label Text=" " x:Name="MainPageUseCaseTitle" FontSize="20" FontAttributes="Bold" TextColor="Transparent" />
+                        <Label x:Name="UseCasesSubtitle" Text=" "
+                               FontSize="14" TextColor="Transparent" />
+                        <Button Text=" " x:Name="MainPageOpenButton"   BackgroundColor="Transparent" TextColor="Transparent" />
+                        <!--Clicked="OnStartUseClicked"-->
 
                     </VerticalStackLayout>
                 </Frame>
