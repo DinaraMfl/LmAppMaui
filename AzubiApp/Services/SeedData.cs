@@ -686,7 +686,7 @@ namespace AzubiApp.Services
                     CorrectAnswersDe = "Auftragsvorbereitungszeit (AVZ) Lieferzeit (LFZ) Transporttagen (TT) Einlagerungszeit (ELZ)",
 
                     TextEn = "The replacement time is made up of:?",
-                    Answer1En = "Order Preparation Time (OPT) Delivery Time (DT Transport Time (TT) Storage Time (ST)",
+                    Answer1En = "Order Preparation Time (OPT) Delivery Time (DT) Transport Time (TT) Storage Time (ST)",
                     Answer2En = "Order Preparation Time (OPT) Delivery Time (DT) ABC Analysis (ABC) Storage Time (ST)",
                     Answer3En = "Order Preparation Time (OPT) Just-in-Time (JiT) ABC Analysis (ABC) Storage Time (ST)",
                     CorrectAnswersEn = "Order Preparation Time (OPT) Delivery Time (DT) Transport Time (TT) Storage Time (ST)",
