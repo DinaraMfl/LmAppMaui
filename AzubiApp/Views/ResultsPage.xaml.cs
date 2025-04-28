@@ -64,9 +64,9 @@ namespace AzubiApp.Views
 
                 Results.Add(new ResultItem
                 {
-                    QuestionText = $" {i + 1}. {questionText}",
-                    UserAnswerText = $"{yourAnswerTranlsate} {string.Join("\n", userSelected)}", // answers from user - 'Your questions'
-                    CorrectAnswerText = $"{correctAnswersTranlatetText} { string.Join("\n", correctAnswers)}", // correct answers from database 'Right questions'
+                    QuestionText = $"\t{i + 1}. {questionText}",
+                    UserAnswerText = $"\t\t\t{yourAnswerTranlsate} \n{string.Join("\n", userSelected)}", // answers from user - 'Your questions'
+                    CorrectAnswerText = $"\n\t\t{correctAnswersTranlatetText} \n{ string.Join("\n", correctAnswers)}", // correct answers from database 'Right questions'
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red,
                     ShowCorrectAnswer = !isCorrect

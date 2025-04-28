@@ -22,7 +22,7 @@
                 <VerticalStackLayout Spacing="25">
 
                       <!--Box -->
-                      <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="10"          
+                      <Button BackgroundColor="#1E1E1E" Padding="20" CornerRadius="20"          
                               MaximumWidthRequest="300"
                               Text="{x:Static resx:AppResources.OrderButton}"
                               x:Name="OrderButton"
@@ -36,7 +36,7 @@
 
                       <Button BackgroundColor="#1E1E1E" 
                               Padding="20" 
-                              CornerRadius="10"         
+                              CornerRadius="20"         
                               MaximumWidthRequest="300"
                               Text="{x:Static resx:AppResources.ParameterButton}"
                               x:Name="ParameterButton"
@@ -50,7 +50,7 @@
 
                       <Button BackgroundColor="#1E1E1E" 
                               Padding="20" 
-                              CornerRadius="10"                   
+                              CornerRadius="20"                   
                               MaximumWidthRequest="300"
                               Text="{x:Static resx:AppResources.ConditionsButton}"
                               x:Name="ConditionsButton"
@@ -64,7 +64,7 @@
 
                       <Button BackgroundColor="#1E1E1E" 
                               Padding="20" 
-                              CornerRadius="10"                    
+                              CornerRadius="20"                    
                               MaximumWidthRequest="300"
                               Text="{x:Static resx:AppResources.ForecastButton}"
                               x:Name="ForecastButton"
@@ -78,7 +78,7 @@
 
                       <Button BackgroundColor="#1E1E1E" 
                               Padding="20" 
-                              CornerRadius="10"                
+                              CornerRadius="20"                
                               MaximumWidthRequest="300"
                               Text="{x:Static resx:AppResources.FilterButton}"
                               x:Name="FilterButton"
@@ -92,7 +92,7 @@
 
                       <Button BackgroundColor="#1E1E1E" 
                               Padding="20" 
-                              CornerRadius="10"           
+                              CornerRadius="20"           
                               MaximumWidthRequest="300"
                               Text="{x:Static resx:AppResources.GeneralButton}"
                               x:Name="GeneralButton"
@@ -110,7 +110,7 @@
                         x:Name="BackModuleButton"
                         BackgroundColor="#FFCD00"
                         TextColor="Black"
-                        CornerRadius="18"
+                        CornerRadius="20"
                         FontSize="18"
                         WidthRequest="200"
                         Margin="0,0,0,50"
