@@ -20,7 +20,7 @@
             </Grid>
 
             <!-- ScrollView für den restlichen Inhalt -->
-            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50">
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50" Padding="100">
 
                 <!-- Quiz Container -->
                 <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
