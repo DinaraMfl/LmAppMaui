@@ -995,7 +995,7 @@ namespace AzubiApp.Services
                     Answer3En = "2",
                     CorrectAnswersEn = "4",
 
-                    QuizCategory = new List<string> { "Konditionen" }
+                    QuizCategory = new List<string> { "Kondition" }
                  },
 
                  new Question
