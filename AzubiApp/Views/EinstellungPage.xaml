@@ -5,35 +5,35 @@
              xmlns:resx="clr-namespace:AzubiApp.Resources.Translate"
              Title="ProfilePage"
              BackgroundColor="Black">
-
-    <VerticalStackLayout>
-        <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
-            <Image Source="logo_white.png" 
-                    WidthRequest="200" 
+    <ScrollView>
+        
+        <Grid>
+            <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
+              
+            <Image   Source="logo_white.png" 
+                     WidthRequest="200" 
                      HeightRequest="200" 
                      Margin="70,0,0,0"
                      Grid.Row="0" 
                      Grid.Column="0"/>
-        </Grid>
+              
+          </Grid>
+            
+            <Label  x:Name="Settings"
+                    Text="{x:Static resx:AppResources.Settings}" 
+                    Style="{StaticResource Headline}"
+                    TextColor="White" 
+                    HorizontalOptions="Center"  
+                    Padding="100"/>
 
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="5" >
-            <Label x:Name="Settings"   
-                   Text="{x:Static resx:AppResources.Settings}" 
-                   Style="{StaticResource Headline}"
-                   TextColor="White"
-                   Padding="0,0,0,300"/>
-        </HorizontalStackLayout>
-
-        <Grid RowDefinitions="*,Auto">
             <Button x:Name="ChangeLanguageButton"            
                     Clicked="OnLanguageButtonClicked"
                     HorizontalOptions="Center"
                     CornerRadius="18"
-                    FontSize="18"  
-                    Grid.Row="1"
-                    Margin="0,200,0,0"
                     VerticalOptions="End"
-                    BackgroundColor="#FFCD00"  />
+                    FontSize="18"
+                    BackgroundColor="#FFCD00"
+                    Margin="30"/>
         </Grid>
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

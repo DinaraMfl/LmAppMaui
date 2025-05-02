@@ -550,7 +550,7 @@ namespace AzubiApp.Services
                     Answer1De = "Die Vorläufer-SKU wird ab dem eingetragenen Datum inaktiv gelöscht & wird dann ersetzt mit der SKU, die diese SKU als Vorläufer eingetragen hat.",
                     Answer2De = "Die Historie vom Vorläufer wird übertragen auf die SKU",
                     Answer3De = "Die SKU wird inaktiviert und erhält eine „Info“-Warnung, die „Vorläufer-SKU“ heißt",
-                    CorrectAnswersDe = "",
+                    CorrectAnswersDe = "Die Historie vom Vorläufer wird übertragen auf die SKU",
 
                     TextEn = "What does a registered forerunner do?",
                     Answer1En = "The predecessor SKU is deleted from the date entered as inactive & is then replaced with the SKU that entered this SKU as the predecessor.",
