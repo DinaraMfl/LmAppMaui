@@ -67,9 +67,6 @@ namespace AzubiApp.Views
 
         private void UpdateUI()
         {
-
-
-
             // prachressourcen aktualisieren
             // Labels manuell mit den neuen Sprachressourcen aktualisieren
             QuizSubtitle.Text = AppResources.QuizSubtitle; // Start from where you left off 

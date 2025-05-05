@@ -24,7 +24,6 @@
                         <Frame BorderColor="Black" Padding="10" Margin="5" BackgroundColor="#E8E9E8" CornerRadius="20">
                             <VerticalStackLayout>
                                 <toolkit:Expander>
-
                                     <toolkit:Expander.Header>
                                         <VerticalStackLayout Padding="5">
                                             <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">

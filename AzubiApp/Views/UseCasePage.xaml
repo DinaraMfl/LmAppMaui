@@ -6,7 +6,6 @@
 
     <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*">
 
-
         <Image Source="logo_white.png"
                WidthRequest="200"
                HeightRequest="200"

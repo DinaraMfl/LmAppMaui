@@ -9,7 +9,6 @@
         <!--Background-->
         <Grid BackgroundColor="Black" RowDefinitions="*" ColumnDefinitions="*">
 
-
             <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
 
                 <!-- Logo oben links -->

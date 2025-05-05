@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-
-namespace AzubiApp.Views;
+﻿namespace AzubiApp.Views;
 
 public partial class UseCasePage : ContentPage
 {
@@ -32,7 +28,6 @@ public partial class UseCasePage : ContentPage
             BaseUrl = baseUrl
         };
     }
-
 
     private async Task CopyAssetsToLocalFolder()
     {

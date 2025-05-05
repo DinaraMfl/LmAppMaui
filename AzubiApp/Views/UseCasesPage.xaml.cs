@@ -16,7 +16,6 @@ public partial class UseCasesPage : ContentPage
             MainThread.BeginInvokeOnMainThread(() => UpdateUI());
         });
         UpdateUI();
-
     }
 
     private async void OnUseCaseClicked(object sender, EventArgs e)
@@ -24,12 +23,10 @@ public partial class UseCasesPage : ContentPage
         await Navigation.PushAsync(new UseCasePage());
     }
 
-
     private async void OnBackUseClicked(object sender, EventArgs e)
     {
         await Navigation.PopAsync();   
     }
-
 
     private void UpdateUI()
     {
@@ -54,5 +51,4 @@ public partial class UseCasesPage : ContentPage
         UseCaseDueDatesButton.Text = AppResources.UseCaseDueDatesButton;
         UseCaseBackButton.Text = AppResources.UseCaseBackButton;
     }
-
 }
