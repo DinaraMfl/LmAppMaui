@@ -97,6 +97,16 @@ namespace AzubiApp.Views
             CorrectAnswerTitle.Text = AppResources.CorrectAnswerTitle; // correct answers Subtitle (.../...)
             BackToStartButton.Text = AppResources.BackToStartButton;
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                await Navigation.PopToRootAsync();
+            });
+
+            return true;
+        }
     }
 
     public class ResultItem
