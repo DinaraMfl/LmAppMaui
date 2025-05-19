@@ -6,7 +6,8 @@ namespace AzubiApp.Views;
 public partial class ModulePage : ContentPage
 {
 	private readonly DatabaseService _database;
-	private string currentLanguage = "en";
+    private bool isQuizStartingWithCategory = false;
+    private string currentLanguage = "en";
 	private readonly string defaultLanguage = "en";
 
 	public ModulePage()
@@ -37,21 +38,31 @@ public partial class ModulePage : ContentPage
     // Startet das Quiz mit Fragen zur gewählten Kategorie
     private async Task StartQuizWithCategory(string category)
     {
-        var allQuestions = await _database.GetAllQuestionsAsync();
+        if (isQuizStartingWithCategory) return;
+        isQuizStartingWithCategory = true;
 
-        var filteredQuestions = allQuestions
-          .Where(q => q.QuizCategory.Any(cat =>
-              cat.Trim().Equals(category.Trim(), StringComparison.OrdinalIgnoreCase)))
-          .OrderBy(q => Guid.NewGuid())
-          .ToList();
-
-        if (filteredQuestions.Count == 0)
+        try
         {
-            await DisplayAlert("Fehler", $"Keine Fragen zur Kategorie '{category}' gefunden!", "OK");
-            return;
-        }
+            var allQuestions = await _database.GetAllQuestionsAsync();
 
-        await Navigation.PushAsync(new QuizPage(_database, filteredQuestions, true));
+            var filteredQuestions = allQuestions
+              .Where(q => q.QuizCategory.Any(cat =>
+                  cat.Trim().Equals(category.Trim(), StringComparison.OrdinalIgnoreCase)))
+              .OrderBy(q => Guid.NewGuid())
+              .ToList();
+
+            if (filteredQuestions.Count == 0)
+            {
+                await DisplayAlert("Fehler", $"Keine Fragen zur Kategorie '{category}' gefunden!", "OK");
+                return;
+            }
+
+            await Navigation.PushAsync(new QuizPage(_database, filteredQuestions, true));
+        }
+        finally
+        {
+            isQuizStartingWithCategory = false;
+        }
     }
 
     private async void OnBackModuleMain(object sender, EventArgs e)

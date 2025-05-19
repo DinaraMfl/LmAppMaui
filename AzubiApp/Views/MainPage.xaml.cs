@@ -7,6 +7,9 @@ namespace AzubiApp.Views
     public partial class MainPage : ContentPage
     {
         private readonly DatabaseService _database;
+        private bool isQuizStarting = false;
+        private bool isUseCaseStarting = false;
+        private bool isModuleClicked = false;
         private string currentLanguage = "en";
         private readonly string defaultLanguage = "en"; // Die Standard-/neutrale Sprache (z. B. Englisch)
 
@@ -33,36 +36,47 @@ namespace AzubiApp.Views
 
         private async void OnStartQuizClicked(object sender, EventArgs e)
         {
-            int numberOfQuestions = 5;
+            if (isQuizStarting) return;
+            isQuizStarting = true;
 
-            List<Question> questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions); // Loading questions
-
-            if (questions.Count == 0)
+            try
             {
-                bool restart = await DisplayAlert(
-                            "",
-                            AppResources.AlertResetProgress,
-                            AppResources.AlertYes,
-                            AppResources.AlertNo
-                        );
+                int numberOfQuestions = 5;
 
-                if (restart)
+                List<Question> questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions); // Loading questions
+
+                if (questions.Count == 0)
                 {
-                    await _database.ClearUserProgressAsync();
-                    await SeedData.Initialize(_database);
+                    bool restart = await DisplayAlert(
+                                "",
+                                AppResources.AlertResetProgress,
+                                AppResources.AlertYes,
+                                AppResources.AlertNo
+                            );
 
-                    questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions);
-
-                    if (questions.Count > 0)
+                    if (restart)
                     {
-                        await Navigation.PushAsync(new QuizPage(_database, questions));
+                        await _database.ClearUserProgressAsync();
+                        await SeedData.Initialize(_database);
+
+                        questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions);
+
+                        if (questions.Count > 0)
+                        {
+                            await Navigation.PushAsync(new QuizPage(_database, questions));
+                        }
                     }
+
+                    return;
                 }
 
-                return;
+                await Navigation.PushAsync(new QuizPage(_database, questions)); // Submitting questions to QuizPage
             }
 
-            await Navigation.PushAsync(new QuizPage(_database, questions)); // Submitting questions to QuizPage
+            finally
+            {
+                isQuizStarting = false;
+            }
         }
 
         private void UpdateUI()
@@ -85,12 +99,33 @@ namespace AzubiApp.Views
 
         private async void OnStartUseClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new UseCasesPage()); // Submitting questions to QuizPage
+            if (isUseCaseStarting) return;
+            isUseCaseStarting = true;
+
+            try
+            {
+                await Navigation.PushAsync(new UseCasesPage()); // Submitting questions to QuizPage
+            }
+            finally
+            {
+                isUseCaseStarting = false;
+            }
         }
 
         private async void OnModuleClick(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ModulePage());
+            if (isModuleClicked) return;
+            isModuleClicked = true;
+
+            try
+            {
+                await Navigation.PushAsync(new ModulePage());
+
+            }
+            finally
+            {
+                isModuleClicked = false;
+            }
         }
 
         private async void UpdateProgress()

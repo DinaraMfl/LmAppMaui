@@ -6,6 +6,7 @@ namespace AzubiApp.Views;
 public partial class UseCasesPage : ContentPage
 {
     private readonly DatabaseService _database;
+    private bool isUseCaseClicked = false;
     private string currentLanguage = "en";
     private readonly string defaultLanguage = "en";
     public UseCasesPage()
@@ -20,7 +21,17 @@ public partial class UseCasesPage : ContentPage
 
     private async void OnUseCaseClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new UseCasePage());
+        if (isUseCaseClicked) return;
+        isUseCaseClicked = true;
+
+        try
+        {
+            await Navigation.PushAsync(new UseCasePage());
+        }
+        finally
+        {
+            isUseCaseClicked = false;
+        }
     }
 
     private async void OnBackUseClicked(object sender, EventArgs e)
