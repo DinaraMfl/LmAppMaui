@@ -4,6 +4,8 @@ public partial class UseCasePage : ContentPage
 {
     public UseCasePage()
     {
+        Shell.SetTabBarIsVisible(this, false);
+
         InitializeComponent();
         LoadHtmlForAndroidAndWindows();
     }
