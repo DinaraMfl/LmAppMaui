@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.Maui.Controls;
-using MauiWebView = Microsoft.Maui.Controls.WebView;
+﻿using AzubiApp.Resources.Translate;
 #if ANDROID
 using AndroidWebView = Android.Webkit.WebView;
 #endif
@@ -11,10 +7,18 @@ namespace AzubiApp.Views
 {
     public partial class UseCasePage : ContentPage
     {
+        private string currentLanguage = "en";
+        private readonly string defaultLanguage = "en";
         public UseCasePage()
         {
             InitializeComponent();
             Shell.SetTabBarIsVisible(this, false);
+
+            MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
+            {
+                MainThread.BeginInvokeOnMainThread(() => UpdateUI());
+            });
+            UpdateUI();
 
 #if ANDROID
             // Registriere Event, sobald der native Handler existiert
@@ -126,5 +130,10 @@ namespace AzubiApp.Views
                 System.Diagnostics.Debug.WriteLine($"Back-Button-Fehler: {ex}");
             }
         }
-    }
+
+        private void UpdateUI()
+        {
+            UseCaseBackButton.Text = AppResources.UseCaseBackButton;
+        }
+    }     
 }

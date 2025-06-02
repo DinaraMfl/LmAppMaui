@@ -17,8 +17,6 @@ public partial class UseCasesPage : ContentPage
             MainThread.BeginInvokeOnMainThread(() => UpdateUI());
         });
         UpdateUI();
-
-     
     }
 
     private async void OnUseCaseClicked(object sender, EventArgs e)

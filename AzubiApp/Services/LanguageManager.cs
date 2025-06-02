@@ -1,6 +1,5 @@
 ﻿using AzubiApp.Resources.Translate;
 using System.Globalization;
-using System.Threading;
 
 namespace AzubiApp
 {
