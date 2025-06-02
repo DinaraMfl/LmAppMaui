@@ -26,7 +26,9 @@ public partial class UseCasesPage : ContentPage
 
         try
         {
-            await Navigation.PushAsync(new UseCasePage());
+            var button = sender as Button;
+            string sectionId = button.CommandParameter?.ToString();
+            await Navigation.PushAsync(new UseCasePage(sectionId));     
         }
         finally
         {

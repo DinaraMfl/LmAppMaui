@@ -9,9 +9,13 @@ namespace AzubiApp.Views
     {
         private string currentLanguage = "en";
         private readonly string defaultLanguage = "en";
-        public UseCasePage()
+        private readonly string sectionId;
+
+        public UseCasePage(string sectionId)
         {
             InitializeComponent();
+            this.sectionId = sectionId;
+
             Shell.SetTabBarIsVisible(this, false);
 
             MessagingCenter.Subscribe<object>(this, "LanguageChanged", (sender) =>
@@ -60,8 +64,24 @@ namespace AzubiApp.Views
                 var htmlFile = Path.Combine(htmlDir, "index.html");
                 string html = await File.ReadAllTextAsync(htmlFile);
 
+
                 // Android und iOS erwarten file://-Pfad mit Slashes
                 var baseUrl = $"file://{htmlDir.Replace("\\", "/")}/";
+
+                if (!string.IsNullOrEmpty(sectionId))
+                {
+                    html += $@"
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {{
+                                const allSections = document.querySelectorAll('section');
+                                allSections.forEach(s => s.style.display = 'none');
+                                const target = document.getElementById('{sectionId}');
+                                if (target) {{
+                                    target.style.display = 'block';
+                                }}
+                            }});
+                        </script>";
+                }
 
                 webView.Source = new HtmlWebViewSource
                 {
@@ -69,6 +89,7 @@ namespace AzubiApp.Views
                     BaseUrl = baseUrl
                 };
             }
+
             catch (Exception ex)
             {
                 // Debug-Ausgabe, falls beim Laden etwas schiefgeht

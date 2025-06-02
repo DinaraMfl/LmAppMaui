@@ -32,6 +32,10 @@
                         MaximumWidthRequest="300"
                         x:Name="UseCaseAutoStoreButton"
                         Text="{x:Static resx:AppResources.UseCaseAutoStoreButton}"  
+                                                                                      CommandParameter="UseCaseAutoStoreButton"
+                                                    Clicked="OnUseCaseClicked"
+
+
                         FontAttributes="Bold"
                         VerticalOptions="Center" 
                         HorizontalOptions="FillAndExpand"
@@ -56,6 +60,8 @@
                         MaximumWidthRequest="300"
                         x:Name="UseCaseContainerOptimizationButton"
                         Text="{x:Static resx:AppResources.UseCaseContainerOptimizationButton}"
+                                                          CommandParameter="UseCaseContainerOptimizationButton"
+
                         Clicked="OnUseCaseClicked"
                         VerticalOptions="Center"
                         HorizontalOptions="FillAndExpand"
