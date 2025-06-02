@@ -1,4 +1,5 @@
-﻿using AzubiApp.Resources.Translate;
+﻿using System.Globalization;
+using AzubiApp.Resources.Translate;
 #if ANDROID
 using AndroidWebView = Android.Webkit.WebView;
 #endif
@@ -60,12 +61,20 @@ namespace AzubiApp.Views
             {
                 await CopyHtmlAssetsToAppData();
 
+                var currentLanguage = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName.ToLowerInvariant();
+                string localizedFileName = currentLanguage == "de" ? "indexDe.html" : "indexEn.html";
+
                 var htmlDir = Path.Combine(FileSystem.AppDataDirectory, "html");
-                var htmlFile = Path.Combine(htmlDir, "index.html");
+                var htmlFile = Path.Combine(htmlDir, localizedFileName);
+
+                if (!File.Exists(htmlFile))
+                {
+                    htmlFile = Path.Combine(htmlDir, "indexEn.html");
+                }
+
                 string html = await File.ReadAllTextAsync(htmlFile);
 
-
-                // Android und iOS erwarten file://-Pfad mit Slashes
+                // Android и iOS ожидают путь в формате file://
                 var baseUrl = $"file://{htmlDir.Replace("\\", "/")}/";
 
                 if (!string.IsNullOrEmpty(sectionId))
@@ -89,10 +98,8 @@ namespace AzubiApp.Views
                     BaseUrl = baseUrl
                 };
             }
-
             catch (Exception ex)
             {
-                // Debug-Ausgabe, falls beim Laden etwas schiefgeht
                 System.Diagnostics.Debug.WriteLine($"Fehler beim Laden des HTML: {ex}");
             }
         }
@@ -102,7 +109,8 @@ namespace AzubiApp.Views
             // Hartkodierte Liste deiner HTML-Assets (Dateien in Resources/Raw oder im Projektordner)
             string[] assets = new[]
             {
-                "html/index.html",
+                "html/indexDe.html",
+                "html/indexEn.html",
                 "html/style.css",
                 "html/imguse/imagecos.png",
                 "html/imguse/imagecow.png",
@@ -155,6 +163,7 @@ namespace AzubiApp.Views
         private void UpdateUI()
         {
             UseCaseBackButton.Text = AppResources.UseCaseBackButton;
+            LoadHtmlAsync(); 
         }
     }     
 }
