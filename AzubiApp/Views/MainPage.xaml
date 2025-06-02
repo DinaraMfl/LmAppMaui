@@ -23,7 +23,7 @@
             <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50" Padding="100">
 
                 <!-- Quiz Container -->
-                <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="20" WidthRequest="350">
+                <Frame BackgroundColor="#3B3B3B" Padding="25" CornerRadius="20" WidthRequest="350">
                     <VerticalStackLayout Spacing="20">
                         <Label Text="Quiz" FontSize="20" FontAttributes="Bold" TextColor="White" />
                         <Label x:Name="QuizSubtitle" Text="{x:Static resx:AppResources.QuizSubtitle}"
@@ -38,11 +38,11 @@
                 </Frame>
 
                 <!-- Use-Cases Container -->
-                <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
+                <Frame BackgroundColor="#3B3B3B" Padding="25" CornerRadius="20" WidthRequest="350">
                     <VerticalStackLayout Spacing="20">
                         <Label Text="{x:Static resx:AppResources.MainPageUseCaseTitle}" x:Name="MainPageUseCaseTitle" FontSize="20" FontAttributes="Bold" TextColor="White" />
                         <Label x:Name="UseCasesSubtitle" Text="{x:Static resx:AppResources.UseCasesSubtitle}" FontSize="14" TextColor="LightGray" />
-                        <Button Text="{x:Static resx:AppResources.MainPageOpenButton}" Clicked="OnStartUseClicked" x:Name="MainPageOpenButton" BackgroundColor="#FFCD00" TextColor="Black" />
+                        <Button Text="{x:Static resx:AppResources.MainPageOpenButton}" Clicked="OnStartUseClicked" x:Name="MainPageOpenButton" BackgroundColor="#FFCD00" TextColor="Black" CornerRadius="20" />
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>

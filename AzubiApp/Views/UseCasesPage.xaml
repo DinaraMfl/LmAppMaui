@@ -26,7 +26,7 @@
                 <VerticalStackLayout Spacing="25">
 
                 <!--Box -->
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"    
                         MaximumWidthRequest="300"
@@ -38,7 +38,7 @@
                         FontSize="20"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"     
                         MaximumWidthRequest="300"
@@ -50,7 +50,7 @@
                         FontSize="20"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"      
                         MaximumWidthRequest="300"
@@ -63,7 +63,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"        
                         MaximumWidthRequest="300"
@@ -75,7 +75,7 @@
                         FontAttributes="Bold" 
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"    
                         MaximumWidthRequest="300"
@@ -87,7 +87,7 @@
                         FontAttributes="Bold" 
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -99,7 +99,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -111,7 +111,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -123,7 +123,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -135,7 +135,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -147,7 +147,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -159,7 +159,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -171,7 +171,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -183,7 +183,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -195,7 +195,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -207,7 +207,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -219,7 +219,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -231,7 +231,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"
@@ -243,7 +243,7 @@
                         FontAttributes="Bold"
                         TextColor="White"/>
 
-                <Button BackgroundColor="#1E1E1E" 
+                    <Button BackgroundColor="#3B3B3B" 
                         Padding="20" 
                         CornerRadius="10"   
                         MaximumWidthRequest="300"

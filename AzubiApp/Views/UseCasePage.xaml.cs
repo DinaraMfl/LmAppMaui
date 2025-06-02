@@ -1,59 +1,130 @@
-﻿namespace AzubiApp.Views;
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
+using Microsoft.Maui.Controls;
+using MauiWebView = Microsoft.Maui.Controls.WebView;
+#if ANDROID
+using AndroidWebView = Android.Webkit.WebView;
+#endif
 
-public partial class UseCasePage : ContentPage
+namespace AzubiApp.Views
 {
-    public UseCasePage()
+    public partial class UseCasePage : ContentPage
     {
-        InitializeComponent();
-        LoadHtmlForAndroidAndWindows();
-    }
-
-    private async void LoadHtmlForAndroidAndWindows()
-    {
-        // Kopiere alle Dateien wie gehabt
-        await CopyAssetsToLocalFolder();
-
-        string htmlFolder = Path.Combine(FileSystem.AppDataDirectory, "html");
-        string htmlFile = Path.Combine(htmlFolder, "index.html");
-
-        // Lade HTML-Inhalt als String
-        string htmlContent = await File.ReadAllTextAsync(htmlFile);
-
-        // Setze baseUrl als "file:///..." (für Android/WebView-Zugriff)
-        string baseUrl = $"file://{htmlFolder.Replace("\\", "/")}/";
-
-        webView.Source = new HtmlWebViewSource
+        public UseCasePage()
         {
-            Html = htmlContent,
-            BaseUrl = baseUrl
-        };
-    }
+            InitializeComponent();
+            Shell.SetTabBarIsVisible(this, false);
 
-    private async Task CopyAssetsToLocalFolder()
-    {
-        string[] files = new[]
+#if ANDROID
+            // Registriere Event, sobald der native Handler existiert
+            webView.HandlerChanged += OnHandlerChanged;
+#endif
+            // HTML-Inhalte in die AppData kopieren und laden
+            LoadHtmlAsync();
+        }
+
+#if ANDROID
+        private void OnHandlerChanged(object sender, EventArgs e)
         {
-            "html/index.html",
-            "html/style.css",
-            "html/imguse/imageCO1.png",
-            "html/imguse/imageCO2.png",
-            "html/imguse/imageCO3.png"
-        };
+            // Warten, bis der Handler verfügbar ist
+            var native = webView.Handler?.PlatformView as AndroidWebView;
+            if (native == null)
+                return;
 
-        foreach (var file in files)
+            // Android-spezifische Einstellungen
+            native.Settings.AllowFileAccess = true;
+            native.Settings.AllowFileAccessFromFileURLs = true;
+            native.Settings.AllowUniversalAccessFromFileURLs = true;
+        }
+
+        protected override void OnDisappearing()
         {
-            string targetPath = Path.Combine(FileSystem.AppDataDirectory, file);
-            string? dir = Path.GetDirectoryName(targetPath);
+            base.OnDisappearing();
+            // Event wieder abmelden, um Leaks zu vermeiden
+            webView.HandlerChanged -= OnHandlerChanged;
+        }
+#endif
 
-            if (!Directory.Exists(dir))
-                Directory.CreateDirectory(dir!);
+        private async void LoadHtmlAsync()
+        {
+            try
+            {
+                await CopyHtmlAssetsToAppData();
 
-            if (File.Exists(targetPath))
-                File.Delete(targetPath);
+                var htmlDir = Path.Combine(FileSystem.AppDataDirectory, "html");
+                var htmlFile = Path.Combine(htmlDir, "index.html");
+                string html = await File.ReadAllTextAsync(htmlFile);
 
-            using var asset = await FileSystem.OpenAppPackageFileAsync(file);
-            using var dest = File.Create(targetPath);
-            await asset.CopyToAsync(dest);
+                // Android und iOS erwarten file://-Pfad mit Slashes
+                var baseUrl = $"file://{htmlDir.Replace("\\", "/")}/";
+
+                webView.Source = new HtmlWebViewSource
+                {
+                    Html = html,
+                    BaseUrl = baseUrl
+                };
+            }
+            catch (Exception ex)
+            {
+                // Debug-Ausgabe, falls beim Laden etwas schiefgeht
+                System.Diagnostics.Debug.WriteLine($"Fehler beim Laden des HTML: {ex}");
+            }
+        }
+
+        private async Task CopyHtmlAssetsToAppData()
+        {
+            // Hartkodierte Liste deiner HTML-Assets (Dateien in Resources/Raw oder im Projektordner)
+            string[] assets = new[]
+            {
+                "html/index.html",
+                "html/style.css",
+                "html/imguse/imagecos.png",
+                "html/imguse/imagecow.png",
+                "html/imguse/imagecox.png"
+            };
+
+            foreach (var asset in assets)
+            {
+                var destPath = Path.Combine(FileSystem.AppDataDirectory, asset);
+                var destDir = Path.GetDirectoryName(destPath)!;
+                if (!Directory.Exists(destDir))
+                    Directory.CreateDirectory(destDir);
+
+                if (File.Exists(destPath))
+                    File.Delete(destPath);
+
+                // Kopiere Asset aus dem APK/App-Paket in AppData
+                using var inStream = await FileSystem.OpenAppPackageFileAsync(asset);
+                using var outStream = File.Create(destPath);
+                await inStream.CopyToAsync(outStream);
+            }
+        }
+
+        private async void OnBackButtonClicked(object sender, EventArgs e)
+        {
+            try
+            {
+                // Prüfen, ob Seite im Push-Stack ist
+                if (Navigation?.NavigationStack.Count > 1)
+                {
+                    await Navigation.PopAsync();
+                }
+                // Falls modal geöffnet (PushModalAsync), dann schließen
+                else if (Navigation?.ModalStack.Count > 0)
+                {
+                    await Navigation.PopModalAsync();
+                }
+                // Fallback: Shell-Back, falls Shell verwendet wird
+                else if (Shell.Current != null)
+                {
+                    await Shell.Current.GoToAsync("..");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Back-Button-Fehler: {ex}");
+            }
         }
     }
 }

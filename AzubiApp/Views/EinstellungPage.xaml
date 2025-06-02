@@ -28,9 +28,11 @@
             <Button x:Name="ChangeLanguageButton"            
                     Clicked="OnLanguageButtonClicked"
                     HorizontalOptions="Center"
-                    CornerRadius="18"
-                    FontSize="18"  
+                    CornerRadius="20"
+                    WidthRequest="270"
+                    FontSize="14"  
                     Grid.Row="1"
+                    Padding="0 "
                     Margin="0,200,0,0"
                     VerticalOptions="End"
                     BackgroundColor="#FFCD00"  />
