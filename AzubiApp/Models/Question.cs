@@ -7,6 +7,8 @@ namespace AzubiApp.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
+        public int Number { get; set; }
+
         // Deutsch
         public string TextDe { get; set; }
         public string Answer1De { get; set; }
