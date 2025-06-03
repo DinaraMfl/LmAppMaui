@@ -20,6 +20,8 @@
                     HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 </Frame>
 
+                <Image x:Name="QuestionImage" HeightRequest="200" Aspect="AspectFit" IsVisible="False"/>
+
                 <VerticalStackLayout Spacing="30">
                     <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
                         <CheckBox x:Name="Answer1" CheckedChanged="OnAnswerChecked"/>

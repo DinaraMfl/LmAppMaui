@@ -69,8 +69,9 @@ namespace AzubiApp.Views
                     CorrectAnswerText = $"\n\t\t{correctAnswersTranlatetText} \n{ string.Join("\n", correctAnswers)}", // correct answers from database 'Right questions'
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red,
-                    ShowCorrectAnswer = !isCorrect
-                });
+                    ShowCorrectAnswer = !isCorrect,
+                    ImagePath = string.IsNullOrEmpty(question.ImagePath) ? null : question.ImagePath
+                });         
             }
 
             ScoreLabel.Text = $"{correctCount} / {questions.Count}";
@@ -118,5 +119,7 @@ namespace AzubiApp.Views
         public Color ResultColor { get; set; }
         public bool ShowCorrectAnswer { get; set; }
         public string ScoreLabel { get; set; }
+        public string ImagePath { get; set; }
+        public bool HasImage => !string.IsNullOrEmpty(ImagePath);
     }
 }

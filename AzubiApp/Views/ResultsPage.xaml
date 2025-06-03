@@ -49,6 +49,15 @@
 
                                     <toolkit:Expander.Content>
                                         <VerticalStackLayout Padding="5">
+                                            
+                                            <!-- Image of the question -->
+                                            <ContentView IsVisible="{Binding HasImage}">
+                                                <Image Source="{Binding ImagePath}"
+                                                        Aspect="AspectFit"
+                                                        HeightRequest="200"
+                                                        HorizontalOptions="Center" />
+                                            </ContentView>
+
                                             <Label Text="{Binding UserAnswerText}" TextColor="Black" FontAttributes="Bold" Margin="0,0,100,0"/>
                                             <Label Text="{Binding CorrectAnswerText}" TextColor="DarkGreen" IsVisible="{Binding ShowCorrectAnswer}" FontAttributes="Bold"/>
                                         </VerticalStackLayout>

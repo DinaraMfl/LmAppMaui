@@ -90,6 +90,16 @@ namespace AzubiApp.Views
 
             QuestionLabel.Text = lang == "de" ? question.TextDe : question.TextEn;
 
+            if (!string.IsNullOrEmpty(question.ImagePath))
+            {
+                QuestionImage.Source = question.ImagePath;
+                QuestionImage.IsVisible = true;
+            }
+            else
+            {
+               QuestionImage.IsVisible = false;
+            }
+
             var answerOptions = lang == "de"
                 ? new List<string> { question.Answer1De, question.Answer2De, question.Answer3De }
                 : new List<string> { question.Answer1En, question.Answer2En, question.Answer3En };

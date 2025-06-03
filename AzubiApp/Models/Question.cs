@@ -23,6 +23,8 @@ namespace AzubiApp.Models
         public string Answer3En { get; set; }
         public string CorrectAnswersEn { get; set; }
 
+        public string? ImagePath { get; set; }
+
         public int Level { get; set; } = 0; // 1 false -> Level + 1
         public int Points { get; set; } = 0; // 1 true -> Level - 1 AND Point + 1   -->    if Points == 3 AND Level == 0 -> "hide" questions. Points for progress
 

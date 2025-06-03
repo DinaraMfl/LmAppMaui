@@ -1682,6 +1682,26 @@ namespace AzubiApp.Services
                     QuizCategory = new List<string> { "", "" }
                  }, */
 
+                 new Question
+                 {
+                    Number = 116,
+
+                    TextDe = "Was stellen die schwarzen Striche oben bei der Prognose dar?",
+                    Answer1De = "Der Prognosehorizont",
+                    Answer2De = "Die Standardabweichung",
+                    Answer3De = "Die relative Abgangsmöglichkeit",
+                    CorrectAnswersDe = "Die Standardabweichung",
+
+                    TextEn = "What does the black line at the top of the forecast represent?",
+                    Answer1En = "The forecast horizon",
+                    Answer2En = "The standard deviation",
+                    Answer3En = "The relative departure option",
+                    CorrectAnswersEn = "The standard deviation",
+
+                    ImagePath = "Images/QuestionsImage/question_116_balk_3.png",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
             };
 
             foreach (var question in newQuestions)
