@@ -93,6 +93,25 @@
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	    <CustomToolNamespace>user.svg</CustomToolNamespace>
 	  </MauiImage>
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_132_balk_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_123_balk_2.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_116_balk_3.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_115_best_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_140_grenz_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_135_para_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_133_warn_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_134_warn_2.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_136_warn_3.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_137_warn_4.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_138_warn_5.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_139_warn_6.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_141_warn_7.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_091_wbz_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_127_wbz_2.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_128_wbz_3.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_129_wbz_4.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_130_wbz_5.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_131_wbz_6.png" />
 	</ItemGroup>
 
 	<ItemGroup>
