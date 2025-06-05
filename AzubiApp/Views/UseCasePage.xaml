@@ -4,19 +4,35 @@
              x:Class="AzubiApp.Views.UseCasePage"
              Title="UseCasePage">
 
-    <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*">
+    <!-- 2 Spalten: links für das Logo, rechts für den Button -->
+    <Grid RowDefinitions="100,Auto,*"
+          ColumnDefinitions="Auto,*">
 
-
+        <!-- Logo ganz links in Spalte 0 -->
         <Image Source="logo_white.png"
                WidthRequest="200"
                HeightRequest="200"
                Margin="20,0,0,0"
                Grid.Row="0"
+               Grid.Column="0"
                HorizontalOptions="Start"
                VerticalOptions="Center" />
 
+        <!-- Zurück-Button ganz rechts in Spalte 1 -->
+        <Button x:Name="UseCaseBackButton"
+                BackgroundColor="#FFCD00"
+                Margin="20,10"
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                Clicked="OnBackButtonClicked" />
+
+        <!-- WebView füllt Zeile 2, über beide Spalten -->
         <WebView x:Name="webView"
                  Grid.Row="2"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2"
                  Margin="10" />
     </Grid>
 </ContentPage>

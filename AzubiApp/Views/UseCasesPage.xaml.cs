@@ -6,6 +6,7 @@ namespace AzubiApp.Views;
 public partial class UseCasesPage : ContentPage
 {
     private readonly DatabaseService _database;
+    private bool isUseCaseClicked = false;
     private string currentLanguage = "en";
     private readonly string defaultLanguage = "en";
     public UseCasesPage()
@@ -16,20 +17,29 @@ public partial class UseCasesPage : ContentPage
             MainThread.BeginInvokeOnMainThread(() => UpdateUI());
         });
         UpdateUI();
-
     }
 
     private async void OnUseCaseClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new UseCasePage());
-    }
+        if (isUseCaseClicked) return;
+        isUseCaseClicked = true;
 
+        try
+        {
+            var button = sender as Button;
+            string sectionId = button.CommandParameter?.ToString();
+            await Navigation.PushAsync(new UseCasePage(sectionId));     
+        }
+        finally
+        {
+            isUseCaseClicked = false;
+        }
+    }
 
     private async void OnBackUseClicked(object sender, EventArgs e)
     {
         await Navigation.PopAsync();   
     }
-
 
     private void UpdateUI()
     {
@@ -54,5 +64,4 @@ public partial class UseCasesPage : ContentPage
         UseCaseDueDatesButton.Text = AppResources.UseCaseDueDatesButton;
         UseCaseBackButton.Text = AppResources.UseCaseBackButton;
     }
-
 }

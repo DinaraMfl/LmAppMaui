@@ -23,7 +23,7 @@
             <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="50" Margin="100">
 
                 <!-- Quiz Container -->
-                <Frame BackgroundColor="#1E1E1E" Padding="25" CornerRadius="10" WidthRequest="350">
+                <Frame BackgroundColor="#3B3B3B" Padding="25" CornerRadius="20" WidthRequest="350">
                     <VerticalStackLayout Spacing="20">
                         <Label Text="Quiz" FontSize="20" FontAttributes="Bold" TextColor="White" />
                         <Label x:Name="QuizSubtitle" Text="{x:Static resx:AppResources.QuizSubtitle}"
@@ -32,20 +32,17 @@
                         <Label x:Name="ProgressLabel" FontSize="14" TextColor="White"/>
                         <ProgressBar x:Name="ProgressBar" HeightRequest="5" BackgroundColor="Gray" />
 
-                        <Button x:Name="ContinueQuizButton"  Text="{x:Static resx:AppResources.ContinueQuizButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black"  />
-                        <Button x:Name="TopicsQuizButton" Text="{x:Static resx:AppResources.TopicsQuizButton}" Clicked="OnModuleClick" BackgroundColor="#FFCD00" TextColor="Black"   />
+                        <Button x:Name="ContinueQuizButton" Text="{x:Static resx:AppResources.ContinueQuizButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black" CornerRadius="20" />
+                        <Button x:Name="TopicsQuizButton" Text="{x:Static resx:AppResources.TopicsQuizButton}" Clicked="OnModuleClick" BackgroundColor="#FFCD00" TextColor="Black" CornerRadius="20" />
                     </VerticalStackLayout>
                 </Frame>
 
                 <!-- Use-Cases Container -->
-                <Frame BackgroundColor="Transparent" Padding="25" CornerRadius="10" WidthRequest="350" >
+                <Frame BackgroundColor="#3B3B3B" Padding="25" CornerRadius="20" WidthRequest="350">
                     <VerticalStackLayout Spacing="20">
-                        <Label Text=" " x:Name="MainPageUseCaseTitle" FontSize="20" FontAttributes="Bold" TextColor="Transparent" />
-                        <Label x:Name="UseCasesSubtitle" Text=" "
-                               FontSize="14" TextColor="Transparent" />
-                        <Button Text=" " x:Name="MainPageOpenButton"   BackgroundColor="Transparent" TextColor="Transparent" />
-                        <!--Clicked="OnStartUseClicked"-->
-
+                        <Label Text="{x:Static resx:AppResources.MainPageUseCaseTitle}" x:Name="MainPageUseCaseTitle" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                        <Label x:Name="UseCasesSubtitle" Text="{x:Static resx:AppResources.UseCasesSubtitle}" FontSize="14" TextColor="LightGray" />
+                        <Button Text="{x:Static resx:AppResources.MainPageOpenButton}" Clicked="OnStartUseClicked" x:Name="MainPageOpenButton" BackgroundColor="#FFCD00" TextColor="Black" CornerRadius="20" />
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>

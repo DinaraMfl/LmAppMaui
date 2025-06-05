@@ -19,5 +19,4 @@
      ContentTemplate="{DataTemplate local:ProfilePage}" Route="EinstellungPage" />
         </Tab>
     </TabBar>
-
 </Shell>

@@ -49,7 +49,6 @@
 	
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\MipMap\remira_figurative_mark_white.png" />
 	
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Images\logo_white.png" Color="#000000" />
@@ -71,6 +70,7 @@
 	  <None Remove="Resources\Icons\quiz.svg" />
 	  <None Remove="Resources\Icons\study.svg" />
 	  <None Remove="Resources\Icons\user.svg" />
+	  <None Remove="Resources\MipMap\logoicon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -93,6 +93,25 @@
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	    <CustomToolNamespace>user.svg</CustomToolNamespace>
 	  </MauiImage>
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_132_balk_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_123_balk_2.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_116_balk_3.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_115_best_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_140_grenz_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_135_para_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_133_warn_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_134_warn_2.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_136_warn_3.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_137_warn_4.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_138_warn_5.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_139_warn_6.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_141_warn_7.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_091_wbz_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_127_wbz_2.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_128_wbz_3.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_129_wbz_4.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_130_wbz_5.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_131_wbz_6.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -149,5 +168,11 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ItemGroup>
+		<MauiAsset Include="html\**\*.*" />
+	  <MauiIcon Include="Resources\MipMap\logoicon.png" />
+	</ItemGroup>
+
 
 </Project>

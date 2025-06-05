@@ -64,13 +64,14 @@ namespace AzubiApp.Views
 
                 Results.Add(new ResultItem
                 {
-                    QuestionText = $" {i + 1}. {questionText}",
-                    UserAnswerText = $"{yourAnswerTranlsate} {string.Join("\n", userSelected)}", // answers from user - 'Your questions'
-                    CorrectAnswerText = $"{correctAnswersTranlatetText} { string.Join("\n", correctAnswers)}", // correct answers from database 'Right questions'
+                    QuestionText = $"\t{i + 1}. {questionText}",
+                    UserAnswerText = $"\t\t\t{yourAnswerTranlsate} \n{string.Join("\n", userSelected)}", // answers from user - 'Your questions'
+                    CorrectAnswerText = $"\n\t\t{correctAnswersTranlatetText} \n{ string.Join("\n", correctAnswers)}", // correct answers from database 'Right questions'
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red,
-                    ShowCorrectAnswer = !isCorrect
-                });
+                    ShowCorrectAnswer = !isCorrect,
+                    ImagePath = string.IsNullOrEmpty(question.ImagePath) ? null : question.ImagePath
+                });         
             }
 
             ScoreLabel.Text = $"{correctCount} / {questions.Count}";
@@ -97,6 +98,16 @@ namespace AzubiApp.Views
             CorrectAnswerTitle.Text = AppResources.CorrectAnswerTitle; // correct answers Subtitle (.../...)
             BackToStartButton.Text = AppResources.BackToStartButton;
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                await Navigation.PopToRootAsync();
+            });
+
+            return true;
+        }
     }
 
     public class ResultItem
@@ -108,5 +119,7 @@ namespace AzubiApp.Views
         public Color ResultColor { get; set; }
         public bool ShowCorrectAnswer { get; set; }
         public string ScoreLabel { get; set; }
+        public string ImagePath { get; set; }
+        public bool HasImage => !string.IsNullOrEmpty(ImagePath);
     }
 }

@@ -9,10 +9,10 @@ namespace AzubiApp.Services
             var existingQuestions = await database.GetAllQuestionsAsync();
 
             var newQuestions = new List<Question>
-            {
+            {                
                 new Question
                 {
-                    Id = 1,
+                    Number = 1,
 
                     TextDe = "Was passiert, wenn die Option „Heute bestellen“ ausgewählt wurde?",
                     Answer1De = "Bestellungen werden auf den heutigen Tag vorgezogen",
@@ -28,10 +28,10 @@ namespace AzubiApp.Services
 
                     QuizCategory = new List<string> { "Bestellung", "Filter", "Allgemein" }
                 },
-
+                
                 new Question
                 {
-                    Id = 2,
+                    Number = 2,
 
                     TextDe = "Welche Funktion hat der Planungshorizont?",
                     Answer1De = "Er zeigt den letzten Bestellvorschlag an",
@@ -47,10 +47,10 @@ namespace AzubiApp.Services
 
                     QuizCategory = new List<string> { "Parameter" }
                 },
-
+                
                 new Question
                 {
-                    Id = 3,
+                    Number = 3,
 
                     TextDe = "Wie wird der Planungshorizont berechnet?",
                     Answer1De = "HEUTE + Eingetragener Planungshorizont in Werktagen",
@@ -69,7 +69,7 @@ namespace AzubiApp.Services
 
                 new Question
                 {
-                    Id = 4,
+                    Number = 4,
 
                     TextDe = "Mit welcher Periodenlänge hat man die niedrigste Standardabweichung bei der Prognose?",
                     Answer1De = "Tagesperiode",
@@ -88,7 +88,7 @@ namespace AzubiApp.Services
 
                 new Question
                 {
-                    Id = 5,
+                    Number = 5,
 
                     TextDe = "Was passiert beim Berechnungstyp „nur Prognose, nicht disponieren“?",
                     Answer1De = "Es wird nur nur eine Prognose gerechnet, aber keine Dispo",
@@ -107,7 +107,7 @@ namespace AzubiApp.Services
 
                 new Question
                 {
-                    Id = 6,
+                    Number = 6,
 
                     TextDe = "Welche Funktion hat die „Max. Reichweite“ in den Parametern?",
                     Answer1De = "Die Max. Reichweite gibt an wie lange die Lieferroute von Lager bis Filiale sein darf",
@@ -126,7 +126,7 @@ namespace AzubiApp.Services
 
                 new Question
                 {
-                    Id = 7,
+                    Number = 7,
 
                     TextDe = "Warum kriegt man eine OoS-Warnmeldung?",
                     Answer1De = "Weil eine SKU keine Bestandsdaten hat",
@@ -145,7 +145,7 @@ namespace AzubiApp.Services
 
                 new Question
                 {
-                    Id = 8,
+                    Number = 8,
 
                     TextDe = "Wie kann ich das Gütekriterium ändern?",
                     Answer1De = "Parameter>Dispo>Bestellmenge",
@@ -164,7 +164,7 @@ namespace AzubiApp.Services
 
                 new Question
                 {
-                    Id = 9,
+                    Number = 9,
 
                     TextDe = "Was passiert beim Berechnungstyp „standard, Prognose + Dispo“?",
                     Answer1De = "Es wird nur eine Prognose ohne Dispo gerechnet",
@@ -183,7 +183,7 @@ namespace AzubiApp.Services
 
                 new Question
                 {
-                    Id = 10,
+                    Number = 10,
 
                     TextDe = "Was passiert beim Berechnungstyp „nicht bestellen, mit Bestand-Sim“?",
                     Answer1De = "Es werden keine Bestellvorschläge generiert, wenn es eine Bestandsimulation gibt",
@@ -202,7 +202,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 11,
+                    Number = 11,
 
                     TextDe = "Was passiert beim Berechnungstyp „nicht bestellen, ohne Bestand-Sim“?",
                     Answer1De = "Es werden keine Bestellvorschläge, aber eine Bestandssimulation generiert",
@@ -221,7 +221,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 12,
+                    Number = 12,
 
                     TextDe = "Was passiert beim Berechnungstyp „Bestellmenge nullen vor Abfüllen“?",
                     Answer1De = "Es wird ein Bedarf gerechnet und Bestellvorschläge erhalten eine Bestellmenge von 0",
@@ -240,7 +240,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 13,
+                    Number = 13,
 
                     TextDe = "Was macht die Optimierungs-Einheit?",
                     Answer1De = "Die Optimierungs-Einheit gibt an mit welcher Einheit gerechnet werden soll",
@@ -259,7 +259,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 14,
+                    Number = 14,
 
                     TextDe = "Wie kann eine Mindestgrenze von 100 Stück (BE0) auf 100€ geändert werden? [Bis Version 8.8-01]",
                     Answer1De = "Den Zweck auf „Mindestgrenze (€)“ setzten",
@@ -278,7 +278,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 15,
+                    Number = 15,
 
                     TextDe = "Welche Parameter sollten eingestellt werden, wenn neue SKUs übergeben werden ohne bekannter Abgangshistorie?",
                     Answer1De = "Mittelwert",
@@ -297,7 +297,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 16,
+                    Number = 16,
 
                     TextDe = "Was unterscheidet eine Filterklasse von einer Zuordnungsklasse?",
                     Answer1De = "Einer Filterklasse können mehr SKUs zugeordnet werden",
@@ -316,7 +316,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 17,
+                    Number = 17,
 
                     TextDe = "Was unterscheidet eine Zuordnungsklasse zu einer Filterklasse?",
                     Answer1De = "Eine Zuordnungsklasse muss manuell befüllt werden",
@@ -335,7 +335,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 18,
+                    Number = 18,
 
                     TextDe = "Was wird inaktiviert, wenn die Kondition „Inaktiv“ gesetzt wird?",
                     Answer1De = "Der Zugeordnete Lieferant",
@@ -354,7 +354,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 19,
+                    Number = 19,
 
                     TextDe = "Was wird inaktiviert, wenn der Parameter „Inaktiv“ gesetzt wird?",
                     Answer1De = "Die Prognose-Rechnung",
@@ -373,7 +373,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 20,
+                    Number = 20,
 
                     TextDe = "Was macht der Read-Only Modus?",
                     Answer1De = "Man kann darüber Bestellungen exportieren",
@@ -392,7 +392,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 21,
+                    Number = 21,
 
                     TextDe = "Was bedeuten grüne  Zeilen in der Export-Tabelle?",
                     Answer1De = "Muss nichts bedeuten da die Farbe angepasst werden kann",
@@ -411,7 +411,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 22,
+                    Number = 22,
 
                     TextDe = "Darf ich eine SKU löschen?",
                     Answer1De = "Nein, SKUs darf man nur auf inaktiv setzen",
@@ -430,7 +430,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 23,
+                    Number = 23,
 
                     TextDe = "Was sind Ausreißer?",
                     Answer1De = "Ausreißer erkennen SKUs die doppelt vorhanden sind",
@@ -449,7 +449,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 24,
+                    Number = 24,
 
                     TextDe = "Woran erkenne ich wie lang eine Saison ist?",
                     Answer1De = "Die Anzahl der Perioden vor und nach dem Stichtag definiert die Länge der Saison",
@@ -468,7 +468,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 25,
+                    Number = 25,
 
                     TextDe = "Wie viele Historienwerte sind erforderlich um einen Strukturbruch zu erkennen?",
                     Answer1De = "Mindestens 2 Historienwerte",
@@ -487,7 +487,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 26,
+                    Number = 26,
 
                     TextDe = "Was korrigiert die Behandlungsgrenze?",
                     Answer1De = "Ausreißer",
@@ -506,7 +506,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 27,
+                    Number = 27,
 
                     TextDe = "Welche Grenze sollte höher sein bei den Ausreißern, damit diese korrigiert wird?",
                     Answer1De = "Behandlungsgrenze",
@@ -525,7 +525,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 28,
+                    Number = 28,
 
                     TextDe = "Wann kommen Vorläufer (normalerweise) zum Einsatz?",
                     Answer1De = "Neue SKUs ohne Historie",
@@ -544,7 +544,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 29,
+                    Number = 29,
 
                     TextDe = "Was bewirkt ein eingetragener Vorläufer?",
                     Answer1De = "Die Vorläufer-SKU wird ab dem eingetragenen Datum inaktiv gelöscht & wird dann ersetzt mit der SKU, die diese SKU als Vorläufer eingetragen hat.",
@@ -563,7 +563,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 30,
+                    Number = 30,
 
                     TextDe = "Wie kann man LOGOMATE dazu bringen nur einen bestimmten Zeitraum der Historie für die Berechnung zu nutzen?",
                     Answer1De = "Bei den Parametern unter dem Reiter „Prognose“ den Kasten „Zu verwendende Historie“ befüllen",
@@ -582,7 +582,7 @@ namespace AzubiApp.Services
                  
                  new Question
                  {
-                    Id = 31,
+                    Number = 31,
 
                     TextDe = "Was bewirkt das Gütekriterium „Bestand minimieren“?",
                     Answer1De = "Der Bestand wird so niedrig wie möglich gehalten, indem die kleinstmöglich Bestellmenge vorgeschlagen wird",
@@ -601,7 +601,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 32,
+                    Number = 32,
 
                     TextDe = "Was bewirkt das Gütekriterium „Kosten/ Warenwert minimieren“?",
                     Answer1De = "Bestellmengen werden reduziert jedoch wird öfter bestellt, um die Lagerhaltungskosten zu minimieren",
@@ -620,7 +620,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 33,
+                    Number = 33,
 
                     TextDe = "Wann tritt die Warnung  “Max. Prognose erreicht” auf?",
                     Answer1De = "Tritt auf, wenn die Prognose einem starken Trend oder quadratischen Trend nach oben unterliegt",
@@ -639,7 +639,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 34,
+                    Number = 34,
 
                     TextDe = "Wann wird ein Strukturbruch erkannt?",
                     Answer1De = "Dies ist ausschließlich nur in der Prognosegrafik zu erkennen",
@@ -658,7 +658,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 35,
+                    Number = 35,
 
                     TextDe = "Wann tritt die Warnung  “Max. Prognose erreicht” auf?",
                     Answer1De = "Tritt auf, wenn zu viel bestellt wird",
@@ -677,7 +677,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 36,
+                    Number = 36,
 
                     TextDe = "Die Wiederbeschaffungszeit setzt sich zusammen aus:?",
                     Answer1De = "Auftragsvorbereitungszeit (AVZ) Lieferzeit (LFZ) Transporttagen (TT) Einlagerungszeit (ELZ)",
@@ -696,7 +696,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 37,
+                    Number = 37,
 
                     TextDe = "Was macht der Trend?",
                     Answer1De = "Er lässt den Mittelwert linear steigen",
@@ -715,7 +715,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 38,
+                    Number = 38,
 
                     TextDe = "Was ist die Voraussetzung für einen Trend?",
                     Answer1De = "Ein Mittelwert",
@@ -734,7 +734,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 39,
+                    Number = 39,
 
                     TextDe = "Was macht der „Quadrat. Trend“?",
                     Answer1De = "Er lässt den Mittelwert linear steigen",
@@ -753,7 +753,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 40,
+                    Number = 40,
 
                     TextDe = "Ist es möglich sowohl Trend als auch Quadrat. Trend einzustellen? ",
                     Answer1De = "Ja, weil der Quadratische Trend ohne linearen Trend nicht funktioniert",
@@ -772,7 +772,7 @@ namespace AzubiApp.Services
                  
                  new Question
                  {
-                    Id = 41,
+                    Number = 41,
 
                     TextDe = "Was sagt die ABC-Klasse über eine SKU aus?",
                     Answer1De = "Die ABC-Klasse zeigt welche SKU am genausten prognostiziert werden kann",
@@ -791,7 +791,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 42,
+                    Number = 42,
 
                     TextDe = "Was sagt eine XYZ-Klasse über eine SKU aus?",
                     Answer1De = "Die ABC-Klasse zeigt welche SKU am genausten prognostiziert werden kann",
@@ -810,7 +810,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 43,
+                    Number = 43,
 
                     TextDe = "Was bewirkt der “Rhythmusanfang” in einem Bestellrhythmus?",
                     Answer1De = "Er gibt an ab welcher Periodenzahl der Bestellrhythmus anfangen soll",
@@ -829,7 +829,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 44,
+                    Number = 44,
 
                     TextDe = "Was muss erfüllt sein damit man im Kalender, die Wochentage & Feiertage bearbeiten kann?",
                     Answer1De = "„Eigener Kalender“ muss angehakt sein",
@@ -848,7 +848,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 45,
+                    Number = 45,
 
                     TextDe = "Was kann auch ohne „Eigener Kalender“-Haken eingestellt werden?",
                     Answer1De = "Wochentage",
@@ -867,7 +867,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 46,
+                    Number = 46,
 
                     TextDe = "Wo kann man den Werkskalender finden?",
                     Answer1De = "Gruppenbaum",
@@ -886,7 +886,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 47,
+                    Number = 47,
 
                     TextDe = "Wo kann man den Lieferanten-Kalender finden?",
                     Answer1De = "Lieferantenbaum",
@@ -905,7 +905,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 48,
+                    Number = 48,
 
                     TextDe = "Welche Kalender gibt es in LOGOMATE?",
                     Answer1De = "Lieferanten-Kalender",
@@ -924,7 +924,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 49,
+                    Number = 49,
 
                     TextDe = "Bei was unterstützt Sie die Vererbung in LOGOMATE?",
                     Answer1De = "Sie verweist auf die letzten Bestellungen vor ca. ein Jahr",
@@ -943,7 +943,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 50,
+                    Number = 50,
 
                     TextDe = "Was sorgt dafür, dass eine Bestellung überfällig ist?",
                     Answer1De = "Warenüberschuss",
@@ -962,7 +962,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 51,
+                    Number = 51,
 
                     TextDe = "Welchen Vorteil hat die 2D-Ansicht?",
                     Answer1De = "Nur damit ist die Prognosegrafik richtig dargestellt",
@@ -981,7 +981,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 52,
+                    Number = 52,
 
                     TextDe = "Wie viele Rhythmen kann ich in den Konditionen (Zeiten)auswählen?",
                     Answer1De = "5",
@@ -1000,7 +1000,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 53,
+                    Number = 53,
 
                     TextDe = "Was ist ein Dispofehler?",
                     Answer1De = "Überfällige Bestellungen",
@@ -1019,7 +1019,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 54,
+                    Number = 54,
 
                     TextDe = "Was ist die primäre Aufgabe der Verbund-Bestellung?",
                     Answer1De = "Alle SKUs die bestellt wurden, sollen gleichzeitig ihren SiB erreichen, um die SKUs wieder gleichzeitig bestellen zu können",
@@ -1038,7 +1038,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 55,
+                    Number = 55,
 
                     TextDe = "Was bewirkt der Parameter „Kein Auslöseartikel“?",
                     Answer1De = "Die SKU darf nur bei einer Verbund-Bestellung mitbestellt werden",
@@ -1057,7 +1057,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 56,
+                    Number = 56,
 
                     TextDe = "Was unterscheidet eine Verbund- Bestellung zu einer „normalen“ Bestellung?",
                     Answer1De = "Mit Verbund-Bestellungen kriegt man einen Mengen-Rabatt, da mehrere Artikel auf einmal bestellt werden",
@@ -1076,7 +1076,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 57,
+                    Number = 57,
 
                     TextDe = "Was kann man machen bei SKUs in einer Verbund-Gruppe, mit jeweils unterschiedlichen Konditionen?",
                     Answer1De = "Verbund-Untergruppen bilden, bei SKUs die die gleichen Konditionen besitzen",
@@ -1095,7 +1095,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 58,
+                    Number = 58,
 
                     TextDe = "Woran erkennt man eine Verbund-Gruppe?",
                     Answer1De = "An der hellgrünen Schriftfarbe der Gruppe",
@@ -1114,7 +1114,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 59,
+                    Number = 59,
 
                     TextDe = "Wie können Verbund-Gruppen erstellt werden?",
                     Answer1De = "“Gewünschte Gruppe”->Rechtsklick->Gruppe/Benutzer ändern->“Verbund“ anhaken",
@@ -1133,7 +1133,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 60,
+                    Number = 60,
 
                     TextDe = "Was zeigt eine rote Schrift in den Bestellungen an (standardmäßig)?",
                     Answer1De = "Die Bestellung hat ihren Verfügbarkeitstermin verpasst und gilt jetzt als überfällig",
@@ -1152,7 +1152,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 61,
+                    Number = 61,
 
                     TextDe = "Was zeigt eine hellrote Schrift in den Bestellungen an (standardmäßig)?",
                     Answer1De = "Die Bestellung hat ihren Verfügbarkeitstermin verpasst und gilt jetzt als überfällig",
@@ -1171,7 +1171,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 62,
+                    Number = 62,
 
                     TextDe = "Was zeigt eine grüne Schrift in den Bestellungen an (standardmäßig)?",
                     Answer1De = "Der Bestellvorschlag wurde exportiert",
@@ -1190,7 +1190,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 63,
+                    Number = 63,
 
                     TextDe = "Was zeigt eine hellgrüne Schrift in den Bestellungen an (standardmäßig)?",
                     Answer1De = "Die Bestellung wurde importiert",
@@ -1209,7 +1209,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 64,
+                    Number = 64,
                  
                     TextDe = "Was zeigt eine schwarze Schrift in den Bestellungen an (standardmäßig)?",
                     Answer1De = "Die Bestellung hat Ihren Bestellzeitpunkt noch nicht erreicht und wurde noch nicht exportiert",
@@ -1228,7 +1228,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 65,
+                    Number = 65,
 
                     TextDe = "Was bewirkt das Gütekriterium „Auf Max. auffüllen“?",
                     Answer1De = "Es wird die maximale Menge bestellt, die pro Bestellung getätigt werden darf",
@@ -1247,7 +1247,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 66,
+                    Number = 66,
 
                     TextDe = "Was bewirkt das Gütekriterium „Auf Max. + Reserv. auffüllen“?",
                     Answer1De = "Es werden Bestellvorschläge generiert, bis der maximale Bestand erreicht wird",
@@ -1266,7 +1266,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 67,
+                    Number = 67,
 
                     TextDe = "Welche Funktion hat das Auto-Store-Verfahren?",
                     Answer1De = "Es werden Bestellvorschläge, aus mehreren Optimierungseinheiten, generiert",
@@ -1285,7 +1285,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 68,
+                    Number = 68,
 
                     TextDe = "Wie und wo wird das Auto-Store-Verfahren aktiviert?",
                     Answer1De = "Parameter->Dispo->Gütekriterium->“Auto-Store-Verfahren“ auswählen",
@@ -1304,7 +1304,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 69,
+                    Number = 69,
 
                     TextDe = "Was bewirkt das Gütekriterium „Container-Optimierung“?",
                     Answer1De = "Es werden Bestellvorschläge generiert mit den kleinstmöglichen Bestellkosten",
@@ -1323,7 +1323,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 70,
+                    Number = 70,
 
                     TextDe = "Was bewirkt das Gütekriterium „Mit Partitionierung“?",
                     Answer1De = "Es wird eine zusätzliche Bestellung generiert für alle Aufträge, die in der aktuellen Periode stattfinden",
@@ -1342,7 +1342,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 71,
+                    Number = 71,
 
                     TextDe = "Was bewirkt das Gütekriterium „Partitionen verwenden Anfangsbestand nicht“?",
                     Answer1De = "Aufträge werden, unabhängig vom Bestand und offenen Bestellungen, 1:1 zu Bestellungen umgewandelt",
@@ -1361,7 +1361,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 72,
+                    Number = 72,
 
                     TextDe = "Was muss erfüllt werden damit das Auto-Store-Verfahren ordnungsgemäß ausgeführt werden kann?",
                     Answer1De = "Die Differenz zwischen den zu verwendenden Optimierungs-Einheiten muss nach oben hin größer werden",
@@ -1380,7 +1380,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 73,
+                    Number = 73,
 
                     TextDe = "Was ist der Unterschied zwischen Auto-Store-Verfahren und Container-Optimierung?",
                     Answer1De = "Beim Auto-Store-Verfahren wird die Bestellmenge optimiert",
@@ -1399,7 +1399,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 74,
+                    Number = 74,
                     
                     TextDe = "Welche Kombinationen sind bei einer Container-Optimierung möglich, nach der optimiert werden soll?",
                     Answer1De = "Volumen / Gewicht",
@@ -1415,10 +1415,10 @@ namespace AzubiApp.Services
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
-
+                 
                  new Question
                  {
-                    Id = 75,
+                    Number = 75,
 
                     TextDe = "Was ändert sich im Bestellfenster wenn Reservierungen eine Partition besitzen?",
                     Answer1De = "Eine Reservierung mit Partition kriegt eine eigene Bestellung und kann direkt einem Auftrag zugeordnet werden",
@@ -1437,7 +1437,7 @@ namespace AzubiApp.Services
                  
                  new Question
                  {
-                    Id = 76,
+                    Number = 76,
 
                     TextDe = "Wofür werden Pseudo-Kontrakte verwendet?",
                     Answer1De = "Das sind Kontrakte auf die nur bestimmte Benutzer zugreifen können",
@@ -1456,7 +1456,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 77,
+                    Number = 77,
 
                     TextDe = "Wie viele Kontrakte kann ein Artikel haben?",
                     Answer1De = "Ein Artikel kann mehrere Kontrakte haben.",
@@ -1475,7 +1475,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 78,
+                    Number = 78,
 
                     TextDe = "Wie viele Lieferanten können einer SKU zugeordnet werden?",
                     Answer1De = "5",
@@ -1494,7 +1494,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 79,
+                    Number = 79,
                     
                     TextDe = "Wie kann ich Lieferkontrakte splitten?",
                     Answer1De = "Parameter -> Dispo -> Kontraktart die Option \"Lieferantenauswahl\" und / oder \"Max. Menge\"",
@@ -1513,7 +1513,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 80,
+                    Number = 80,
 
                     TextDe = "Was bedeutet in der Kontraktauswahl \"Nach Vertragsende\"?",
                     Answer1De = "Es wird beim Lieferanten mit dem nächsten Vertragsende bestellt, wenn der Kontrakt offen ist.",
@@ -1532,7 +1532,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 81,
+                    Number = 81,
 
                     TextDe = "Was bedeutet in der Kontraktart \"Dauerauftrag/Bestellungsaufteilung\"?",
                     Answer1De = "Bestellmengen für SKUs mit mehreren Lieferanten können nicht aufgeteilt werden, sondern nur vereinzelt.",
@@ -1551,7 +1551,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 82,
+                    Number = 82,
 
                     TextDe = "Was bewirkt die Kontraktart \"Max.Menge\"?",
                     Answer1De = "Es wird immer soviel bestellt bis die Maximale Bestandskapazität erreicht wird von der SKU",
@@ -1570,7 +1570,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 83,
+                    Number = 83,
 
                     TextDe = "Welche Farbe haben negative Aktionen in der Prognosegrafik? (standardgemäß)",
                     Answer1De = "weiß",
@@ -1589,7 +1589,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 84,
+                    Number = 84,
 
                     TextDe = "Was sind Semi-Aktionen?",
                     Answer1De = "Semi-Aktionen werden angezeigt bei einer Ausreißer-Behandlung",
@@ -1608,7 +1608,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 85,
+                    Number = 85,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses blau & unterstrichen angezeigt wird?",
                     Answer1De = "Der Wert wurde auf der aktuellen Ebene erfasst.",
@@ -1627,7 +1627,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 86,
+                    Number = 86,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses grün & unterstrichen angezeigt wird?",
                     Answer1De = "Der Wert wurde von einer Klasse geerbt.",
@@ -1646,7 +1646,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 87,
+                    Number = 87,
 
                     TextDe = "Automatische Aktionen, die Vergangenheitswerte korrigieren, können entstehen…",
                     Answer1De = "durch die Prognose.",
@@ -1665,7 +1665,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 88,
+                    Number = 88,
 
                     TextDe = "Was machen Info-Aktionen ?",
                     Answer1De = "Damit kann man zuvor nicht berücksichtige Zeiträume mit ihren Abverkäufen und Aktionen für die Prognoserechnung verwenden.",
@@ -1684,7 +1684,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 89,
+                    Number = 89,
 
                     TextDe = "Was sind Stichtage?",
                     Answer1De = "Stichtage ermöglichen variable Saisons.",
@@ -1703,7 +1703,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 90,
+                    Number = 90,
 
                     TextDe = "Welche Aussage stimmt nicht?",
                     Answer1De = "Der SiB ist die Menge, die auf Lager sein muss, um Abweichungen in den prognostizierten Abverkäufen aufzufangen.",
@@ -1722,7 +1722,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 91,
+                    Number = 91,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Dienstag?",
                     Answer1De = "9 Tage",
@@ -1741,7 +1741,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 92,
+                    Number = 92,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses blau angezeigt wird?",
                     Answer1De = "Das Feld vererbt einen Wert",
@@ -1760,7 +1760,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 93,
+                    Number = 93,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses schwarz angezeigt wird?",
                     Answer1De = "Der Wert im Feld wurde manuell eingepflegt",
@@ -1779,7 +1779,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 94,
+                    Number = 94,
 
                     TextDe = "Welchen Unterschied macht es, wenn ein Konditions- / Parameter-Feld unterstrichen wird oder nicht?",
                     Answer1De = "Ein unterstrichenes Feld wurde von einem User bearbeitet",
@@ -1798,7 +1798,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 95,
+                    Number = 95,
 
                     TextDe = "Welche Auswirkung hat eine Kontraktart?",
                     Answer1De = "Die Kontraktart bestimmt, wie mit Kontrakten umgegangen werden soll",
@@ -1817,7 +1817,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 96,
+                    Number = 96,
 
                     TextDe = "Welche Auswirkung hat eine Kontraktauswahl?",
                     Answer1De = "Mit der Kontraktauswahl kann ein Kontrakt statisch übergeben werden, bis dieser erfüllt wurde",
@@ -1836,7 +1836,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 97,
+                    Number = 97,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „Nach Restmenge“?",
                     Answer1De = "Der Kontrakt mit der niedrigsten Restlaufzeit wird verwendet",
@@ -1855,7 +1855,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 98,
+                    Number = 98,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „RMge / RLfz“?",
                     Answer1De = "Der Kontrakt mit der höchsten prozentualen Restmenge wird verwendet",
@@ -1874,7 +1874,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 99,
+                    Number = 99,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „RMge / GMge“?",
                     Answer1De = "Der Kontrakt mit der höchsten prozentualen Restmenge pro Tag wird verwendet",
@@ -1893,7 +1893,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 100,
+                    Number = 100,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „(RMge / GMge) * (1 / RLfz)“?",
                     Answer1De = "Der Kontrakt mit der höchsten durchschnittlichen Restmenge pro Tag wird verwendet",
@@ -1912,7 +1912,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 101,
+                    Number = 101,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „(RMge / GMge) * (GLfz / RLfz)“?",
                     Answer1De = "Der Kontrakt mit, der am stärksten steigenden durchschnittlichen Restmenge pro Tag wird, verwendet",
@@ -1931,7 +1931,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 102,
+                    Number = 102,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „Bestell-Verhältnis“?",
                     Answer1De = "Die Bestellmenge wird auf mehrere Lieferanten aufgeteilt im angegebenen Verhältnis",
@@ -1950,7 +1950,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 103,
+                    Number = 103,
 
                     TextDe = "Welche Kontraktart muss ausgewählt sein damit die Kontraktauswahl verwendet wird?",
                     Answer1De = "Lieferantenauswahl",
@@ -1969,7 +1969,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 104,
+                    Number = 104,
 
                     TextDe = "Was bewirkt die Kontraktart „Kontrakte ignorieren“?",
                     Answer1De = "Die Kontrakte werden bis zum nächsten Bestelltermin nicht verwendet ",
@@ -1988,7 +1988,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 105,
+                    Number = 105,
 
                     TextDe = "Was bewirkt die Kontraktart „Max. Menge u. Lieferantenauswahl“?",
                     Answer1De = "Es wird der Kontrakt mit der höchsten Kontraktmenge gewählt",
@@ -2007,7 +2007,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 106,
+                    Number = 106,
 
                     TextDe = "Was macht der Parameter \"Berechnung von Semi-Aktionen\"?",
                     Answer1De = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen ermittelt werden.",
@@ -2026,7 +2026,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 107,
+                    Number = 107,
 
                     TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit'' bei der Berechnung von Semi-Aktionen?",
                     Answer1De = "Aktionsmengen werden ausschließlich aus den Lagerbeständen während der Aktion berechnet.",
@@ -2045,7 +2045,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 108,
+                    Number = 108,
 
                     TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit + ggf. Info setzen'' bei der Berechnung von Semi-Aktionen?",
                     Answer1De = "Wenn die Semi-Aktion nach dem ersten Abgang endet, wird sie automatisch gestoppt.",
@@ -2064,7 +2064,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 109,
+                    Number = 109,
 
                     TextDe = "Was macht der Typ ''Rel zu Ex-Post-Prognose'' bei der Berechnung von Semi-Aktionen?",
                     Answer1De = "Aktionsmengen basieren ausschließlich auf den ursprünglich geplanten Liefermengen.",
@@ -2083,7 +2083,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 110,
+                    Number = 110,
 
                     TextDe = "Was macht der Typ ''Rel. zu aktionsfreier Zeit mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
                     Answer1De = "Für diesen Parameter sind nur zukünftige Verkaufsprognosen notwendig.",
@@ -2102,7 +2102,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 111,
+                    Number = 111,
 
                     TextDe = "Was macht der Typ ''Rel. zur Ex-Post-Prognose mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
                     Answer1De = "Dieser Parameter funktioniert auch ohne historische Daten.",
@@ -2121,7 +2121,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 112,
+                    Number = 112,
 
                     TextDe = "Wo kann ich die Ausreißererkennung deaktivieren?",
                     Answer1De = "Parameter -> Strukturbruch/Ausreißer -> Strukturbrucherkennung",
@@ -2140,7 +2140,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 114,
+                    Number = 113,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2159,7 +2159,26 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 115,
+                    Number = 114,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Number = 115,
 
                     TextDe = "Was bedeuten die roten Striche am unteren Rand der Bestandssimulation?",
                     Answer1De = "Ein alternativer SiB-Typ, der an jedem Wochenende pausiert",
@@ -2178,26 +2197,28 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 116,
+                    Number = 116,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was stellen die schwarzen Striche oben bei der Prognose dar?",
+                    Answer1De = "Der Prognosehorizont",
+                    Answer2De = "Die Standardabweichung",
+                    Answer3De = "Die relative Abgangsmöglichkeit",
+                    CorrectAnswersDe = "Die Standardabweichung",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does the black line at the top of the forecast represent?",
+                    Answer1En = "The forecast horizon",
+                    Answer2En = "The standard deviation",
+                    Answer3En = "The relative departure option",
+                    CorrectAnswersEn = "The standard deviation",
 
-                    QuizCategory = new List<string> { "", "" }
+                    ImagePath = "Images/QuestionsImage/question_116_balk_3.png",
+
+                    QuizCategory = new List<string> { "Prognose" }
                  },
 
                  new Question
                  {
-                    Id = 117,
+                    Number = 117,
 
                     TextDe = "Wo kann ich die Farben der Prognosegrafik ändern?",
                     Answer1De = "Unter dem Layout",
@@ -2216,7 +2237,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 118,
+                    Number = 118,
 
                     TextDe = "Was bedeutet ein Prognose-Faktor von 2.0?",
                     Answer1De = "eine Halbierung der Prognose",
@@ -2235,7 +2256,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 119,
+                    Number = 119,
 
                     TextDe = "Was bedeutet ''Sofort bestellen'' in den Konditionen?",
                     Answer1De = "Alle offenen Bestellungen werden heute bestellt",
@@ -2254,7 +2275,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 120,
+                    Number = 120,
 
                     TextDe = "Was sind die Vorraussetzung für die Kontraktauswahl: “Bestellverhältnis” ?",
                     Answer1De = "Man benötigt zwei Lieferanten",
@@ -2273,7 +2294,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 121,
+                    Number = 121,
 
                     TextDe = "Werden historische Aktionen bei der Prognose berücksichtigt?",
                     Answer1De = "Ja",
@@ -2292,7 +2313,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 122,
+                    Number = 122,
 
                     TextDe = "Man kann eine variable Saison erkennen, wenn…?",
                     Answer1De = "z.B. wenn Schulferien auftreten",
@@ -2311,7 +2332,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 123,
+                    Number = 123,
 
                     TextDe = "Was stellen die dunkelgrünen Balkenanteile dar?",
                     Answer1De = "Negative Aktionen",
@@ -2330,7 +2351,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 124,
+                    Number = 124,
 
                     TextDe = "Was macht der Typ “SiB-Erhöhung” bei der Behandlung Aktionsbestellung?",
                     Answer1De = "Der SiB wird dauerhaft um die Aktionsmenge × Prozentsatz erhöht",
@@ -2349,7 +2370,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 125,
+                    Number = 125,
 
                     TextDe = "Was macht der Typ “SiB-Erhöhung m. langsamen Abfall” bei der Behandlung Aktionsbestellung?",
                     Answer1De = "Die Reduktion des Sicherheitsbestands beginnt erst nach Ende der Aktion",
@@ -2368,7 +2389,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 126,
+                    Number = 126,
 
                     TextDe = "Was macht der Typ “Reservierungsdatum vordatieren” bei der Behandlung Aktionsbestellung?",
                     Answer1De = "Reicht die Bestellmenge für den Aktionszeitraum, wird nach der Dispo das Reservierungsdatum aller Positionen auf das Verfügbar-ab-Datum gesetzt.",
@@ -2387,7 +2408,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 127,
+                    Number = 127,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
                     Answer1De = "15 Tage",
@@ -2406,7 +2427,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 128,
+                    Number = 128,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag? (temp/adrian.pawlak/App_Use-Case/WBZ_3.png)",
                     Answer1De = "25 Tage",
@@ -2425,7 +2446,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 129,
+                    Number = 129,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
                     Answer1De = "11 Tage",
@@ -2444,7 +2465,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 130,
+                    Number = 130,
 
                     TextDe = "",
                     Answer1De = "13 Tage",
@@ -2463,7 +2484,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 131,
+                    Number = 131,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
                     Answer1De = "12 Tage",
@@ -2482,7 +2503,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 132,
+                    Number = 132,
 
                     TextDe = "Welcher dieser Balken zeigt eine Ausreißer-Korrektur?",
                     Answer1De = "Der linke Balken",
@@ -2501,7 +2522,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 133,
+                    Number = 133,
 
                     TextDe = "Welche Warnung wird erzeugt?",
                     Answer1De = "Max. Reichweite wird überschritten",
@@ -2520,7 +2541,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 134,
+                    Number = 134,
 
                     TextDe = "Welche Warnung wird erzeugt?",
                     Answer1De = "Aktuell OoS",
@@ -2539,7 +2560,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 135,
+                    Number = 135,
 
                     TextDe = "Wofür wird dieser Block benutzt?",
                     Answer1De = "Um festzulegen wieviel von der Abgangs-Historie verwendet werden soll, für die Prognoserechnung",
@@ -2558,7 +2579,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 136,
+                    Number = 136,
 
                     TextDe = "Welche Warnungen werden erzeugt?",
                     Answer1De = "Ausreißer",
@@ -2577,7 +2598,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 137,
+                    Number = 137,
 
                     TextDe = "Welche Warnungen werden erzeugt?",
                     Answer1De = "Stark fallende Prognose",
@@ -2596,7 +2617,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 138,
+                    Number = 138,
 
                     TextDe = "Welche Warnungen werden erzeugt?",
                     Answer1De = "Ausreißer",
@@ -2615,7 +2636,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 139,
+                    Number = 139,
 
                     TextDe = "Welche Warnungen werden erzeugt?",
                     Answer1De = "Ausreißer",
@@ -2634,7 +2655,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 140,
+                    Number = 140,
 
                     TextDe = "Was zeigen die gestrichelten Linien an?",
                     Answer1De = "Die Ausreißer-Behandlungsgrenze",
@@ -2653,7 +2674,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 141,
+                    Number = 141,
 
                     TextDe = "Welche Warnung wird erzeugt?",
                     Answer1De = "Überfällige Bestellungen",
@@ -2672,7 +2693,7 @@ namespace AzubiApp.Services
 
                  /*new Question
                  {
-                    Id = 142,
+                    Number = 142,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2691,7 +2712,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 143,
+                    Number = 143,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2710,7 +2731,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 144,
+                    Number = 144,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2729,7 +2750,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 145,
+                    Number = 145,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2748,7 +2769,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 146,
+                    Number = 146,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2768,7 +2789,7 @@ namespace AzubiApp.Services
 
                 new Question
                  {
-                    Id = 147,
+                    Number = 147,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2787,7 +2808,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 148,
+                    Number = 148,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2806,7 +2827,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 149,
+                    Number = 149,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2825,7 +2846,7 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 150,
+                    Number = 150,
 
                     TextDe = "",
                     Answer1De = "",
@@ -2841,13 +2862,12 @@ namespace AzubiApp.Services
 
                     QuizCategory = new List<string> { "", "" }
                  }, */
-            
             };
 
 
             foreach (var question in newQuestions)
             {
-                if (!existingQuestions.Any(q => q.Id == question.Id))
+                if (!existingQuestions.Any(q => q.Number == question.Number))
                 {
                     await database.AddQuestionAsync(question);
                 }
