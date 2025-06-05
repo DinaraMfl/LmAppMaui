@@ -686,7 +686,7 @@ namespace AzubiApp.Services
                     CorrectAnswersDe = "Auftragsvorbereitungszeit (AVZ) Lieferzeit (LFZ) Transporttagen (TT) Einlagerungszeit (ELZ)",
 
                     TextEn = "The replacement time is made up of:?",
-                    Answer1En = "Order Preparation Time (OPT) Delivery Time (DT Transport Time (TT) Storage Time (ST)",
+                    Answer1En = "Order Preparation Time (OPT) Delivery Time (DT) Transport Time (TT) Storage Time (ST)",
                     Answer2En = "Order Preparation Time (OPT) Delivery Time (DT) ABC Analysis (ABC) Storage Time (ST)",
                     Answer3En = "Order Preparation Time (OPT) Just-in-Time (JiT) ABC Analysis (ABC) Storage Time (ST)",
                     CorrectAnswersEn = "Order Preparation Time (OPT) Delivery Time (DT) Transport Time (TT) Storage Time (ST)",
@@ -1434,220 +1434,714 @@ namespace AzubiApp.Services
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
-                 /*
+                 
                  new Question
                  {
                     Id = 76,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Wofür werden Pseudo-Kontrakte verwendet?",
+                    Answer1De = "Das sind Kontrakte auf die nur bestimmte Benutzer zugreifen können",
+                    Answer2De = "Damit kann ein zusätzlicher SiB vorgegeben werden.",
+                    Answer3De = "Diese Kontrakte werden für Kommentare verwendet",
+                    CorrectAnswersDe = "Damit kann ein zusätzlicher SiB vorgegeben werden",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What are pseudo-contracts used for?",
+                    Answer1En = "These are contracts that only certain users can access",
+                    Answer2En = "This can be used to define an additional SiB.",
+                    Answer3En = "These contracts can be used for comments",
+                    CorrectAnswersEn = "This can be used to define an additional SiB.",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Paramter", "Kondition" }
                  },
 
                  new Question
                  {
                     Id = 77,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Wie viele Kontrakte kann ein Artikel haben?",
+                    Answer1De = "Ein Artikel kann mehrere Kontrakte haben.",
+                    Answer2De = "Keine, da Kontrakte nicht auf Artikelebene laufen. ",
+                    Answer3De = "Ein Kontrakt pro Artikel.",
+                    CorrectAnswersDe = "Ein Artikel kann mehrere Kontrakte haben",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "How many contracts can an article have?",
+                    Answer1En = "An article can have multiple contracts.",
+                    Answer2En = "None, as contracts do not run at article level. ",
+                    Answer3En = "One contract per article.",
+                    CorrectAnswersEn = "An article can have multiple contracts.",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Parameter" }
                  },
 
                  new Question
                  {
                     Id = 78,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Wie viele Lieferanten können einer SKU zugeordnet werden?",
+                    Answer1De = "5",
+                    Answer2De = "1",
+                    Answer3De = "Es gibt keine Begrenzung",
+                    CorrectAnswersDe = "Es gibt keine Begrenzung",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "How many suppliers can be assigned to a SKU?",
+                    Answer1En = "5",
+                    Answer2En = "1",
+                    Answer3En = "There is no limit",
+                    CorrectAnswersEn = "There is no limit",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Allgemein" }
                  },
 
                  new Question
                  {
                     Id = 79,
                     
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Wie kann ich Lieferkontrakte splitten?",
+                    Answer1De = "Parameter -> Dispo -> Kontraktart die Option \"Lieferantenauswahl\" und / oder \"Max. Menge\"",
+                    Answer2De = "Parameter -> Dispo -> Kontraktauswahl die Option \"Nach Restmenge\"",
+                    Answer3De = "Konditionen -> Kontrakte -> Spaltenauswahl die Option \"Ext. Kontrakt-Pos-Nr\".",
+                    CorrectAnswersDe = "Parameter -> Dispo -> Kontraktart die Option \"Lieferantenauswahl\" und / oder \"Max. Menge\"",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "How can I split delivery contracts?",
+                    Answer1En = "Parameters -> Replenishment -> Contract type: \"Select Supplier\" and / or \"Max. Quantity\"",
+                    Answer2En = "Parameters -> Replenishment -> Select contract:  \"By rest quantity\"",
+                    Answer3En = "Conditions -> Contracts -> Columns (Right Click): \"Ext. contract pos no\"",
+                    CorrectAnswersEn = "Parameters -> Replenishment -> Contract type: \"Select Supplier\" and / or \"Max. Quantity\"",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Parameter" }
                  },
 
                  new Question
                  {
                     Id = 80,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was bedeutet in der Kontraktauswahl \"Nach Vertragsende\"?",
+                    Answer1De = "Es wird beim Lieferanten mit dem nächsten Vertragsende bestellt, wenn der Kontrakt offen ist.",
+                    Answer2De = "Bestellt wird immer beim Lieferanten mit der kürzesten Wiederbeschaffungszeit (WBZ) ",
+                    Answer3De = "Bestellt wird nur dann, wenn der Kontrakt vollständig erfüllt wird.",
+                    CorrectAnswersDe = "Es wird beim Lieferanten mit dem nächsten Vertragsende bestellt, wenn der Kontrakt offen ist",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does the Option \"By timeout contract\" mean at the field \"Select contract\"",
+                    Answer1En = "It is ordered from the supplier with the next contract end date if the contract is still open",
+                    Answer2En = "Orders are always placed with the supplier with the shortest Total Lead Time (TLT)",
+                    Answer3En = "Orders are only placed if the contract will be completely fulfilled",
+                    CorrectAnswersEn = "It is ordered from the supplier with the next contract end date if the contract is still open",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Parameter" }
                  },
 
                  new Question
                  {
                     Id = 81,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was bedeutet in der Kontraktart \"Dauerauftrag/Bestellungsaufteilung\"?",
+                    Answer1De = "Bestellmengen für SKUs mit mehreren Lieferanten können nicht aufgeteilt werden, sondern nur vereinzelt.",
+                    Answer2De = "Die Aufteilung der Bestellmengen erfolgt nur über Daueraufträge, eine Kombination ist nicht möglich.",
+                    Answer3De = "Bestellmengen für SKUs mit mehreren Lieferanten können zwischen Dauerauftrag und Bestellungsaufteilung aufgeteilt werden, auch kombiniert.",
+                    CorrectAnswersDe = "Bestellmengen für SKUs mit mehreren Lieferanten können zwischen Dauerauftrag und Bestellungsaufteilung aufgeteilt werden, auch kombiniert",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does the option “standing order/order split” mean in the field \"contract type\"?",
+                    Answer1En = "Order quantities for SKUs with several suppliers cannot be split, only individual ones.",
+                    Answer2En = "The order quantities are only split via standing orders, a combination is not possible",
+                    Answer3En = "Order quantities for SKUs with multiple suppliers can be split between standing order and order splitting; also combined",
+                    CorrectAnswersEn = "Order quantities for SKUs with multiple suppliers can be split between standing order and order splitting; also combined",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Parameter" }
                  },
 
                  new Question
                  {
                     Id = 82,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was bewirkt die Kontraktart \"Max.Menge\"?",
+                    Answer1De = "Es wird immer soviel bestellt bis die Maximale Bestandskapazität erreicht wird von der SKU",
+                    Answer2De = "Mit diese Kontraktart kann eine Maximale Kontrakt-Abrufmenge festgelegt werden",
+                    Answer3De = "Es wird die maximal abrufbare Menge vom Lieferanten bestellt bis der Kontakt aufgebraucht wurde",
+                    CorrectAnswersDe = "Es wird die maximal abrufbare Menge vom Lieferanten bestellt bis der Kontakt aufgebraucht wurde",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does the contract type “Max. quantity” do?",
+                    Answer1En = "Orders are always placed until the maximum stock capacity of the SKU is reached.",
+                    Answer2En = "A maximum contract release order quantity can be defined with this contract type",
+                    Answer3En = "The maximum quantity that can be requested from the supplier is ordered until the contact has been fulfilled",
+                    CorrectAnswersEn = "The maximum quantity that can be requested from the supplier is ordered until the contact has been fulfilled",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Parameter" }
                  },
 
                  new Question
                  {
                     Id = 83,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Welche Farbe haben negative Aktionen in der Prognosegrafik? (standardgemäß)",
+                    Answer1De = "weiß",
+                    Answer2De = "blau",
+                    Answer3De = "rot",
+                    CorrectAnswersDe = "weiß",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What color do negative promotions have in the forecast chart? (by default)",
+                    Answer1En = "white",
+                    Answer2En = "blue",
+                    Answer3En = "red",
+                    CorrectAnswersEn = "white",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Prognose"}
                  },
 
                  new Question
                  {
                     Id = 84,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was sind Semi-Aktionen?",
+                    Answer1De = "Semi-Aktionen werden angezeigt bei einer Ausreißer-Behandlung",
+                    Answer2De = "Semi-Aktionen sind Aktionen, bei denen der Zeitraum bekannt ist aber die Menge unbekannt ist",
+                    Answer3De = "Semi-Aktionen befinden sich immer in der Vergangenheit",
+                    CorrectAnswersDe = "Semi-Aktionen sind Aktionen, bei denen sowohl der Zeitraum als auch die Menge unbekannt sind| Semi-Aktionen befinden sich immer in der Vergangenheit",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What are semi-promotions?",
+                    Answer1En = "Semi-promotions are displayed for outlier corrections",
+                    Answer2En = "\"Semi-promotions\" are promotions where the time period is known but the quantity is unknown",
+                    Answer3En = "Semi-promotions are always located in the past",
+                    CorrectAnswersEn = "\"Semi-promotions\" are promotions where the time period is known but the quantity is unknown| Semi-promotions are always located in the past",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Parameter" }
                  },
 
                  new Question
                  {
                     Id = 85,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses blau & unterstrichen angezeigt wird?",
+                    Answer1De = "Der Wert wurde auf der aktuellen Ebene erfasst.",
+                    Answer2De = "Der Wert gehört zu einer Verbundgruppe.",
+                    Answer3De = "Der Wert wurde von einer höheren Ebene geerbt.",
+                    CorrectAnswersDe = "Der Wert wurde von einer höheren Ebene geerbt",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does a parameter/condition field indicate when it is displayed in blue & underlined?",
+                    Answer1En = "The value was entered at the current level.",
+                    Answer2En = "The value belongs to a compound group",
+                    Answer3En = "The value was passed on from a higher level",
+                    CorrectAnswersEn = "The value was passed on from a higher level",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Parameter" }
                  },
 
                  new Question
                  {
                     Id = 86,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses grün & unterstrichen angezeigt wird?",
+                    Answer1De = "Der Wert wurde von einer Klasse geerbt.",
+                    Answer2De = "Der Wert wurde auf der aktuellen Ebene erfasst.",
+                    Answer3De = "Der Wert wurde von einer anderen SKU übernommen. ",
+                    CorrectAnswersDe = "Der Wert wurde von einer Klasse geerbt",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does a parameter/condition field indicate when it is displayed in green & underlined?",
+                    Answer1En = "The value was passed on from a class",
+                    Answer2En = "The value was entered at the current level",
+                    Answer3En = "The value was adopted from another SKU",
+                    CorrectAnswersEn = "The value was passed on from a class",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Parameter" }
                  },
 
                  new Question
                  {
                     Id = 87,
 
+                    TextDe = "Automatische Aktionen, die Vergangenheitswerte korrigieren, können entstehen…",
+                    Answer1De = "durch die Prognose.",
+                    Answer2De = "durch die OoS-Bereinigung.",
+                    Answer3De = "durch eine Strukturbruch-Erkennung",
+                    CorrectAnswersDe = "durch die OoS-Bereinigung",
+
+                    TextEn = "Automatic promotions that correct historical values can arise...",
+                    Answer1En = "through the forecast",
+                    Answer2En = "through the OoS correction",
+                    Answer3En = "through a structural break detection",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "Allgemein" }
+                 },
+
+                 new Question
+                 {
+                    Id = 88,
+
+                    TextDe = "Was machen Info-Aktionen ?",
+                    Answer1De = "Damit kann man zuvor nicht berücksichtige Zeiträume mit ihren Abverkäufen und Aktionen für die Prognoserechnung verwenden.",
+                    Answer2De = "Bei diesen Aktionen werden die Zeiträume anonymisiert.",
+                    Answer3De = "Eine Info-Aktion hat keinen Einfluss auf die Prognose, aber besitzt Kommentare um auf besondere Umstände hinzuweisen",
+                    CorrectAnswersDe = "Damit kann man zuvor nicht berücksichtige Zeiträume mit ihren Abverkäufen und Aktionen für die Prognoserechnung verwenden",
+
+                    TextEn = "What do Info-Promotions do?",
+                    Answer1En = "This allows you to use previously unconsidered periods with their sales and promotions for the forecast calculation",
+                    Answer2En = "With these actions, the time periods are anonymized",
+                    Answer3En = "An info campaign has no influence on the forecast, but has comments to point out special circumstances",
+                    CorrectAnswersEn = "This allows you to use previously unconsidered periods with their sales and promotions for the forecast calculation",
+
+                    QuizCategory = new List<string> { "Allgemein" }
+                 },
+
+                 new Question
+                 {
+                    Id = 89,
+
+                    TextDe = "Was sind Stichtage?",
+                    Answer1De = "Stichtage ermöglichen variable Saisons.",
+                    Answer2De = "Stichtage verhindern, dass saisonale Schwankungen erkannt werden können.",
+                    Answer3De = "Stichtage werden verwendet um vor Preisschwankungen zu warnen",
+                    CorrectAnswersDe = "Stichtage ermöglichen variable Saisons",
+
+                    TextEn = "What are due dates?",
+                    Answer1En = "Due dates allow variable seasons",
+                    Answer2En = "Due dates prevent the detection of seasonal swings",
+                    Answer3En = "Due dates are used to warn about price swings",
+                    CorrectAnswersEn = "Due dates allow variable seasons",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 90,
+
+                    TextDe = "Welche Aussage stimmt nicht?",
+                    Answer1De = "Der SiB ist die Menge, die auf Lager sein muss, um Abweichungen in den prognostizierten Abverkäufen aufzufangen.",
+                    Answer2De = "Der SiB ist der durchschnittliche Lagerbestand während eines Monats.",
+                    Answer3De = "Der SiB sagt aus welche Menge bestellt werden muss um einer OoS-Situation zu entgehen",
+                    CorrectAnswersDe = "Der SiB ist der durchschnittliche Lagerbestand während eines Monats| Der SiB sagt aus welche Menge bestellt werden muss um einer OoS-Situation zu entgehen",
+
+                    TextEn = "Which statement is not true?",
+                    Answer1En = "The Sft is the quantity that must be in stock in order to compensate for deviations in forecast sales",
+                    Answer2En = "The Sft is the average stock level during a month",
+                    Answer3En = "The Sft indicates the quantity that must be ordered to avoid an OoS situation",
+                    CorrectAnswersEn = "The Sft is the average stock level during a month| The Sft indicates the quantity that must be ordered to avoid an OoS situation",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 91,
+
+                    TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Dienstag?",
+                    Answer1De = "9 Tage",
+                    Answer2De = "10 Tage",
+                    Answer3De = "11 Tage",
+                    CorrectAnswersDe = "11 Tage",
+
+                    TextEn = "How long would the total lead time be if an order is placed on a Tuesday with the following conditions? ",
+                    Answer1En = "9 Days",
+                    Answer2En = "10 Days",
+                    Answer3En = "11 Days",
+                    CorrectAnswersEn = "11 Days",
+
+                    QuizCategory = new List<string> { "Bestellung", "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 92,
+
+                    TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses blau angezeigt wird?",
+                    Answer1De = "Das Feld vererbt einen Wert",
+                    Answer2De = "Der Wert im Feld wird standardmäßig übergeben",
+                    Answer3De = "Das Feld wird nicht verwendet",
+                    CorrectAnswersDe = "Der Wert im Feld wird standardmäßig übergeben",
+
+                    TextEn = "What does a parameter/condition field indicate when it is displayed in blue?",
+                    Answer1En = "The field passes on a value",
+                    Answer2En = "The value in the field is set by default",
+                    Answer3En = "The field is not used",
+                    CorrectAnswersEn = "The value in the field is set by default",
+
+                    QuizCategory = new List<string> { "Parameter", "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 93,
+
+                    TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses schwarz angezeigt wird?",
+                    Answer1De = "Der Wert im Feld wurde manuell eingepflegt",
+                    Answer2De = "Der Wert im Feld wird standardmäßig übergeben",
+                    Answer3De = "Das Feld wird nicht verwendet",
+                    CorrectAnswersDe = "Der Wert im Feld wurde manuell eingepflegt",
+
+                    TextEn = "What does a parameter/condition field show when it is displayed in black?",
+                    Answer1En = "The value in the field was entered manually",
+                    Answer2En = "The value in the field is set by default",
+                    Answer3En = "The field is not used",
+                    CorrectAnswersEn = "The value in the field was entered manually",
+
+                    QuizCategory = new List<string> { "Parameter", "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 94,
+
+                    TextDe = "Welchen Unterschied macht es, wenn ein Konditions- / Parameter-Feld unterstrichen wird oder nicht?",
+                    Answer1De = "Ein unterstrichenes Feld wurde von einem User bearbeitet",
+                    Answer2De = "Wenn ein Feld unterstrichen ist bedeutet es das dieser Wert von einer höheren Ebene vererbt wurde ",
+                    Answer3De = "Es gibt keine eindeutige Bedeutung.",
+                    CorrectAnswersDe = "Wenn ein Feld unterstrichen ist bedeutet es das dieser Wert von einer höheren Ebene vererbt wurde ",
+
+                    TextEn = "What difference does it make if a condition / parameter field is underlined or not?",
+                    Answer1En = "An underlined field has been edited by a user",
+                    Answer2En = "If a field is underlined, it means that this value was passed on from a higher level ",
+                    Answer3En = "There is no clear meaning",
+                    CorrectAnswersEn = "If a field is underlined, it means that this value was passed on from a higher level ",
+
+                    QuizCategory = new List<string> { "Parameter", "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 95,
+
+                    TextDe = "Welche Auswirkung hat eine Kontraktart?",
+                    Answer1De = "Die Kontraktart bestimmt, wie mit Kontrakten umgegangen werden soll",
+                    Answer2De = "Die Kontraktart bestimmt, ob es sich um einen Lieferanten-, Artikel- oder Kundenkontrakt handelt ",
+                    Answer3De = "Die Kontraktart bestimmt welche Kontrakte gewählt werden sollen ",
+                    CorrectAnswersDe = "Die Kontraktart bestimmt, wie mit Kontrakten umgegangen werden soll",
+
+                    TextEn = "What is the effect of a contract type?",
+                    Answer1En = "The contract type defines how contracts should be handled",
+                    Answer2En = "The contract type determines whether it is a supplier, article or customer contract ",
+                    Answer3En = "The contract type determines which contracts should be chosen",
+                    CorrectAnswersEn = "The contract type defines how contracts should be handled",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 96,
+
+                    TextDe = "Welche Auswirkung hat eine Kontraktauswahl?",
+                    Answer1De = "Mit der Kontraktauswahl kann ein Kontrakt statisch übergeben werden, bis dieser erfüllt wurde",
+                    Answer2De = "Die Kontraktauswahl bestimmt welche Kontrakte gewählt werden sollen ",
+                    Answer3De = "Die Kontraktauswahl bestimmt, wie mit Kontrakten umgegangen werden soll",
+                    CorrectAnswersDe = "Die Kontraktauswahl bestimmt welche Kontrakte gewählt werden sollen ",
+
+                    TextEn = "What is the effect of the \"Select contract\" field?",
+                    Answer1En = "With the select contract function, a contract can be assigned statically until it has been fulfilled",
+                    Answer2En = "The select contract function determines which contracts are to be chosen",
+                    Answer3En = "The select contract function defines how contracts are to be handled",
+                    CorrectAnswersEn = "The select contract function determines which contracts are to be chosen",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 97,
+
+                    TextDe = "Was bewirkt die Kontraktauswahl „Nach Restmenge“?",
+                    Answer1De = "Der Kontrakt mit der niedrigsten Restlaufzeit wird verwendet",
+                    Answer2De = "Der Kontrakt mit der größten Restmenge wird verwendet",
+                    Answer3De = "Der Kontrakt mit der niedrigsten Restmenge wird verwendet",
+                    CorrectAnswersDe = "Der Kontrakt mit der größten Restmenge wird verwendet",
+
+                    TextEn = "What does the select contract function “By remaining quantity” do?",
+                    Answer1En = "The contract with the lowest remaining duration is used",
+                    Answer2En = "The contract with the largest remaining quantity is used",
+                    Answer3En = "The contract with the lowest remaining quantity is used",
+                    CorrectAnswersEn = "The contract with the largest remaining quantity is used",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 98,
+
+                    TextDe = "Was bewirkt die Kontraktauswahl „RMge / RLfz“?",
+                    Answer1De = "Der Kontrakt mit der höchsten prozentualen Restmenge wird verwendet",
+                    Answer2De = "Der Kontrakt mit der höchsten durchschnittlichen Restmenge pro Tag wird verwendet",
+                    Answer3De = "Der Kontrakt mit der höchsten prozentualen Restmenge pro Tag wird verwendet",
+                    CorrectAnswersDe = "Der Kontrakt mit der höchsten durchschnittlichen Restmenge pro Tag wird verwendet",
+
+                    TextEn = "What is the effect of the select contract “RQty / RTm”?",
+                    Answer1En = "The contract with the highest remaining quantity in % is used",
+                    Answer2En = "The contract with the highest average remaining quantity per day is used",
+                    Answer3En = "The contract with the highest remaining quantity in % per day is used",
+                    CorrectAnswersEn = "The contract with the highest average remaining quantity per day is used",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 99,
+
+                    TextDe = "Was bewirkt die Kontraktauswahl „RMge / GMge“?",
+                    Answer1De = "Der Kontrakt mit der höchsten prozentualen Restmenge pro Tag wird verwendet",
+                    Answer2De = "Der Kontrakt mit der höchsten prozentualen Restmenge wird verwendet",
+                    Answer3De = "Der Kontrakt mit der höchsten durchschnittlichen Restmenge pro Tag wird verwendet",
+                    CorrectAnswersDe = "Der Kontrakt mit der höchsten prozentualen Restmenge wird verwendet",
+
+                    TextEn = "What is the effect of the select contract “RQty / GTm”?",
+                    Answer1En = "The contract with the highest remaining quantity in % per day is used",
+                    Answer2En = "The contract with the highest remaining quantity in % is used",
+                    Answer3En = "The contract with the highest average remaining quantity per day is used",
+                    CorrectAnswersEn = "The contract with the highest remaining quantity in % is used",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 100,
+
+                    TextDe = "Was bewirkt die Kontraktauswahl „(RMge / GMge) * (1 / RLfz)“?",
+                    Answer1De = "Der Kontrakt mit der höchsten durchschnittlichen Restmenge pro Tag wird verwendet",
+                    Answer2De = "Der Kontrakt mit der niedrigsten prozentualen Restmenge pro Tag wird verwendet",
+                    Answer3De = "Der Kontrakt mit der höchsten prozentualen Restmenge pro Tag wird verwendet",
+                    CorrectAnswersDe = "Der Kontrakt mit der niedrigsten prozentualen Restmenge pro Tag wird verwendet",
+
+                    TextEn = "What is the effect of the select contract “(RQty / GLfz) * (1 / RTm)”?",
+                    Answer1En = "The contract with the highest average remaining quantity per day is used",
+                    Answer2En = "The contract with the lowest remaining quantity in % per day is used",
+                    Answer3En = "The contract with the highest remaining quantity in % per day is used",
+                    CorrectAnswersEn = "The contract with the lowest remaining quantity in % per day is used",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 101,
+
+                    TextDe = "Was bewirkt die Kontraktauswahl „(RMge / GMge) * (GLfz / RLfz)“?",
+                    Answer1De = "Der Kontrakt mit, der am stärksten steigenden durchschnittlichen Restmenge pro Tag wird, verwendet",
+                    Answer2De = "Der Kontrakt mit der höchsten durchschnittlichen Restmenge pro Tag wird verwendet",
+                    Answer3De = "Der Kontrakt mit der höchsten prozentualen Restmenge pro Tag wird verwendet",
+                    CorrectAnswersDe = "Der Kontrakt mit, der am stärksten steigenden durchschnittlichen Restmenge pro Tag wird, verwendet",
+
+                    TextEn = "What is the effect of the select contract “(RMge / GMge) * (GLfz / RLfz)”?",
+                    Answer1En = "The contract with the highest increasing average remaining quantity per day is used",
+                    Answer2En = "The contract with the highest average remaining quantity per day is used",
+                    Answer3En = "The contract with the highest remaining quantity in % per day is used",
+                    CorrectAnswersEn = "The contract with the most increasing average remaining quantity per day is used",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 102,
+
+                    TextDe = "Was bewirkt die Kontraktauswahl „Bestell-Verhältnis“?",
+                    Answer1De = "Die Bestellmenge wird auf mehrere Lieferanten aufgeteilt im angegebenen Verhältnis",
+                    Answer2De = "Die Kontraktmenge vom ausgewählten Kontrakt wird verbraucht und der Rest wird mit anderen Kontrakten aufgefüllt",
+                    Answer3De = "Der Kontrakt vom Hauptlieferanten wird verwendet",
+                    CorrectAnswersDe = "Die Bestellmenge wird auf mehrere Lieferanten aufgeteilt im angegebenen Verhältnis",
+
+                    TextEn = "What does the select contract “Order ratio” do?",
+                    Answer1En = "The order quantity is divided among several suppliers in the specified ratio",
+                    Answer2En = "The quantity of the selected contract will be used up and the remaining quantity will be filled with other contracts",
+                    Answer3En = "The contract from the main supplier is used",
+                    CorrectAnswersEn = "The order quantity is divided among several suppliers in the specified ratio",
+
+                    QuizCategory = new List<string> { "Paramter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 103,
+
+                    TextDe = "Welche Kontraktart muss ausgewählt sein damit die Kontraktauswahl verwendet wird?",
+                    Answer1De = "Lieferantenauswahl",
+                    Answer2De = "Dauerauftrag/ Bestellungsaufteilung",
+                    Answer3De = "Max. Menge & Lieferantenauswahl",
+                    CorrectAnswersDe = "Lieferantenauswahl| Max. Menge & Lieferantenauswahl",
+
+                    TextEn = "Which contract type must be selected in order to use the select contract function?",
+                    Answer1En = "Select Supplier",
+                    Answer2En = "Standing Order / Order Split",
+                    Answer3En = "Max. Qty + Select Supplier",
+                    CorrectAnswersEn = "Select Supplier| Max. Qty + Select Supplier",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 104,
+
+                    TextDe = "Was bewirkt die Kontraktart „Kontrakte ignorieren“?",
+                    Answer1De = "Die Kontrakte werden bis zum nächsten Bestelltermin nicht verwendet ",
+                    Answer2De = "Kontrakte werden nicht verwendet",
+                    Answer3De = "Die Kontraktauswahl wird ignoriert",
+                    CorrectAnswersDe = "Kontrakte werden nicht verwendet",
+
+                    TextEn = "What does the contract type “Ignore contracts” do?",
+                    Answer1En = "The contracts will not be used until the next order date",
+                    Answer2En = "Contracts will not be used",
+                    Answer3En = "The select contract is ignored",
+                    CorrectAnswersEn = "Contracts will not be used",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 105,
+
+                    TextDe = "Was bewirkt die Kontraktart „Max. Menge u. Lieferantenauswahl“?",
+                    Answer1De = "Es wird der Kontrakt mit der höchsten Kontraktmenge gewählt",
+                    Answer2De = "Es wird der Kontrakt gewählt, der zum Entscheidungskriterium von der Kontraktauswahl am ehesten passt und es wird anschließend die maximal abrufbare Menge bestellt",
+                    Answer3De = "Es wird der Kontrakt mit der höchsten abrufbaren Menge gewählt",
+                    CorrectAnswersDe = "Es wird der Kontrakt gewählt, der zum Entscheidungskriterium von der Kontraktauswahl am ehesten passt und es wird anschließend die maximal abrufbare Menge bestellt",
+
+                    TextEn = "What is the effect of the contract type “Max. Qty + Select Supplier”?",
+                    Answer1En = "The contract with the highest contract quantity is selected",
+                    Answer2En = "The contract that matches the decision criterion of the select contract best is chosen and the maximum quantity that is available is then ordered",
+                    Answer3En = "The contract with the highest available quantity is selected",
+                    CorrectAnswersEn = "The contract that matches the decision criterion of the select contract best is chosen and the maximum quantity that is available is then ordered",
+
+                    QuizCategory = new List<string> { "Paramter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 106,
+
+                    TextDe = "Was macht der Parameter \"Berechnung von Semi-Aktionen\"?",
+                    Answer1De = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen ermittelt werden.",
+                    Answer2De = "Damit erkennt man eine deutliche und beständige Niveau-Änderung in der Historie.",
+                    Answer3De = "Mit dem Parameter werden im Planungshorizont Akionen mit übergeben",
+                    CorrectAnswersDe = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen ermittelt werden.",
+
+                    TextEn = "What does the “Calculation of semi-promotions” parameter do?",
+                    Answer1En = "You use these parameters to define the types of how the promotion quantities are calculated",
+                    Answer2En = "This shows a clear and consistent change in the historical level",
+                    Answer3En = "The parameter is used to transfer promotions in the planning horizon",
+                    CorrectAnswersEn = "You use these parameters to define the types of how the promotion quantities are calculated",
+
+                    QuizCategory = new List<string> { "Allgemein" }
+                 },
+
+                 new Question
+                 {
+                    Id = 107,
+
+                    TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit'' bei der Berechnung von Semi-Aktionen?",
+                    Answer1De = "Aktionsmengen werden ausschließlich aus den Lagerbeständen während der Aktion berechnet.",
+                    Answer2De = "Die Aktionsmenge ergibt sich aus dem durchschnittlichen Preisunterschied vor und während der Aktion.",
+                    Answer3De = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht.",
+                    CorrectAnswersDe = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht.",
+
+                    TextEn = "What does the type ''Rel to non-promotion time'' do when calculating semi-promotions?",
+                    Answer1En = "Promotion quantities are calculated exclusively from the warehouse stocks during the promotion",
+                    Answer2En = "The promotion quantity is calculated from the average price difference before and during the promotion",
+                    Answer3En = "The promotion quantity is calculated by comparing sales during the promotion with sales during non-promotion periods",
+                    CorrectAnswersEn = "The promotion quantity is calculated by comparing sales during the promotion with sales during non-promotion periods",
+
+                    QuizCategory = new List<string> { "Allgemein" }
+                 },
+
+                 new Question
+                 {
+                    Id = 108,
+
+                    TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit + ggf. Info setzen'' bei der Berechnung von Semi-Aktionen?",
+                    Answer1De = "Wenn die Semi-Aktion nach dem ersten Abgang endet, wird sie automatisch gestoppt.",
+                    Answer2De = "Eine Berechnung erfolgt nicht. Endet die Semi-Aktion, bevor der erste Abverkauf stattfindet, wird sie automatisch als Info-Aktion gewertet.",
+                    Answer3De = "Die Semi-Aktion bleibt aktiv, auch wenn es keinen Abverkauf gibt.",
+                    CorrectAnswersDe = "Eine Berechnung erfolgt nicht. Endet die Semi-Aktion, bevor der erste Abverkauf stattfindet, wird sie automatisch als Info-Aktion gewertet.",
+
+                    TextEn = "What does the type ''Rel to non promotion time + set info if necessary'' do when calculating semi-promotions?",
+                    Answer1En = "If the semi-promotion ends after the first sale, it is automatically stopped",
+                    Answer2En = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion.",
+                    Answer3En = "The semi-promotion remains active even if there is no sale.",
+                    CorrectAnswersEn = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion.",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 109,
+
+                    TextDe = "Was macht der Typ ''Rel zu Ex-Post-Prognose'' bei der Berechnung von Semi-Aktionen?",
+                    Answer1De = "Aktionsmengen basieren ausschließlich auf den ursprünglich geplanten Liefermengen.",
+                    Answer2De = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet.",
+                    Answer3De = "Die Aktionsmenge wird durch den Durchschnitt der Verkäufe aus der Vorjahresaktion berechnet.",
+                    CorrectAnswersDe = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet.",
+
+                    TextEn = "What does the type ''Rel to ex-post forecast'' do in the calculation of semi-promotions?",
+                    Answer1En = "Promotional quantities are based exclusively on the originally planned delivery quantities.",
+                    Answer2En = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast.",
+                    Answer3En = "The promotion quantity is calculated as the average of the sales from the previous year's promotion.",
+                    CorrectAnswersEn = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast.",
+
+                    QuizCategory = new List<string> { "Paramter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 110,
+
+                    TextDe = "Was macht der Typ ''Rel. zu aktionsfreier Zeit mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
+                    Answer1De = "Für diesen Parameter sind nur zukünftige Verkaufsprognosen notwendig.",
+                    Answer2De = "Für diesen Parameter werden historische Bestandsdaten benötigt. Die entgangene Aktionsmenge wird berechnet, indem die Verkäufe während der Aktion mit denen außerhalb des Aktionszeitraums verglichen werden.",
+                    Answer3De = "Entgangene Aktionsmengen werden anhand der Bestellungen im Aktionszeitraum ermittelt.",
+                    CorrectAnswersDe = "Für diesen Parameter werden historische Bestandsdaten benötigt. Die entgangene Aktionsmenge wird berechnet, indem die Verkäufe während der Aktion mit denen außerhalb des Aktionszeitraums verglichen werden.",
+
+                    TextEn = "What does the type ''Rel. to non promotion time with OoS correction'' do when calculating semi-promotions?",
+                    Answer1En = "Only future sales forecasts are required for this parameter.",
+                    Answer2En = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period.",
+                    Answer3En = "Missed promotional quantities are determined on the basis of orders placed during the promotional period.",
+                    CorrectAnswersEn = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period.",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 111,
+
+                    TextDe = "Was macht der Typ ''Rel. zur Ex-Post-Prognose mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
+                    Answer1De = "Dieser Parameter funktioniert auch ohne historische Daten.",
+                    Answer2De = "Entgangene Aktionsmengen basieren ausschließlich auf den geplanten Liefermengen.",
+                    Answer3De = "Dieser Parameter setzt historische Bestandsdaten voraus. Die entgangenen Aktionsmengen werden ermittelt, indem die tatsächlichen Verkäufe mit der Ex-Post-Prognose verglichen werden.",
+                    CorrectAnswersDe = "Dieser Parameter setzt historische Bestandsdaten voraus. Die entgangenen Aktionsmengen werden ermittelt, indem die tatsächlichen Verkäufe mit der Ex-Post-Prognose verglichen werden.",
+
+                    TextEn = "What does the type ''Rel. to ex-post forecast with OoS correction'' do when calculating semi-promotions?",
+                    Answer1En = "This parameter also works without historical data.",
+                    Answer2En = "Missed promotion quantities are based exclusively on the planned delivery quantities.",
+                    Answer3En = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast.",
+                    CorrectAnswersEn = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast.",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 112,
+
+                    TextDe = "Wo kann ich die Ausreißererkennung deaktivieren?",
+                    Answer1De = "Parameter -> Strukturbruch/Ausreißer -> Strukturbrucherkennung",
+                    Answer2De = "Parameter -> Strukturbruch/Ausreißer -> Ausreißererkennung",
+                    Answer3De = "Parameter -> Strukturbruch/Ausreißer -> Auch letzten Wert korrigieren",
+                    CorrectAnswersDe = "Parameter -> Strukturbruch/Ausreißer -> Ausreißererkennung",
+
+                    TextEn = "Where can I deactivate the outlier detection?",
+                    Answer1En = "Parameters -> Structure break/ Outlier -> Structure break detection",
+                    Answer2En = "Parameters -> Structure break/ Outlier -> Outlier detection",
+                    Answer3En = "Parameter -> Structure break/outlier -> Also correct last value",
+                    CorrectAnswersEn = "Parameters -> Structure break/ Outlier -> Outlier detection",
+
+                    QuizCategory = new List<string> { "Parameter" }
+                 },
+
+                 new Question
+                 {
+                    Id = 114,
+
                     TextDe = "",
                     Answer1De = "",
                     Answer2De = "",
@@ -1665,7 +2159,673 @@ namespace AzubiApp.Services
 
                  new Question
                  {
-                    Id = 88,
+                    Id = 115,
+
+                    TextDe = "Was bedeuten die roten Striche am unteren Rand der Bestandssimulation?",
+                    Answer1De = "Ein alternativer SiB-Typ, der an jedem Wochenende pausiert",
+                    Answer2De = "Feiertage, meist sind es Wochenenden an dem gar kein Verkauf stattfindet",
+                    Answer3De = "Kennzeichnet immer den Anfang der Woche.",
+                    CorrectAnswersDe = "Feiertage, meist sind es Wochenenden an dem gar kein Verkauf stattfindet",
+
+                    TextEn = "What does the red line at the bottom of the stock simulation mean?",
+                    Answer1En = "An alternative Sft type who takes a break every weekend",
+                    Answer2En = "Public holidays, usually weekends on which there are no sales at all",
+                    Answer3En = "Always marks the beginning of the week",
+                    CorrectAnswersEn = "Public holidays, usually weekends on which there are no sales at all",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 116,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 117,
+
+                    TextDe = "Wo kann ich die Farben der Prognosegrafik ändern?",
+                    Answer1De = "Unter dem Layout",
+                    Answer2De = "Unter Extras",
+                    Answer3De = "Im Parameter",
+                    CorrectAnswersDe = "Unter Extras",
+
+                    TextEn = "Where can I change the colors of the forecast graphic?",
+                    Answer1En = "Under the layout",
+                    Answer2En = "Under Extras",
+                    Answer3En = "Under Parameters",
+                    CorrectAnswersEn = "Under Extras",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 118,
+
+                    TextDe = "Was bedeutet ein Prognose-Faktor von 2.0?",
+                    Answer1De = "eine Halbierung der Prognose",
+                    Answer2De = "eine Verdopplung der Prognose",
+                    Answer3De = "Eine Prognose die eine erweiterte Version hat.",
+                    CorrectAnswersDe = "eine Verdopplung der Prognose",
+
+                    TextEn = "What does a forecast factor of 2.0 mean?",
+                    Answer1En = "a reduction by half for the forecast",
+                    Answer2En = "a duplication of the forecast",
+                    Answer3En = "A forecast that has an extended version",
+                    CorrectAnswersEn = "a duplication of the forecast",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 119,
+
+                    TextDe = "Was bedeutet ''Sofort bestellen'' in den Konditionen?",
+                    Answer1De = "Alle offenen Bestellungen werden heute bestellt",
+                    Answer2De = "Alle offenen Bestellungen werden morgen bestellt",
+                    Answer3De = "Alle offenen Bestellungen werden ein Bestellryhtmus haben",
+                    CorrectAnswersDe = "Alle offenen Bestellungen werden heute bestellt",
+
+                    TextEn = "What does ''order immediately'' mean in the conditions?",
+                    Answer1En = "All open orders will be ordered today",
+                    Answer2En = "All open orders will be ordered tomorrow",
+                    Answer3En = "All open orders will have an order rhythm",
+                    CorrectAnswersEn = "All open orders will be ordered today",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 120,
+
+                    TextDe = "Was sind die Vorraussetzung für die Kontraktauswahl: “Bestellverhältnis” ?",
+                    Answer1De = "Man benötigt zwei Lieferanten",
+                    Answer2De = "Die Kontraktart muss ebenfalls angepasst werden.",
+                    Answer3De = "Es muss einer Verbundbestellung zu gehören",
+                    CorrectAnswersDe = "Man benötigt zwei Lieferanten| Die Kontraktart muss ebenfalls angepasst werden.",
+
+                    TextEn = "What are the requirements for the select contract: “ order ratio” ?",
+                    Answer1En = "You need two suppliers",
+                    Answer2En = "The contract type must also be adjusted",
+                    Answer3En = "It must belong to a composite order",
+                    CorrectAnswersEn = "You need two suppliers| The contract type must also be adjusted",
+
+                    QuizCategory = new List<string> { "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 121,
+
+                    TextDe = "Werden historische Aktionen bei der Prognose berücksichtigt?",
+                    Answer1De = "Ja",
+                    Answer2De = "Nein",
+                    Answer3De = "Nein, diese sind nur in der Bestandssimulation zusehen",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "Are historical promotions taken into account in the forecast?",
+                    Answer1En = "Yes",
+                    Answer2En = "No",
+                    Answer3En = "No, these are only visible in the stock simulation",
+                    CorrectAnswersEn = "Yes",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 122,
+
+                    TextDe = "Man kann eine variable Saison erkennen, wenn…?",
+                    Answer1De = "z.B. wenn Schulferien auftreten",
+                    Answer2De = "der Auffülltyp auf “Nicht auffüllen” gesetzt ist",
+                    Answer3De = "eindeutige Steigungen/Senkungen in bestimmten Zeitperioden erkennbar sind",
+                    CorrectAnswersDe = "z.B. wenn Schulferien auftreten| eindeutige Steigungen/Senkungen in bestimmten Zeitperioden erkennbar sind",
+
+                    TextEn = "You can recognize a variable season when...?",
+                    Answer1En = "e.g. if school vacations begin",
+                    Answer2En = "the refill type is set to “Do not refill”",
+                    Answer3En = "clear increases/decreases are recognizable in certain time periods",
+                    CorrectAnswersEn = "e.g. if school vacations begin| clear increases/decreases are recognizable in certain time periods",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 123,
+
+                    TextDe = "Was stellen die dunkelgrünen Balkenanteile dar?",
+                    Answer1De = "Negative Aktionen",
+                    Answer2De = "Positive Aktionen im Falle einer Ausreißererkennung",
+                    Answer3De = "Die Behandlungsgrenze für Ausreißer",
+                    CorrectAnswersDe = "Positive Aktionen im Falle einer Ausreißererkennung",
+
+                    TextEn = "What do the dark green bars represent? (Default Settings) (temp/adrian.pawlak/App_Use-Case/Balk_2.png)",
+                    Answer1En = "Negative promotions",
+                    Answer2En = "Positive promotions in the event of outlier detection",
+                    Answer3En = "The outlier treatment limit",
+                    CorrectAnswersEn = "Positive promotions in the event of outlier detection",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 124,
+
+                    TextDe = "Was macht der Typ “SiB-Erhöhung” bei der Behandlung Aktionsbestellung?",
+                    Answer1De = "Der SiB wird dauerhaft um die Aktionsmenge × Prozentsatz erhöht",
+                    Answer2De = "Der SiB wird zwischen dem Verfügbar-ab-Datum und dem Aktionsbeginn um die Aktionsmenge × Prozentsatz erhöht und zum Aktionsstart sofort wieder gesenkt",
+                    Answer3De = "Die Anpassung des SiB erfolgt erst nach dem Aktionsbeginn",
+                    CorrectAnswersDe = "Der SiB wird zwischen dem Verfügbar-ab-Datum und dem Aktionsbeginn um die Aktionsmenge × Prozentsatz erhöht und zum Aktionsstart sofort wieder gesenkt",
+
+                    TextEn = "What does the “Safety Stock increase” type do in the handling promotion order?",
+                    Answer1En = "The Sft is permanently increased by the promotion quantity × percentage",
+                    Answer2En = "The Sft is increased by the promotion quantity × percentage between the available-from date and the start of the promotion and is immediately reduced again at the start of the promotion",
+                    Answer3En = "The Sft is only adjusted after the start of the campaign",
+                    CorrectAnswersEn = "The Sft is increased between the available-from date and the start of the promotion by the promotion quantity × percentage and immediately reduced again at the start of the promotion",
+
+                    QuizCategory = new List<string> { "Bestellung" }
+                 },
+
+                 new Question
+                 {
+                    Id = 125,
+
+                    TextDe = "Was macht der Typ “SiB-Erhöhung m. langsamen Abfall” bei der Behandlung Aktionsbestellung?",
+                    Answer1De = "Die Reduktion des Sicherheitsbestands beginnt erst nach Ende der Aktion",
+                    Answer2De = "Der Sicherheitsbestand bleibt während des gesamten Aktionszeitraums konstant auf dem erhöhten Niveau",
+                    Answer3De = "Wie SiB-Erhöhung, aber der SiB wird langsam und gleichmäßig über den gesamten Aktions-Zeitraum verringert",
+                    CorrectAnswersDe = "Wie SiB-Erhöhung, aber der SiB wird langsam und gleichmäßig über den gesamten Aktions-Zeitraum verringert",
+
+                    TextEn = "What does the type “Sft increase w. slow decline” do in the handling promotion order?",
+                    Answer1En = "The reduction of the safety stock only begins after the end of the campaign",
+                    Answer2En = "The safety stock remains constant at the increased level during the entire campaign period",
+                    Answer3En = "Like Sft increase, but the Sft is reduced slowly and evenly over the entire promotion period",
+                    CorrectAnswersEn = "Like Sft increase, but the Sft is reduced slowly and evenly over the entire promotion period",
+
+                    QuizCategory = new List<string> { "Bestellung" }
+                 },
+
+                 new Question
+                 {
+                    Id = 126,
+
+                    TextDe = "Was macht der Typ “Reservierungsdatum vordatieren” bei der Behandlung Aktionsbestellung?",
+                    Answer1De = "Reicht die Bestellmenge für den Aktionszeitraum, wird nach der Dispo das Reservierungsdatum aller Positionen auf das Verfügbar-ab-Datum gesetzt.",
+                    Answer2De = "Das Reservierungsdatum wird nur für die erste Position auf das Verfügbar-ab-Datum gesetzt.",
+                    Answer3De = "Das Reservierungsdatum wird erst nach Ende des Aktionszeitraums angepasst.",
+                    CorrectAnswersDe = "Reicht die Bestellmenge für den Aktionszeitraum, wird nach der Disposition das Reservierungsdatum aller Positionen auf das Verfügbar-ab-Datum gesetzt.",
+
+                    TextEn = "What does the type “repone reservation date” do when handling promotional orders?",
+                    Answer1En = "If the order quantity is sufficient for the promotional period, the reservation date of all items is set to the available from date after the dispo",
+                    Answer2En = "The reservation date is only set for the first position to the available from date",
+                    Answer3En = "The reservation date will only be adjusted after the end of the promotional period.",
+                    CorrectAnswersEn = "If the order quantity is sufficient for the promotional period, the reservation date of all items is set to the available from date after the dispo",
+
+                    QuizCategory = new List<string> { "Bestellung" }
+                 },
+
+                 new Question
+                 {
+                    Id = 127,
+
+                    TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
+                    Answer1De = "15 Tage",
+                    Answer2De = "17 Tage",
+                    Answer3De = "19 Tage",
+                    CorrectAnswersDe = "17 Tage",
+
+                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions?",
+                    Answer1En = "15 Days",
+                    Answer2En = "17 Days",
+                    Answer3En = "19 Days",
+                    CorrectAnswersEn = "17 Days",
+
+                    QuizCategory = new List<string> { "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 128,
+
+                    TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag? (temp/adrian.pawlak/App_Use-Case/WBZ_3.png)",
+                    Answer1De = "25 Tage",
+                    Answer2De = "29 Tage",
+                    Answer3De = "27 Tage",
+                    CorrectAnswersDe = "27 Tage",
+
+                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions?",
+                    Answer1En = "25 Days",
+                    Answer2En = "29 Days",
+                    Answer3En = "27 Days",
+                    CorrectAnswersEn = "27 Days",
+
+                    QuizCategory = new List<string> { "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 129,
+
+                    TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
+                    Answer1De = "11 Tage",
+                    Answer2De = "15 Tage",
+                    Answer3De = "19 Tage",
+                    CorrectAnswersDe = "11 Tage",
+
+                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions?)",
+                    Answer1En = "11 Days",
+                    Answer2En = "15 Days",
+                    Answer3En = "13 Days",
+                    CorrectAnswersEn = "11 Days",
+
+                    QuizCategory = new List<string> { "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 130,
+
+                    TextDe = "",
+                    Answer1De = "13 Tage",
+                    Answer2De = "15 Tage",
+                    Answer3De = "17 Tage",
+                    CorrectAnswersDe = "13 Days",
+
+                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions? (temp/adrian.pawlak/App_Use-Case/WBZ_5.png)",
+                    Answer1En = "13 Days",
+                    Answer2En = "15 Days",
+                    Answer3En = "17 Days",
+                    CorrectAnswersEn = "13 Days",
+
+                    QuizCategory = new List<string> { "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 131,
+
+                    TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
+                    Answer1De = "12 Tage",
+                    Answer2De = "16 Tage",
+                    Answer3De = "13 Tage",
+                    CorrectAnswersDe = "13 Tage",
+
+                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions?",
+                    Answer1En = "12 Days",
+                    Answer2En = "16 Days",
+                    Answer3En = "13 Days",
+                    CorrectAnswersEn = "13 Days",
+
+                    QuizCategory = new List<string> { "Kondition" }
+                 },
+
+                 new Question
+                 {
+                    Id = 132,
+
+                    TextDe = "Welcher dieser Balken zeigt eine Ausreißer-Korrektur?",
+                    Answer1De = "Der linke Balken",
+                    Answer2De = "Der rechte Balken",
+                    Answer3De = "Beide",
+                    CorrectAnswersDe = "Beide",
+
+                    TextEn = "Which of these bars shows an outlier correction?",
+                    Answer1En = "The left bar",
+                    Answer2En = "The right bar",
+                    Answer3En = "Both",
+                    CorrectAnswersEn = "Both",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 133,
+
+                    TextDe = "Welche Warnung wird erzeugt?",
+                    Answer1De = "Max. Reichweite wird überschritten",
+                    Answer2De = "Max. Bestand wird überschritten",
+                    Answer3De = "Max. Planungshorizont überschritten",
+                    CorrectAnswersDe = "Max. Bestand wird überschritten",
+
+                    TextEn = "Which warning is generated?",
+                    Answer1En = "Max. Range is exceeded",
+                    Answer2En = "Max. Stock is exceeded",
+                    Answer3En = "Max. Planning horizon exceeded",
+                    CorrectAnswersEn = "Max. Stock is exceeded",
+
+                    QuizCategory = new List<string> { "Bestellung" }
+                 },
+
+                 new Question
+                 {
+                    Id = 134,
+
+                    TextDe = "Welche Warnung wird erzeugt?",
+                    Answer1De = "Aktuell OoS",
+                    Answer2De = "Wahrscheinlich OoS",
+                    Answer3De = "Reservierungen können nicht befriedigt werden",
+                    CorrectAnswersDe = "Wahrscheinlich OoS| Reservierungen können nicht befriedigt werden",
+
+                    TextEn = "Which warning is generated?",
+                    Answer1En = "Currently OoS",
+                    Answer2En = "Probably OoS",
+                    Answer3En = "Reservations cannot be fulfilled",
+                    CorrectAnswersEn = "Probably OoS| Reservations cannot be fulfilled",
+
+                    QuizCategory = new List<string> { "Bestellung" }
+                 },
+
+                 new Question
+                 {
+                    Id = 135,
+
+                    TextDe = "Wofür wird dieser Block benutzt?",
+                    Answer1De = "Um festzulegen wieviel von der Abgangs-Historie verwendet werden soll, für die Prognoserechnung",
+                    Answer2De = "Um festzulegen wieviel von der Abgangs-Historie angezeigt werden soll, in der Prognosegrafik",
+                    Answer3De = "Um zu begrenzen, für wie weit in der Zukunft Bestellungen generiert werden dürfen",
+                    CorrectAnswersDe = "Um festzulegen wieviel von der Abgangs-Historie verwendet werden soll, für die Prognoserechnung",
+
+                    TextEn = "What is this block used for?",
+                    Answer1En = "To determine how much of the issue history should be used for the forecast calculation",
+                    Answer2En = "To determine how much of the retirement history should be displayed in the forecast graphic",
+                    Answer3En = "To limit for how far into the future orders may be generated",
+                    CorrectAnswersEn = "To determine how much of the issue history should be used for the forecast calculation",
+
+                    QuizCategory = new List<string> { "Bestellung", "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 136,
+
+                    TextDe = "Welche Warnungen werden erzeugt?",
+                    Answer1De = "Ausreißer",
+                    Answer2De = "Strukturbruch",
+                    Answer3De = "Stark steigende Prognose",
+                    CorrectAnswersDe = "Ausreißer| Stark steigende Prognose",
+
+                    TextEn = "Which warning is generated?",
+                    Answer1En = "Outlier",
+                    Answer2En = "Structure break",
+                    Answer3En = "Strongly rising forecast",
+                    CorrectAnswersEn = "Outliers| Strongly rising forecast",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 137,
+
+                    TextDe = "Welche Warnungen werden erzeugt?",
+                    Answer1De = "Stark fallende Prognose",
+                    Answer2De = "Stark steigende Prognose",
+                    Answer3De = "Aktuell keine Standardabweichung",
+                    CorrectAnswersDe = "Stark fallende Prognose",
+
+                    TextEn = "Which warning is generated?",
+                    Answer1En = "Strongly falling forecast",
+                    Answer2En = "Strongly rising forecast",
+                    Answer3En = "Currently no standard deviation",
+                    CorrectAnswersEn = "Strongly rising forecast",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 138,
+
+                    TextDe = "Welche Warnungen werden erzeugt?",
+                    Answer1De = "Ausreißer",
+                    Answer2De = "Strukturbruch",
+                    Answer3De = "Möglicher Strukturbruch",
+                    CorrectAnswersDe = "Ausreißer",
+
+                    TextEn = "Which warning is generated?",
+                    Answer1En = "Outlier",
+                    Answer2En = "Structure break",
+                    Answer3En = "Possible structure break",
+                    CorrectAnswersEn = "Outlier",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 139,
+
+                    TextDe = "Welche Warnungen werden erzeugt?",
+                    Answer1De = "Ausreißer",
+                    Answer2De = "Stark fallende Prognose",
+                    Answer3De = "Strukturbruch",
+                    CorrectAnswersDe = "Ausreißer| Stark fallende Prognose",
+
+                    TextEn = "Which warning is generated?",
+                    Answer1En = "Outlier",
+                    Answer2En = "Strongly falling forecast",
+                    Answer3En = "Structure break",
+                    CorrectAnswersEn = "Outlier| Strongly rising forecast",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 140,
+
+                    TextDe = "Was zeigen die gestrichelten Linien an?",
+                    Answer1De = "Die Ausreißer-Behandlungsgrenze",
+                    Answer2De = "Die Ausreißer-Warnungsgrenze",
+                    Answer3De = "Den Alternativen SiB",
+                    CorrectAnswersDe = "Die Ausreißer-Behandlungsgrenze| Die Ausreißer-Warnungsgrenze",
+
+                    TextEn = "What does the dotted lines show?",
+                    Answer1En = "The outlier treatment threshold",
+                    Answer2En = "The outlier warning threshold",
+                    Answer3En = "The alternative Sft",
+                    CorrectAnswersEn = "The outlier treatment threshold| The outlier warning threshold",
+
+                    QuizCategory = new List<string> { "Prognose" }
+                 },
+
+                 new Question
+                 {
+                    Id = 141,
+
+                    TextDe = "Welche Warnung wird erzeugt?",
+                    Answer1De = "Überfällige Bestellungen",
+                    Answer2De = "Max. Bestand wird überschritten",
+                    Answer3De = "Nachdisponieren",
+                    CorrectAnswersDe = "Überfällige Bestellungen",
+
+                    TextEn = "Which warning is generated?",
+                    Answer1En = "Overdue orders",
+                    Answer2En = "Max. Stock is exceeded",
+                    Answer3En = "Replenishment",
+                    CorrectAnswersEn = "Overdue orders",
+
+                    QuizCategory = new List<string> { "Bestellung" }
+                 },
+
+                 /*new Question
+                 {
+                    Id = 142,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 143,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 144,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 145,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 146,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+
+                new Question
+                 {
+                    Id = 147,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 148,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 149,
+
+                    TextDe = "",
+                    Answer1De = "",
+                    Answer2De = "",
+                    Answer3De = "",
+                    CorrectAnswersDe = "",
+
+                    TextEn = "",
+                    Answer1En = "",
+                    Answer2En = "",
+                    Answer3En = "",
+                    CorrectAnswersEn = "",
+
+                    QuizCategory = new List<string> { "", "" }
+                 },
+
+                 new Question
+                 {
+                    Id = 150,
 
                     TextDe = "",
                     Answer1De = "",
@@ -1683,6 +2843,7 @@ namespace AzubiApp.Services
                  }, */
             
             };
+
 
             foreach (var question in newQuestions)
             {

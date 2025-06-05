@@ -265,7 +265,7 @@
     <value>Use Case</value>
   </data>
   <data name="MainPageProgressText" xml:space="preserve">
-    <value>Fortschritt</value>
+    <value>Fortschritt Quiz</value>
   </data>
   <data name="ResultPageYourAnswersText" xml:space="preserve">
     <value>Ihre Antworten:</value>
@@ -278,5 +278,8 @@
   </data>
   <data name="ModulePageTopicTitle" xml:space="preserve">
     <value>Themengebiete</value>
+  </data>
+  <data name="ModulePageHintForProgressBar" xml:space="preserve">
+    <value>Hinweis: Dieser Teil zählt nicht zum Fortschritt</value>
   </data>
 </root>

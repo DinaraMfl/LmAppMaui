@@ -270,6 +270,15 @@ namespace AzubiApp.Resources.Translate {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
         /// </summary>
+        internal static string ModulePageHintForProgressBar {
+            get {
+                return ResourceManager.GetString("ModulePageHintForProgressBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
         internal static string ModulePageTopicTitle {
             get {
                 return ResourceManager.GetString("ModulePageTopicTitle", resourceCulture);

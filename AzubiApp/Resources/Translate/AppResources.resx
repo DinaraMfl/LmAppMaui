@@ -279,4 +279,7 @@
   <data name="ModulePageTopicTitle" xml:space="preserve">
     <value />
   </data>
+  <data name="ModulePageHintForProgressBar" xml:space="preserve">
+    <value />
+  </data>
 </root>
