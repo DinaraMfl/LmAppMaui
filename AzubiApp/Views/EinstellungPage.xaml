@@ -9,15 +9,14 @@
         
         <Grid>
             <Grid RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
-              
-            <Image   Source="logo_white.png" 
+
+                <Image   Source="logo_white.png" 
                      WidthRequest="200" 
                      HeightRequest="200" 
                      Margin="70,0,0,0"
                      Grid.Row="0" 
                      Grid.Column="0"/>
-              
-          </Grid>
+            </Grid>
             
             <Label  x:Name="Settings"
                     Text="{x:Static resx:AppResources.Settings}" 
@@ -31,6 +30,7 @@
                     HorizontalOptions="Center"
                     CornerRadius="18"
                     VerticalOptions="End"
+                    TextColor="Black"
                     FontSize="18"
                     BackgroundColor="#FFCD00"
                     Margin="30"/>

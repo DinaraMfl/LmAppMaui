@@ -80,5 +80,6 @@ public partial class ModulePage : ContentPage
         GeneralButton.Text = AppResources.GeneralButton;
         BackModuleButton.Text = AppResources.BackModuleButton;
         ModulePageTopicTitle.Text = AppResources.ModulePageTopicTitle;
+        ModulePageHintForProgressBar.Text = AppResources.ModulePageHintForProgressBar;
     }
 }
