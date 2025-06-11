@@ -440,7 +440,7 @@ namespace AzubiApp.Services
 
                     TextEn = "What are outliers?",
                     Answer1En = "Recognize outliers SKUs that exist twice",
-                    Answer2En = "Delete outliers Disposals that result in stocks falling below the SiB",
+                    Answer2En = "Delete outliers Disposals that result in stocks falling below the Sft",
                     Answer3En = "Outliers are extreme values in the history",
                     CorrectAnswersEn = "Outliers are extreme values in the history",
 
@@ -547,13 +547,13 @@ namespace AzubiApp.Services
                     Number = 29,
 
                     TextDe = "Was bewirkt ein eingetragener Vorläufer?",
-                    Answer1De = "Die Vorläufer-SKU wird ab dem eingetragenen Datum inaktiv gelöscht & wird dann ersetzt mit der SKU, die diese SKU als Vorläufer eingetragen hat.",
+                    Answer1De = "Die Vorläufer-SKU wird ab dem eingetragenen Datum inaktiv gelöscht & wird dann ersetzt mit der SKU, die diese SKU als Vorläufer eingetragen hat",
                     Answer2De = "Die Historie vom Vorläufer wird übertragen auf die SKU",
                     Answer3De = "Die SKU wird inaktiviert und erhält eine „Info“-Warnung, die „Vorläufer-SKU“ heißt",
                     CorrectAnswersDe = "Die Historie vom Vorläufer wird übertragen auf die SKU",
 
                     TextEn = "What does a registered forerunner do?",
-                    Answer1En = "The predecessor SKU is deleted from the date entered as inactive & is then replaced with the SKU that entered this SKU as the predecessor.",
+                    Answer1En = "The predecessor SKU is deleted from the date entered as inactive & is then replaced with the SKU that entered this SKU as the predecessor",
                     Answer2En = "The history of the predecessor is transferred to the SKU",
                     Answer3En = "The SKU is deactivated and receives an “Info” warning called “Predecessor SKU”",
                     CorrectAnswersEn = "The history of the predecessor is transferred to the SKU",
@@ -800,7 +800,7 @@ namespace AzubiApp.Services
                     CorrectAnswersDe = "Die ABC-Klasse zeigt welche SKU am genausten prognostiziert werden kann",
 
                     TextEn = "What does an XYZ class say about an SKU?",
-                    Answer1En = "The ABC class shows which SKU can be predicted most accurately ",
+                    Answer1En = "The ABC class shows which SKU can be predicted most accurately",
                     Answer2En = "The ABC class shows which SKU is ordered most often",
                     Answer3En = "The ABC class shows which SKUs have the highest turnover",
                     CorrectAnswersEn = "The ABC class shows which SKU can be predicted most accurately",
@@ -1257,9 +1257,9 @@ namespace AzubiApp.Services
 
                     TextEn = "What is the effect of the quality criterion “Fill up to max. + reserv.”?",
                     Answer1En = "Order proposals are generated until the maximum stock level is reached",
-                    Answer2En = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached.",
+                    Answer2En = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached",
                     Answer3En = "Order proposals are generated to satisfy all reservations",
-                    CorrectAnswersEn = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached.",
+                    CorrectAnswersEn = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1441,15 +1441,15 @@ namespace AzubiApp.Services
 
                     TextDe = "Wofür werden Pseudo-Kontrakte verwendet?",
                     Answer1De = "Das sind Kontrakte auf die nur bestimmte Benutzer zugreifen können",
-                    Answer2De = "Damit kann ein zusätzlicher SiB vorgegeben werden.",
+                    Answer2De = "Damit kann ein zusätzlicher SiB vorgegeben werden",
                     Answer3De = "Diese Kontrakte werden für Kommentare verwendet",
                     CorrectAnswersDe = "Damit kann ein zusätzlicher SiB vorgegeben werden",
 
                     TextEn = "What are pseudo-contracts used for?",
                     Answer1En = "These are contracts that only certain users can access",
-                    Answer2En = "This can be used to define an additional SiB.",
+                    Answer2En = "This can be used to define an additional Sft",
                     Answer3En = "These contracts can be used for comments",
-                    CorrectAnswersEn = "This can be used to define an additional SiB.",
+                    CorrectAnswersEn = "This can be used to define an additional Sft",
 
                     QuizCategory = new List<string> { "Paramter", "Kondition" }
                  },
@@ -1459,16 +1459,16 @@ namespace AzubiApp.Services
                     Number = 77,
 
                     TextDe = "Wie viele Kontrakte kann ein Artikel haben?",
-                    Answer1De = "Ein Artikel kann mehrere Kontrakte haben.",
-                    Answer2De = "Keine, da Kontrakte nicht auf Artikelebene laufen. ",
-                    Answer3De = "Ein Kontrakt pro Artikel.",
+                    Answer1De = "Ein Artikel kann mehrere Kontrakte haben",
+                    Answer2De = "Keine, da Kontrakte nicht auf Artikelebene laufen",
+                    Answer3De = "Ein Kontrakt pro Artikel",
                     CorrectAnswersDe = "Ein Artikel kann mehrere Kontrakte haben",
 
                     TextEn = "How many contracts can an article have?",
-                    Answer1En = "An article can have multiple contracts.",
-                    Answer2En = "None, as contracts do not run at article level. ",
-                    Answer3En = "One contract per article.",
-                    CorrectAnswersEn = "An article can have multiple contracts.",
+                    Answer1En = "An article can have multiple contracts",
+                    Answer2En = "None, as contracts do not run at article level",
+                    Answer3En = "One contract per article",
+                    CorrectAnswersEn = "An article can have multiple contracts",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1516,9 +1516,9 @@ namespace AzubiApp.Services
                     Number = 80,
 
                     TextDe = "Was bedeutet in der Kontraktauswahl \"Nach Vertragsende\"?",
-                    Answer1De = "Es wird beim Lieferanten mit dem nächsten Vertragsende bestellt, wenn der Kontrakt offen ist.",
-                    Answer2De = "Bestellt wird immer beim Lieferanten mit der kürzesten Wiederbeschaffungszeit (WBZ) ",
-                    Answer3De = "Bestellt wird nur dann, wenn der Kontrakt vollständig erfüllt wird.",
+                    Answer1De = "Es wird beim Lieferanten mit dem nächsten Vertragsende bestellt, wenn der Kontrakt offen ist",
+                    Answer2De = "Bestellt wird immer beim Lieferanten mit der kürzesten Wiederbeschaffungszeit (WBZ)",
+                    Answer3De = "Bestellt wird nur dann, wenn der Kontrakt vollständig erfüllt wird",
                     CorrectAnswersDe = "Es wird beim Lieferanten mit dem nächsten Vertragsende bestellt, wenn der Kontrakt offen ist",
 
                     TextEn = "What does the Option \"By timeout contract\" mean at the field \"Select contract\"",
@@ -1535,13 +1535,13 @@ namespace AzubiApp.Services
                     Number = 81,
 
                     TextDe = "Was bedeutet in der Kontraktart \"Dauerauftrag/Bestellungsaufteilung\"?",
-                    Answer1De = "Bestellmengen für SKUs mit mehreren Lieferanten können nicht aufgeteilt werden, sondern nur vereinzelt.",
-                    Answer2De = "Die Aufteilung der Bestellmengen erfolgt nur über Daueraufträge, eine Kombination ist nicht möglich.",
-                    Answer3De = "Bestellmengen für SKUs mit mehreren Lieferanten können zwischen Dauerauftrag und Bestellungsaufteilung aufgeteilt werden, auch kombiniert.",
+                    Answer1De = "Bestellmengen für SKUs mit mehreren Lieferanten können nicht aufgeteilt werden, sondern nur vereinzelt",
+                    Answer2De = "Die Aufteilung der Bestellmengen erfolgt nur über Daueraufträge, eine Kombination ist nicht möglich",
+                    Answer3De = "Bestellmengen für SKUs mit mehreren Lieferanten können zwischen Dauerauftrag und Bestellungsaufteilung aufgeteilt werden, auch kombiniert",
                     CorrectAnswersDe = "Bestellmengen für SKUs mit mehreren Lieferanten können zwischen Dauerauftrag und Bestellungsaufteilung aufgeteilt werden, auch kombiniert",
 
                     TextEn = "What does the option “standing order/order split” mean in the field \"contract type\"?",
-                    Answer1En = "Order quantities for SKUs with several suppliers cannot be split, only individual ones.",
+                    Answer1En = "Order quantities for SKUs with several suppliers cannot be split, only individual ones",
                     Answer2En = "The order quantities are only split via standing orders, a combination is not possible",
                     Answer3En = "Order quantities for SKUs with multiple suppliers can be split between standing order and order splitting; also combined",
                     CorrectAnswersEn = "Order quantities for SKUs with multiple suppliers can be split between standing order and order splitting; also combined",
@@ -1560,7 +1560,7 @@ namespace AzubiApp.Services
                     CorrectAnswersDe = "Es wird die maximal abrufbare Menge vom Lieferanten bestellt bis der Kontakt aufgebraucht wurde",
 
                     TextEn = "What does the contract type “Max. quantity” do?",
-                    Answer1En = "Orders are always placed until the maximum stock capacity of the SKU is reached.",
+                    Answer1En = "Orders are always placed until the maximum stock capacity of the SKU is reached",
                     Answer2En = "A maximum contract release order quantity can be defined with this contract type",
                     Answer3En = "The maximum quantity that can be requested from the supplier is ordered until the contact has been fulfilled",
                     CorrectAnswersEn = "The maximum quantity that can be requested from the supplier is ordered until the contact has been fulfilled",
@@ -1611,13 +1611,13 @@ namespace AzubiApp.Services
                     Number = 85,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses blau & unterstrichen angezeigt wird?",
-                    Answer1De = "Der Wert wurde auf der aktuellen Ebene erfasst.",
-                    Answer2De = "Der Wert gehört zu einer Verbundgruppe.",
-                    Answer3De = "Der Wert wurde von einer höheren Ebene geerbt.",
+                    Answer1De = "Der Wert wurde auf der aktuellen Ebene erfasst",
+                    Answer2De = "Der Wert gehört zu einer Verbundgruppe",
+                    Answer3De = "Der Wert wurde von einer höheren Ebene geerbt",
                     CorrectAnswersDe = "Der Wert wurde von einer höheren Ebene geerbt",
 
                     TextEn = "What does a parameter/condition field indicate when it is displayed in blue & underlined?",
-                    Answer1En = "The value was entered at the current level.",
+                    Answer1En = "The value was entered at the current level",
                     Answer2En = "The value belongs to a compound group",
                     Answer3En = "The value was passed on from a higher level",
                     CorrectAnswersEn = "The value was passed on from a higher level",
@@ -1630,9 +1630,9 @@ namespace AzubiApp.Services
                     Number = 86,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses grün & unterstrichen angezeigt wird?",
-                    Answer1De = "Der Wert wurde von einer Klasse geerbt.",
-                    Answer2De = "Der Wert wurde auf der aktuellen Ebene erfasst.",
-                    Answer3De = "Der Wert wurde von einer anderen SKU übernommen. ",
+                    Answer1De = "Der Wert wurde von einer Klasse geerbt",
+                    Answer2De = "Der Wert wurde auf der aktuellen Ebene erfasst",
+                    Answer3De = "Der Wert wurde von einer anderen SKU übernommen",
                     CorrectAnswersDe = "Der Wert wurde von einer Klasse geerbt",
 
                     TextEn = "What does a parameter/condition field indicate when it is displayed in green & underlined?",
@@ -1649,8 +1649,8 @@ namespace AzubiApp.Services
                     Number = 87,
 
                     TextDe = "Automatische Aktionen, die Vergangenheitswerte korrigieren, können entstehen…",
-                    Answer1De = "durch die Prognose.",
-                    Answer2De = "durch die OoS-Bereinigung.",
+                    Answer1De = "durch die Prognose",
+                    Answer2De = "durch die OoS-Bereinigung",
                     Answer3De = "durch eine Strukturbruch-Erkennung",
                     CorrectAnswersDe = "durch die OoS-Bereinigung",
 
@@ -1658,7 +1658,7 @@ namespace AzubiApp.Services
                     Answer1En = "through the forecast",
                     Answer2En = "through the OoS correction",
                     Answer3En = "through a structural break detection",
-                    CorrectAnswersEn = "",
+                    CorrectAnswersEn = "through the OoS correction",
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -1667,9 +1667,9 @@ namespace AzubiApp.Services
                  {
                     Number = 88,
 
-                    TextDe = "Was machen Info-Aktionen ?",
-                    Answer1De = "Damit kann man zuvor nicht berücksichtige Zeiträume mit ihren Abverkäufen und Aktionen für die Prognoserechnung verwenden.",
-                    Answer2De = "Bei diesen Aktionen werden die Zeiträume anonymisiert.",
+                    TextDe = "Was machen Info-Aktionen?",
+                    Answer1De = "Damit kann man zuvor nicht berücksichtige Zeiträume mit ihren Abverkäufen und Aktionen für die Prognoserechnung verwenden",
+                    Answer2De = "Bei diesen Aktionen werden die Zeiträume anonymisiert",
                     Answer3De = "Eine Info-Aktion hat keinen Einfluss auf die Prognose, aber besitzt Kommentare um auf besondere Umstände hinzuweisen",
                     CorrectAnswersDe = "Damit kann man zuvor nicht berücksichtige Zeiträume mit ihren Abverkäufen und Aktionen für die Prognoserechnung verwenden",
 
@@ -1687,8 +1687,8 @@ namespace AzubiApp.Services
                     Number = 89,
 
                     TextDe = "Was sind Stichtage?",
-                    Answer1De = "Stichtage ermöglichen variable Saisons.",
-                    Answer2De = "Stichtage verhindern, dass saisonale Schwankungen erkannt werden können.",
+                    Answer1De = "Stichtage ermöglichen variable Saisons",
+                    Answer2De = "Stichtage verhindern, dass saisonale Schwankungen erkannt werden können",
                     Answer3De = "Stichtage werden verwendet um vor Preisschwankungen zu warnen",
                     CorrectAnswersDe = "Stichtage ermöglichen variable Saisons",
 
@@ -1706,8 +1706,8 @@ namespace AzubiApp.Services
                     Number = 90,
 
                     TextDe = "Welche Aussage stimmt nicht?",
-                    Answer1De = "Der SiB ist die Menge, die auf Lager sein muss, um Abweichungen in den prognostizierten Abverkäufen aufzufangen.",
-                    Answer2De = "Der SiB ist der durchschnittliche Lagerbestand während eines Monats.",
+                    Answer1De = "Der SiB ist die Menge, die auf Lager sein muss, um Abweichungen in den prognostizierten Abverkäufen aufzufangen",
+                    Answer2De = "Der SiB ist der durchschnittliche Lagerbestand während eines Monats",
                     Answer3De = "Der SiB sagt aus welche Menge bestellt werden muss um einer OoS-Situation zu entgehen",
                     CorrectAnswersDe = "Der SiB ist der durchschnittliche Lagerbestand während eines Monats| Der SiB sagt aus welche Menge bestellt werden muss um einer OoS-Situation zu entgehen",
 
@@ -1785,15 +1785,15 @@ namespace AzubiApp.Services
 
                     TextDe = "Welchen Unterschied macht es, wenn ein Konditions- / Parameter-Feld unterstrichen wird oder nicht?",
                     Answer1De = "Ein unterstrichenes Feld wurde von einem User bearbeitet",
-                    Answer2De = "Wenn ein Feld unterstrichen ist bedeutet es das dieser Wert von einer höheren Ebene vererbt wurde ",
-                    Answer3De = "Es gibt keine eindeutige Bedeutung.",
-                    CorrectAnswersDe = "Wenn ein Feld unterstrichen ist bedeutet es das dieser Wert von einer höheren Ebene vererbt wurde ",
+                    Answer2De = "Wenn ein Feld unterstrichen ist bedeutet es das dieser Wert von einer höheren Ebene vererbt wurde",
+                    Answer3De = "Es gibt keine eindeutige Bedeutung",
+                    CorrectAnswersDe = "Wenn ein Feld unterstrichen ist bedeutet es das dieser Wert von einer höheren Ebene vererbt wurde",
 
                     TextEn = "What difference does it make if a condition / parameter field is underlined or not?",
                     Answer1En = "An underlined field has been edited by a user",
-                    Answer2En = "If a field is underlined, it means that this value was passed on from a higher level ",
+                    Answer2En = "If a field is underlined, it means that this value was passed on from a higher level",
                     Answer3En = "There is no clear meaning",
-                    CorrectAnswersEn = "If a field is underlined, it means that this value was passed on from a higher level ",
+                    CorrectAnswersEn = "If a field is underlined, it means that this value was passed on from a higher level",
 
                     QuizCategory = new List<string> { "Parameter", "Kondition" }
                  },
@@ -1804,13 +1804,13 @@ namespace AzubiApp.Services
 
                     TextDe = "Welche Auswirkung hat eine Kontraktart?",
                     Answer1De = "Die Kontraktart bestimmt, wie mit Kontrakten umgegangen werden soll",
-                    Answer2De = "Die Kontraktart bestimmt, ob es sich um einen Lieferanten-, Artikel- oder Kundenkontrakt handelt ",
-                    Answer3De = "Die Kontraktart bestimmt welche Kontrakte gewählt werden sollen ",
+                    Answer2De = "Die Kontraktart bestimmt, ob es sich um einen Lieferanten-, Artikel- oder Kundenkontrakt handelt",
+                    Answer3De = "Die Kontraktart bestimmt welche Kontrakte gewählt werden sollen",
                     CorrectAnswersDe = "Die Kontraktart bestimmt, wie mit Kontrakten umgegangen werden soll",
 
                     TextEn = "What is the effect of a contract type?",
                     Answer1En = "The contract type defines how contracts should be handled",
-                    Answer2En = "The contract type determines whether it is a supplier, article or customer contract ",
+                    Answer2En = "The contract type determines whether it is a supplier, article or customer contract",
                     Answer3En = "The contract type determines which contracts should be chosen",
                     CorrectAnswersEn = "The contract type defines how contracts should be handled",
 
@@ -1823,9 +1823,9 @@ namespace AzubiApp.Services
 
                     TextDe = "Welche Auswirkung hat eine Kontraktauswahl?",
                     Answer1De = "Mit der Kontraktauswahl kann ein Kontrakt statisch übergeben werden, bis dieser erfüllt wurde",
-                    Answer2De = "Die Kontraktauswahl bestimmt welche Kontrakte gewählt werden sollen ",
+                    Answer2De = "Die Kontraktauswahl bestimmt welche Kontrakte gewählt werden sollen",
                     Answer3De = "Die Kontraktauswahl bestimmt, wie mit Kontrakten umgegangen werden soll",
-                    CorrectAnswersDe = "Die Kontraktauswahl bestimmt welche Kontrakte gewählt werden sollen ",
+                    CorrectAnswersDe = "Die Kontraktauswahl bestimmt welche Kontrakte gewählt werden sollen",
 
                     TextEn = "What is the effect of the \"Select contract\" field?",
                     Answer1En = "With the select contract function, a contract can be assigned statically until it has been fulfilled",
@@ -1926,7 +1926,7 @@ namespace AzubiApp.Services
                     Answer1En = "The contract with the highest increasing average remaining quantity per day is used",
                     Answer2En = "The contract with the highest average remaining quantity per day is used",
                     Answer3En = "The contract with the highest remaining quantity in % per day is used",
-                    CorrectAnswersEn = "The contract with the most increasing average remaining quantity per day is used",
+                    CorrectAnswersEn = "The contract with the highest increasing average remaining quantity per day is used",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -2012,10 +2012,10 @@ namespace AzubiApp.Services
                     Number = 106,
 
                     TextDe = "Was macht der Parameter \"Berechnung von Semi-Aktionen\"?",
-                    Answer1De = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen ermittelt werden.",
-                    Answer2De = "Damit erkennt man eine deutliche und beständige Niveau-Änderung in der Historie.",
+                    Answer1De = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen ermittelt werden",
+                    Answer2De = "Damit erkennt man eine deutliche und beständige Niveau-Änderung in der Historie",
                     Answer3De = "Mit dem Parameter werden im Planungshorizont Akionen mit übergeben",
-                    CorrectAnswersDe = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen ermittelt werden.",
+                    CorrectAnswersDe = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen ermittelt werden",
 
                     TextEn = "What does the “Calculation of semi-promotions” parameter do?",
                     Answer1En = "You use these parameters to define the types of how the promotion quantities are calculated",
@@ -2031,10 +2031,10 @@ namespace AzubiApp.Services
                     Number = 107,
 
                     TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit'' bei der Berechnung von Semi-Aktionen?",
-                    Answer1De = "Aktionsmengen werden ausschließlich aus den Lagerbeständen während der Aktion berechnet.",
-                    Answer2De = "Die Aktionsmenge ergibt sich aus dem durchschnittlichen Preisunterschied vor und während der Aktion.",
-                    Answer3De = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht.",
-                    CorrectAnswersDe = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht.",
+                    Answer1De = "Aktionsmengen werden ausschließlich aus den Lagerbeständen während der Aktion berechnet",
+                    Answer2De = "Die Aktionsmenge ergibt sich aus dem durchschnittlichen Preisunterschied vor und während der Aktion",
+                    Answer3De = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht",
+                    CorrectAnswersDe = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht",
 
                     TextEn = "What does the type ''Rel to non-promotion time'' do when calculating semi-promotions?",
                     Answer1En = "Promotion quantities are calculated exclusively from the warehouse stocks during the promotion",
@@ -2050,16 +2050,16 @@ namespace AzubiApp.Services
                     Number = 108,
 
                     TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit + ggf. Info setzen'' bei der Berechnung von Semi-Aktionen?",
-                    Answer1De = "Wenn die Semi-Aktion nach dem ersten Abgang endet, wird sie automatisch gestoppt.",
-                    Answer2De = "Eine Berechnung erfolgt nicht. Endet die Semi-Aktion, bevor der erste Abverkauf stattfindet, wird sie automatisch als Info-Aktion gewertet.",
-                    Answer3De = "Die Semi-Aktion bleibt aktiv, auch wenn es keinen Abverkauf gibt.",
-                    CorrectAnswersDe = "Eine Berechnung erfolgt nicht. Endet die Semi-Aktion, bevor der erste Abverkauf stattfindet, wird sie automatisch als Info-Aktion gewertet.",
+                    Answer1De = "Wenn die Semi-Aktion nach dem ersten Abgang endet, wird sie automatisch gestoppt",
+                    Answer2De = "Eine Berechnung erfolgt nicht. Endet die Semi-Aktion, bevor der erste Abverkauf stattfindet, wird sie automatisch als Info-Aktion gewertet",
+                    Answer3De = "Die Semi-Aktion bleibt aktiv, auch wenn es keinen Abverkauf gibt",
+                    CorrectAnswersDe = "Eine Berechnung erfolgt nicht. Endet die Semi-Aktion, bevor der erste Abverkauf stattfindet, wird sie automatisch als Info-Aktion gewertet",
 
                     TextEn = "What does the type ''Rel to non promotion time + set info if necessary'' do when calculating semi-promotions?",
                     Answer1En = "If the semi-promotion ends after the first sale, it is automatically stopped",
-                    Answer2En = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion.",
-                    Answer3En = "The semi-promotion remains active even if there is no sale.",
-                    CorrectAnswersEn = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion.",
+                    Answer2En = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion",
+                    Answer3En = "The semi-promotion remains active even if there is no sale",
+                    CorrectAnswersEn = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -2069,16 +2069,16 @@ namespace AzubiApp.Services
                     Number = 109,
 
                     TextDe = "Was macht der Typ ''Rel zu Ex-Post-Prognose'' bei der Berechnung von Semi-Aktionen?",
-                    Answer1De = "Aktionsmengen basieren ausschließlich auf den ursprünglich geplanten Liefermengen.",
-                    Answer2De = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet.",
-                    Answer3De = "Die Aktionsmenge wird durch den Durchschnitt der Verkäufe aus der Vorjahresaktion berechnet.",
-                    CorrectAnswersDe = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet.",
+                    Answer1De = "Aktionsmengen basieren ausschließlich auf den ursprünglich geplanten Liefermengen",
+                    Answer2De = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet",
+                    Answer3De = "Die Aktionsmenge wird durch den Durchschnitt der Verkäufe aus der Vorjahresaktion berechnet",
+                    CorrectAnswersDe = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet",
 
                     TextEn = "What does the type ''Rel to ex-post forecast'' do in the calculation of semi-promotions?",
-                    Answer1En = "Promotional quantities are based exclusively on the originally planned delivery quantities.",
-                    Answer2En = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast.",
-                    Answer3En = "The promotion quantity is calculated as the average of the sales from the previous year's promotion.",
-                    CorrectAnswersEn = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast.",
+                    Answer1En = "Promotional quantities are based exclusively on the originally planned delivery quantities",
+                    Answer2En = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast",
+                    Answer3En = "The promotion quantity is calculated as the average of the sales from the previous year's promotion",
+                    CorrectAnswersEn = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast",
 
                     QuizCategory = new List<string> { "Paramter" }
                  },
@@ -2088,16 +2088,16 @@ namespace AzubiApp.Services
                     Number = 110,
 
                     TextDe = "Was macht der Typ ''Rel. zu aktionsfreier Zeit mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
-                    Answer1De = "Für diesen Parameter sind nur zukünftige Verkaufsprognosen notwendig.",
-                    Answer2De = "Für diesen Parameter werden historische Bestandsdaten benötigt. Die entgangene Aktionsmenge wird berechnet, indem die Verkäufe während der Aktion mit denen außerhalb des Aktionszeitraums verglichen werden.",
-                    Answer3De = "Entgangene Aktionsmengen werden anhand der Bestellungen im Aktionszeitraum ermittelt.",
-                    CorrectAnswersDe = "Für diesen Parameter werden historische Bestandsdaten benötigt. Die entgangene Aktionsmenge wird berechnet, indem die Verkäufe während der Aktion mit denen außerhalb des Aktionszeitraums verglichen werden.",
+                    Answer1De = "Für diesen Parameter sind nur zukünftige Verkaufsprognosen notwendig",
+                    Answer2De = "Für diesen Parameter werden historische Bestandsdaten benötigt. Die entgangene Aktionsmenge wird berechnet, indem die Verkäufe während der Aktion mit denen außerhalb des Aktionszeitraums verglichen werden",
+                    Answer3De = "Entgangene Aktionsmengen werden anhand der Bestellungen im Aktionszeitraum ermittelt",
+                    CorrectAnswersDe = "Für diesen Parameter werden historische Bestandsdaten benötigt. Die entgangene Aktionsmenge wird berechnet, indem die Verkäufe während der Aktion mit denen außerhalb des Aktionszeitraums verglichen werden",
 
                     TextEn = "What does the type ''Rel. to non promotion time with OoS correction'' do when calculating semi-promotions?",
-                    Answer1En = "Only future sales forecasts are required for this parameter.",
-                    Answer2En = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period.",
-                    Answer3En = "Missed promotional quantities are determined on the basis of orders placed during the promotional period.",
-                    CorrectAnswersEn = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period.",
+                    Answer1En = "Only future sales forecasts are required for this parameter",
+                    Answer2En = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period",
+                    Answer3En = "Missed promotional quantities are determined on the basis of orders placed during the promotional period",
+                    CorrectAnswersEn = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -2107,16 +2107,16 @@ namespace AzubiApp.Services
                     Number = 111,
 
                     TextDe = "Was macht der Typ ''Rel. zur Ex-Post-Prognose mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
-                    Answer1De = "Dieser Parameter funktioniert auch ohne historische Daten.",
-                    Answer2De = "Entgangene Aktionsmengen basieren ausschließlich auf den geplanten Liefermengen.",
-                    Answer3De = "Dieser Parameter setzt historische Bestandsdaten voraus. Die entgangenen Aktionsmengen werden ermittelt, indem die tatsächlichen Verkäufe mit der Ex-Post-Prognose verglichen werden.",
-                    CorrectAnswersDe = "Dieser Parameter setzt historische Bestandsdaten voraus. Die entgangenen Aktionsmengen werden ermittelt, indem die tatsächlichen Verkäufe mit der Ex-Post-Prognose verglichen werden.",
+                    Answer1De = "Dieser Parameter funktioniert auch ohne historische Daten",
+                    Answer2De = "Entgangene Aktionsmengen basieren ausschließlich auf den geplanten Liefermengen",
+                    Answer3De = "Dieser Parameter setzt historische Bestandsdaten voraus. Die entgangenen Aktionsmengen werden ermittelt, indem die tatsächlichen Verkäufe mit der Ex-Post-Prognose verglichen werden",
+                    CorrectAnswersDe = "Dieser Parameter setzt historische Bestandsdaten voraus. Die entgangenen Aktionsmengen werden ermittelt, indem die tatsächlichen Verkäufe mit der Ex-Post-Prognose verglichen werden",
 
                     TextEn = "What does the type ''Rel. to ex-post forecast with OoS correction'' do when calculating semi-promotions?",
-                    Answer1En = "This parameter also works without historical data.",
-                    Answer2En = "Missed promotion quantities are based exclusively on the planned delivery quantities.",
-                    Answer3En = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast.",
-                    CorrectAnswersEn = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast.",
+                    Answer1En = "This parameter also works without historical data",
+                    Answer2En = "Missed promotion quantities are based exclusively on the planned delivery quantities",
+                    Answer3En = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast",
+                    CorrectAnswersEn = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -2150,10 +2150,10 @@ namespace AzubiApp.Services
                     Answer3De = "30",
                     CorrectAnswersDe = "9",
 
-                    TextEn = "How many SiB types are there?",
+                    TextEn = "How many Sft types are there?",
                     Answer1En = "5",
                     Answer2En = "9",
-                    Answer3En = "3,",
+                    Answer3En = "30",
                     CorrectAnswersEn = "9",
 
                     QuizCategory = new List<string> { "Parameter" }
@@ -2163,17 +2163,17 @@ namespace AzubiApp.Services
                  {
                     Number = 114,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Wie kann ich die Prognose-Einstellungen mit übernehmen? (Saison)",
+                    Answer1De = "Standardmäßig ist die Einstellung nicht aktiviert",
+                    Answer2De = "Unter Extras, beim Prognose-Parameter die Periode ändern",
+                    Answer3De = "Dafür muss man den LM-Support anrufen, da hiefür globale Systemeinstellungen benötig werden",
+                    CorrectAnswersDe = "Standardmäßig ist die Einstellung nicht aktiviert.| Dafür muss man den LM-Support anrufen, da hiefür globale Systemeinstellungen benötig werden",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "How can I apply the forecast settings? (season)",
+                    Answer1En = "The setting is not activated by default",
+                    Answer2En = "Under Extras, change the period for the forecast parameter",
+                    Answer3En = "To do this, you must call LM support, as global system settings are required for this",
+                    CorrectAnswersEn = "The setting is not activated by default.| To do this, you must call LM support, as global system settings are required for this",
 
                     QuizCategory = new List<string> { "", "" }
                  },
@@ -2185,7 +2185,7 @@ namespace AzubiApp.Services
                     TextDe = "Was bedeuten die roten Striche am unteren Rand der Bestandssimulation?",
                     Answer1De = "Ein alternativer SiB-Typ, der an jedem Wochenende pausiert",
                     Answer2De = "Feiertage, meist sind es Wochenenden an dem gar kein Verkauf stattfindet",
-                    Answer3De = "Kennzeichnet immer den Anfang der Woche.",
+                    Answer3De = "Kennzeichnet immer den Anfang der Woche",
                     CorrectAnswersDe = "Feiertage, meist sind es Wochenenden an dem gar kein Verkauf stattfindet",
 
                     TextEn = "What does the red line at the bottom of the stock simulation mean?",
@@ -2246,7 +2246,7 @@ namespace AzubiApp.Services
                     TextDe = "Was bedeutet ein Prognose-Faktor von 2.0?",
                     Answer1De = "eine Halbierung der Prognose",
                     Answer2De = "eine Verdopplung der Prognose",
-                    Answer3De = "Eine Prognose die eine erweiterte Version hat.",
+                    Answer3De = "Eine Prognose die eine erweiterte Version hat",
                     CorrectAnswersDe = "eine Verdopplung der Prognose",
 
                     TextEn = "What does a forecast factor of 2.0 mean?",
@@ -2283,9 +2283,9 @@ namespace AzubiApp.Services
 
                     TextDe = "Was sind die Vorraussetzung für die Kontraktauswahl: “Bestellverhältnis” ?",
                     Answer1De = "Man benötigt zwei Lieferanten",
-                    Answer2De = "Die Kontraktart muss ebenfalls angepasst werden.",
+                    Answer2De = "Die Kontraktart muss ebenfalls angepasst werden",
                     Answer3De = "Es muss einer Verbundbestellung zu gehören",
-                    CorrectAnswersDe = "Man benötigt zwei Lieferanten| Die Kontraktart muss ebenfalls angepasst werden.",
+                    CorrectAnswersDe = "Man benötigt zwei Lieferanten| Die Kontraktart muss ebenfalls angepasst werden",
 
                     TextEn = "What are the requirements for the select contract: “ order ratio” ?",
                     Answer1En = "You need two suppliers",
@@ -2304,7 +2304,7 @@ namespace AzubiApp.Services
                     Answer1De = "Ja",
                     Answer2De = "Nein",
                     Answer3De = "Nein, diese sind nur in der Bestandssimulation zusehen",
-                    CorrectAnswersDe = "",
+                    CorrectAnswersDe = "Ja",
 
                     TextEn = "Are historical promotions taken into account in the forecast?",
                     Answer1En = "Yes",
@@ -2344,7 +2344,7 @@ namespace AzubiApp.Services
                     Answer3De = "Die Behandlungsgrenze für Ausreißer",
                     CorrectAnswersDe = "Positive Aktionen im Falle einer Ausreißererkennung",
 
-                    TextEn = "What do the dark green bars represent? (Default Settings) (temp/adrian.pawlak/App_Use-Case/Balk_2.png)",
+                    TextEn = "What do the dark green bars represent? (Default Settings)",
                     Answer1En = "Negative promotions",
                     Answer2En = "Positive promotions in the event of outlier detection",
                     Answer3En = "The outlier treatment limit",
@@ -2369,7 +2369,7 @@ namespace AzubiApp.Services
                     Answer1En = "The Sft is permanently increased by the promotion quantity × percentage",
                     Answer2En = "The Sft is increased by the promotion quantity × percentage between the available-from date and the start of the promotion and is immediately reduced again at the start of the promotion",
                     Answer3En = "The Sft is only adjusted after the start of the campaign",
-                    CorrectAnswersEn = "The Sft is increased between the available-from date and the start of the promotion by the promotion quantity × percentage and immediately reduced again at the start of the promotion",
+                    CorrectAnswersEn = "The Sft is increased by the promotion quantity × percentage between the available-from date and the start of the promotion and is immediately reduced again at the start of the promotion",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -2398,15 +2398,15 @@ namespace AzubiApp.Services
                     Number = 126,
 
                     TextDe = "Was macht der Typ “Reservierungsdatum vordatieren” bei der Behandlung Aktionsbestellung?",
-                    Answer1De = "Reicht die Bestellmenge für den Aktionszeitraum, wird nach der Dispo das Reservierungsdatum aller Positionen auf das Verfügbar-ab-Datum gesetzt.",
-                    Answer2De = "Das Reservierungsdatum wird nur für die erste Position auf das Verfügbar-ab-Datum gesetzt.",
-                    Answer3De = "Das Reservierungsdatum wird erst nach Ende des Aktionszeitraums angepasst.",
-                    CorrectAnswersDe = "Reicht die Bestellmenge für den Aktionszeitraum, wird nach der Disposition das Reservierungsdatum aller Positionen auf das Verfügbar-ab-Datum gesetzt.",
+                    Answer1De = "Reicht die Bestellmenge für den Aktionszeitraum, wird nach der Dispo das Reservierungsdatum aller Positionen auf das Verfügbar-ab-Datum gesetzt",
+                    Answer2De = "Das Reservierungsdatum wird nur für die erste Position auf das Verfügbar-ab-Datum gesetzt",
+                    Answer3De = "Das Reservierungsdatum wird erst nach Ende des Aktionszeitraums angepasst",
+                    CorrectAnswersDe = "Reicht die Bestellmenge für den Aktionszeitraum, wird nach der Dispo das Reservierungsdatum aller Positionen auf das Verfügbar-ab-Datum gesetzt",
 
                     TextEn = "What does the type “repone reservation date” do when handling promotional orders?",
                     Answer1En = "If the order quantity is sufficient for the promotional period, the reservation date of all items is set to the available from date after the dispo",
                     Answer2En = "The reservation date is only set for the first position to the available from date",
-                    Answer3En = "The reservation date will only be adjusted after the end of the promotional period.",
+                    Answer3En = "The reservation date will only be adjusted after the end of the promotional period",
                     CorrectAnswersEn = "If the order quantity is sufficient for the promotional period, the reservation date of all items is set to the available from date after the dispo",
 
                     QuizCategory = new List<string> { "Bestellung" }
@@ -2437,7 +2437,7 @@ namespace AzubiApp.Services
                  {
                     Number = 128,
 
-                    TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag? (temp/adrian.pawlak/App_Use-Case/WBZ_3.png)",
+                    TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
                     Answer1De = "25 Tage",
                     Answer2De = "29 Tage",
                     Answer3De = "27 Tage",
@@ -2483,9 +2483,9 @@ namespace AzubiApp.Services
                     Answer1De = "13 Tage",
                     Answer2De = "15 Tage",
                     Answer3De = "17 Tage",
-                    CorrectAnswersDe = "13 Days",
+                    CorrectAnswersDe = "13 Tage",
 
-                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions? (temp/adrian.pawlak/App_Use-Case/WBZ_5.png)",
+                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions?",
                     Answer1En = "13 Days",
                     Answer2En = "15 Days",
                     Answer3En = "17 Days",
