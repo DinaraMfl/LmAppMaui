@@ -1736,7 +1736,7 @@ namespace AzubiApp.Services
                     Answer3En = "11 Days",
                     CorrectAnswersEn = "11 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_091_wbz_1.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_091_wbz_1.png",
 
                     QuizCategory = new List<string> { "Bestellung", "Kondition" }
                  },
@@ -2194,7 +2194,7 @@ namespace AzubiApp.Services
                     Answer3En = "Always marks the beginning of the week",
                     CorrectAnswersEn = "Public holidays, usually weekends on which there are no sales at all",
 
-                    ImagePath = "Images/QuestionsImage/question_115_best_1.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_115_best_1.png",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2215,7 +2215,7 @@ namespace AzubiApp.Services
                     Answer3En = "The relative departure option",
                     CorrectAnswersEn = "The standard deviation",
 
-                    ImagePath = "Images/QuestionsImage/question_116_balk_3.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_116_balk_3.png",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2350,7 +2350,8 @@ namespace AzubiApp.Services
                     Answer3En = "The outlier treatment limit",
                     CorrectAnswersEn = "Positive promotions in the event of outlier detection",
 
-                    ImagePath = "Images/QuestionsImage/question_123_balk_2.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_123_balk_2.png",
+                    ImagePathEn = "Images/QuestionsImage/En/test.png",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2428,7 +2429,7 @@ namespace AzubiApp.Services
                     Answer3En = "19 Days",
                     CorrectAnswersEn = "17 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_127_wbz_2.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_127_wbz_2.png",
 
                     QuizCategory = new List<string> { "Kondition" }
                  },
@@ -2449,7 +2450,7 @@ namespace AzubiApp.Services
                     Answer3En = "27 Days",
                     CorrectAnswersEn = "27 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_128_wbz_3.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_128_wbz_3.png",
 
                     QuizCategory = new List<string> { "Kondition" }
                  },
@@ -2470,7 +2471,7 @@ namespace AzubiApp.Services
                     Answer3En = "13 Days",
                     CorrectAnswersEn = "11 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_129_wbz_4.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_129_wbz_4.png",
 
                     QuizCategory = new List<string> { "Kondition" }
                  },
@@ -2491,7 +2492,7 @@ namespace AzubiApp.Services
                     Answer3En = "17 Days",
                     CorrectAnswersEn = "13 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_130_wbz_5.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_130_wbz_5.png",
 
                     QuizCategory = new List<string> { "Kondition" }
                  },
@@ -2512,7 +2513,7 @@ namespace AzubiApp.Services
                     Answer3En = "13 Days",
                     CorrectAnswersEn = "13 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_131_wbz_6.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_131_wbz_6.png",
 
                     QuizCategory = new List<string> { "Kondition" }
                  },
@@ -2533,7 +2534,7 @@ namespace AzubiApp.Services
                     Answer3En = "Both",
                     CorrectAnswersEn = "Both",
 
-                    ImagePath = "Images/QuestionsImage/question_132_balk_1.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_132_balk_1.png",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2554,7 +2555,7 @@ namespace AzubiApp.Services
                     Answer3En = "Max. Planning horizon exceeded",
                     CorrectAnswersEn = "Max. Stock is exceeded",
 
-                    ImagePath = "Images/QuestionsImage/question_133_warn_1.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_133_warn_1.png",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -2575,7 +2576,7 @@ namespace AzubiApp.Services
                     Answer3En = "Reservations cannot be fulfilled",
                     CorrectAnswersEn = "Probably OoS| Reservations cannot be fulfilled",
 
-                    ImagePath = "Images/QuestionsImage/question_134_warn_2.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_134_warn_2.png",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -2596,7 +2597,7 @@ namespace AzubiApp.Services
                     Answer3En = "To limit for how far into the future orders may be generated",
                     CorrectAnswersEn = "To determine how much of the issue history should be used for the forecast calculation",
 
-                    ImagePath = "Images/QuestionsImage/question_135_para_1.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_135_para_1.png",
 
                     QuizCategory = new List<string> { "Bestellung", "Prognose" }
                  },
@@ -2617,7 +2618,7 @@ namespace AzubiApp.Services
                     Answer3En = "Strongly rising forecast",
                     CorrectAnswersEn = "Outliers| Strongly rising forecast",
 
-                    ImagePath = "Images/QuestionsImage/question_136_warn_3.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_136_warn_3.png",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2638,7 +2639,7 @@ namespace AzubiApp.Services
                     Answer3En = "Currently no standard deviation",
                     CorrectAnswersEn = "Strongly rising forecast",
 
-                    ImagePath = "Images/QuestionsImage/question_137_warn_4.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_137_warn_4.png",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2659,7 +2660,7 @@ namespace AzubiApp.Services
                     Answer3En = "Possible structure break",
                     CorrectAnswersEn = "Outlier",
 
-                    ImagePath = "Images/QuestionsImage/question_138_warn_5.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_138_warn_5.png",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2680,7 +2681,7 @@ namespace AzubiApp.Services
                     Answer3En = "Structure break",
                     CorrectAnswersEn = "Outlier| Strongly rising forecast",
 
-                    ImagePath = "Images/QuestionsImage/question_139_warn_6.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_139_warn_6.png",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2701,7 +2702,7 @@ namespace AzubiApp.Services
                     Answer3En = "The alternative Sft",
                     CorrectAnswersEn = "The outlier treatment threshold| The outlier warning threshold",
 
-                    ImagePath = "Images/QuestionsImage/question_140_grenz_1.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_140_grenz_1.png",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2722,7 +2723,7 @@ namespace AzubiApp.Services
                     Answer3En = "Replenishment",
                     CorrectAnswersEn = "Overdue orders",
 
-                    ImagePath = "Images/QuestionsImage/question_141_warn_7.png",
+                    ImagePathDe = "Images/QuestionsImage/De/question_141_warn_7.png",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },

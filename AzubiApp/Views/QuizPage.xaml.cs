@@ -90,14 +90,15 @@ namespace AzubiApp.Views
 
             QuestionLabel.Text = lang == "de" ? question.TextDe : question.TextEn;
 
-            if (!string.IsNullOrEmpty(question.ImagePath))
+            string imagePath = lang == "de" ? question.ImagePathDe : question.ImagePathEn;
+            if (!string.IsNullOrEmpty(imagePath))
             {
-                QuestionImage.Source = question.ImagePath;
+                QuestionImage.Source = imagePath;
                 QuestionImage.IsVisible = true;
             }
             else
             {
-               QuestionImage.IsVisible = false;
+                QuestionImage.IsVisible = false;
             }
 
             var answerOptions = lang == "de"

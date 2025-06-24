@@ -61,6 +61,7 @@ namespace AzubiApp.Views
                 }
 
                 var questionText = lang == "de" ? question.TextDe : question.TextEn;
+                var imagePath = lang == "de" ? question.ImagePathDe : question.ImagePathEn;
 
                 Results.Add(new ResultItem
                 {
@@ -70,7 +71,7 @@ namespace AzubiApp.Views
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red,
                     ShowCorrectAnswer = !isCorrect,
-                    ImagePath = string.IsNullOrEmpty(question.ImagePath) ? null : question.ImagePath
+                    ImagePath = string.IsNullOrEmpty(imagePath) ? null : imagePath
                 });         
             }
 
