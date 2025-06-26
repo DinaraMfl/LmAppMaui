@@ -174,8 +174,4 @@
 	  <MauiIcon Include="Resources\MipMap\logoicon.png" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Resources\Images\QuestionsImage\En\" />
-	</ItemGroup>
-
 </Project>
