@@ -20,7 +20,39 @@
                     HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 </Frame>
 
-                <Image x:Name="QuestionImage" HeightRequest="200" Aspect="AspectFit" IsVisible="False"/>
+                <!-- Zoom Images-->
+                <ContentView x:Name="ImageContainer" IsVisible="False" HeightRequest="200">
+                    <Grid>
+                        <Image x:Name="QuestionImageNormal"
+                                 Aspect="AspectFit"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"
+                                 IsVisible="True">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="OnImageDoubleTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <ScrollView x:Name="ImageScrollView"
+                                    Orientation="Both"
+                                    BackgroundColor="Black"
+                                    IsVisible="False">
+                            <ContentView>
+                                <Grid>
+                                    <Image x:Name="QuestionImageZoomed"
+                                        Aspect="Fill"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Start"
+                                        Scale="1">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="OnImageDoubleTapped" />
+                                            <PinchGestureRecognizer PinchUpdated="OnImagePinchUpdated" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Grid>
+                            </ContentView>  
+                        </ScrollView>
+                    </Grid>
+                </ContentView>
 
                 <VerticalStackLayout Spacing="30">
                     <HorizontalStackLayout Spacing="10" VerticalOptions="Center">

@@ -9,7 +9,7 @@ namespace AzubiApp.Services
             var existingQuestions = await database.GetAllQuestionsAsync();
 
             var newQuestions = new List<Question>
-            {                
+            { /*      
                 new Question
                 {
                     Number = 1,
@@ -2411,7 +2411,7 @@ namespace AzubiApp.Services
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
-
+                 */
                  new Question
                  {
                     Number = 127,
@@ -2464,7 +2464,7 @@ namespace AzubiApp.Services
                     Answer3De = "19 Tage",
                     CorrectAnswersDe = "11 Tage",
 
-                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions?)",
+                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions?",
                     Answer1En = "11 Days",
                     Answer2En = "15 Days",
                     Answer3En = "13 Days",
@@ -2485,7 +2485,7 @@ namespace AzubiApp.Services
                     Answer3De = "17 Tage",
                     CorrectAnswersDe = "13 Days",
 
-                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions? (temp/adrian.pawlak/App_Use-Case/WBZ_5.png)",
+                    TextEn = "How long would the replenishment time be if an order is placed on a Monday with the following conditions?",
                     Answer1En = "13 Days",
                     Answer2En = "15 Days",
                     Answer3En = "17 Days",

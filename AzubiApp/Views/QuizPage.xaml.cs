@@ -92,12 +92,12 @@ namespace AzubiApp.Views
 
             if (!string.IsNullOrEmpty(question.ImagePath))
             {
-                QuestionImage.Source = question.ImagePath;
-                QuestionImage.IsVisible = true;
+                QuestionImageNormal.Source = question.ImagePath;
+                ImageContainer.IsVisible = true;
             }
             else
             {
-               QuestionImage.IsVisible = false;
+                ImageContainer.IsVisible = false;
             }
 
             var answerOptions = lang == "de"
@@ -279,6 +279,82 @@ namespace AzubiApp.Views
                 {
                     checkBox.IsChecked = !checkBox.IsChecked;
                 }
+            }
+        }
+
+        // Zoom Images
+        double currentScale = 1;
+        readonly double minScale = 1;
+        readonly double maxScale = 2;
+        double startScale = 1;
+
+        void OnImagePinchUpdated(object sender, PinchGestureUpdatedEventArgs e)
+        {
+            if (e.Status == GestureStatus.Started)
+            {
+                startScale = QuestionImageZoomed.Scale;
+            }
+            else if (e.Status == GestureStatus.Running)
+            {
+                double newScale = Math.Max(minScale, Math.Min(maxScale, startScale * e.Scale));
+                QuestionImageZoomed.Scale = newScale;
+                currentScale = newScale;
+            }
+        }
+
+        void OnImageDoubleTapped(object sender, EventArgs e)
+        {
+            var image = QuestionImageZoomed;
+            var args = (TappedEventArgs)e;
+            var tapPosition = args.GetPosition(image);
+
+            if (currentScale == minScale)
+            {
+                currentScale = maxScale;
+                image.Source = QuestionImageNormal.Source;
+                image.Scale = minScale;
+                image.WidthRequest = -1;
+                image.HeightRequest = -1;
+
+                QuestionImageNormal.IsVisible = false;
+                ImageScrollView.IsVisible = true;
+
+                image.ScaleTo(currentScale, 200, Easing.CubicInOut).ContinueWith(_ =>
+                {
+                    MainThread.BeginInvokeOnMainThread(() =>
+                    {
+                        double width = image.Width * currentScale;
+                        double height = image.Height * currentScale;
+
+                        if (width > 0 && height > 0)
+                        {
+                            image.WidthRequest = width;
+                            image.HeightRequest = height;
+                        }
+
+                        if (tapPosition is not null)
+                        {
+                            double scrollX = Math.Max(0, (width * tapPosition.Value.X / image.Width) - (ImageScrollView.Width / 2));
+                            double scrollY = Math.Max(0, (height * tapPosition.Value.Y / image.Height) - (ImageScrollView.Height / 2));
+                            ImageScrollView.ScrollToAsync(scrollX, scrollY, false);
+                        }
+                    });
+                });
+            }
+            else
+            {
+                currentScale = minScale;
+                image.ScaleTo(minScale, 200, Easing.CubicInOut).ContinueWith(_ =>
+                {
+                    MainThread.BeginInvokeOnMainThread(() =>
+                    {
+                        image.WidthRequest = -1;
+                        image.HeightRequest = -1;
+                        ImageScrollView.ScrollToAsync(0, 0, false);
+                        ImageScrollView.IsVisible = false;
+                        QuestionImageNormal.IsVisible = true;
+                    });
+                });
             }
         }
 
