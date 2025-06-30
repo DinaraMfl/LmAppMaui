@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Neuere Versionen, stabiler und kompatibel -->
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.0" />
+		<PackageReference Include="xunit" Version="2.4.2" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
+		<PackageReference Include="coverlet.collector" Version="6.0.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Using-Element brauchst du nicht zwingend, kann aber bleiben -->
+		<Using Include="Xunit" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Falls du dein AzubiApp.Logic Projekt hast, referenziere es hier -->
+		<!-- <ProjectReference Include="..\AzubiApp.Logic\AzubiApp.Logic.csproj" /> -->
+
+		<!-- Oder, falls du die Haupt-App direkt testen willst (nicht empfohlen wegen Multi-Target) -->
+		<!-- <ProjectReference Include="..\AzubiApp\AzubiApp.csproj" /> -->
+	</ItemGroup>
+
+</Project>

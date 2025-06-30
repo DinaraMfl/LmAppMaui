@@ -174,4 +174,8 @@
 	  <MauiIcon Include="Resources\MipMap\logoicon.png" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Services\NewFolder\" />
+	</ItemGroup>
+
 </Project>
