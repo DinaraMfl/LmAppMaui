@@ -74,7 +74,7 @@ namespace AzubiApp.Views
 
                 string html = await File.ReadAllTextAsync(htmlFile);
 
-                // Android и iOS ожидают путь в формате file://
+               
                 var baseUrl = $"file://{htmlDir.Replace("\\", "/")}/";
 
                 if (!string.IsNullOrEmpty(sectionId))
@@ -114,7 +114,23 @@ namespace AzubiApp.Views
                 "html/style.css",
                 "html/imguse/imagecos.png",
                 "html/imguse/imagecow.png",
-                "html/imguse/imagecox.png"
+                "html/imguse/imagecox.png",
+                "html/imguse/imagesib1.png",
+                "html/imguse/imagesib2.png",
+                "html/imguse/imagesib3.png",
+                "html/imguse/imagesib4.png",
+                "html/imguse/imagesib5.png",
+                "html/imguse/imagesib6.png",
+                "html/imguse/imagesib7.png",
+                "html/imguse/imagesib8.png",
+                "html/imguse/imagesib9.png",
+                "html/imguse/imagesplit1.png",
+                "html/imguse/imagesplit2.png",
+                "html/imguse/imagesplit3.png",
+                "html/imguse/imagesplit4.png",
+                "html/imguse/imageuml1.png",
+                "html/imguse/imageuml2.png",
+                
             };
 
             foreach (var asset in assets)

@@ -6,7 +6,7 @@ body {
   background-color: black;
   color: #f9f9f9;
 }
-
+    
 section {
   max-width: 800px;
   margin: auto;
@@ -37,8 +37,27 @@ li {
   margin-bottom: 10px;
 }
 
+ol {
+    padding-left: 20px;
+
+}
+
+.LightGreycolor {
+    color: lightgray;
+}
+
+.SmallerText {
+    font-size: 0.8em;
+    color: #9fdcff;
+}
+
+.Blocksatz {
+    text-align:justify;
+
+}
+
 @media (max-width: 600px) {
-  body {
+    body {
     padding: 10px;
   }
 

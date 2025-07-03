@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,59 @@
     </section>
 
     <section id="UseCaseTransferButton">
-        <h1>UseCaseTransferButton</h1>
+
+
+        <h1>Umlagerung</h1>
+    
+        <p>
+            Eine Umlagerung ist ein Transfer von Beständen zwischen Lägern/Filialen mit gleichem Artikel. Genauer 
+            gesagt werden SKUs mit Fehlmengen mit Lieferungen von SKUs mit Übermenge vor einer OoS-Situation bewahrt.
+        </p>
+    
+        <p>
+            Diese Lieferung wird Umlagerungsbestellung genannt und wird durch einen Umlagerungslieferanten durchgeführt.
+        </p>
+
+        <p> 
+            Um bestimmen zu können, ob eine Umlagerung sinnvoll ist wird außerdem für beide Läger/SKUs die Mengen berechnet die angenommen & abgegeben werden können.
+        </p>
+
+        <ul>
+            <li>	Bei der SKU die annimmt werden die Fehlmengen berechnet</li>
+        </ul>
+
+        <img src="imguse/imageuml1.png" alt="Fehlermenge" />
+
+        <ul>
+            <li> Bei der SKU die abgibt werden die Übermengen berechnet</li>
+        </ul>
+
+        <img src="imguse/imageuml2.png" alt="Übermenge" />
+
+       <p>
+            Fällt bei dieser Berechnung auf das die Menge die angenommen oder abgegeben wird nicht passend ist, 
+            weil z.B. die Übermenge nicht ausreicht, um die Fehlmenge zu kompensieren, wird die Umlagerungsbestellung abgebrochen
+       </p>
+    
+
+       <p>
+           Sollten mehrere SKUs eine Fehlmenge aufweisen, wird die SKU mit der niedrigsten Fehlmenge bevorzugt.
+       </p>
+
+       <p>
+           Bei gleich hoher Fehlmenge wird sich für die SKU entschieden mit dem spätesten Verfügbarkeitsdatum.
+       </p>
+
+       <p>
+           Bei einer angenommenen Umlagerung wird bei der Umlagerungs-SKU eine Reservierung hinterlegt.
+       </p>
+
+       <p>
+           Um Umlagerungen zu ermöglichen, müssen Anpassungen am LOGOMATE-System unternommen werden,
+           für die Sie Ihren LOGOMATE Ansprechpartner kontaktieren müssen der Ihnen weitere Details gibt.
+       </p>
+
+
     </section>
 
     <section id="UseCaseContainerOptimizationButton">
@@ -93,8 +145,129 @@
         </ul>
     </section>
 
-    <section id="UseCaseAutoStoreButton">
-        <h1>UseCaseAutoStoreButton</h1>
+    <section id="UseCaseSftTypesButton">
+        <h1>SiB-Typen</h1>
+        <p>
+            Der Sicherheitsbestand (SiB) ist die Mindestlagerhaltung, die erforderlich ist, um eine Out-of-Stock-Situation zu vermeiden.
+            [Bestandssimulation].
+            Angesichts der vorliegenden Parameter und Konditionen.
+        </p>
+        <img src="imguse/imagesib1.png" alt="text" />
+        <h5>(Der SiB wird in LM durch die blau gestrichelte, gerade Linie dargestellt.)</h5>
+
+        <p>
+                  1. Wenn der Bestand fast kurz vor Out-of-Stock ist,
+                  wird die übliche Bedarfsmenge des Kunden nachbestellt.
+        
+
+           <br /> 2. Sobald der SiB erreicht ist, wird eine automatische Nachbestellung ausgelöst,
+                     um den Bestand aufzufüllen.  
+        
+            <strong><u><br />Häufige Typen  </u> </strong>
+        
+            <strong> <br />Effektiv: </strong>Standardabweichung über den Simulationszeitraum.
+        
+            <strong> <br />Effektiv dynamsich: </strong> Hier werden die Abstände nicht direkt per Monate betrachtet wie beim effektiven, 
+                          sondern, der Abstand zwischen Bestell- u. Verfügbarkeitsdatum (ab dem 2ten Bestelltag). 
+      
+            <strong><u><br />Seltene Typen</u></strong>
+     
+            <strong> <br />Minimal: </strong> Bezieht sich ausschließlich auf den Min.SiB (Parameter) oder 0.
+        
+            <strong> Dynamisch: </strong> Bezieht sich zunehmend auf Prognose-Fehler (häufige Ungenauigkeit -> SiB monoton wachsend). 
+    
+            <strong> <br />Max. Abgang: </strong> Hier wird ein Abverkauf auf Tagesebene benötigt.
+        
+            <strong>Abgangssumme in WBZ:</strong> Bildet die Summe aller Abgänge während der WBZ.
+        </p>
+
+
+        <h1> Darstellung der SiB-Typen </h1>
+
+        <p> <strong> Minimal </strong> optional: <img src="imguse/imagesib2.png" alt="Minimal optional:" /> </p>
+
+        <p>Unter Eingabe des Min.SiB: <img src="imguse/imagesib3.png" alt="test"/></p>
+
+        <h5>(Die gestrichelte Linie kennzeichnet den eingestellten Min.SiB im Parameter und der Bestand passt sich diese auch an.)</h5>
+
+        <p> <strong>Effektiv:</strong><img src="imguse/imagesib5.png" alt="test" />  </p>
+
+        <h5>   (Der Sicherheitsbestand wird gleitend berechnet und bildet über den ganzen Simulations-Zeitraum die
+                sich ändernde Standardabweichung ab. Der SiB schwankt hierbei, er geht sogar nach dem Planungshorizont.) 
+        </h5>
+       
+        <p><strong>Effektiv dynamisch:</strong></p>
+        <img src="imguse/imagesib6.png" alt="test" />
+
+        <h5>(Der SiB steigt zwischen Bestelldatum und Verfügbarkeitsdatum 
+        kontinuierlich an und sinkt sobald neue Ware verfügbar ist ab.)</h5>
+
+        <p><strong>Dynamisch:</strong></p>
+        <img src="imguse/imagesib7.png" alt="Alternate Text" />
+
+        <h5>(Hier liegt eine Prognoseungenauigkeit vor, und ab einem bestimmten Zeitpunkt,
+        an dem die Standardabweichung zunimmt, steigt der Wert ‚‚monoton wachsend‘‘.)</h5>
+
+        <p><strong>Max. Abgang:</strong></p>
+        <img src="imguse/imagesib8.png" alt="Alternate Text" />
+
+        <h5>(Der SiB-Typ Max. Abgang liefert nur dann Ergebnisse, wenn Tages-Historiendaten vorliegen</h5>
+
+        <p><strong>Abgangssumme in WBZ:</strong></p>
+        <img src="imguse/imagesib9.png" alt="test" />
+        <h5>(Der SiB wird kontinuierlich auf der Höhe der summierten historischen Werte innerhalb der WBZ gehalten,
+             sofern diese den minimalen SiB überschreiten.)</h5>
     </section>
+
+    <section id="UseCaseSplitConditionsButton">
+
+        <h1>Split-Kondition</h1>
+
+        <p>
+            <strong>Eine Split-Kondition wird verwendet, um eine Verbund-Bestellung </strong>
+            <span class="LightGreycolor"> [Disposition->Verbunddisposition] </span> 
+            <strong> auf meherere Transporter zu verteilen, wenn die Bestellung nicht in einen Transporter passt,
+            da Sie zu schwer ist oder sie zu groß ist</strong> </p>
+        <p>
+            Es gibt insgesamt 4 verschiedene Split-Methoden, die über Flags
+            <span class="LightGreycolor">Menge,Preise,Kosten->Bis Version 8.8-01->Flag]</span> (ab 8.8-01 über Kriterium
+            <span class="LightGreycolor">[Konditionen->Menge,Preise,Kosten->Ab Version 8.8-01->Kriterium]</span>) eingestellt werden:
+        </p>        
+        <img src="imguse/imagesplit1.png" class="Zoom" alt="Optionen Split-Methoden"/>
+
+        <ol>
+            <li> 	<strong>So voll wie möglich</strong> = ein Transporter wird vollgemacht und der Rest kommt in einen weiteren Transporter</li>
+            <li>	<strong>So gleich verteilt wie möglich</strong> = Alle Transporter transportieren die gleiche Menge.</li>
+            <li>    <strong>So sortenrein wie möglich </strong> = Gleiche SKUs <span class="LightGreycolor">[Glossar] </span> werden zusammengehalten </li>
+        <ul>
+                  <li> <span class="SmallerText">	<strong>    So sortenrein wie möglich, Unterverbund betrachten (ab 8.9-07)</strong>  = Gleiche SKUs <span class="LightGreycolor">[Glossar] </span> werden zusammengehalten und die Kondition von Untergruppen werden mit beachtet. </span> </li>      
+        </ul>
+        <li>  <strong> Über RW abfüllen </strong>= Die SKU [Glossar] mit der höchsten Reichweite [Reichweite] werden auf einen weiteren Transporter verteilt bis die Bestellung in den 1. Transporter passen.</li>
+       </ol>
+
+         <p> 
+             Die Kondition wird bei den Konditionen unter dem Reiter „Menge,Preis,Kosten“ eingestellt.
+        </p>
+
+         <p>
+
+             <strong> Vor Version 8.5-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">>Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Max-Grenze pro Bestellung]"</span> <span class="SmallerText">(nur abfüllen möglich, ohne Bestellung mit 2. Transporter)</span>
+
+         </p>
+
+         <img src="imguse/imagesplit2.png" alt="Maxgrenze pro Bestellung" />
+
+         <p>
+             <strong> Ab Version 8.5-01:</strong> „Split auf Mixed (Opti) Einheit <span class="LightGreycolor"> [Konditionen->Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Split auf Mixed (Opti) Einheit]</span>“ <span class="SmallerText">(„über RW abfüllen“ nicht möglich) </span>
+         </p>
+         <img src="imguse/imagesplit3.png" alt="Split auf Mixed (Opti) Einheit" />
+
+         <p><strong>Ab Version 8.8-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">[Konditionen->Menge,Preise,Kosten->Ab Version 8.8-01->Zweck->Maxgrenze pro Bestellung]</span>“ <span class="SmallerText">(alle Methoden möglich)</span></p>
+
+         <img src="imguse/imagesplit4.png" alt="Maxgrenze pro Bestellung" />
+
+    </section>
+
+
 </body>
 </html>

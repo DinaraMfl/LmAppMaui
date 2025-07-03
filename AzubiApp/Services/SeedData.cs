@@ -2727,99 +2727,109 @@ namespace AzubiApp.Services
                     QuizCategory = new List<string> { "Bestellung" }
                  },
 
-                 /*new Question
+                 new Question
                  {
                     Number = 142,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was bedeutet der graue Kasten im Bild?",
+                    Answer1De = "Eine bevorstehende Aktion",
+                    Answer2De = "In dem Zeitraum soll kein Bestand vorhanden sein",
+                    Answer3De = "In diesem Zeitraum sind selbst definierte Betriebsferien",
+                    CorrectAnswersDe = "In dem Zeitraum soll kein Bestand vorhanden sein",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does the gray box in the picture mean? ",
+                    Answer1En = "An upcoming promotion",
+                    Answer2En = "There should be no stock in the period",
+                    Answer3En = "During this period are self-defined company vacations",
+                    CorrectAnswersEn = "There should be no stock in the period",
+                    
+                    ImagePath = "Images/QuestionsImage/question_142_Sim_2.png",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose" }
                  },
 
                  new Question
                  {
                     Number = 143,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Welcher Graph zeigt den Min. SiB an? (temp/adrian.pawlak/App_Use-Case/Sim_3.png)",
+                    Answer1De = "Graph 1",
+                    Answer2De = "Graph 2",
+                    Answer3De = "Graph 1 & Graph 2",
+                    CorrectAnswersDe = "Graph 2",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "Which graph shows the min. SiB? (temp/adrian.pawlak/App_Use-Case/Sim_3.png)",
+                    Answer1En = "Graph 1",
+                    Answer2En = "Graph 2",
+                    Answer3En = "Graph 1 & Graph 2",
+                    CorrectAnswersEn = "Graph 2",
 
-                    QuizCategory = new List<string> { "", "" }
+                    ImagePath = "Images/QuestionsImage/question_143_Sim_3.png",
+
+                    QuizCategory = new List<string> { "Parameter", "Allgemein" }
                  },
 
                  new Question
                  {
                     Number = 144,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was zeigen die vertikalen Striche an?",
+                    Answer1De = "Das sind die Termine wann eine Bestellung ausgelöst wird",
+                    Answer2De = "Das sind die Termine wann eine Bestellung im WE eintrifft",
+                    Answer3De = "Das sind die Standardabweichungen der Bestände",
+                    CorrectAnswersDe = "Das sind die Termine wann eine Bestellung ausgelöst wird",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What do the vertical lines show? (temp/adrian.pawlak/App_Use-Case/Sim_4.png)",
+                    Answer1En = "These are the dates when an order is triggered",
+                    Answer2En = "These are the dates when an order will be delivered",
+                    Answer3En = "These are the standard deviations of the stocks",
+                    CorrectAnswersEn = "These are the dates when an order is triggered",
 
-                    QuizCategory = new List<string> { "", "" }
+                    ImagePath = "Images/QuestionsImage/question_144_Sim_4.png",
+
+                    QuizCategory = new List<string> { "Bestellung" }
                  },
 
                  new Question
                  {
                     Number = 145,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was zeigt die blaue Stecknadel an?",
+                    Answer1De = "Eine Wiedervorlage die ihr Datum überschritten hat",
+                    Answer2De = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt",
+                    Answer3De = "Eine Wiedervorlage die übergeben wurde mit einem Datum in der Zukunft",
+                    CorrectAnswersDe = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does the blue pin show?",
+                    Answer1En = "A Memo that has exceeded its date",
+                    Answer2En = "A Memo that was inherited and has no date",
+                    Answer3En = "A Memo that has been provided with a date in the future",
+                    CorrectAnswersEn = "A Memo that was inherited and has no date",
 
-                    QuizCategory = new List<string> { "", "" }
+                    ImagePath = "Images/QuestionsImage/question_145_Wied_1.png",
+
+                    QuizCategory = new List<string> { "Allgemein" }
                  },
 
                  new Question
                  {
                     Number = 146,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was zeigt die schwarze Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_2.png)",
+                    Answer1De = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt ",
+                    Answer2De = "Eine Wiedervorlage, die geerbt wurde und ihr Datum überschritten hat",
+                    Answer3De = "Eine Wiedervorlage ohne Datum",
+                    CorrectAnswersDe = "Eine Wiedervorlage ohne Datum",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does the black pin show? (temp/adrian.pawlak/App_Use-Case/Wied_2.png)",
+                    Answer1En = "A Memo that was inherited and has no date",
+                    Answer2En = "A Memo that has been inherited and has exceeded its date",
+                    Answer3En = "A Memo without a date",
+                    CorrectAnswersEn = "A Memo without a date",
 
-                    QuizCategory = new List<string> { "", "" }
+                    ImagePath = "Images/QuestionsImage/question_146_Wied_2.png",
+
+                    QuizCategory = new List<string> { "Allgemein" }
                  },
 
 
@@ -2827,77 +2837,139 @@ namespace AzubiApp.Services
                  {
                     Number = 147,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was zeigt die graue Stecknadel an?",
+                    Answer1De = "Eine Wiedervorlage, die geerbt wurde und ein Datum in der Zukunft hat",
+                    Answer2De = "Eine Wiedervorlage die ihr Datum überschritten hat",
+                    Answer3De = "Eine Wiedervorlage mit Datum in der Zukunft",
+                    CorrectAnswersDe = "Eine Wiedervorlage mit Datum in der Zukunft",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does the gray pin show?",
+                    Answer1En = "A Memo that was inherited and has a date in the future",
+                    Answer2En = "A Memo that has exceeded its date",
+                    Answer3En = "A Memo that has been provided with a date in the future",
+                    CorrectAnswersEn = "A Memo that has been provided with a date in the future",
 
-                    QuizCategory = new List<string> { "", "" }
+                    ImagePath = "Images/QuestionsImage/question_147_Wied_3.png",
+
+                    QuizCategory = new List<string> { "Allgemein" }
                  },
 
                  new Question
                  {
                     Number = 148,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was zeigt die rote Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_4.png)",
+                    Answer1De = "Eine Wiedervorlage, die geerbt wurde und ihr Datum überschritten hat",
+                    Answer2De = "Eine Wiedervorlage, die ihr Datum überschritten hat",
+                    Answer3De = "Eine Wiedervorlage ohne Datum",
+                    CorrectAnswersDe = "Eine Wiedervorlage, die ihr Datum überschritten hat",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What does the red pin show? (temp/adrian.pawlak/App_Use-Case/Wied_4.png)",
+                    Answer1En = "A Memo that has been inherited and has exceeded its date",
+                    Answer2En = "A Memo that has exceeded its date",
+                    Answer3En = "A Memo without a date",
+                    CorrectAnswersEn = "A Memo that has exceeded its date",
 
-                    QuizCategory = new List<string> { "", "" }
+                    ImagePath = "Images/QuestionsImage/question_147_Wied_3.png",
+
+                    QuizCategory = new List<string> { "Allgemein" }
                  },
 
                  new Question
                  {
                     Number = 149,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Was zeigen die roten Pfeile in der Bestandssimulation an? (temp/adrian.pawlak/App_Use-Case/Sim_5.png)",
+                    Answer1De = "Sie zeigen den Verfall von Beständen einer SKU an",
+                    Answer2De = "Sie zeigen an wann Reservierungen fällig sind",
+                    Answer3De = "Sie zeigen den Zeitraum einer Aktion an",
+                    CorrectAnswersDe = "Sie zeigen den Verfall von Beständen einer SKU an",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "What do the red arrows show in the stock simulation? (temp/adrian.pawlak/App_Use-Case/Sim_5.png)",
+                    Answer1En = "They show the expiration of stocks of an SKU",
+                    Answer2En = "They show when reservations are due",
+                    Answer3En = "They show the time period of an promotion",
+                    CorrectAnswersEn = "They show the expiration of stocks of an SKU",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Kondition" }
                  },
 
                  new Question
                  {
                     Number = 150,
 
-                    TextDe = "",
-                    Answer1De = "",
-                    Answer2De = "",
-                    Answer3De = "",
-                    CorrectAnswersDe = "",
+                    TextDe = "Woran erkennt man, in der Bestandssimulation, wann eine Bestellung eintrifft? (temp/adrian.pawlak/App_Use-Case/Sim_6.png)",
+                    Answer1De = "An den gestrichelten vertikalen Linien",
+                    Answer2De = "An den steigenden Stellen des Graphen",
+                    Answer3De = "An der gestrichelten horizontalen Linie",
+                    CorrectAnswersDe = "An den steigenden Stellen des Graphen",
 
-                    TextEn = "",
-                    Answer1En = "",
-                    Answer2En = "",
-                    Answer3En = "",
-                    CorrectAnswersEn = "",
+                    TextEn = "How do you recognize in the stock simulation when an order arrives? (temp/adrian.pawlak/App_Use-Case/Sim_6.png)",
+                    Answer1En = "By the dotted vertical lines",
+                    Answer2En = "By the rising points of the graph",
+                    Answer3En = "By the dotted horizontal line",
+                    CorrectAnswersEn = "By the rising points of the graph",
 
-                    QuizCategory = new List<string> { "", "" }
-                 }, */
+                    QuizCategory = new List<string> { "Bestellung", "Allgemein" }
+             
+                 }, 
+            
+                  new Question
+                 {
+                    Number = 151,
+
+                    TextDe = "Was zeigt eine hellblaue Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_5.png)",
+                    Answer1De = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt",
+                    Answer2De = "Eine Wiedervorlage, die geerbt wurde und ein Datum in der Zukunft hat",
+                    Answer3De = "Eine Wiedervorlage die ein Datum in der Zukunft hat",
+                    CorrectAnswersDe = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt",
+
+                    TextEn = "What does the light blue pin show? (temp/adrian.pawlak/App_Use-Case/Wied_5.png)",
+                    Answer1En = "A Memo that was inherited and has no date",
+                    Answer2En = "A Memo that was inherited and has a date in the future",
+                    Answer3En = "A Memo that has been provided with a date in the future",
+                    CorrectAnswersEn = "A Memo that was inherited and has a date in the future",
+
+                    QuizCategory = new List<string> { "Allgemein" }
+                 },
+
+                  new Question
+                 {
+                    Number = 152,
+
+                    TextDe = "Was zeigt eine lilane Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_6.png)",
+                    Answer1De = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt",
+                    Answer2De = "Eine Wiedervorlage, die geerbt wurde und ihr Datum überschritten hat",
+                    Answer3De = "Eine Wiedervorlage die ein Datum in der Zukunft hat",
+                    CorrectAnswersDe = "Eine Wiedervorlage, die geerbt wurde und ihr Datum überschritten hat",
+
+                    TextEn = "What does the purple pin show? (temp/adrian.pawlak/App_Use-Case/Wied_6.png)",
+                    Answer1En = "A Memo that was inherited and has no date",
+                    Answer2En = "A Memo that has been inherited and has exceeded its date",
+                    Answer3En = "A Memo that has been provided with a date in the future",
+                    CorrectAnswersEn = "A Memo that has been inherited and has exceeded its date",
+
+                    QuizCategory = new List<string> { "Allgemein" }
+                 },
+
+                  new Question
+                 {
+                    Number = 153,
+
+                    TextDe = "Was zeigt die türkise Farbe an? (temp/adrian.pawlak/App_Use-Case/Grp_1.png)",
+                    Answer1De = "Es hat keine Bedeutung, da man jeder Gruppe eine beliebige Farbe geben kann für eine individuelle Farbkodierung",
+                    Answer2De = "Eine Verbund-Gruppe",
+                    Answer3De = "Eine Gruppe auf den nur bestimmte User zugreifen können",
+                    CorrectAnswersDe = "Eine Verbund-Gruppe",
+
+                    TextEn = "What does the turquoise color show? (temp/adrian.pawlak/App_Use-Case/Grp_1.png)",
+                    Answer1En = "It has no meaning, as you can give each group any color for individual color coding",
+                    Answer2En = "A compound group",
+                    Answer3En = "A group that only certain users can access",
+                    CorrectAnswersEn = "A compound group",
+
+                    QuizCategory = new List<string> { "Bestellung", "Allgemein" }
+                 },
             };
 
 

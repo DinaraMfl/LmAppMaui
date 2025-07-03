@@ -22,8 +22,10 @@
                     Text="{x:Static resx:AppResources.Settings}" 
                     Style="{StaticResource Headline}"
                     TextColor="White" 
-                    HorizontalOptions="Center"  
-                    Padding="100"/>
+                    HorizontalOptions="Center"
+                    FontAutoScalingEnabled="False"
+                    Padding="100"
+                    LineBreakMode="NoWrap" />
 
             <Button x:Name="ChangeLanguageButton"            
                     Clicked="OnLanguageButtonClicked"

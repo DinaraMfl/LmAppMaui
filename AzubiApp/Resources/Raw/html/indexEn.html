@@ -22,73 +22,71 @@
     </section>
 
     <section id="UseCaseContainerOptimizationButton">
-        <h1>ContaineroptimierungEnglish</h1>
+        <h1>ContaineroptimierungEnglish</h1> 
         <p>
-            Eine Containeroptimierung ermittelt eine kostengünstige
-            Container-Kombination für eine berechnete (Auslöse-)Menge und ggf. das
-            Aufrunden dieser Container-Kombination. Damit die Container-Optimierung
-            verwendet werden kann, muss das Gütekriterium in der Verbundgruppe auf
-            „Container-Optimierung“ eingestellt sein.
+            A container optimization determines a cost-effective container
+            combination for a calculated (trigger) quantity and, if necessary, the rounding
+            up of this container optimization. In order for container optimization to be used, the quality 
+            criterion in the Compound group must be set to “Container optimization”.
         </p>
 
-        <img src="imguse/imagecos.png" alt="Einstellung in den Parametern" />
-        <h5>Einstellung in den Parametern</h5>
+        <img src="imguse/imagecosen.png" alt="Setting in the parameters" />
+        <h5>Setting in the parameters</h5>
 
         <p>
-            Diese werden auch in den Konditionen angelegt unter Einheiten &gt;
-            Konditionen Mengen/ Preise/ Kosten.
+            These are also created in the conditions &gt;
+            Conditions -> Units -> Conditions Quantities/ Prices/ Costs.
         </p>
 
         <img src="imguse/imagecow.png" alt="Einstellung in den Konditionen" />
-        <h5>Einstellung in den Konditionen</h5>
+        <h5>Setting in the conditions</h5>
 
         <p>
-            Wenn auch LCL-Container berücksichtigt werden sollen, muss hierfür eine
-            zusätzliche Zeile unter „Mengen, Preise, Kosten“ eingefügt werden:
+            If LCL containers are also to be taken into account, 
+            an additional line must be added under “Quantities, prices, costs”:
         </p>
 
         <img src="imguse/imagecox.png" alt="LCL Container Beispiel" />
 
         <h5>
-            LCL steht für "Less than Container Load" und bezeichnet eine
-            Versandmethode, bei der sich mehrere Versender (Lieferanten) einen
-            Container teilen.
+            LCL stands for “Less than Container Load” and refers to a shipping
+            method in which several shippers (suppliers) share one container.
         </h5>
 
         <p>
-            Hier muss als Bezug „Vol. Brutto“ ausgewählt werden. Zudem ist – wie
-            oben – das Mix-Flag zu setzen und entweder „Zus. Lieferantenkosten“ oder
-            „Zus. eigene Kosten“ auszuwählen.
+            Here, “gross vol.” must be selected as the reference.
+            In addition, as above, the mix flag must be set
+            and either “Additional supplier costs” or “Additional own costs” selected.
         </p>
 
         <p>
-            Nach dem Auffüllen wird die Gesamtbestellung entsprechend der zuvor
-            bestimmten optimalen Containerkombination auf die einzelnen Container
-            aufgeteilt. Dies erfolgt folgendermaßen:
+            After filling, the total order is divided between the individual containers
+            according to the previously determined optimum
+            container combination. This is done as follows:
         </p>
 
         <ul>
             <li>
-                Falls ein LCL-Container enthalten ist, werden die Bestellpositionen
-                nach absteigender Dichte sortiert und in den Container geladen, bis
-                das Volumen erreicht ist.
+                If an LCL container is included in the container combination, 
+                the order items are sorted by descending density
+                and loaded into the LCL container one after the other until the intended volume is reached.
             </li>
             <li>
-                Positionen und Container werden nach einem Kriterium (z. B. Dichte
-                oder Restdichte) sortiert.
+               	The order items and containers are sorted according to a suitable 
+                criterion, for example by density or possible residual density.
             </li>
             <li>
-                Verteilung der Positionen erfolgt optimierungseinheitsweise oder
-                stellplatzweise auf Container.
+                The order items are then distributed to the containers 
+                either by optimization unit or - if possible - by bin location.
             </li>
             <li>
-                Nach jeder Zuordnung wird die verbleibende Restdichte berechnet und
-                die Reihenfolge neu bestimmt.
+                After each assignment, the remaining density of the container is calculated
+                and the order of the containers is adjusted accordingly.
             </li>
             <li>
-                Falls eine Position in keinen Container mehr passt, wird der Container
-                mit geringster Volumenüberschreitung gewählt. Gewicht kann
-                überschritten werden, aber nicht Stellplatzkapazität.
+                If an item no longer fits into a container, the container with the smallest overrun of the permitted volume is selected. 
+                If a storage space restriction must be observed, exceeding the weight limit is
+                considered less critical than exceeding the storage space capacity.
             </li>
         </ul>
     </section>
