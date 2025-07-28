@@ -83,6 +83,8 @@ namespace AzubiApp.Views
                 return;
             }
 
+            if (category) ExitModuleQuizButton.IsVisible = true;
+
             var question = _questions[_currentIndex];
             QuestionCounterLabel.Text = $"{_currentIndex + 1} / {_questions.Count}";
 
@@ -267,6 +269,15 @@ namespace AzubiApp.Views
             }
         }
 
+        private async void OnExitClicked(object sender, EventArgs e) // Die funktion ist normale zurück button mit alert
+        {
+            bool confirmExit = await DisplayAlert(AppResources.AlertError, AppResources.AlertLeaveQuiz, AppResources.AlertYes, AppResources.AlertNo);
+            if (confirmExit)
+            {
+                await Navigation.PopAsync();
+            }
+        }
+
         private void OnAnswerTapped(object sender, EventArgs e)
         {
             if (_answeredQuestions[_currentIndex])
@@ -285,6 +296,7 @@ namespace AzubiApp.Views
         private void UpdateUI()
         {
             BackQuizButton.Text = AppResources.BackQuizButton; // Back / Zurück
+            ExitModuleQuizButton.Text = AppResources.ExitModuleQuizButton; // Exit / Beenden
         }
     }
 }

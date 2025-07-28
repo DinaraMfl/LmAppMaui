@@ -283,4 +283,7 @@
   <data name="ModulePageHintForProgressBar" xml:space="preserve">
     <value>Note: This part does not count to the progress</value>
   </data>
+  <data name="ExitModuleQuizButton" xml:space="preserve">
+    <value>Exit</value>
+  </data>
 </root>

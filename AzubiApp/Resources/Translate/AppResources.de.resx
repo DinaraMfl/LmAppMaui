@@ -282,4 +282,7 @@
   <data name="ModulePageHintForProgressBar" xml:space="preserve">
     <value>Hinweis: Dieser Teil zählt nicht zum Fortschritt</value>
   </data>
+  <data name="ExitModuleQuizButton" xml:space="preserve">
+    <value>Beenden</value>
+  </data>
 </root>
