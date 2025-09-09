@@ -139,6 +139,9 @@
 	  <Compile Update="Views\EinstellungPage.xaml.cs">
 	    <DependentUpon>EinstellungPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\OnlineHelpPage.xaml.cs">
+	    <DependentUpon>OnlineHelpPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -156,6 +159,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EinstellungPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\OnlineHelpPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\QuizPage.xaml">

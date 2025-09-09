@@ -18,10 +18,59 @@
     </section>
 
     <section id="UseCaseTransferButton">
-        <h1>UseCaseTransferButtonEnglish</h1>
+        <h1>Transfer</h1>
+
+        <p>
+            A stock transfer is a transfer of stock between warehouses/stores with the same item. More precisely
+            SKUs with shortages are saved from an OoS situation with deliveries of SKUs with excess quantities.
+        </p>
+
+        <p>
+            This delivery is called a stock transfer order and is carried out by a stock transfer supplier.
+        </p>
+
+        <p>
+            In order to determine whether a stock transfer makes sense, the quantities that can be accepted and delivered are also calculated for both warehouses/SKUs.+
+        </p>
+
+        <ul>
+            <li>	The missing quantities are calculated for the SKU that accepts </li>
+        </ul>
+
+        <img src="imguse/imageuml1.png" alt="Error quantity" />
+
+        <ul>
+            <li> The SKU that delivers the excess quantities are calculated</li>
+        </ul>
+
+        <img src="imguse/imageuml2.png" alt="Excess quantity" />
+
+        <p>
+            If this calculation reveals that the quantity accepted or delivered is not suitable,
+            because, for example, the excess quantity is not sufficient to compensate for the shortfall, the stock transport order is canceled
+        </p>
+
+
+        <p>
+            If several SKUs have a missing quantity, the SKU with the lowest missing quantity is preferred.
+        </p>
+
+        <p>
+            If the shortfall is the same, the SKU with the latest availability date is selected.
+        </p>
+
+        <p>
+            If a stock transfer is accepted, a reservation is made in the stock transfer SKU.
+        </p>
+
+        <p>
+            To enable relocations, adjustments must be made to the LOGOMATE system,
+            for which you must contact your LOGOMATE contact person who will give you further details.
+        </p>
+
     </section>
 
-    <section id="UseCaseContainerOptimizationButton">
+    <section id="UseCaseContainerOptimizationButton"> 
         <h1>ContaineroptimierungEnglish</h1> 
         <p>
             A container optimization determines a cost-effective container
@@ -89,7 +138,10 @@
                 considered less critical than exceeding the storage space capacity.
             </li>
         </ul>
+
     </section>
+
+    <section id=""></section>
 
 
 

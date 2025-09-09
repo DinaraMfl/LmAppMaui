@@ -241,7 +241,7 @@
     <value>Sitchtage / Saison</value>
   </data>
   <data name="UseCaseBufferStoreButton" xml:space="preserve">
-    <value>PufferLager</value>
+    <value>Puffer Lager</value>
   </data>
   <data name="UseCaseTransferButton" xml:space="preserve">
     <value>Umlagerung</value>
