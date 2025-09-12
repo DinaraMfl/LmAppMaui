@@ -186,10 +186,11 @@ namespace AzubiApp.Views
                 "html/imguse/imagesai1.png",
                 "html/imguse/imagesai2.png",
                 "html/imguse/imagesai3.png",
+                "html/imguse/imagesai3en.png",
                 "html/imguse/imagesai4.png",
+                "html/imguse/imagesai4en.png",
                 "html/imguse/imagesai5.png",
                 "html/imguse/imagesai6.png",
-
             };
 
             foreach (var asset in assets)

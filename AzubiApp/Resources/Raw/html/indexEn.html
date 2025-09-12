@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <section id="UseCaseAutoStoreButton">
         <h1>UseCaseAutoStoreButtonEnglish</h1>
     </section>
@@ -70,12 +71,12 @@
 
     </section>
 
-    <section id="UseCaseContainerOptimizationButton"> 
-        <h1>ContaineroptimierungEnglish</h1> 
+    <section id="UseCaseContainerOptimizationButton">
+        <h1>ContaineroptimierungEnglish</h1>
         <p>
             A container optimization determines a cost-effective container
             combination for a calculated (trigger) quantity and, if necessary, the rounding
-            up of this container optimization. In order for container optimization to be used, the quality 
+            up of this container optimization. In order for container optimization to be used, the quality
             criterion in the Compound group must be set to “Container optimization”.
         </p>
 
@@ -91,7 +92,7 @@
         <h5>Setting in the conditions</h5>
 
         <p>
-            If LCL containers are also to be taken into account, 
+            If LCL containers are also to be taken into account,
             an additional line must be added under “Quantities, prices, costs”:
         </p>
 
@@ -116,16 +117,16 @@
 
         <ul>
             <li>
-                If an LCL container is included in the container combination, 
+                If an LCL container is included in the container combination,
                 the order items are sorted by descending density
                 and loaded into the LCL container one after the other until the intended volume is reached.
             </li>
             <li>
-               	The order items and containers are sorted according to a suitable 
+                The order items and containers are sorted according to a suitable
                 criterion, for example by density or possible residual density.
             </li>
             <li>
-                The order items are then distributed to the containers 
+                The order items are then distributed to the containers
                 either by optimization unit or - if possible - by bin location.
             </li>
             <li>
@@ -133,7 +134,7 @@
                 and the order of the containers is adjusted accordingly.
             </li>
             <li>
-                If an item no longer fits into a container, the container with the smallest overrun of the permitted volume is selected. 
+                If an item no longer fits into a container, the container with the smallest overrun of the permitted volume is selected.
                 If a storage space restriction must be observed, exceeding the weight limit is
                 considered less critical than exceeding the storage space capacity.
             </li>
@@ -141,8 +142,57 @@
 
     </section>
 
-    <section id=""></section>
+    <section id="UseCaseDueDatesButton">
 
+        <h1>Saison</h1>
+
+        <p>
+            If LOGOMATE detects unusual issues in the history, it attempts to correct them. 
+            If this happens frequently in the same year/month/week period with a similar deviation of X%, a season is recognized. 
+            This also affects the forecast, as this “deviation” is then used in further calculations.
+        </p>
+
+        <img src="imguse/imagesai1.png" alt="Prognose" />
+
+        <p>If you want to adjust the season detection, you can do so in the forecast window under the parameters.</p>
+
+        <img src="imguse/imagesai2.png" alt="Saison" />
+
+        <p>There you can specify how many periods are necessary for a season to be recognized, as well as the effect factor at which a season may be recognized.</p>
+
+        <p>It is also possible to transfer a season from one SKU to another.</p>
+
+        <p>To do this, enter the SKU from which the season is to be transferred in the preset window of the parameters, under the parameter “Use seasonality from”. </p>
+
+        <img src="imguse/imagesai3en.png" alt="" />
+
+        <p>If the SKU already has a season without this option, the transferred season will be ignored (this will also be displayed as a forecast warning).</p>
+
+        <h2>Key dates</h2>
+
+        <p>Key dates are used for variable seasons.</p>
+
+        <p>These are manually created seasons that are entered in the window of the same name under Parameters.</p>
+
+        <img src="imguse/imagesai4en.png" alt="Parameter" />
+
+        <p>The individual events can be set up in the upper block. The length, effect factor, and description are entered there.</p>
+
+        <p>The affected days are displayed in the lower block. At least two key dates must be specified there (one in the past and one in the future) to calculate a season.</p>
+
+        <p>If everything has been entered correctly, a key date action is generated for the specified dates.</p>
+
+        <p>Without season detection/key date action:</p>
+
+        <img src="imguse/imagesai5.png" alt="Prognose" />
+
+        <p>With season recognition/key date promotion:</p>
+
+        <img src="imguse/imagesai6.png" alt="Prognosegrafik" />
+
+        <section id=""></section>
+
+    </section>
 
 
 </body>
