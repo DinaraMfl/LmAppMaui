@@ -19,7 +19,7 @@
     </section>
 
     <section id="UseCaseTransferButton">
-        
+
         <h1>Transfer</h1>
 
         <p>
@@ -74,7 +74,7 @@
     <section id="UseCaseContainerOptimizationButton">
 
         <h1>ContaineroptimierungEnglish</h1>
-        
+
         <p>
             A container optimization determines a cost-effective container
             combination for a calculated (trigger) quantity and, if necessary, the rounding
@@ -144,6 +144,36 @@
 
     </section>
 
+    <section id="UseCaseCompositeOrderButton">
+
+        <h1>Compound Order</h1>
+
+        <p>In a compound order, SKUs are ordered together to minimize the total costs.</p>
+
+        <p>This means that when an item from this compound group is ordered, several other items that would otherwise have to be ordered separately are also ordered at the same time, if possible, which would otherwise increase transport costs unnecessarily.</p>
+
+        <p>Therefore, care is taken to ensure that all items in this compound group reach their safety stock level at the same time, if possible.</p>
+
+        <img src="imguse/imagevbe1en.png" alt="Bestandssimulation" />
+
+        <p>When placing a compound order, attention is paid to the conditions, i.e., these should be as identical as possible, otherwise optimization will take longer and be more difficult to calculate.</p>
+
+        <p>In cases like these, it can be advantageous to divide compound groups into smaller compound subgroups.</p>
+
+        <p>If compound groups are formed in this way, different conditions can also be used, as calculations are performed recursively. Nevertheless, these should be consistent for each group.</p>
+
+        <p>In addition, there must also be a compound supplier for each compound group to deliver the order.</p>
+
+        <p>This must also be configured accordingly in the conditions window with the available loading space for the items and the SU & Mix checkboxes.</p>
+
+        <img src="imguse/imagevbe2en.png" alt="Alternate Text" />
+
+        <p>For the item, you must configure in the parameter window whether the item is allowed to trigger orders and the replenishment type.</p>
+
+        <img src="imguse/imagevbe3en.png" alt="Parameter" />
+
+    </section>
+
     <section id="UseCaseSporadicProcedureButton">
 
         <h1>Sporadic method</h1>
@@ -151,7 +181,7 @@
         <p>
             The sporadic method was developed for time series with irregular or low sales.<br />
             It is characterized by uncertainties both in the amount of the forecast values and in their timing.
-            The standard deviation of the forecast value represents the “vertical uncertainty,” while the standard deviation of the duration describes the “horizontal uncertainty.”           
+            The standard deviation of the forecast value represents the “vertical uncertainty,” while the standard deviation of the duration describes the “horizontal uncertainty.”
         </p>
 
         <img src="imguse/imagespo1en.png" alt="Sporadic process in the parameter window" />
