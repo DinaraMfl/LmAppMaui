@@ -14,24 +14,78 @@
 
 <body>
     <section id="UseCaseAutoStoreButton">
-        <h1>UseCaseAutoStoreButton</h1>
+        <h1>Auto-Store Verfahren</h1>
+
+        <p>
+            Bei einem Auto-Store Verfahren werden Einheiten definiert, die statt der Optimierungseinheiten verwendet werden für Bestellungen.
+            Diese Einheiten werden je nach benötigter Menge als Kombination disponiert.
+        </p>
+
+        <p>Beispiel:</p>
+
+        <img src="imguse/imageauto1.png" alt="Bespiel Auto-Store Verfarhen" />
+
+        <img src="imguse/imageauto2.png" alt="Bespiel Auto-Store Verfarhen" />
+
+        <p> Wird eine definierte Einheit überschritten wird die nächsthöhere Einheit verwendet statt einem Vielfachen der vorherigen Einheit. </p>
+
+
+        <p><em>Voraussetzung:</em></p>
+
+        <ul>
+            <li>
+                Die Einheiten sollen von oben nach unten größer werden (BE0 -> BE?)
+            </li>
+
+            <li>
+                Differenz zwischen den Einheiten soll steigen mit ansteigender BE-Zeile
+            </li>
+            <li>
+                Jede Einheit soll einen OE-Haken haben
+            </li>
+            <li>
+                Keine der Einheiten darf einen Mix-Haken haben.
+            </li>
+        </ul>
+
+        <h3>Auto-Store Verfahren mit Max. Reichweite</h3>
+
+        <p>Überschreitet die Bestellmenge die Max. Reichweite wird auf die größtmögliche OE abgerundet</p>
+
+        <blockquote>
+
+            <p> Ist eine Lieferanteneinheit gepflegt wird die als Bestelleinheit genutzt.</p>
+
+        </blockquote>
+
+
+        <p>Beispiel:</p>
+
+        <p><span class="SmallerText">Stück/Monat | Max.Reichweute: 3 Monate]</span> </p>
+
+        <p>Bei einer Nötigen Menge von 8,20 wird anstatt der 20 Stück, 11 bestellt (8 + 3)</p>
+
+        <p><span class="SmallerText">[+ Lieferanteneinheit: 10 Stück]</span></p>
+
+        <p>Die Bestellmenge wird auf die LE angepasst. Somit werden die 11 Stück auf 10 reduziert da 20 Stück (2*10) die Max. Reichweite überschreiten würden.</p>
+
     </section>
 
     <section id="UseCaseTransferButton">
 
 
         <h1>Umlagerung</h1>
-    
+
         <p>
-            Eine Umlagerung ist ein Transfer von Beständen zwischen Lägern/Filialen mit gleichem Artikel. Genauer 
+            Eine Umlagerung ist ein Transfer von Beständen zwischen Lägern/Filialen mit gleichem Artikel. Genauer
             gesagt werden SKUs mit Fehlmengen mit Lieferungen von SKUs mit Übermenge vor einer OoS-Situation bewahrt.
         </p>
-    
+
         <p>
             Diese Lieferung wird Umlagerungsbestellung genannt und wird durch einen Umlagerungslieferanten durchgeführt.
         </p>
 
-        <p> 
+        <p>
             Um bestimmen zu können, ob eine Umlagerung sinnvoll ist wird außerdem für beide Läger/SKUs die Mengen berechnet die angenommen & abgegeben werden können.
         </p>
 
@@ -47,28 +101,28 @@
 
         <img src="imguse/imageuml2.png" alt="Übermenge" />
 
-       <p>
-            Fällt bei dieser Berechnung auf das die Menge die angenommen oder abgegeben wird nicht passend ist, 
+        <p>
+            Fällt bei dieser Berechnung auf das die Menge die angenommen oder abgegeben wird nicht passend ist,
             weil z.B. die Übermenge nicht ausreicht, um die Fehlmenge zu kompensieren, wird die Umlagerungsbestellung abgebrochen
-       </p>
-    
+        </p>
 
-       <p>
-           Sollten mehrere SKUs eine Fehlmenge aufweisen, wird die SKU mit der niedrigsten Fehlmenge bevorzugt.
-       </p>
 
-       <p>
-           Bei gleich hoher Fehlmenge wird sich für die SKU entschieden mit dem spätesten Verfügbarkeitsdatum.
-       </p>
+        <p>
+            Sollten mehrere SKUs eine Fehlmenge aufweisen, wird die SKU mit der niedrigsten Fehlmenge bevorzugt.
+        </p>
 
-       <p>
-           Bei einer angenommenen Umlagerung wird bei der Umlagerungs-SKU eine Reservierung hinterlegt.
-       </p>
+        <p>
+            Bei gleich hoher Fehlmenge wird sich für die SKU entschieden mit dem spätesten Verfügbarkeitsdatum.
+        </p>
 
-       <p>
-           Um Umlagerungen zu ermöglichen, müssen Anpassungen am LOGOMATE-System unternommen werden,
-           für die Sie Ihren LOGOMATE Ansprechpartner kontaktieren müssen der Ihnen weitere Details gibt.
-       </p>
+        <p>
+            Bei einer angenommenen Umlagerung wird bei der Umlagerungs-SKU eine Reservierung hinterlegt.
+        </p>
+
+        <p>
+            Um Umlagerungen zu ermöglichen, müssen Anpassungen am LOGOMATE-System unternommen werden,
+            für die Sie Ihren LOGOMATE Ansprechpartner kontaktieren müssen der Ihnen weitere Details gibt.
+        </p>
 
 
     </section>
@@ -156,28 +210,28 @@
         <h5>(Der SiB wird in LM durch die blau gestrichelte, gerade Linie dargestellt.)</h5>
 
         <p>
-                  1. Wenn der Bestand fast kurz vor Out-of-Stock ist,
-                  wird die übliche Bedarfsmenge des Kunden nachbestellt.
-        
+            1. Wenn der Bestand fast kurz vor Out-of-Stock ist,
+            wird die übliche Bedarfsmenge des Kunden nachbestellt.
 
-           <br /> 2. Sobald der SiB erreicht ist, wird eine automatische Nachbestellung ausgelöst,
-                     um den Bestand aufzufüllen.  
-        
+
+            <br /> 2. Sobald der SiB erreicht ist, wird eine automatische Nachbestellung ausgelöst,
+            um den Bestand aufzufüllen.
+
             <strong><u><br />Häufige Typen  </u> </strong>
-        
+
             <strong> <br />Effektiv: </strong>Standardabweichung über den Simulationszeitraum.
-        
-            <strong> <br />Effektiv dynamsich: </strong> Hier werden die Abstände nicht direkt per Monate betrachtet wie beim effektiven, 
-                          sondern, der Abstand zwischen Bestell- u. Verfügbarkeitsdatum (ab dem 2ten Bestelltag). 
-      
+
+            <strong> <br />Effektiv dynamsich: </strong> Hier werden die Abstände nicht direkt per Monate betrachtet wie beim effektiven,
+            sondern, der Abstand zwischen Bestell- u. Verfügbarkeitsdatum (ab dem 2ten Bestelltag).
+
             <strong><u><br />Seltene Typen</u></strong>
-     
+
             <strong> <br />Minimal: </strong> Bezieht sich ausschließlich auf den Min.SiB (Parameter) oder 0.
-        
-            <strong> Dynamisch: </strong> Bezieht sich zunehmend auf Prognose-Fehler (häufige Ungenauigkeit -> SiB monoton wachsend). 
-    
+
+            <strong> Dynamisch: </strong> Bezieht sich zunehmend auf Prognose-Fehler (häufige Ungenauigkeit -> SiB monoton wachsend).
+
             <strong> <br />Max. Abgang: </strong> Hier wird ein Abverkauf auf Tagesebene benötigt.
-        
+
             <strong>Abgangssumme in WBZ:</strong> Bildet die Summe aller Abgänge während der WBZ.
         </p>
 
@@ -186,27 +240,32 @@
 
         <p> <strong> Minimal </strong> optional: <img src="imguse/imagesib2.png" alt="Minimal optional:" /> </p>
 
-        <p>Unter Eingabe des Min.SiB: <img src="imguse/imagesib3.png" alt="test"/></p>
+        <p>Unter Eingabe des Min.SiB: <img src="imguse/imagesib3.png" alt="test" /></p>
 
         <h5>(Die gestrichelte Linie kennzeichnet den eingestellten Min.SiB im Parameter und der Bestand passt sich diese auch an.)</h5>
 
         <p> <strong>Effektiv:</strong><img src="imguse/imagesib5.png" alt="test" />  </p>
 
-        <h5>   (Der Sicherheitsbestand wird gleitend berechnet und bildet über den ganzen Simulations-Zeitraum die
-                sich ändernde Standardabweichung ab. Der SiB schwankt hierbei, er geht sogar nach dem Planungshorizont.) 
+        <h5>
+            (Der Sicherheitsbestand wird gleitend berechnet und bildet über den ganzen Simulations-Zeitraum die
+            sich ändernde Standardabweichung ab. Der SiB schwankt hierbei, er geht sogar nach dem Planungshorizont.)
         </h5>
-       
+
         <p><strong>Effektiv dynamisch:</strong></p>
         <img src="imguse/imagesib6.png" alt="test" />
 
-        <h5>(Der SiB steigt zwischen Bestelldatum und Verfügbarkeitsdatum 
-        kontinuierlich an und sinkt sobald neue Ware verfügbar ist ab.)</h5>
+        <h5>
+            (Der SiB steigt zwischen Bestelldatum und Verfügbarkeitsdatum
+            kontinuierlich an und sinkt sobald neue Ware verfügbar ist ab.)
+        </h5>
 
         <p><strong>Dynamisch:</strong></p>
         <img src="imguse/imagesib7.png" alt="Alternate Text" />
 
-        <h5>(Hier liegt eine Prognoseungenauigkeit vor, und ab einem bestimmten Zeitpunkt,
-        an dem die Standardabweichung zunimmt, steigt der Wert ‚‚monoton wachsend‘‘.)</h5>
+        <h5>
+            (Hier liegt eine Prognoseungenauigkeit vor, und ab einem bestimmten Zeitpunkt,
+            an dem die Standardabweichung zunimmt, steigt der Wert ‚‚monoton wachsend‘‘.)
+        </h5>
 
         <p><strong>Max. Abgang:</strong></p>
         <img src="imguse/imagesib8.png" alt="Alternate Text" />
@@ -215,8 +274,10 @@
 
         <p><strong>Abgangssumme in WBZ:</strong></p>
         <img src="imguse/imagesib9.png" alt="test" />
-        <h5>(Der SiB wird kontinuierlich auf der Höhe der summierten historischen Werte innerhalb der WBZ gehalten,
-             sofern diese den minimalen SiB überschreiten.)</h5>
+        <h5>
+            (Der SiB wird kontinuierlich auf der Höhe der summierten historischen Werte innerhalb der WBZ gehalten,
+            sofern diese den minimalen SiB überschreiten.)
+        </h5>
     </section>
 
     <section id="UseCaseSplitConditionsButton">
@@ -225,46 +286,984 @@
 
         <p>
             <strong>Eine Split-Kondition wird verwendet, um eine Verbund-Bestellung </strong>
-            <span class="LightGreycolor"> [Disposition->Verbunddisposition] </span> 
-            <strong> auf meherere Transporter zu verteilen, wenn die Bestellung nicht in einen Transporter passt,
-            da Sie zu schwer ist oder sie zu groß ist</strong> </p>
+            <span class="LightGreycolor"> [Disposition->Verbunddisposition] </span>
+            <strong>
+                auf meherere Transporter zu verteilen, wenn die Bestellung nicht in einen Transporter passt,
+                da Sie zu schwer ist oder sie zu groß ist
+            </strong>
+        </p>
         <p>
             Es gibt insgesamt 4 verschiedene Split-Methoden, die über Flags
             <span class="LightGreycolor">Menge,Preise,Kosten->Bis Version 8.8-01->Flag]</span> (ab 8.8-01 über Kriterium
             <span class="LightGreycolor">[Konditionen->Menge,Preise,Kosten->Ab Version 8.8-01->Kriterium]</span>) eingestellt werden:
-        </p>        
-        <img src="imguse/imagesplit1.png" class="Zoom" alt="Optionen Split-Methoden"/>
+        </p>
+        <img src="imguse/imagesplit1.png" class="Zoom" alt="Optionen Split-Methoden" />
 
         <ol>
             <li> 	<strong>So voll wie möglich</strong> = ein Transporter wird vollgemacht und der Rest kommt in einen weiteren Transporter</li>
             <li>	<strong>So gleich verteilt wie möglich</strong> = Alle Transporter transportieren die gleiche Menge.</li>
             <li>    <strong>So sortenrein wie möglich </strong> = Gleiche SKUs <span class="LightGreycolor">[Glossar] </span> werden zusammengehalten </li>
-        <ul>
-                  <li> <span class="SmallerText">	<strong>    So sortenrein wie möglich, Unterverbund betrachten (ab 8.9-07)</strong>  = Gleiche SKUs <span class="LightGreycolor">[Glossar] </span> werden zusammengehalten und die Kondition von Untergruppen werden mit beachtet. </span> </li>      
-        </ul>
-        <li>  <strong> Über RW abfüllen </strong>= Die SKU [Glossar] mit der höchsten Reichweite [Reichweite] werden auf einen weiteren Transporter verteilt bis die Bestellung in den 1. Transporter passen.</li>
-       </ol>
+            <ul>
+                <li> <span class="SmallerText">	<strong>    So sortenrein wie möglich, Unterverbund betrachten (ab 8.9-07)</strong>  = Gleiche SKUs <span class="LightGreycolor">[Glossar] </span> werden zusammengehalten und die Kondition von Untergruppen werden mit beachtet. </span> </li>
+            </ul>
+            <li>  <strong> Über RW abfüllen </strong>= Die SKU [Glossar] mit der höchsten Reichweite [Reichweite] werden auf einen weiteren Transporter verteilt bis die Bestellung in den 1. Transporter passen.</li>
+        </ol>
 
-         <p> 
-             Die Kondition wird bei den Konditionen unter dem Reiter „Menge,Preis,Kosten“ eingestellt.
+        <p>
+            Die Kondition wird bei den Konditionen unter dem Reiter „Menge,Preis,Kosten“ eingestellt.
         </p>
 
-         <p>
+        <p>
 
-             <strong> Vor Version 8.5-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">>Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Max-Grenze pro Bestellung]"</span> <span class="SmallerText">(nur abfüllen möglich, ohne Bestellung mit 2. Transporter)</span>
+            <strong> Vor Version 8.5-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">>Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Max-Grenze pro Bestellung]"</span> <span class="SmallerText">(nur abfüllen möglich, ohne Bestellung mit 2. Transporter)</span>
 
-         </p>
+        </p>
 
-         <img src="imguse/imagesplit2.png" alt="Maxgrenze pro Bestellung" />
+        <img src="imguse/imagesplit2.png" alt="Maxgrenze pro Bestellung" />
 
-         <p>
-             <strong> Ab Version 8.5-01:</strong> „Split auf Mixed (Opti) Einheit <span class="LightGreycolor"> [Konditionen->Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Split auf Mixed (Opti) Einheit]</span>“ <span class="SmallerText">(„über RW abfüllen“ nicht möglich) </span>
-         </p>
-         <img src="imguse/imagesplit3.png" alt="Split auf Mixed (Opti) Einheit" />
+        <p>
+            <strong> Ab Version 8.5-01:</strong> „Split auf Mixed (Opti) Einheit <span class="LightGreycolor"> [Konditionen->Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Split auf Mixed (Opti) Einheit]</span>“ <span class="SmallerText">(„über RW abfüllen“ nicht möglich) </span>
+        </p>
+        <img src="imguse/imagesplit3.png" alt="Split auf Mixed (Opti) Einheit" />
 
-         <p><strong>Ab Version 8.8-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">[Konditionen->Menge,Preise,Kosten->Ab Version 8.8-01->Zweck->Maxgrenze pro Bestellung]</span>“ <span class="SmallerText">(alle Methoden möglich)</span></p>
+        <p><strong>Ab Version 8.8-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">[Konditionen->Menge,Preise,Kosten->Ab Version 8.8-01->Zweck->Maxgrenze pro Bestellung]</span>“ <span class="SmallerText">(alle Methoden möglich)</span></p>
 
-         <img src="imguse/imagesplit4.png" alt="Maxgrenze pro Bestellung" />
+        <img src="imguse/imagesplit4.png" alt="Maxgrenze pro Bestellung" />
+
+    </section>
+    <section id="UseCaseBufferStoreButton">
+
+        <h1>Pufferlager-Logik</h1>
+
+
+        <p>
+            Bei einer Pufferlager-Logik werden zusätzliche Läger in LOGOMATE angelegt.
+            Diese können auch ehemalige Filialen oder Zentrallager sein die nicht mehr weitergeführt werden.
+        </p>
+
+        <p>
+
+            Das Ziel von diesen Pufferlagern ist es so schnell wie möglich ihren Bestand zu verbrauchen.
+        </p>
+
+        <p>
+
+            Das wird umgesetzt, indem der Bedarf von den aktiven Filialen an das Zentrallager übergeben werden
+            Das Zentrallager verbraucht dann primär erst die Bestände der Pufferlager, bevor er auf seine eigenen Bestände zugreift.
+
+        </p>
+
+        <h3> Voraussetzung </h3>
+
+        <ol>
+            <li>
+                Die Filial-SKU muss sowohl Zentrallager als auch Pufferlager übergeben kriegen
+                über die Stückliste mit dem Typen „Default“ und die
+                jeweiligen Lieferanten zugeordnet bekommen, wobei die Lieferanten der Pufferlager inaktiviert sein sollen.
+            </li>
+
+            <li>
+                Das Pufferlager muss die Zentrallager-SKU über die Stückliste übergeben bekommen mit
+                dem Typen „Puffer-SKU“ und muss den
+                gleichen Lieferanten besitzen, der auch bei der Filial-SKU übergeben wurde, jedoch diesmal aktiv.
+                Außerdem muss der Parameter „Typ“ unter dem Reiter „Status“ auf „Nur Prognose, keine Disposition“ gestellt sein sowie die SKU aktiv sein
+
+            </li>
+        </ol>
+        <p>
+
+            Wenn alles richtig eingestellt wurde, sollten nun alle Bedarfe von Filialen primär von den Pufferlagern erfüllt werden.
+            Erst wenn die Pufferlager leer sind sollte das Zentrallager die Bedarfe mit seinem Bestand befriedigen.
+        </p>
+
+        <p>
+            Im Falle, dass die Pufferlager noch nicht leer sind, und der Bedarf von den Filialen
+            nicht abgedeckt werden kann in den gewünschten Zeiten, gibt es folgende Verfahren, die je nach Systemeinstellung, angewandt werden:
+            <br />[<strong>Hinweis: </strong> <span class="SmallerText">sprechen sie Ihren REMIRA Ansprechpartner an, der das für Sie einrichtet</span>]
+        </p>
+
+
+        <p>
+            Szenario „Kürzen“:
+
+        </p>
+
+        <p>
+
+            <span class="SmallerText">    <strong>Grund-Ausgangslage:</strong></span>
+        </p>
+
+        <p>
+            <img src="imguse/imagepuflo1.png" alt="Grund-Ausgangslage" />
+
+        </p>
+
+        <p>
+            <span></span> <strong> Hinweis: </strong> Der Systemparameter „teilweise nicht erfüllbare Filialbestellung“ muss mit „splitten“ befüllt sein.
+
+        </p>
+
+        <p>
+
+            Das würde wie folgt aussehen:
+
+        </p>
+        <p> <img src="imguse/imagepuflo2.png" alt="Bespiel text" /></p>
+
+        <p>
+
+            Bei einmaligen Rechnen wird zusätzlich eine Bestellung von 30 Stück für das Zentrallager erstellt um die fehlenden 30 Stück aufzutreiben für die Bedarfe der Filialen
+        </p>
+
+        <p>
+            Wird ein zweites Mal gerechnet oder wurde die Systemeinstellung „ggf. 2x rechnen“ aktiviert sieht die Export-Tabelle wie folgt aus:
+
+        </p>
+
+        <p>
+
+            <img src="imguse/imagepuflo3.png" alt="alternaitver text" />
+
+        </p>
+        <p>
+            Filiale 1 wird auf 20 Stück gekürzt da Pufferlager 2 einen Bestand von 20 hat
+            Filiale 2 wird auf 10 Stück gekürzt da Pufferlager 3 einen Bestand von 10 hat
+            Filiale 3 wird nicht gekützt, da alle Pufferlager leer sind und das Zentrallager einen höheren Bestand hat als Filiale 3 benötigt.
+
+        </p>
+
+
+
+        <h3>   <strong> Szenerio „Splitten“: </strong> </h3>
+
+        <p><strong> Grund-Ausgangslage: </strong></p>
+
+        <p><img src="imguse/imagepuflo4.png" alt="test" /></p>
+
+        <p>
+            Bei dem Szenario „Splitten“ würden alle Filialen mit vorhandenen Beständen beliefert werden
+            und die fehlenden Mengen würden nachbestellt werden sowie an die entsprechenden Filialen ausgeliefert.
+        </p>
+
+        <p> <strong>Hinweis</strong> Der Sytemparameter „teilweise nicht erfüllbare Filialbestellung“ muss mit „splitten“ befüllt sein. </p>
+
+        <p>Das würde dann wie folgt aussehen</p>
+
+        <p><img src="imguse/imagepuflo5.png" alt="Test" /> </p>
+
+        <p>Grundsätzlich werden die Bestellungen mit kürzerem Lieferdatum priorisiert, im Falle, wie jetzt, dass alle das gleiche Lieferdatum haben wird die obere SKU priorisiert.</p>
+        <p>Dadurch ergibt sich, dass…</p>
+
+
+        <p>
+            Filiale 1 erst per Pufferlager beliefert wird und der Rest-Bedarf vom Zentrallager übernommen wird.<br />
+            Filiale 2 komplett vom Zentrallager beliefert wird, da alle Pufferlager leer sind<br />
+            Filiale 3 mit dem Restbestand vom Zentrallager beliefert wird und der Rest später ausgeliefert wird durch das Zentrallager, dass die fehlenden 30 Stück nachbestellt.
+        </p>
+
+        <h3>(Ab Version 8.5-11) Szenario „Verschieben“ </h3>
+
+        <p> <strong>Grund-Ausgangslage:</strong></p>
+
+        <p>
+            Zentrallager hat einen Bestand von 2 <br />
+            Filiale LP91 hat einen Bestand von 4 <br />
+            Filiale LP92 hat keinen Bestand
+        </p>
+
+        <img src="imguse/imagepuflo6.png" alt="text" />
+
+        <p>Bei dem Szenario „Verschieben“ würden die Bestände auf die Filialen verteilt werden, die sowohl vollständig und am schnellsten befriedigt werden können.</p>
+
+
+        <p><strong>Hinweis:</strong>Bei dem Szenario „Verschieben“ würden die Bestände auf die Filialen verteilt werden, die sowohl vollständig und am schnellsten befriedigt werden können.</p>
+
+        <p> Das würde dann wie folgt aussehen:</p>
+
+        <p> Nach Rechnen mit „Splitten“:"</p>
+
+        <img src="imguse/imagepuflo7.png" alt=" Text" />
+
+        <p>
+            Da Filiale LP92 keinen Bestand hat, bevorzugt das Zentrallager die Bestellung von LP92 und gibt seine 2 Stück ab. <br />
+            Dadurch wird die Bestellung von Filiale LP91 auf den 19.7 verschoben da das Zentrallager seinen Bestand mit einer Bestellung erst aufstocken muss.
+        </p>
+
+        <p><span class="SmallerText">Anschließendes Rechnen mit „Verschieben“:</span></p>
+
+        <img src="imguse/imagepuflo8.png" alt="Text" />
+
+
+        <p>Da die Bestellung von Filiale LP91 sofort erfüllt werden kann wird die bevorzugt</p>
+
+        <p>Die Lieferung der Bestellung von LP92 wird verschoben auf den 18.7 da zu dem Zeitpunkt das Zentrallager wieder genug Bestand aufgebaut hat, um diese Bestellung zu befriedigen, durch die Lieferung am 16.7</p>
+
+
+    </section>
+
+    <section id="UseCaseAbcAnalysisButton">
+
+        <h1> ABC-Analyse  </h1>
+
+        <p> Die ABC-Analyse dient der Klassifizierung von SKUs einer frei definierbaren Kennzahl, dem sogenannten ABC-Wert.   </p>
+
+        <p> Dieser Wert ergibt sich aus der Kombination relevanter Felder wie beispielsweise Menge und Wert – etwa den Abgängen der letzten zwölf Monate in Stückzahl. Ziel ist es, eine interne Liste zu erstellen, in der alle SKUs nach ihrem ABC-Wert in absteigender Reihenfolge sortiert sind. </p>
+
+
+        <p>
+            <img src="imguse/imageabc1.png" alt="ABC-Analyse für Gruppe" />
+            <span class="LightGreycolor">  (Fenster in LOGOMATE) </span>
+        </p>
+
+
+        <h3><strong>Mit Inaktiven</strong></h3>
+
+        <p> Bei der ABC-Analyse werden auch sämtliche inaktiven SKUs mit einbezogen. </p>
+
+
+        <h3> N-Klasse</h3>
+
+        <p> Die N-Klasse umfasst alle SKUs, die im ausgewählten Zeitraum entweder keinen Umsatz oder erstmals einen Umsatz (durch Abverkauf oder Lieferung) verzeichnet haben.</p>
+        <ul>
+            <li>	Wird eine SKU der N-Klasse zugeordnet, bedeutet dies, dass sie in den letzten 180 Tagen zum ersten Mal geliefert wurde.</li>
+        </ul>
+
+        <img src="imguse/imageabc2.png" alt="N-Klasse" />
+
+        <h4> Zeitraum in Tagen</h4>
+
+        <p> Hier wird die Anzahl Tage von "heute" ausgehend rückwärts angeben, </p>
+
+        <p><strong>1.Lieferung im Zeitraum</strong></p>
+
+        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum sein erstmaliger Abverkauf erfolgt ist. </p>
+
+        <img src="imguse/imageabc3.png" alt="Lieferung im Zeitraum" />
+
+
+        <h4><strong>1.Abgang im Zeitraum</strong></h4>
+
+        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum sein erstmaliger Abverkauf erfolgt ist. </p>
+
+        <img src="imguse/imageabc4.png" alt="Abgang im Zeitraum" />
+
+        <h4><strong>Keine Lieferung bisher oder 1. Lieferung im Zeitraum</strong></h4>
+
+        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum entweder keine oder die erste Lieferung erfolgt ist.</p>
+
+        <img src="imguse/imageabc5.png" alt="Kein Abgang bisher oder 1. Abgang im Zeitraum" />
+
+
+        <p><strong>Kein Abgang bisher oder 1. Abgang im Zeitraum</strong></p>
+
+        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum entweder kein Abverkauf stattgefunden hat oder der erste Abverkauf erfolgt ist.</p>
+
+        <img src="imguse/imageabc6.png" alt="Kein Abgang bisher oder 1. Abgang im Zeitraum" />
+
+        <h3>D-Klasse</h3>
+
+        <p>
+            Die D-Klasse umfasst alle SKUs, die im definierten Zeitraum nicht verkauft wurden oder deren vorgegebene Verkaufsmengen nicht erreicht haben.
+            Sie dient dazu, ausgelaufene oder „tote“ Artikel gezielt zu kennzeichnen und in einer Klasse zu bündeln.
+        </p>
+
+
+        <img src="imguse/imageabc7.png" alt="D-Klasse" />
+
+
+        <h5><strong>Zeitraum in Tagen</strong></h5>
+
+        <p>Ähnlich wie bei der N-Klasse wird dies auch rückwirkend von heute ausgeben.</p>
+
+        <p>Unter <strong>„Maximal“</strong> kann man folgende Optionen auswählen:</p>
+
+
+        <h5><strong>Abgangsmenge</strong></h5>
+
+        <p>Dabei bezieht sich die Menge im Zeitraum auf die tatsächliche Verbrauchs- bzw. Abverkaufsmenge in der Basiseinheit des jeweiligen Artikels bzw. Lagerplatzes. </p>
+
+        <img src="imguse/imageabc8.png" alt="Abgangsmenge setting" />
+
+        <h5><strong># Positionen</strong></h5>
+
+        <p> Dabei bezieht sich die Menge im Zeitraum auf die Anzahl der Verbräuche bzw. Abverkäufe. </p>
+
+        <img src="imguse/imageabc9.png" alt="# Positionen Setting" />
+
+
+        <h5><strong># Abgangstage</strong></h5>
+
+        <p>Diese Funktion ist nur verfügbar, wenn Einzelpositionen wie Lieferantendaten an LOGOMATE übergeben werden.</p>
+
+
+        <img src="imguse/imageabc10.png" alt="# Abgangstage Setting" />
+
+        <h5><strong> Menge im Zeitraum </strong></h5>
+
+        <p>Hier kann man eintragen, wie groß die Summe aller Abverkäufe im angegebenen Zeitraum höchstens sein darf.</p>
+
+
+        <h5><strong> 0-Prognose </strong></h5>
+
+        <p>Die Aktivierung der 0-Prognose für die D-Klasse setzt eine vollautomatische Null-Prognose voraus – der Artikel muss als 0-Artikel klassifiziert, sein.</p>
+
+        <h5><strong> Bestand </strong></h5>
+
+        <p>Mithilfe der Operatoren und der Mengenanforderung zum Bestand kann die D-Klasse zusätzlich gefiltert werden, bezogen auf den aktuellen Bestand.</p>
+
+
+        <h3><strong>ABC</strong></h3>
+
+
+        <img src="imguse/imageabc11.png" alt="ABC setting" />
+
+
+        <h3>AB-Grenze</h3>
+
+        <p>Die AB-Grenze ist ein Prozentwert, der den Anteil der A-Artikel an der Gesamtsumme der A-, B- und C-Artikel definiert.</p>
+
+
+        <h3>BC-Grenze</h3>
+
+        <p>Die BC-Grenze ist ein Prozentsatz, der den Anteil der A- und B-Artikel an der Summe aller A-, B- und C-Artikel angibt.</p>
+
+
+        <h3><strong>Grenzen Wertmäßig <span class="SmallerText">(Bsp.)</span></strong></h3>
+
+
+        <img src="imguse/imageabc12.png" alt="Knotenliste" />
+
+        <p>Knotenliste nach ABC-Wert Absteiegnd sotiert. Die Option <strong>Grenzen Wertmäßig</strong> ist nicht aktiv</p>
+
+
+        <img src="imguse/imageabc13.png" alt="Knotenliste" />
+
+
+        <h3><strong>Negative Mengen ignorieren</strong></h3>
+
+        <p>Diese Option wirkt nur mit der Mengenoption „Abgänge letzte“, erst wenn sie gesetzt ist, kann sich die ABC-Klassifizierung ändern.</p>
+
+        <img src="imguse/imageabc14.png" alt="ABC Settings" />
+
+
+        <h3><strong>Menge</strong></h3>
+
+        <P>Der Beobachtungszeitraum wird unter dem Punkt 'Menge' festgelegt.</P>
+
+        <h5> Prognose Heute</h5>
+
+        <p>aktueller Prognosewert</p>
+
+        <h5> Prognose V.-Termin</h5>
+
+        <p>Prognosewert zum Zeitpunkt des nächsten Verfügbarkeitstermins</p>
+
+
+        <h5>Prognose Mittelwert </h5>
+
+        <p>durchschnittliche Tages-Prognose</p>
+
+        <h5>Abgänge letzte</h5>
+
+        <p>Abgänge der letzten x Tage / Wochen / Monate von heute an</p>
+
+        <h5> # Pos. letzte  </h5>
+
+        <p>Positionen der letzten x Tage / Wochen / Monate von heute an</p>
+
+        <h5># Abg.-Tage letzte</h5>
+
+        <p> Abgangstage der letzten x Tage / Wochen / Monate von heute an </p>
+
+
+        <p> <strong>Wichtig:</strong> Die Funktionen <strong>„#Pos. Letzte“ und „#Abg.-Tage letzte“</strong> funktionieren nur wenn Lieferantendaten an LOGOMATE übergeben werden. </p>
+    </section>
+
+    <section id="UseCaseInheritanceButton">
+
+        <h1>Vererbung</h1>
+
+
+        <p>
+            Innerhalb eines LOGOMATE-Cockpits können Werte weitervererbt werden.
+            Grundsätzlich werden alle Werte von höheren Gruppen auf alle Gruppen da drunter vererbt.
+        </p>
+
+        <p>
+            Wenn ein Wert vererbt wurde wird der betroffene Parameter farblich markiert.
+            Je nach Art der Vererbung wird eine andere Farbe angezeigt:
+
+        </p>
+
+        <ul>
+            <li> Blau = Standardwert von LOGOMATE </li>
+
+
+            <li> Blau unterstrichen = Der Wert wurde von einer höheren Ebene vererbt (Tooltip zeigt die Ebene an)  </li>
+
+            <li> Grün = Der Wert wurde von einer Klasse geerbt</li>
+
+            <li> Grau = Mehrere SKUs wurden ausgewählt die verschiedene Werte haben </li>
+
+        </ul>
+        <p> Wenn der Maus-Zeiger über einen geerbten Parameter gehalten wird, wird ein Tooltip angezeigt der zeigt durch welche Ebene der Wert vererbt wird. </p>
+
+
+        <img src="imguse/imagever1.png" alt="Gruppenbaum paramater" />
+
+        <p>Drückt man zusätzlich STRG, während man auf den Parameter drückt, springt man auf die Ebene, die den Wert vererbt.</p>
+
+        <img src="imguse/imagever2.png" alt="Gruppenbaum Parameter" />
+
+    </section>
+
+    <section id="UseCaseOrderRhythmButton">
+
+        <h1>Bestell-/Lieferrhythmus</h1>
+
+        <p>
+            Bei einem Bestell- bzw. Lieferrhythmus handelt es sich um eine regelmäßige Serie von Bestellungen bzw. Lieferungen.
+            Diese „Serie“ kann im Konditionen-Fenster eingestellt werden.
+        </p>
+
+        <h3>Bestell-Rhythmus</h3>
+
+        <p>
+            Wählt man im Kondition-Fenster im Tab „Zeiten“ als Rhythmus „Bestell“ aus wird ein Bestellrhytmus erzeugt und es werden Bestellungen erzeugt, die im definierten Zeitraum immer bestellt werden
+        </p>
+
+        <h3> Liefer-Rhythmus </h3>
+
+        <p>Wählt man im Kondition-Fenster im Tab „Zeiten“ als Rhythmus „Liefer“ aus wird ein Lieferrhytmus erzeugt und es werden Bestellungen erzeugt, die im definierten Zeitraum immer geliefert werden </p>
+
+        <h3>Verbund-Liefer/Bestell-Rhythmus</h3>
+
+        <p>Alle Bestellvorschläge der nächsten Tage werden zusammengefasst und am ersten Bestelltermin als eine Bestellung vorgeschlagen. Nicht benötigte SKUs werden so mitbestellt, dass der Verbundrhythmus erreicht wird.</p>
+
+        <h3>Rhythmus-Assistent</h3>
+
+        <p>
+            Mit dem Rhythmus-Assistent wird der Rhythmus konfiguriert.
+            Man öffnet den Rhythmus-Assistenten über einen Rechtsklick im unteren Bereich und anschließend durch drücken von „Einfügen“
+        </p>
+
+
+
+        <img src="imguse/imageliefryhth1.png" alt="Settings" />
+
+        <img src="imguse/imageliefryhth2.png" alt="Rhythmus-Assistent" />
+
+
+        <p>Im Rhythmus-Assistenten besteht aus 10 Abschnitten </p>
+
+        <ol>
+            <li><strong> Rhythmuslänge:</strong> Mit welcher Periodengröße gerechnet werden soll</li>
+            <li> <strong>Rhythmusart:</strong> Welche Art von Rhythmus</li>
+            <li><strong> Bestelltag:</strong> Tag an dem immer bestellt werden soll + Ausnahmeregelung</li>
+            <li><strong> Transport-/Liefertag:</strong> Tag an dem immer geliefert werden soll + Ausnahmeregelung</li>
+            <li><strong> Lieferzeit: </strong>  Eingetragene Lieferzeit / neue Lieferzeit / exklusive Lieferzeit </li>
+            <li> <strong> Alle</strong>Abstand zwischen 2 Bestellungen</li>
+            <li> <strong> Falls zwingender Rhythmus, Rhythmusanfang: </strong> Rhythmusbeginn wird eingetragen, wenn der Rhythmus dauerhaft eingehalten werden soll, sonst kann auch abgewichen werden, falls LOGOMATE es entscheidet</li>
+            <li> <strong> Bezogen auf:</strong> Angeben für welchen von beiden Rhythmusarten der 7 Abschnitt gilt</li>
+            <li> <strong>  Verbund-Rhythmus:</strong> Bestellvorschläge werden zusammengefasst und bestellt nach definiertem Rhythmus (Abschnitt 7 muss leer sein)</li>
+            <li> <strong>Gültigkeitsbereich:</strong> Anfang & Ende vom Rhythmus</li>
+        </ol>
+    </section>
+
+
+    <section id="UseCasePartitionButton">
+
+
+        <h1>Partitionen</h1>
+        <p>Mit Partitionen können Reservierungen 1:1 zu einer Bestellung erstellt werden die direkt einem Auftrag zugeordnet werden kann.</p>
+
+        <p> Um Partitionen nutzen zu können muss folgendes erfüllt werden: </p>
+
+        <p>
+
+            1. Die Systemeinstellung „SKU-Virtualisierung aktivieren“ muss aktiv sein.
+            Hinweis: Sprechen Sie ihren REMIRA Ansprechpartner dafür an
+        </p>
+
+        <img src="imguse/imagepar1.png" alt="SKU-Virtualisierung aktivieren" />
+
+        <p>
+            2. Der Parameter Gütekriterium muss mit „Mit Partitionierung“ oder „Partitionen verwenden Anfangsbestand nicht“ gefüllt sein.
+
+        </p>
+
+        <img src="imguse/imagepar2.png" alt="Güterkriterium" />
+        <p>
+            3. Es muss bei der Reservierung ein AddOn-Lieferant über die Spalte „L.-Typ“ sowie eine Partitionsnummer über die Spalte „Partition“ übergeben werden
+
+        </p>
+
+        <img src="imguse/imagepar3.png" alt="Reservierungen" />
+
+        <p>
+            Wenn alles richtig eingestellt wurde, könnte es wie folgt ablaufen:
+        </p>
+
+        <img src="imguse/imagepar4.png" alt="Reservierung" />
+
+        <p>
+            Zum 21.01.2014 liegen vier Reservierungen für die SKU Design-HK 0,80 schwarz vor.
+            Zwei mit und zwei ohne Partitions-Nummer.
+        </p>
+
+        <img src="imguse/imagepar5.png" alt="Bestellung" />
+
+        <p>
+            Die Reservierungen ohne Partitions-Nummer werden zu einem Auftrag zusammengefasst. Eine Zuordnung zu einer Reservierung ist nicht mehr möglich.
+        </p>
+
+        <p>
+            Die Reservierungen mit Partitions-Nummer werden zu 2 getrennten Aufträgen.
+
+        </p>
+
+    </section>
+
+    <section id="UseCaseFilterClassesButton">
+
+        <h1>Filter(-klassen)</h1>
+
+        <p>LOGOMATE bietet 3 Möglichkeiten, um nach SKUs aus der Knotenliste filtern zu können.</p>
+
+        <h3> 1. Filter-Dialog</h3>
+
+
+        <img src="imguse/imagefil1.png" alt="Filter Dialog" />
+
+        <h5>  Klassenbaum -> Rechsklick “Filter” -> „Filter bearbeiten“  </h5>
+
+        <img src="imguse/imagefil2.png" alt="Filter bearbeiten" />
+
+        <p>
+            In diesem Fenster kann ein temporärer Filter eingestellt werden, der beim nächsten Start von LOGOMATE wieder zurückgesetzt wird.
+        </p>
+
+
+        <p> Es kann gefiltert werden nach: </p>
+
+        <ul>
+            <li>Spalten aus der Knotenliste</li>
+
+            <li> Parametern</li>
+
+            <li> Widervorlagen </li>
+
+            <li> Aktionen</li>
+
+            <li> Planwerten </li>
+        </ul>
+
+        <h3>2.	Filterklasse</h3>
+
+        <img src="imguse/imagefil1.png" alt="Filter Dialog" />
+
+        <h5>  Klassenbaum -> Rechsklick “Filter” -> „Filter bearbeiten“  </h5>
+
+        <img src="imguse/imagefil3.png" alt="Klasse einfügen" />
+
+        <h6> Typ: Filterklasse</h6>
+
+        <p>Die Filterklassen werden fest angelegt, also bleiben Filterklassen auch nach erneuten Starten von LOGOMATE im Klassenbaum.</p>
+
+        <p>Außerdem kann mit dem „Global“-Haken entschieden werden, ob der Filter zugänglich für alle oder nur für sich selbst sichtbar sind.</p>
+
+        <p>Ein weiterer Unterschied zum Filter-Dialog ist, dass es nun kein Limit gibt nach wie vielen Spalten gefiltert werden kann. </p>
+
+        <p>Es ist auch möglich eine Filterklasse in einer Filterklasse anzulegen. So können auch Filter-Gruppen erstellt werden.</p>
+
+        <p>Der letzte Unterschied zum Filter-Dialog ist, dass die SKUs die im Filter landen parametrierbar sind. Dafür muss nur der Filter ausgewählt sein, wenn Parameter vergeben werden.</p>
+
+        <h3> 3.	Zuordnungsklassen</h3>
+
+        <img src="imguse/imagefil1.png" alt="Filter Dialog" />
+
+        <h5>  Klassenbaum -> Rechsklick “Filter” -> „Filter bearbeiten“  </h5>
+
+        <img src="imguse/imagefil4.png" alt="Klasse einfügen" />
+
+        <h6> Typ: Zuordnungsklasse</h6>
+
+        <p>Zuordnungsklassen haben alle Funktionen, die auch die Filterklassen haben, mit einem Unterschied.</p>
+
+        <p>
+            Bei Zuordnungsklassen sind statisch da nicht gefiltert wird.
+            Alle gewünschten SKUs werden reingezogen, die man dort haben möchte.
+        </p>
+
+        <p>Auch hier können Filterklassen in Zuordnungsklassen angelegt werden und Gruppen gebildet werden.</p>
+
+        <p>Es ergibt sich folgendes Bild zu den 3 „Filtern“:</p>
+
+        <img src="imguse/imagefil5.png" alt="Tabelle" />
+
+    </section>
+
+    <section id="UseCaseResubmissionButton">
+
+        <h1>Wiedervorlagen</h1>
+
+        <p>LOGOMATE bietet die Möglichkeit Wiedervorlagen zu setzen auf Knoten.</p>
+
+        <p>Dafür muss einfach ein Rechtsklick auf den jeweiligen Knoten erfolgen & die Option „Notiz/Wiedervorlage“ ausgewählt werden.</p>
+
+        <img src="imguse/imagewie1.png" alt="Knotenliste" />
+
+        <img src="imguse/imagewie2.png" alt="Notiz/Wiedervorlage" />
+
+        <p>Dort können Datum und Text hinzugefügt werden. Und je nach dem, was als Text, Datum oder auf welcher Ebene die Wiedervorlage eingetragen wurde, hat die Stecknadel eine andere Farbe. </p>
+
+        <img src="imguse/imagewie3.png" alt="Erklärung" />
+
+        <p>Die Wiedervorlagen werden, nachdem sie angelegt wurden, in der Knotenliste angezeigt. </p>
+    </section>
+
+    <section id="UseCasePrecursorButton">
+
+        <h1>Vorläufer</h1>
+
+        <p>Bei einem Vorläufer wird die Historie von einer Vorläufer SKU auf eine Nachfolger SKU übermittelt. Zudem können mehrere Zeitreihen verkettet werden.</p>
+
+        <p>Ein Vorläufer kann in LOGOMATE unter <span class="BlueColor">[Parameter->Sonstiges->Vorläufer]</span>  so eingepflegt werden:</p>
+
+        <ul>
+            <li>Kopieren Sie die Vorläufer-SKU aus der Knotenliste (Zeile markieren + STRG + C) und fügen Sie die SKU unter Parameter -> Sonstiges in das Feld Vorläufer ein (STRG + V).</li>
+
+            <li> Alternative: Suchen Sie direkt in der Vorläufer-Auswahlliste. Teileingaben werden unterstützt. In großen Systemen müssen die Teil-Artikel-Nummern so präzise sein, dass die Ergebnisliste nicht zu groß wird (bis zu 100.000 Einträge).</li>
+        </ul>
+
+        <img src="imguse/imagevor1.png" alt="Einstellung" />
+
+        <p>In der Prognosegrafik werden die Vorläufer-Anteile farblich hervorgehoben (default = gelb).</p>
+
+        <img src="imguse/imagevor2.png" alt="Prognose" />
+
+
+        <h3>Vorläuferfaktoren </h3>
+
+        <p> Jeder Historienwert wird mit dem Vorläufer-Faktor multipliziert:</p>
+
+        <ul>
+            <li>Vorläufer-Faktor 1.0 = vollständig</li>
+
+            <li> Vorläufer-Faktor 0.5 = die Hälfte</li>
+
+            <li> Vorläufer-Faktor 2.0 = das Doppelte</li>
+        </ul>
+    </section>
+
+    <section id="UseCasePromotionsButton">
+
+
+        <h1>Aktionen (Typen)</h1>
+
+        <p>Im Handel versteht man unter Aktionen in der Regel verkaufsfördernde Maßnahmen. In LOGOMATE hingegen werden sämtliche Planbedarfe als Aktionen bezeichnet.</p>
+
+
+
+        <p>LOGOMATE erkennt ungewöhnliche Verkaufs- oder Verbrauchsmuster und kann diese durch automatische Aktionen ausgleichen.</p>
+
+
+
+        <h3>Automatische/Stichtags- Aktionen</h3>
+
+        <p>Automatische Aktionen dienen zur Korrektur von Vergangenheitswerten durch OoS-Bereinigung, die Behandlung von Ausreißern, das Setzen negativer Historienwerte auf null, sowie durch Stichtags-Aktionen.</p>
+
+        <p> Stichtags-Aktionen sind zukünftige Aktionen, die durch die Definition einer Variablen Saison mithilfe von Stichtagen entstehen und dabei die Prognose ersetzen.</p>
+
+        <p> <strong> Wichtig! </strong> Automatische Aktionen lassen sich weder manuell hinzufügen noch direkt entfernen.  </p>
+
+
+        <h3>Manuelle Aktionen</h3>
+
+        <p>
+            Manuelle Aktionen sind Aktionen mit bekanntem Zeitraum und festgelegter Menge. Für zukünftige Aktionen ist ein Wert im Feld Erwartete Menge oder Rel. erwartete Menge erforderlich; diese Mengen sind in der Regel positiv und werden als Zusatz (On Top) zum Prognosewert addiert.
+            Vergangene Aktionen benötigen einen Eintrag im Feld Menge oder Rel. Menge; die Aktionsmenge kann positiv oder negativ sein und dient zur Korrektur des Abverkaufswerts.
+        </p>
+
+
+        <h4>Semi-Aktionen</h4>
+
+        <p>Semi-Aktionen sind Aktionen mit festgelegtem Zeitraum, deren Umfang jedoch unbekannt ist, liegen ihre Zeiträume in der Vergangenheit, fließen sie nicht in die Prognose ein. </p>
+
+        <h4> Berechnung der Semi-Aktionen </h4>
+
+        <p>Diese Parameter bestimmen, auf welche Weise die Aktionsmengen berechnet werden, jedoch beeinflusst der Parameter nur Semi-Aktionen, die in der Vergangenheit liegen.</p>
+
+        <img src="imguse/imageakt1.png" alt="Alternate Text" />
+
+        <h3>Typen von Semi-Aktionen</h3>
+
+        <h4>Rel zu aktionsfreier Zeit</h4>
+
+        <p>Die Aktionsmengen ergeben sich aus dem Verhältnis der Verkäufe während des Aktionszeitraums zu den Verkäufen in aktionsfreien Zeiträumen.</p>
+
+        <h4>Rel zu aktionsfreier Zeit + ggf. Info setzen</h4>
+
+        <p>Keine Berechnung erfolgt; endet die Semi-Aktion vor dem ersten Abgang, wird sie in eine Info-Aktion umgewandelt.</p>
+
+        <h4>Rel zu Ex-Post-Prognose</h4>
+
+        <p>Die Aktionsmengen werden auf Basis des Verhältnisses zwischen Verkäufen und der Ex-Post-Prognose berechnet.</p>
+
+        <h4>Rel. zu aktionsfreier Zeit mit OoS-Korrektur	</h4>
+
+        <p>Für diesen Parameter sind historische Bestände erforderlich; entgangene Aktionsmengen werden anhand des Verhältnisses der Verkäufe im Aktionszeitraum zu den Verkäufen in aktionsfreien Zeiträumen berechnet.</p>
+
+        <h4>Rel. zur Ex-Post-Prognose mit OoS-Korrektur</h4>
+
+        <p>Für diesen Parameter sind historische Bestände notwendig; entgangene Aktionsmengen werden anhand des Verhältnisses zwischen Verkäufen und der Ex-Post-Prognose berechnet.</p>
+
+        <h3>Info-Aktionen</h3>
+
+        <p>Info-Aktionen dienen lediglich der Kennzeichnung von Aktionen und haben grundsätzlich keine Auswirkungen; wird der Aktionstyp jedoch von Semi auf Info geändert, können zuvor unberücksichtigte Zeiträume samt Abverkäufen und Aktionen in die Prognose einfließen. </p>
+
+        <h3>Exklusive Aktionen </h3>
+
+        <p>Exklusive Aktionen ermöglichen die Festlegung von Zeiträumen, in denen Ausreißer trotz aktivierter Ausreißererkennung nicht korrigiert werden; wird der Aktionstyp von Ausreißer auf Exklusive geändert, bleibt die berechnete Aktionsmenge unverändert bestehen.</p>
+
+        <p> <strong> Beispiel: </strong></p>
+
+        <img src="imguse/imageakt2.png" alt="Aktionen" />
+
+
+        <p> <strong> LOGOMATE </strong> hat mehrere Ausreißer in den historischen Abverkaufsdaten erkannt und entsprechend korrigiert.</p>
+
+
+        <img src="imguse/imageakt3.png" alt="Aktionen" />
+
+        <p>Damit die Aktionsmengen künftig nicht durch automatische Aktionen angepasst werden, wurde bei zwei Aktionen der Aktionstyp von Ausreißer auf Exklusive umgestellt.</p>
+
+
+    </section>
+
+
+    <section id="UseCaseContractsButton">
+
+        <h1>Kontrakte</h1>
+
+
+        <p>
+            Kontrakte in <span class="BlueColor"> LOGOMATE</span><span class="LightGreycolor"> [Konditionen/Parameter]</span> sind Vereinbarungen zwischen einem Lieferanten über die Lieferung einer bestimmten SKU.
+            Der Kontrakt legt keine konkreten Liefermengen oder -termine fest, sondern definiert lediglich die Gesamtmenge, die innerhalb des vereinbarten Zeitraums geliefert werden soll (Mengenkontrakt).
+
+        </p>
+
+
+        <p>Zu dem festgelegten Zeitpunkt muss die Ware jederzeit bereitstehen.</p>
+
+        <p> <strong>Kundenkontrakte </strong></p>
+
+
+        <p>Beim Kundenkontrakt wird kein fester Tag festgelegt, sondern ein Lieferzeitraum.</p>
+
+        <h5>Beispiel:</h5>
+
+        <img src="imguse/imagekon1.png" alt="Kundenkontrakte" />
+
+        <h6> (Anders als bei den Reservierungen wird im Kundenkontrakt ein SiB festgelegt.)   </h6>
+
+
+        <h3>Kontraktarten</h3>
+
+        <img src="imguse/imagekon2.png" alt="Bestellmenge" />
+
+
+        <h4>Kontrakte ignorieren</h4>
+
+        <p>Die in den Konditionen erfassten Kontrakte werden ignoriert.</p>
+
+        <h4>Lieferantenbevorzugung </h4>
+
+        <p>Die Lieferantenauswahl richtet sich nach den vorhandenen Kontraktarten. Der Zeitpunkt der Verfügbarkeit wird bestimmt, wobei das zugrunde liegende Entscheidungskriterium im Abschnitt ‚Kontraktauswahl‘ definiert ist.</p>
+
+        <h4>   Lieferantenauswahl </h4>
+
+        <p>Die Lieferantenauswahl erfolgt entweder auf Grundlage vorhandener Kontrakte oder gemäß dem im Abschnitt ‚Kontraktauswahl‘ festgelegten Entscheidungskriterium.</p>
+
+        <h4>Max. Menge</h4>
+
+        <p>Die maximal abrufbare Menge beim Lieferanten</p>
+
+        <h4>Max. Menge u. Lieferantenauswahl</h4>
+
+        <p>Die Auswahl des Lieferanten erfolgt auf Basis der maximal abrufbaren Menge sowie der festgelegten Kriterien zur Lieferantenauswahl.</p>
+
+
+        <h4>Bestellungsaufteilung</h4>
+
+        <p>Wenn diese Option aktiviert ist, können die Bestellmengen für SKUs mit mehreren aktiven Lieferanten aufgeteilt werden. Die Optionen Dauerauftrag und Bestellaufteilung stehen zur Verfügung, beide können kombiniert werden.</p>
+
+        <h3>Pseudo-Kontrakte</h3>
+
+        <p>
+            Bei Pseudo-Kontrakten kann ein zusätzlicher SiB-Wert vorgegeben werden. Für diese Art von Kontrakten darf keine Kunden-Nummer hinterlegt werden,
+            da sonst möglicherweise das Feld „Geliefert“ automatisch befüllt wird.
+            Von REMIRA importierte Pseudo-Kunden-Kontrakte enthalten nicht die Kunden-Nummer, sondern den Vermerk „PSEUDO“.
+        </p>
+
+
+        <h3>Kontrakte auf Artikel-Ebene</h3>
+
+        <p>Ein Artikel kann mehrere Kontrakte besitzen, die im Reiter Kontrakte des Konditionenfensters hinzugefügt und automatisch auf die zugehörigen SKUs vererbt werden.</p>
+
+        <h3>Lieferantenkontrakte splitten</h3>
+
+
+        <p>Lieferantenkontrakte können ab <span class="BlueColor"> LOGOMATE Version LM2021-11 / 8.5-03 </span>nach Kontraktmenge und -zeitraum gesplittet werden.</p>
+
+        <p>
+            Wählen Sie hierzu unter [Parameter → Disposition → Kontraktart] die Optionen „Lieferantenauswahl u.Max. Menge“ aus.
+            Für jeden Kontrakt wird dabei eine separate Bestellposition erzeugt.
+            Die Auftragsnummer der Bestellung bleibt dabei erhalten – es wird lediglich eine neue Position mit eigener Positionsnummer zur bestehenden Bestellung hinzugefügt.
+        </p>
+
+    </section>
+
+
+    <section id="UseCaseCompositeOrderButton">
+
+
+
+        <h1>Verbundbestellung</h1>
+
+        <p>Bei einer Verbundbestellung werden SKUs zusammenbestellt, um die Gesamtkosten minimieren zu können.</p>
+
+        <p>Das heißt wenn ein Artikel dieser Verbundgruppe bestellt wird, werden wenn möglich gleich mehrerer Artikel mitbestellt die sonst eine eigene Bestellung auslösen müssten, wodurch die Transportkosten unnötig steigen würden.</p>
+
+        <p>Daher wird geschaut das alle Artikel dieser Verbundgruppe möglichst zur gleichen Zeit ihren Sicherheitsbestand erreichen. </p>
+
+        <img src="imguse/imagevbe1.png" alt="Bestandssimulation" />
+
+
+        <p>Bei einer Verbundbestellung wird auf die Konditionen geachtet, d.h. diese sollten möglichst identisch sein da sonst die Optimierung länger dauert & schwieriger zu berechnen wird.</p>
+
+        <p>In Fällen wie diesen kann es von Vorteil sein Verbundgruppen in kleinere Verbunduntergruppen aufzuteilen.</p>
+
+        <p>Werden Verbundgruppen so gebildet können auch verschiedene Konditionen verwendet werden, da rekursiv gerechnet wird. Trotzdem sollten diese pro Gruppe einheitlich sein.</p>
+
+
+        <p>Außerdem muss pro Verbundgruppe auch ein Verbundlieferant vorhanden sein der die Bestellung ausliefert.</p>
+
+        <p>Der muss auch entsprechend im Kondition-Fenster konfiguriert werden mit dem verfügbaren Laderaum für die Artikel sowie OE & Mix Haken</p>
+
+        <img src="imguse/imagevbe2.png" alt="Alternate Text" />
+
+        <p>Und bei dem Artikel muss im Parameter-Fenster konfiguriert werden, ob der Artikel Bestellungen auslösen darf sowie den Auffülltypen</p>
+
+
+        <img src="imguse/imagevbe3.png" alt="Parameter" />
+
+    </section>
+
+
+
+    <section id="UseCaseSporadicProcedureButton">
+
+
+        <h1>Sporadisches Verfahren</h1>
+
+        <p>
+            Das sporadische Verfahren wurde für Zeitreihen mit unregelmäßigen oder geringen Abverkäufen entwickelt. <br />
+            Es ist durch Unsicherheiten sowohl in der Höhe der Prognosewerte als auch in deren zeitlichem Auftreten gekennzeichnet.
+            Die Standardabweichung des Prognosewerts steht dabei für die „vertikale Unsicherheit“, während die Standardabweichung der Dauer die „horizontale Unsicherheit“ beschreibt.
+        </p>
+
+
+        <img src="imguse/imagespo1.png" alt="Sporadisches Verfahren im Parameterfenster" />
+
+
+        <h5>Min. Anzahl Abgänge</h5>
+
+        <p>Benötigte Anzahl an historischen Werten (ohne Nullwerte) </p>
+
+        <h5>Max. relative Abgangshäufigkeit</h5>
+
+        <p>
+            Maximal zulässiger Anteil der Abgänge an allen
+            Historienwerten = Nicht-Nullen-Anteil in % <br />
+            <strong>Bsp.:</strong> Drei Abgänge, zehn Historienwerte (inkl. Null-Werte)
+            => Abgangshäufigkeit = 30%
+
+        </p>
+
+        <h5> Min. Lücken-Quote </h5>
+
+        <p>
+            Erforderlicher Mindestanteil an Lücken zwischen den Abgängen; dabei wird jeder Zeitraum größer null zwischen zwei Abgängen als eine Lücke gewertet.
+            <strong>Bsp.:</strong> Fünf Lücken zwischen zehn Abgängen => Lücken-Quote = 50%
+        </p>
+        <h5>Max. Abstandsabweichung</h5>
+
+        <p>Maximal erlaubte Standardabweichung des zeitlichen Abstands – anders gesagt: Zu große Lücken sind nicht zulässig.</p>
+        
+    </section>
+
+    <section id="UseCaseDueDatesButton">
+
+
+
+        <h1>Saison</h1>
+
+        <p>
+            Wenn LOGOMATE unübliche Abgänge in der Historie erkennt,
+            wird versucht diese zu korrigieren. Passiert das öfter in 
+            der gleichen Jahres-/Monats-/Wochen-Periode mit einer ähnlichen 
+            Abweichung von X% wird eine Saison erkannt. Das wirkt sich 
+            dementsprechend auch auf die Prognose aus, da dann mit 
+            dieser „Abweichung“ weitergerechnet wird. 
+        </p>
+
+
+        <img src="imguse/imagesai1.png" alt="Prognose" />
+
+
+        <p>Will man die Saison-Erkennung anpassen so kann man das im Prognose-Fenster bei den Parametern tun. </p>
+
+
+        <img src="imguse/imagesai2.png" alt="Saison" />
+
+        <p>Dort kann man vorgeben wie viele Perioden nötig sind damit eine Saison erkannt werden kann, sowie ab welchem Effekt-Faktor mit einer Saison erkannt werden darf. </p>
+
+        <p>Es ist auch möglich eine Saison von einer anderen SKU auf eine andere SKU zu übertragen.</p>
+
+        <p>Dafür wird die SKU, von der die Saison übernommen werden soll, im Vorgabe-Fenster der Parameter, beim Parameter „Saison verwenden von“, eingetragen. </p>
+
+        <img src="imguse/imagesai3.png" alt="" />
+
+        <p>Wenn die SKU bereits ohne diese Option, aktuell eine Saison hat, wird die übergebene Saison ignoriert (Das wird auch als Prognose-Warnung angezeigt). </p>
+
+        <h2>Stichtage</h2>
+
+        <p>Bei variablen Saisons werden Stichtage verwendet.</p>
+
+        <p>Das sind manuell angelegte Saisons, die im gleichnamigen Fenster bei den Parametern eingetragen werden.</p>
+
+
+        <img src="imguse/imagesai4.png" alt="Parameter" />
+
+
+        <p>Im oberen Block können die einzelnen Ereignisse eingerichtet werden. Dort werden Länge, Effekt-Faktor und Beschreibung eingetragen.</p>
+
+        <p>Im unteren Block werden die betroffenen Tage angezeigt. Dort müssen mindestens 2 Stichtage angegeben werden (1 in der Vergangenheit & 1 in der Zukunft), damit eine Saison berechnen zu können.</p>
+
+        <p>Wurde alles korrekt eingetragen wird eine Stichtag-Aktion erzeugt für die angegeben Termine.</p>
+
+        <p>Ohne Saison-Erkennung/ Stichtag-Aktion: </p>
+
+
+        <img src="imguse/imagesai5.png" alt="Prognose" />
+
+
+        <p>Mit Saison-Erkennung/ Stichtag-Aktion: </p>
+
+
+        <img src="imguse/imagesai6.png" alt="Prognosegrafik" />
+       
 
     </section>
 

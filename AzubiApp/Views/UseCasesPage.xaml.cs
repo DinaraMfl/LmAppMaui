@@ -53,7 +53,6 @@ public partial class UseCasesPage : ContentPage
         UseCaseSftTypesButton.Text = AppResources.UseCaseSftTypesButton;
         UseCaseOrderRhythmButton.Text = AppResources.UseCaseOrderRhythmButton;
         UseCaseResubmissionButton.Text = AppResources.UseCaseResubmissionButton;
-        UseCaseGeneralHandlingButton.Text = AppResources.UseCaseGeneralHandlingButton;
         UseCasePrecursorButton.Text = AppResources.UseCasePrecursorButton;
         UseCaseBufferStoreButton.Text = AppResources.UseCaseBufferStoreButton;
         UseCaseAbcAnalysisButton.Text =AppResources.UseCaseAbcAnalysisButton;
