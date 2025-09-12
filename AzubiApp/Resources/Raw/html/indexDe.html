@@ -196,6 +196,256 @@
         </ul>
     </section>
 
+    <section id="UseCaseSplitConditionsButton">
+
+        <h1>Split-Kondition</h1>
+
+        <p>
+            <strong>Eine Split-Kondition wird verwendet, um eine Verbund-Bestellung </strong>
+            <span class="LightGreycolor"> [Disposition->Verbunddisposition] </span>
+            <strong>
+                auf meherere Transporter zu verteilen, wenn die Bestellung nicht in einen Transporter passt,
+                da Sie zu schwer ist oder sie zu groß ist
+            </strong>
+        </p>
+        <p>
+            Es gibt insgesamt 4 verschiedene Split-Methoden, die über Flags
+            <span class="LightGreycolor">Menge,Preise,Kosten->Bis Version 8.8-01->Flag]</span> (ab 8.8-01 über Kriterium
+            <span class="LightGreycolor">[Konditionen->Menge,Preise,Kosten->Ab Version 8.8-01->Kriterium]</span>) eingestellt werden:
+        </p>
+        <img src="imguse/imagesplit1.png" class="Zoom" alt="Optionen Split-Methoden" />
+
+        <ol>
+            <li> 	<strong>So voll wie möglich</strong> = ein Transporter wird vollgemacht und der Rest kommt in einen weiteren Transporter</li>
+            <li>	<strong>So gleich verteilt wie möglich</strong> = Alle Transporter transportieren die gleiche Menge.</li>
+            <li>    <strong>So sortenrein wie möglich </strong> = Gleiche SKUs <span class="LightGreycolor">[Glossar] </span> werden zusammengehalten </li>
+            <ul>
+                <li> <span class="SmallerText">	<strong>    So sortenrein wie möglich, Unterverbund betrachten (ab 8.9-07)</strong>  = Gleiche SKUs <span class="LightGreycolor">[Glossar] </span> werden zusammengehalten und die Kondition von Untergruppen werden mit beachtet. </span> </li>
+            </ul>
+            <li>  <strong> Über RW abfüllen </strong>= Die SKU [Glossar] mit der höchsten Reichweite [Reichweite] werden auf einen weiteren Transporter verteilt bis die Bestellung in den 1. Transporter passen.</li>
+        </ol>
+
+        <p>
+            Die Kondition wird bei den Konditionen unter dem Reiter „Menge,Preis,Kosten“ eingestellt.
+        </p>
+
+        <p>
+            <strong> Vor Version 8.5-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">>Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Max-Grenze pro Bestellung]"</span> <span class="SmallerText">(nur abfüllen möglich, ohne Bestellung mit 2. Transporter)</span>
+        </p>
+
+        <img src="imguse/imagesplit2.png" alt="Maxgrenze pro Bestellung" />
+
+        <p>
+            <strong> Ab Version 8.5-01:</strong> „Split auf Mixed (Opti) Einheit <span class="LightGreycolor"> [Konditionen->Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Split auf Mixed (Opti) Einheit]</span>“ <span class="SmallerText">(„über RW abfüllen“ nicht möglich) </span>
+        </p>
+        <img src="imguse/imagesplit3.png" alt="Split auf Mixed (Opti) Einheit" />
+
+        <p><strong>Ab Version 8.8-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">[Konditionen->Menge,Preise,Kosten->Ab Version 8.8-01->Zweck->Maxgrenze pro Bestellung]</span>“ <span class="SmallerText">(alle Methoden möglich)</span></p>
+
+        <img src="imguse/imagesplit4.png" alt="Maxgrenze pro Bestellung" />
+
+    </section>
+
+    <section id="UseCasePartitionButton">
+
+        <h1>Partitionen</h1>
+
+        <p>Mit Partitionen können Reservierungen 1:1 zu einer Bestellung erstellt werden die direkt einem Auftrag zugeordnet werden kann.</p>
+
+        <p> Um Partitionen nutzen zu können muss folgendes erfüllt werden: </p>
+
+        <p>
+            1. Die Systemeinstellung „SKU-Virtualisierung aktivieren“ muss aktiv sein.
+            Hinweis: Sprechen Sie ihren REMIRA Ansprechpartner dafür an
+        </p>
+
+        <img src="imguse/imagepar1.png" alt="SKU-Virtualisierung aktivieren" />
+
+        <p>
+            2. Der Parameter Gütekriterium muss mit „Mit Partitionierung“ oder „Partitionen verwenden Anfangsbestand nicht“ gefüllt sein.
+        </p>
+
+        <img src="imguse/imagepar2.png" alt="Güterkriterium" />
+
+        <p>
+            3. Es muss bei der Reservierung ein AddOn-Lieferant über die Spalte „L.-Typ“ sowie eine Partitionsnummer über die Spalte „Partition“ übergeben werden
+        </p>
+
+        <img src="imguse/imagepar3.png" alt="Reservierungen" />
+
+        <p>
+            Wenn alles richtig eingestellt wurde, könnte es wie folgt ablaufen:
+        </p>
+
+        <img src="imguse/imagepar4.png" alt="Reservierung" />
+
+        <p>
+            Zum 21.01.2014 liegen vier Reservierungen für die SKU Design-HK 0,80 schwarz vor.
+            Zwei mit und zwei ohne Partitions-Nummer.
+        </p>
+
+        <img src="imguse/imagepar5.png" alt="Bestellung" />
+
+        <p>
+            Die Reservierungen ohne Partitions-Nummer werden zu einem Auftrag zusammengefasst. Eine Zuordnung zu einer Reservierung ist nicht mehr möglich.
+        </p>
+
+        <p>
+            Die Reservierungen mit Partitions-Nummer werden zu 2 getrennten Aufträgen.
+        </p>
+
+    </section>
+
+    <section id="UseCaseFilterClassesButton">
+
+        <h1>Filter(-klassen)</h1>
+
+        <p>LOGOMATE bietet 3 Möglichkeiten, um nach SKUs aus der Knotenliste filtern zu können.</p>
+
+        <h3> 1. Filter-Dialog</h3>
+
+        <img src="imguse/imagefil1.png" alt="Filter Dialog" />
+
+        <h5>  Klassenbaum -> Rechsklick “Filter” -> „Filter bearbeiten“  </h5>
+
+        <img src="imguse/imagefil2.png" alt="Filter bearbeiten" />
+
+        <p>
+            In diesem Fenster kann ein temporärer Filter eingestellt werden, der beim nächsten Start von LOGOMATE wieder zurückgesetzt wird.
+        </p>
+
+        <p> Es kann gefiltert werden nach: </p>
+
+        <ul>
+            <li>Spalten aus der Knotenliste</li>
+
+            <li> Parametern</li>
+
+            <li> Widervorlagen </li>
+
+            <li> Aktionen</li>
+
+            <li> Planwerten </li>
+        </ul>
+
+        <h3>2.	Filterklasse</h3>
+
+        <img src="imguse/imagefil1.png" alt="Filter Dialog" />
+
+        <h5>  Klassenbaum -> Rechsklick “Filter” -> „Filter bearbeiten“  </h5>
+
+        <img src="imguse/imagefil3.png" alt="Klasse einfügen" />
+
+        <h6> Typ: Filterklasse</h6>
+
+        <p>Die Filterklassen werden fest angelegt, also bleiben Filterklassen auch nach erneuten Starten von LOGOMATE im Klassenbaum.</p>
+
+        <p>Außerdem kann mit dem „Global“-Haken entschieden werden, ob der Filter zugänglich für alle oder nur für sich selbst sichtbar sind.</p>
+
+        <p>Ein weiterer Unterschied zum Filter-Dialog ist, dass es nun kein Limit gibt nach wie vielen Spalten gefiltert werden kann. </p>
+
+        <p>Es ist auch möglich eine Filterklasse in einer Filterklasse anzulegen. So können auch Filter-Gruppen erstellt werden.</p>
+
+        <p>Der letzte Unterschied zum Filter-Dialog ist, dass die SKUs die im Filter landen parametrierbar sind. Dafür muss nur der Filter ausgewählt sein, wenn Parameter vergeben werden.</p>
+
+        <h3> 3.	Zuordnungsklassen</h3>
+
+        <img src="imguse/imagefil1.png" alt="Filter Dialog" />
+
+        <h5>  Klassenbaum -> Rechsklick “Filter” -> „Filter bearbeiten“  </h5>
+
+        <img src="imguse/imagefil4.png" alt="Klasse einfügen" />
+
+        <h6> Typ: Zuordnungsklasse</h6>
+
+        <p>Zuordnungsklassen haben alle Funktionen, die auch die Filterklassen haben, mit einem Unterschied.</p>
+
+        <p>
+            Bei Zuordnungsklassen sind statisch da nicht gefiltert wird.
+            Alle gewünschten SKUs werden reingezogen, die man dort haben möchte.
+        </p>
+
+        <p>Auch hier können Filterklassen in Zuordnungsklassen angelegt werden und Gruppen gebildet werden.</p>
+
+        <p>Es ergibt sich folgendes Bild zu den 3 „Filtern“:</p>
+
+        <img src="imguse/imagefil5.png" alt="Tabelle" />
+
+    </section>
+
+    <section id="UseCaseContractsButton">
+
+        <h1>Kontrakte</h1>
+
+        <p>
+            Kontrakte in <span class="BlueColor"> LOGOMATE</span><span class="LightGreycolor"> [Konditionen/Parameter]</span> sind Vereinbarungen zwischen einem Lieferanten über die Lieferung einer bestimmten SKU.
+            Der Kontrakt legt keine konkreten Liefermengen oder -termine fest, sondern definiert lediglich die Gesamtmenge, die innerhalb des vereinbarten Zeitraums geliefert werden soll (Mengenkontrakt).
+        </p>
+
+        <p>Zu dem festgelegten Zeitpunkt muss die Ware jederzeit bereitstehen.</p>
+
+        <p> <strong>Kundenkontrakte </strong></p>
+
+        <p>Beim Kundenkontrakt wird kein fester Tag festgelegt, sondern ein Lieferzeitraum.</p>
+
+        <h5>Beispiel:</h5>
+
+        <img src="imguse/imagekon1.png" alt="Kundenkontrakte" />
+
+        <h6> (Anders als bei den Reservierungen wird im Kundenkontrakt ein SiB festgelegt.)   </h6>
+
+        <h3>Kontraktarten</h3>
+
+        <img src="imguse/imagekon2.png" alt="Bestellmenge" />
+
+        <h4>Kontrakte ignorieren</h4>
+
+        <p>Die in den Konditionen erfassten Kontrakte werden ignoriert.</p>
+
+        <h4>Lieferantenbevorzugung </h4>
+
+        <p>Die Lieferantenauswahl richtet sich nach den vorhandenen Kontraktarten. Der Zeitpunkt der Verfügbarkeit wird bestimmt, wobei das zugrunde liegende Entscheidungskriterium im Abschnitt ‚Kontraktauswahl‘ definiert ist.</p>
+
+        <h4>   Lieferantenauswahl </h4>
+
+        <p>Die Lieferantenauswahl erfolgt entweder auf Grundlage vorhandener Kontrakte oder gemäß dem im Abschnitt ‚Kontraktauswahl‘ festgelegten Entscheidungskriterium.</p>
+
+        <h4>Max. Menge</h4>
+
+        <p>Die maximal abrufbare Menge beim Lieferanten</p>
+
+        <h4>Max. Menge u. Lieferantenauswahl</h4>
+
+        <p>Die Auswahl des Lieferanten erfolgt auf Basis der maximal abrufbaren Menge sowie der festgelegten Kriterien zur Lieferantenauswahl.</p>
+
+        <h4>Bestellungsaufteilung</h4>
+
+        <p>Wenn diese Option aktiviert ist, können die Bestellmengen für SKUs mit mehreren aktiven Lieferanten aufgeteilt werden. Die Optionen Dauerauftrag und Bestellaufteilung stehen zur Verfügung, beide können kombiniert werden.</p>
+
+        <h3>Pseudo-Kontrakte</h3>
+
+        <p>
+            Bei Pseudo-Kontrakten kann ein zusätzlicher SiB-Wert vorgegeben werden. Für diese Art von Kontrakten darf keine Kunden-Nummer hinterlegt werden,
+            da sonst möglicherweise das Feld „Geliefert“ automatisch befüllt wird.
+            Von REMIRA importierte Pseudo-Kunden-Kontrakte enthalten nicht die Kunden-Nummer, sondern den Vermerk „PSEUDO“.
+        </p>
+
+        <h3>Kontrakte auf Artikel-Ebene</h3>
+
+        <p>Ein Artikel kann mehrere Kontrakte besitzen, die im Reiter Kontrakte des Konditionenfensters hinzugefügt und automatisch auf die zugehörigen SKUs vererbt werden.</p>
+
+        <h3>Lieferantenkontrakte splitten</h3>
+
+        <p>Lieferantenkontrakte können ab <span class="BlueColor"> LOGOMATE Version LM2021-11 / 8.5-03 </span>nach Kontraktmenge und -zeitraum gesplittet werden.</p>
+
+        <p>
+            Wählen Sie hierzu unter [Parameter → Disposition → Kontraktart] die Optionen „Lieferantenauswahl u.Max. Menge“ aus.
+            Für jeden Kontrakt wird dabei eine separate Bestellposition erzeugt.
+            Die Auftragsnummer der Bestellung bleibt dabei erhalten – es wird lediglich eine neue Position mit eigener Positionsnummer zur bestehenden Bestellung hinzugefügt.
+        </p>
+
+    </section>
+
     <section id="UseCaseSftTypesButton">
 
         <h1>SiB-Typen</h1>
@@ -279,54 +529,106 @@
         </h5>
     </section>
 
-    <section id="UseCaseSplitConditionsButton">
+    <section id="UseCaseOrderRhythmButton">
 
-        <h1>Split-Kondition</h1>
+        <h1>Bestell-/Lieferrhythmus</h1>
 
         <p>
-            <strong>Eine Split-Kondition wird verwendet, um eine Verbund-Bestellung </strong>
-            <span class="LightGreycolor"> [Disposition->Verbunddisposition] </span>
-            <strong>
-                auf meherere Transporter zu verteilen, wenn die Bestellung nicht in einen Transporter passt,
-                da Sie zu schwer ist oder sie zu groß ist
-            </strong>
+            Bei einem Bestell- bzw. Lieferrhythmus handelt es sich um eine regelmäßige Serie von Bestellungen bzw. Lieferungen.
+            Diese „Serie“ kann im Konditionen-Fenster eingestellt werden.
         </p>
+
+        <h3>Bestell-Rhythmus</h3>
+
         <p>
-            Es gibt insgesamt 4 verschiedene Split-Methoden, die über Flags
-            <span class="LightGreycolor">Menge,Preise,Kosten->Bis Version 8.8-01->Flag]</span> (ab 8.8-01 über Kriterium
-            <span class="LightGreycolor">[Konditionen->Menge,Preise,Kosten->Ab Version 8.8-01->Kriterium]</span>) eingestellt werden:
+            Wählt man im Kondition-Fenster im Tab „Zeiten“ als Rhythmus „Bestell“ aus wird ein Bestellrhytmus erzeugt und es werden Bestellungen erzeugt, die im definierten Zeitraum immer bestellt werden
         </p>
-        <img src="imguse/imagesplit1.png" class="Zoom" alt="Optionen Split-Methoden" />
+
+        <h3> Liefer-Rhythmus </h3>
+
+        <p>Wählt man im Kondition-Fenster im Tab „Zeiten“ als Rhythmus „Liefer“ aus wird ein Lieferrhytmus erzeugt und es werden Bestellungen erzeugt, die im definierten Zeitraum immer geliefert werden </p>
+
+        <h3>Verbund-Liefer/Bestell-Rhythmus</h3>
+
+        <p>Alle Bestellvorschläge der nächsten Tage werden zusammengefasst und am ersten Bestelltermin als eine Bestellung vorgeschlagen. Nicht benötigte SKUs werden so mitbestellt, dass der Verbundrhythmus erreicht wird.</p>
+
+        <h3>Rhythmus-Assistent</h3>
+
+        <p>
+            Mit dem Rhythmus-Assistent wird der Rhythmus konfiguriert.
+            Man öffnet den Rhythmus-Assistenten über einen Rechtsklick im unteren Bereich und anschließend durch drücken von „Einfügen“
+        </p>
+
+        <img src="imguse/imageliefryhth1.png" alt="Settings" />
+
+        <img src="imguse/imageliefryhth2.png" alt="Rhythmus-Assistent" />
+
+        <p>Im Rhythmus-Assistenten besteht aus 10 Abschnitten </p>
 
         <ol>
-            <li> 	<strong>So voll wie möglich</strong> = ein Transporter wird vollgemacht und der Rest kommt in einen weiteren Transporter</li>
-            <li>	<strong>So gleich verteilt wie möglich</strong> = Alle Transporter transportieren die gleiche Menge.</li>
-            <li>    <strong>So sortenrein wie möglich </strong> = Gleiche SKUs <span class="LightGreycolor">[Glossar] </span> werden zusammengehalten </li>
-            <ul>
-                <li> <span class="SmallerText">	<strong>    So sortenrein wie möglich, Unterverbund betrachten (ab 8.9-07)</strong>  = Gleiche SKUs <span class="LightGreycolor">[Glossar] </span> werden zusammengehalten und die Kondition von Untergruppen werden mit beachtet. </span> </li>
-            </ul>
-            <li>  <strong> Über RW abfüllen </strong>= Die SKU [Glossar] mit der höchsten Reichweite [Reichweite] werden auf einen weiteren Transporter verteilt bis die Bestellung in den 1. Transporter passen.</li>
+            <li><strong> Rhythmuslänge:</strong> Mit welcher Periodengröße gerechnet werden soll</li>
+            <li> <strong>Rhythmusart:</strong> Welche Art von Rhythmus</li>
+            <li><strong> Bestelltag:</strong> Tag an dem immer bestellt werden soll + Ausnahmeregelung</li>
+            <li><strong> Transport-/Liefertag:</strong> Tag an dem immer geliefert werden soll + Ausnahmeregelung</li>
+            <li><strong> Lieferzeit: </strong>  Eingetragene Lieferzeit / neue Lieferzeit / exklusive Lieferzeit </li>
+            <li> <strong> Alle</strong>Abstand zwischen 2 Bestellungen</li>
+            <li> <strong> Falls zwingender Rhythmus, Rhythmusanfang: </strong> Rhythmusbeginn wird eingetragen, wenn der Rhythmus dauerhaft eingehalten werden soll, sonst kann auch abgewichen werden, falls LOGOMATE es entscheidet</li>
+            <li> <strong> Bezogen auf:</strong> Angeben für welchen von beiden Rhythmusarten der 7 Abschnitt gilt</li>
+            <li> <strong>  Verbund-Rhythmus:</strong> Bestellvorschläge werden zusammengefasst und bestellt nach definiertem Rhythmus (Abschnitt 7 muss leer sein)</li>
+            <li> <strong>Gültigkeitsbereich:</strong> Anfang & Ende vom Rhythmus</li>
         </ol>
+    </section>
 
-        <p>
-            Die Kondition wird bei den Konditionen unter dem Reiter „Menge,Preis,Kosten“ eingestellt.
-        </p>
+    <section id="UseCaseResubmissionButton">
 
-        <p>
-            <strong> Vor Version 8.5-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">>Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Max-Grenze pro Bestellung]"</span> <span class="SmallerText">(nur abfüllen möglich, ohne Bestellung mit 2. Transporter)</span>
-        </p>
+        <h1>Wiedervorlagen</h1>
 
-        <img src="imguse/imagesplit2.png" alt="Maxgrenze pro Bestellung" />
+        <p>LOGOMATE bietet die Möglichkeit Wiedervorlagen zu setzen auf Knoten.</p>
 
-        <p>
-            <strong> Ab Version 8.5-01:</strong> „Split auf Mixed (Opti) Einheit <span class="LightGreycolor"> [Konditionen->Menge,Preise,Kosten->Bis Version 8.8-01->Zweck->Split auf Mixed (Opti) Einheit]</span>“ <span class="SmallerText">(„über RW abfüllen“ nicht möglich) </span>
-        </p>
-        <img src="imguse/imagesplit3.png" alt="Split auf Mixed (Opti) Einheit" />
+        <p>Dafür muss einfach ein Rechtsklick auf den jeweiligen Knoten erfolgen & die Option „Notiz/Wiedervorlage“ ausgewählt werden.</p>
 
-        <p><strong>Ab Version 8.8-01:</strong> „Maxgrenze pro Bestellung <span class="LightGreycolor">[Konditionen->Menge,Preise,Kosten->Ab Version 8.8-01->Zweck->Maxgrenze pro Bestellung]</span>“ <span class="SmallerText">(alle Methoden möglich)</span></p>
+        <img src="imguse/imagewie1.png" alt="Knotenliste" />
 
-        <img src="imguse/imagesplit4.png" alt="Maxgrenze pro Bestellung" />
+        <img src="imguse/imagewie2.png" alt="Notiz/Wiedervorlage" />
 
+        <p>Dort können Datum und Text hinzugefügt werden. Und je nach dem, was als Text, Datum oder auf welcher Ebene die Wiedervorlage eingetragen wurde, hat die Stecknadel eine andere Farbe. </p>
+
+        <img src="imguse/imagewie3.png" alt="Erklärung" />
+
+        <p>Die Wiedervorlagen werden, nachdem sie angelegt wurden, in der Knotenliste angezeigt. </p>
+    </section>
+
+    <section id="UseCasePrecursorButton">
+
+        <h1>Vorläufer</h1>
+
+        <p>Bei einem Vorläufer wird die Historie von einer Vorläufer SKU auf eine Nachfolger SKU übermittelt. Zudem können mehrere Zeitreihen verkettet werden.</p>
+
+        <p>Ein Vorläufer kann in LOGOMATE unter <span class="BlueColor">[Parameter->Sonstiges->Vorläufer]</span>  so eingepflegt werden:</p>
+
+        <ul>
+            <li>Kopieren Sie die Vorläufer-SKU aus der Knotenliste (Zeile markieren + STRG + C) und fügen Sie die SKU unter Parameter -> Sonstiges in das Feld Vorläufer ein (STRG + V).</li>
+
+            <li> Alternative: Suchen Sie direkt in der Vorläufer-Auswahlliste. Teileingaben werden unterstützt. In großen Systemen müssen die Teil-Artikel-Nummern so präzise sein, dass die Ergebnisliste nicht zu groß wird (bis zu 100.000 Einträge).</li>
+        </ul>
+
+        <img src="imguse/imagevor1.png" alt="Einstellung" />
+
+        <p>In der Prognosegrafik werden die Vorläufer-Anteile farblich hervorgehoben (default = gelb).</p>
+
+        <img src="imguse/imagevor2.png" alt="Prognose" />
+
+        <h3>Vorläuferfaktoren </h3>
+
+        <p> Jeder Historienwert wird mit dem Vorläufer-Faktor multipliziert:</p>
+
+        <ul>
+            <li>Vorläufer-Faktor 1.0 = vollständig</li>
+
+            <li> Vorläufer-Faktor 0.5 = die Hälfte</li>
+
+            <li> Vorläufer-Faktor 2.0 = das Doppelte</li>
+        </ul>
     </section>
 
     <section id="UseCaseBufferStoreButton">
@@ -478,235 +780,6 @@
 
     </section>
 
-    <section id="UseCaseOrderRhythmButton">
-
-        <h1>Bestell-/Lieferrhythmus</h1>
-
-        <p>
-            Bei einem Bestell- bzw. Lieferrhythmus handelt es sich um eine regelmäßige Serie von Bestellungen bzw. Lieferungen.
-            Diese „Serie“ kann im Konditionen-Fenster eingestellt werden.
-        </p>
-
-        <h3>Bestell-Rhythmus</h3>
-
-        <p>
-            Wählt man im Kondition-Fenster im Tab „Zeiten“ als Rhythmus „Bestell“ aus wird ein Bestellrhytmus erzeugt und es werden Bestellungen erzeugt, die im definierten Zeitraum immer bestellt werden
-        </p>
-
-        <h3> Liefer-Rhythmus </h3>
-
-        <p>Wählt man im Kondition-Fenster im Tab „Zeiten“ als Rhythmus „Liefer“ aus wird ein Lieferrhytmus erzeugt und es werden Bestellungen erzeugt, die im definierten Zeitraum immer geliefert werden </p>
-
-        <h3>Verbund-Liefer/Bestell-Rhythmus</h3>
-
-        <p>Alle Bestellvorschläge der nächsten Tage werden zusammengefasst und am ersten Bestelltermin als eine Bestellung vorgeschlagen. Nicht benötigte SKUs werden so mitbestellt, dass der Verbundrhythmus erreicht wird.</p>
-
-        <h3>Rhythmus-Assistent</h3>
-
-        <p>
-            Mit dem Rhythmus-Assistent wird der Rhythmus konfiguriert.
-            Man öffnet den Rhythmus-Assistenten über einen Rechtsklick im unteren Bereich und anschließend durch drücken von „Einfügen“
-        </p>
-
-        <img src="imguse/imageliefryhth1.png" alt="Settings" />
-
-        <img src="imguse/imageliefryhth2.png" alt="Rhythmus-Assistent" />
-
-        <p>Im Rhythmus-Assistenten besteht aus 10 Abschnitten </p>
-
-        <ol>
-            <li><strong> Rhythmuslänge:</strong> Mit welcher Periodengröße gerechnet werden soll</li>
-            <li> <strong>Rhythmusart:</strong> Welche Art von Rhythmus</li>
-            <li><strong> Bestelltag:</strong> Tag an dem immer bestellt werden soll + Ausnahmeregelung</li>
-            <li><strong> Transport-/Liefertag:</strong> Tag an dem immer geliefert werden soll + Ausnahmeregelung</li>
-            <li><strong> Lieferzeit: </strong>  Eingetragene Lieferzeit / neue Lieferzeit / exklusive Lieferzeit </li>
-            <li> <strong> Alle</strong>Abstand zwischen 2 Bestellungen</li>
-            <li> <strong> Falls zwingender Rhythmus, Rhythmusanfang: </strong> Rhythmusbeginn wird eingetragen, wenn der Rhythmus dauerhaft eingehalten werden soll, sonst kann auch abgewichen werden, falls LOGOMATE es entscheidet</li>
-            <li> <strong> Bezogen auf:</strong> Angeben für welchen von beiden Rhythmusarten der 7 Abschnitt gilt</li>
-            <li> <strong>  Verbund-Rhythmus:</strong> Bestellvorschläge werden zusammengefasst und bestellt nach definiertem Rhythmus (Abschnitt 7 muss leer sein)</li>
-            <li> <strong>Gültigkeitsbereich:</strong> Anfang & Ende vom Rhythmus</li>
-        </ol>
-    </section>
-
-    <section id="UseCasePartitionButton">
-
-        <h1>Partitionen</h1>
-
-        <p>Mit Partitionen können Reservierungen 1:1 zu einer Bestellung erstellt werden die direkt einem Auftrag zugeordnet werden kann.</p>
-
-        <p> Um Partitionen nutzen zu können muss folgendes erfüllt werden: </p>
-
-        <p>
-            1. Die Systemeinstellung „SKU-Virtualisierung aktivieren“ muss aktiv sein.
-            Hinweis: Sprechen Sie ihren REMIRA Ansprechpartner dafür an
-        </p>
-
-        <img src="imguse/imagepar1.png" alt="SKU-Virtualisierung aktivieren" />
-
-        <p>
-            2. Der Parameter Gütekriterium muss mit „Mit Partitionierung“ oder „Partitionen verwenden Anfangsbestand nicht“ gefüllt sein.
-        </p>
-
-        <img src="imguse/imagepar2.png" alt="Güterkriterium" />
-
-        <p>
-            3. Es muss bei der Reservierung ein AddOn-Lieferant über die Spalte „L.-Typ“ sowie eine Partitionsnummer über die Spalte „Partition“ übergeben werden
-        </p>
-
-        <img src="imguse/imagepar3.png" alt="Reservierungen" />
-
-        <p>
-            Wenn alles richtig eingestellt wurde, könnte es wie folgt ablaufen:
-        </p>
-
-        <img src="imguse/imagepar4.png" alt="Reservierung" />
-
-        <p>
-            Zum 21.01.2014 liegen vier Reservierungen für die SKU Design-HK 0,80 schwarz vor.
-            Zwei mit und zwei ohne Partitions-Nummer.
-        </p>
-
-        <img src="imguse/imagepar5.png" alt="Bestellung" />
-
-        <p>
-            Die Reservierungen ohne Partitions-Nummer werden zu einem Auftrag zusammengefasst. Eine Zuordnung zu einer Reservierung ist nicht mehr möglich.
-        </p>
-
-        <p>
-            Die Reservierungen mit Partitions-Nummer werden zu 2 getrennten Aufträgen.
-        </p>
-
-    </section>
-
-    <section id="UseCaseFilterClassesButton">
-
-        <h1>Filter(-klassen)</h1>
-
-        <p>LOGOMATE bietet 3 Möglichkeiten, um nach SKUs aus der Knotenliste filtern zu können.</p>
-
-        <h3> 1. Filter-Dialog</h3>
-
-        <img src="imguse/imagefil1.png" alt="Filter Dialog" />
-
-        <h5>  Klassenbaum -> Rechsklick “Filter” -> „Filter bearbeiten“  </h5>
-
-        <img src="imguse/imagefil2.png" alt="Filter bearbeiten" />
-
-        <p>
-            In diesem Fenster kann ein temporärer Filter eingestellt werden, der beim nächsten Start von LOGOMATE wieder zurückgesetzt wird.
-        </p>
-
-        <p> Es kann gefiltert werden nach: </p>
-
-        <ul>
-            <li>Spalten aus der Knotenliste</li>
-
-            <li> Parametern</li>
-
-            <li> Widervorlagen </li>
-
-            <li> Aktionen</li>
-
-            <li> Planwerten </li>
-        </ul>
-
-        <h3>2.	Filterklasse</h3>
-
-        <img src="imguse/imagefil1.png" alt="Filter Dialog" />
-
-        <h5>  Klassenbaum -> Rechsklick “Filter” -> „Filter bearbeiten“  </h5>
-
-        <img src="imguse/imagefil3.png" alt="Klasse einfügen" />
-
-        <h6> Typ: Filterklasse</h6>
-
-        <p>Die Filterklassen werden fest angelegt, also bleiben Filterklassen auch nach erneuten Starten von LOGOMATE im Klassenbaum.</p>
-
-        <p>Außerdem kann mit dem „Global“-Haken entschieden werden, ob der Filter zugänglich für alle oder nur für sich selbst sichtbar sind.</p>
-
-        <p>Ein weiterer Unterschied zum Filter-Dialog ist, dass es nun kein Limit gibt nach wie vielen Spalten gefiltert werden kann. </p>
-
-        <p>Es ist auch möglich eine Filterklasse in einer Filterklasse anzulegen. So können auch Filter-Gruppen erstellt werden.</p>
-
-        <p>Der letzte Unterschied zum Filter-Dialog ist, dass die SKUs die im Filter landen parametrierbar sind. Dafür muss nur der Filter ausgewählt sein, wenn Parameter vergeben werden.</p>
-
-        <h3> 3.	Zuordnungsklassen</h3>
-
-        <img src="imguse/imagefil1.png" alt="Filter Dialog" />
-
-        <h5>  Klassenbaum -> Rechsklick “Filter” -> „Filter bearbeiten“  </h5>
-
-        <img src="imguse/imagefil4.png" alt="Klasse einfügen" />
-
-        <h6> Typ: Zuordnungsklasse</h6>
-
-        <p>Zuordnungsklassen haben alle Funktionen, die auch die Filterklassen haben, mit einem Unterschied.</p>
-
-        <p>
-            Bei Zuordnungsklassen sind statisch da nicht gefiltert wird.
-            Alle gewünschten SKUs werden reingezogen, die man dort haben möchte.
-        </p>
-
-        <p>Auch hier können Filterklassen in Zuordnungsklassen angelegt werden und Gruppen gebildet werden.</p>
-
-        <p>Es ergibt sich folgendes Bild zu den 3 „Filtern“:</p>
-
-        <img src="imguse/imagefil5.png" alt="Tabelle" />
-
-    </section>
-
-    <section id="UseCaseResubmissionButton">
-
-        <h1>Wiedervorlagen</h1>
-
-        <p>LOGOMATE bietet die Möglichkeit Wiedervorlagen zu setzen auf Knoten.</p>
-
-        <p>Dafür muss einfach ein Rechtsklick auf den jeweiligen Knoten erfolgen & die Option „Notiz/Wiedervorlage“ ausgewählt werden.</p>
-
-        <img src="imguse/imagewie1.png" alt="Knotenliste" />
-
-        <img src="imguse/imagewie2.png" alt="Notiz/Wiedervorlage" />
-
-        <p>Dort können Datum und Text hinzugefügt werden. Und je nach dem, was als Text, Datum oder auf welcher Ebene die Wiedervorlage eingetragen wurde, hat die Stecknadel eine andere Farbe. </p>
-
-        <img src="imguse/imagewie3.png" alt="Erklärung" />
-
-        <p>Die Wiedervorlagen werden, nachdem sie angelegt wurden, in der Knotenliste angezeigt. </p>
-    </section>
-
-    <section id="UseCasePrecursorButton">
-
-        <h1>Vorläufer</h1>
-
-        <p>Bei einem Vorläufer wird die Historie von einer Vorläufer SKU auf eine Nachfolger SKU übermittelt. Zudem können mehrere Zeitreihen verkettet werden.</p>
-
-        <p>Ein Vorläufer kann in LOGOMATE unter <span class="BlueColor">[Parameter->Sonstiges->Vorläufer]</span>  so eingepflegt werden:</p>
-
-        <ul>
-            <li>Kopieren Sie die Vorläufer-SKU aus der Knotenliste (Zeile markieren + STRG + C) und fügen Sie die SKU unter Parameter -> Sonstiges in das Feld Vorläufer ein (STRG + V).</li>
-
-            <li> Alternative: Suchen Sie direkt in der Vorläufer-Auswahlliste. Teileingaben werden unterstützt. In großen Systemen müssen die Teil-Artikel-Nummern so präzise sein, dass die Ergebnisliste nicht zu groß wird (bis zu 100.000 Einträge).</li>
-        </ul>
-
-        <img src="imguse/imagevor1.png" alt="Einstellung" />
-
-        <p>In der Prognosegrafik werden die Vorläufer-Anteile farblich hervorgehoben (default = gelb).</p>
-
-        <img src="imguse/imagevor2.png" alt="Prognose" />
-
-        <h3>Vorläuferfaktoren </h3>
-
-        <p> Jeder Historienwert wird mit dem Vorläufer-Faktor multipliziert:</p>
-
-        <ul>
-            <li>Vorläufer-Faktor 1.0 = vollständig</li>
-
-            <li> Vorläufer-Faktor 0.5 = die Hälfte</li>
-
-            <li> Vorläufer-Faktor 2.0 = das Doppelte</li>
-        </ul>
-    </section>
-
     <section id="UseCaseAbcAnalysisButton">
 
         <h1> ABC-Analyse  </h1>
@@ -826,7 +899,7 @@
         <p>Knotenliste nach ABC-Wert Absteiegnd sotiert. Die Option <strong>Grenzen Wertmäßig</strong> ist nicht aktiv</p>
 
         <img src="imguse/imageabc13.png" alt="Knotenliste" />
-       
+
         <p>Die gleiche Liste. Die Option <strong>Grenze Wertmäßig</strong> ist aktiv. Die ABC-Klassifizierung hat sich geändert.</p>
 
         <h3><strong>Negative Mengen ignorieren</strong></h3>
@@ -974,79 +1047,6 @@
         <img src="imguse/imageakt3.png" alt="Aktionen" />
 
         <p>Damit die Aktionsmengen künftig nicht durch automatische Aktionen angepasst werden, wurde bei zwei Aktionen der Aktionstyp von Ausreißer auf Exklusive umgestellt.</p>
-
-    </section>
-
-    <section id="UseCaseContractsButton">
-
-        <h1>Kontrakte</h1>
-
-        <p>
-            Kontrakte in <span class="BlueColor"> LOGOMATE</span><span class="LightGreycolor"> [Konditionen/Parameter]</span> sind Vereinbarungen zwischen einem Lieferanten über die Lieferung einer bestimmten SKU.
-            Der Kontrakt legt keine konkreten Liefermengen oder -termine fest, sondern definiert lediglich die Gesamtmenge, die innerhalb des vereinbarten Zeitraums geliefert werden soll (Mengenkontrakt).
-        </p>
-
-        <p>Zu dem festgelegten Zeitpunkt muss die Ware jederzeit bereitstehen.</p>
-
-        <p> <strong>Kundenkontrakte </strong></p>
-
-        <p>Beim Kundenkontrakt wird kein fester Tag festgelegt, sondern ein Lieferzeitraum.</p>
-
-        <h5>Beispiel:</h5>
-
-        <img src="imguse/imagekon1.png" alt="Kundenkontrakte" />
-
-        <h6> (Anders als bei den Reservierungen wird im Kundenkontrakt ein SiB festgelegt.)   </h6>
-
-        <h3>Kontraktarten</h3>
-
-        <img src="imguse/imagekon2.png" alt="Bestellmenge" />
-
-        <h4>Kontrakte ignorieren</h4>
-
-        <p>Die in den Konditionen erfassten Kontrakte werden ignoriert.</p>
-
-        <h4>Lieferantenbevorzugung </h4>
-
-        <p>Die Lieferantenauswahl richtet sich nach den vorhandenen Kontraktarten. Der Zeitpunkt der Verfügbarkeit wird bestimmt, wobei das zugrunde liegende Entscheidungskriterium im Abschnitt ‚Kontraktauswahl‘ definiert ist.</p>
-
-        <h4>   Lieferantenauswahl </h4>
-
-        <p>Die Lieferantenauswahl erfolgt entweder auf Grundlage vorhandener Kontrakte oder gemäß dem im Abschnitt ‚Kontraktauswahl‘ festgelegten Entscheidungskriterium.</p>
-
-        <h4>Max. Menge</h4>
-
-        <p>Die maximal abrufbare Menge beim Lieferanten</p>
-
-        <h4>Max. Menge u. Lieferantenauswahl</h4>
-
-        <p>Die Auswahl des Lieferanten erfolgt auf Basis der maximal abrufbaren Menge sowie der festgelegten Kriterien zur Lieferantenauswahl.</p>
-
-        <h4>Bestellungsaufteilung</h4>
-
-        <p>Wenn diese Option aktiviert ist, können die Bestellmengen für SKUs mit mehreren aktiven Lieferanten aufgeteilt werden. Die Optionen Dauerauftrag und Bestellaufteilung stehen zur Verfügung, beide können kombiniert werden.</p>
-
-        <h3>Pseudo-Kontrakte</h3>
-
-        <p>
-            Bei Pseudo-Kontrakten kann ein zusätzlicher SiB-Wert vorgegeben werden. Für diese Art von Kontrakten darf keine Kunden-Nummer hinterlegt werden,
-            da sonst möglicherweise das Feld „Geliefert“ automatisch befüllt wird.
-            Von REMIRA importierte Pseudo-Kunden-Kontrakte enthalten nicht die Kunden-Nummer, sondern den Vermerk „PSEUDO“.
-        </p>
-
-        <h3>Kontrakte auf Artikel-Ebene</h3>
-
-        <p>Ein Artikel kann mehrere Kontrakte besitzen, die im Reiter Kontrakte des Konditionenfensters hinzugefügt und automatisch auf die zugehörigen SKUs vererbt werden.</p>
-
-        <h3>Lieferantenkontrakte splitten</h3>
-
-        <p>Lieferantenkontrakte können ab <span class="BlueColor"> LOGOMATE Version LM2021-11 / 8.5-03 </span>nach Kontraktmenge und -zeitraum gesplittet werden.</p>
-
-        <p>
-            Wählen Sie hierzu unter [Parameter → Disposition → Kontraktart] die Optionen „Lieferantenauswahl u.Max. Menge“ aus.
-            Für jeden Kontrakt wird dabei eine separate Bestellposition erzeugt.
-            Die Auftragsnummer der Bestellung bleibt dabei erhalten – es wird lediglich eine neue Position mit eigener Positionsnummer zur bestehenden Bestellung hinzugefügt.
-        </p>
 
     </section>
 
