@@ -19,6 +19,7 @@
     </section>
 
     <section id="UseCaseTransferButton">
+        
         <h1>Transfer</h1>
 
         <p>
@@ -51,7 +52,6 @@
             because, for example, the excess quantity is not sufficient to compensate for the shortfall, the stock transport order is canceled
         </p>
 
-
         <p>
             If several SKUs have a missing quantity, the SKU with the lowest missing quantity is preferred.
         </p>
@@ -72,7 +72,9 @@
     </section>
 
     <section id="UseCaseContainerOptimizationButton">
+
         <h1>ContaineroptimierungEnglish</h1>
+        
         <p>
             A container optimization determines a cost-effective container
             combination for a calculated (trigger) quantity and, if necessary, the rounding
@@ -142,13 +144,50 @@
 
     </section>
 
+    <section id="UseCaseSporadicProcedureButton">
+
+        <h1>Sporadic method</h1>
+
+        <p>
+            The sporadic method was developed for time series with irregular or low sales.<br />
+            It is characterized by uncertainties both in the amount of the forecast values and in their timing.
+            The standard deviation of the forecast value represents the “vertical uncertainty,” while the standard deviation of the duration describes the “horizontal uncertainty.”           
+        </p>
+
+        <img src="imguse/imagespo1en.png" alt="Sporadic process in the parameter window" />
+
+        <h5>Min. number of departures</h5>
+
+        <p>Required number of historical values (excluding zero values) </p>
+
+        <h5>Max. relative departure frequency</h5>
+
+        <p>
+            Maximum permissible proportion of departures in all
+            historical values = proportion of non-zero values in % <br />
+            <strong>Example: </strong>Three departures, ten historical values (including zero values) => departure frequency = 30%
+        </p>
+
+        <h5>Min. gap ratio</h5>
+
+        <p>
+            Required minimum proportion of gaps between departures; any period greater than zero between two departures is counted as a gap.
+            <strong>Example: </strong>Five gaps between ten departures => Gap ratio = 50%
+        </p>
+
+        <h5>Max. distance deviation</h5>
+
+        <p>Maximum permitted standard deviation of the time interval – in other words: Gaps that are too large are not permitted.</p>
+
+    </section>
+
     <section id="UseCaseDueDatesButton">
 
         <h1>Saison</h1>
 
         <p>
-            If LOGOMATE detects unusual issues in the history, it attempts to correct them. 
-            If this happens frequently in the same year/month/week period with a similar deviation of X%, a season is recognized. 
+            If LOGOMATE detects unusual issues in the history, it attempts to correct them.
+            If this happens frequently in the same year/month/week period with a similar deviation of X%, a season is recognized.
             This also affects the forecast, as this “deviation” is then used in further calculations.
         </p>
 

@@ -183,6 +183,7 @@ namespace AzubiApp.Views
                 "html/imguse/imagevbe2.png",
                 "html/imguse/imagevbe3.png",
                 "html/imguse/imagespo1.png",
+                "html/imguse/imagespo1en.png",
                 "html/imguse/imagesai1.png",
                 "html/imguse/imagesai2.png",
                 "html/imguse/imagesai3.png",
