@@ -14,15 +14,62 @@
 
 <body>
     <section id="UseCaseAutoStoreButton">
-        <h1>UseCaseAutoStoreButtonEnglish</h1>
+        <h1>Auto-Store Procedure</h1>
+
+        <p>
+            In an Auto-Store procedure, units are defined that are used for orders instead of optimization units.
+            These units are scheduled as a combination depending on the quantity required.
+        </p>
+
+        <p>Example:</p>
+
+        <img src="imguse/imageauto1en.png" alt="Assigned suppliers" />
+
+        <img src="imguse/imageauto2en.png" alt="Table" />
+
+        <p>If a defined unit is exceeded, the next higher unit is used instead of a multiple of the previous unit.</p>
+
+        <p>Requirements:</p>
+        <ul>
+            <li>The units should increase in size from top to bottom (SU0 -> SU?)</li>
+
+            <li>Range between units should increase with increasing BE line</li>
+
+            <li>Each unit should have an OU-Box ticked</li>
+
+            <li>None of the units should have a Mix-Box ticked</li>
+        </ul>
+
+        <h3>Auto-Store Procedure with Max. Coverage</h3>
+
+        <p>
+            If the order quantity exceeds the Max. Coverage,
+            it will be rounded down to the largest possible OU
+        </p>
+
+        <p>If a supplier unit is defined, it is used as the order unit</p>
+
+        <p>Example:</p>
+
+        <h6>[Forecast: 5 Unit/Month | Max. Coverage: 3 Months]</h6>
+
+        <p>With a required quantity of 8.20, 11 items are ordered instead of 20 (8 + 3)</p>
+
+        <p><span class="BlueColor">[+ Supplier Unit: 10 Units]</span></p>
+
+        <p>
+            The order quantity is adjusted to the SU (ticked box). This means that the 11 items are reduced to 10,
+            as 20 items (2*10) would exceed the maximum range.
+        </p>
+
     </section>
 
     <section id="UseCaseTransferButton">
-        <h1>Transfer</h1>
+        <h1>Stock Transfer</h1>
 
         <p>
-            A stock transfer is a transfer of stock between warehouses/stores with the same item. More precisely
-            SKUs with shortages are saved from an OoS situation with deliveries of SKUs with excess quantities.
+            A stock transfer is a transfer of stock between warehouses/stores with the same item.
+            More specifically, SKUs with missing stock are saved from an OoS situation by deliveries of SKUs with excess stock.
         </p>
 
         <p>
@@ -30,72 +77,77 @@
         </p>
 
         <p>
-            In order to determine whether a stock transfer makes sense, the quantities that can be accepted and delivered are also calculated for both warehouses/SKUs.+
+            To determine whether a stock transfer is appropriate, the quantities that can be received and issued for both warehouses/SKUs are also calculated.
         </p>
 
         <ul>
-            <li>	The missing quantities are calculated for the SKU that accepts </li>
+            <li>	The receiving SKU is used to calculate the missing quantities. </li>
         </ul>
 
-        <img src="imguse/imageuml1.png" alt="Error quantity" />
+        <img src="imguse/imageuml1en.png" alt="Error quantity" />
 
         <ul>
-            <li> The SKU that delivers the excess quantities are calculated</li>
+            <li> The exceeding quantities are calculated for the delivering SKU.</li>
         </ul>
 
-        <img src="imguse/imageuml2.png" alt="Excess quantity" />
+        <img src="imguse/imageuml2en.png" alt="Excess quantity" />
 
         <p>
-            If this calculation reveals that the quantity accepted or delivered is not suitable,
-            because, for example, the excess quantity is not sufficient to compensate for the shortfall, the stock transport order is canceled
+            If this calculation shows that the incoming or outgoing quantity is still not enough,
+            for example, because the excess quantity is not large enough to make up for the missing quantity, the stock transfer order is canceled.
         </p>
 
 
         <p>
-            If several SKUs have a missing quantity, the SKU with the lowest missing quantity is preferred.
+            If several SKUs have a missing quantity, the SKU with the smallest missing quantity is preferred.
         </p>
 
         <p>
-            If the shortfall is the same, the SKU with the latest availability date is selected.
+            If the missing quantity is identical, the SKU with the latest availability date is selected.
         </p>
 
         <p>
-            If a stock transfer is accepted, a reservation is made in the stock transfer SKU.
+            In the event of a confirmed stock transfer, a reservation is created for the stock transfer SKU.
         </p>
 
         <p>
-            To enable relocations, adjustments must be made to the LOGOMATE system,
-            for which you must contact your LOGOMATE contact person who will give you further details.
+            To activate stock transfers, adjustments must be made to the LOGOMATE system.
+            Please contact your LOGOMATE contact person for further information.
         </p>
 
     </section>
 
-    <section id="UseCaseContainerOptimizationButton"> 
-        <h1>ContaineroptimierungEnglish</h1> 
+    <section id="UseCaseContainerOptimizationButton">
+        <h1>Container Optimization </h1>
+
         <p>
-            A container optimization determines a cost-effective container
-            combination for a calculated (trigger) quantity and, if necessary, the rounding
-            up of this container optimization. In order for container optimization to be used, the quality 
-            criterion in the Compound group must be set to “Container optimization”.
+            A container optimization determines a cost-effective container combination for a calculated (trigger) quantity and, if
+            necessary, the rounding up of this container optimization. [Parameters -> Replenishment-> Quality criterion].  8.5/8.6
         </p>
 
-        <img src="imguse/imagecosen.png" alt="Setting in the parameters" />
+        <p>
+            In order for container optimization to be used, the quality criterion in the
+            Compound group [Parameters -> Replenishment-> Quality criterion] must be set to “Container optimization”.
+
+        </p>
+
+        <img src="imguse/imagecon1en.png" alt="Setting in the parameters" />
         <h5>Setting in the parameters</h5>
 
         <p>
-            These are also created in the conditions &gt;
+            These are also created in the conditions
             Conditions -> Units -> Conditions Quantities/ Prices/ Costs.
         </p>
 
-        <img src="imguse/imagecow.png" alt="Einstellung in den Konditionen" />
+        <img src="imguse/imagecon2en.png" alt="Setting in the condition" />
         <h5>Setting in the conditions</h5>
 
         <p>
-            If LCL containers are also to be taken into account, 
+            If LCL containers are also to be considered,
             an additional line must be added under “Quantities, prices, costs”:
         </p>
 
-        <img src="imguse/imagecox.png" alt="LCL Container Beispiel" />
+        <img src="imguse/imagecon3en.png" alt="LCL Container Beispiel" />
 
         <h5>
             LCL stands for “Less than Container Load” and refers to a shipping
@@ -116,16 +168,16 @@
 
         <ul>
             <li>
-                If an LCL container is included in the container combination, 
+                If an LCL container is included in the container combination,
                 the order items are sorted by descending density
                 and loaded into the LCL container one after the other until the intended volume is reached.
             </li>
             <li>
-               	The order items and containers are sorted according to a suitable 
-                criterion, for example by density or possible residual density.
+                The order items and containers are sorted according to a suitable
+                criterion, for example by density or possible residual density. [Selection of the optimum criterion see sort criterion in REMIRA Wiki].
             </li>
             <li>
-                The order items are then distributed to the containers 
+                The order items are then distributed to the containers
                 either by optimization unit or - if possible - by bin location.
             </li>
             <li>
@@ -133,7 +185,7 @@
                 and the order of the containers is adjusted accordingly.
             </li>
             <li>
-                If an item no longer fits into a container, the container with the smallest overrun of the permitted volume is selected. 
+                If an item no longer fits into a container, the container with the smallest overrun of the permitted volume is selected.
                 If a storage space restriction must be observed, exceeding the weight limit is
                 considered less critical than exceeding the storage space capacity.
             </li>
@@ -141,9 +193,622 @@
 
     </section>
 
-    <section id=""></section>
+    <section id="UseCaseSplitConditionsButton">
+
+        <h1>Split-Condition</h1>
+
+        <p>
+            <strong>
+                A split condition is used to distribute a Compound Order among several transporters
+                if the order does not fit into one transporter because it is too heavy or too large.
+            </strong>
+        </p>
 
 
+        <p>
+            There are a total of 4 different split methods,
+            which can be set using “flags” (from 8.8-01 using “criteria”):
+        </p>
+
+        <img src="imguse/imagesplit1en.png" alt="Criterion" />
+
+        <ol>
+            <li> <strong> Split as full as possible =</strong> one transporter is filled to the maximum and the rest goes into an additional transporter</li>
+
+            <li> <strong>Split as evenly distributed as possible =</strong> all transporters carry the same quantity  </li>
+
+            <li> <strong>Split as single variety as possible =</strong> identical SKUs are kept together</li>
+
+            <li> <strong> Reduce down according to coverage =</strong> The SKUs with the highest coverage are distributed to another transporter until the order fits into the first transporter.</li>
+
+        </ol>
+
+        <p>The condition is set in the conditions under the “Quantity, Price, Costs” tab.</p>
+
+        <p> <strong>Before version 8.5-01:</strong> “Maximum limit per order” (only reducing down possible, without order with 2nd transporter)</p>
+
+
+        <img src="imguse/imagesplit2en.png" alt="conditions" />
+
+
+        <p><strong>From version 8.5-01:</strong> “Split to mixed (Opti) Unit” (“Reduce down according to coverage” not possible)</p>
+
+
+        <img src="imguse/imagesplit3en.png" alt="Order schedule" />
+
+        <p> From version 8.8-01: “Maximum limit per order” (all methods possible)</p>
+
+        <p>Split to Mixed (Opti) Unit</p>
+
+
+        <img src="imguse/imagesplit4en.png" alt="conditions" />
+
+    </section>
+
+    <section id="UseCasePartitionButton">
+
+        <h1>Partition</h1>
+
+        <p>With partitions, reservations can be created 1:1 for an order that can be assigned directly to an order.</p>
+
+        <p>To be able to use partitions, the following must be fulfilled:</p>
+
+
+        <p>
+            1.	The system setting “Activate SKU virtualization” must be active.
+            Note: Talk to your REMIRA contact person about this
+        </p>
+
+        <img src="imguse/imagepar1en.png" alt="SKU Virtuallierung" />
+
+        <p>2.	The quality criterion parameter must be filled with “With partitioning” or “Partitions do not use initial stock”</p>
+
+        <img src="imguse/imagepar2en.png" alt="Order Quantity" />
+
+        <p>3.	An AddOn supplier must be transferred via the “L. type” column and a partition number via the “Partition” column when making the reservation</p>
+
+
+        <img src="imguse/imagepar3en.png" alt="Alternate Text" />
+
+        <p>If everything has been set up correctly, it could work as follows:</p>
+
+        <img src="imguse/imagepar4en.png" alt="Reservations for" />
+
+        <p>As of 21.01.2014, there are four reservations for the SKU Design-HK 0.80 black. Two with and two without a partition number.</p>
+
+        <img src="imguse/imagepar5en.png" alt="Oeders for" />
+
+        <p>The reservations without a partition number are combined into one order. It is no longer possible to assign them to a reservation.</p>
+
+        <p>The reservations with a partition number become 2 separate orders.</p>
+    </section>
+
+    <section id="UseCaseFilterClassesButton">
+
+        <h1>Filter(classes)</h1>
+
+        <p>LOGOMATE offers 3 options for filtering SKUs in the node list.</p>
+
+        <h3> 1. Filter-Dialog</h3>
+
+
+        <img src="imguse/imagefil1en.png" alt="Filter Dialog" />
+
+        <h5>  Classtree -> Rightclick “Filter” -> „Edit Filter“ </h5>
+
+        <img src="imguse/imagefil2en.png" alt="Filter bearbeiten" />
+
+        <p>
+            In this window, you can set a temporary filter that will be reset the next time LOGOMATE is started.
+        </p>
+
+
+        <p> You can filter by: </p>
+
+        <ul>
+            <li>Columns from the node list</li>
+
+            <li> Parameters</li>
+
+            <li> Follow-ups </li>
+
+            <li> Actions</li>
+
+            <li> Planned values </li>
+        </ul>
+
+        <p>At the top, you can also choose whether inactive SKUs should be included and whether upper- and lower-case letters should be taken into account in the entries.</p>
+
+        <h3>2. Filter Class</h3>
+
+        <img src="imguse/imagefil1en.png" alt="Filter Dialog" />
+
+        <h5>  Classtree -> Rightclick “Filter” -> „New Class“ </h5>
+
+        <img src="imguse/imagefil3en.png" alt="insert class " />
+
+        <h6> Type: Filter class</h6>
+
+        <p>The filter classes are permanently created, meaning that filter classes remain in the class tree even after LOGOMATE is restarted.</p>
+
+        <p>In addition, the “Global” checkbox can be used to decide whether the filter is accessible to everyone or only visible to yourself.</p>
+
+        <p>Another difference to the filter dialog is that there is now no limit to the number of columns that can be filtered. </p>
+
+        <p>It is also possible to create a filter class within a filter class. This allows filter groups to be created.</p>
+
+        <p>The final difference to the filter dialog is that the SKUs that end up in the filter can be parameterized. To do this, the filter must be selected when parameters are assigned.</p>
+
+        <h3>3.	Assignment Class</h3>
+
+        <img src="imguse/imagefil1en.png" alt="Filter Dialog" />
+
+        <h5>  Classtree -> Rightclick “Filter” -> „New Class“ </h5>
+
+        <img src="imguse/imagefil4en.png" alt="Klasse einfügen" />
+
+        <h6> Type: Assignment Class</h6>
+
+        <p>Assignment classes have all the functions that filter classes have, with one difference. Assignment classes are static because they are not filtered. </p>
+
+        <p>
+            All desired SKUs that you want to have there are included.
+        </p>
+
+        <p>Here, filter classes can also be created in assignment classes and groups can be formed.</p>
+
+        <p>The following picture results for the 3 “filters”: </p>
+
+        <img src="imguse/imagefil5en.png" alt="Table" />
+
+    </section>
+
+
+    <section id="UseCaseContractsButton">
+
+
+        <h1>Contracts</h1>
+
+
+        <p>
+            Contracts in <span class="BlueColor"> LOGOMATE</span><span class="LightGreycolor"> [Conditions/Parameters]</span> are agreements between a supplier and a customer regarding the delivery of a specific SKU.
+            The contract does not specify concrete delivery quantities or dates but merely defines the total quantity to be delivered within the agreed period (quantity contract).
+
+        </p>
+
+
+        <p>The goods must be ready at any time at the specified time.</p>
+
+        <p> <strong>Customer contracts </strong></p>
+
+
+        <p>Customer contracts do not specify a fixed date, but rather a delivery period.</p>
+
+        <h5>Example:</h5>
+
+        <img src="imguse/imagekon1en.png" alt="Customercontracts" />
+
+        <h6> (Unlike reservations, a SFT is specified in the customer contract.) </h6>
+
+        <img src="imguse/imagekon2en.png" alt="Stock Chart" />
+
+        <h6>(The amount increases over the period from the beginning to the end.)</h6>
+
+
+        <h3>Contract types</h3>
+
+        <img src="imguse/imagekon3en.png" alt="Order Quantity" />
+
+
+        <h4>Ignore contracts</h4>
+
+        <p>The contracts specified in the terms and conditions are ignored.</p>
+
+        <h4>Favor Supplier </h4>
+
+        <p>Supplier selection is based on the existing contract types. The time of availability is determined, with the underlying decision criterion defined in the “Contract selection” section.</p>
+
+        <h4>   Select Supplier  </h4>
+
+        <p>Suppliers are selected either on the basis of existing contracts or in accordance with the decision criteria specified in the section entitled “Select.”</p>
+
+        <h4>Max. quantity</h4>
+
+        <p>The maximum quantity that can be called off from the supplier.</p>
+
+        <h4>Maximum quantity and supplier selection</h4>
+
+        <p>The supplier is selected based on the maximum quantity that can be called up and the specified criteria for supplier selection.</p>
+
+
+        <h4>Order splitting</h4>
+
+        <p>If this option is enabled, order quantities for SKUs with multiple active suppliers can be split. The options Standing order and Order splitting are available, and both can be combined</p>
+
+        <h3>Pseudo contracts</h3>
+
+        <p>
+            An additional SFT value can be specified for pseudo contracts. No customer number may be stored for this type
+            of contract, as otherwise the “Delivered” field may be filled in automatically. Pseudo customer contracts
+            imported from REMIRA do not contain the customer number, but the note “PSEUDO”.
+        </p>
+
+
+        <h3>Contracts at article level</h3>
+
+        <p>An item can have multiple contracts, which are added in the Contracts tab of the Conditions window and automatically inherited by the associated SKUs.</p>
+
+        <h3>Split supplier contracts</h3>
+
+
+        <p>Supplier contracts can be split according to contract quantity and period from <span class="BlueColor"> LOGOMATE version LM2021-11 / 8.5-03 </span>onwards</p>
+
+        <p>
+            To do this, select the options “Supplier selection and max. quantity” under [Parameters → Disposition → Contract type].
+            A separate order item is created for each contract.
+            The order number of the purchase order remains the same, only a new item with its own position number is added to the existing purchase order.
+
+        </p>
+
+    </section>
+
+
+
+    <section id="UseCaseSftTypesButton">
+        <h1> SFT-Types</h1>
+        <p>
+            The safety stock level (SFT) is the minimum stock level required to avoid an out-of-stock situation.
+            [Stock simulation]. Given the available parameters and conditions.
+        </p>
+        <img src="imguse/imagesib1en.png" alt="Stock simulation" />
+
+        <h5>(The SFT is represented in LM by the blue dashed straight line.)</h5>
+
+        <p>
+            1. When stock is almost out of stock, the customer's usual order quantity is reordered.
+
+
+            <br /> 2. Once the SFTis reached, an automatic reorder is triggered to replenish stock.
+
+            <strong><u><br />Common types </u> </strong>
+
+            <strong> <br />Effective: </strong>Standard deviation over the simulation period.
+
+            <strong> <br />Effectively dynamic:  </strong> : Here, the intervals are not considered directly in terms of months, as is the case with the effective interval, but rather the interval
+            between the order date and the availability date (from the second order day).
+
+            <strong><u><br />Rare types</u></strong>
+
+            <strong> <br />Minimal:  </strong> Refers exclusively to Min.SFT(parameter) or 0
+
+            <strong> Dynamic: </strong> Increasingly refers to forecasting errors (frequent inaccuracy -> SFT monotonically increasing).
+
+            <strong> <br />Max. departure: </strong> A daily sale is required here.
+
+            <strong>Total expenditure in WBZ:</strong> Represents the sum of all departures during the WBZ.
+        </p>
+
+
+        <h1> Presentation of the SFT types  </h1>
+
+        <p> <strong> Minimal </strong> option: <img src="imguse/imagesib2en.png" alt="Minimal optional:" /> </p>
+
+        <p>By entering Min.SiB: <img src="imguse/imagesib3en.png" alt="Stock simulation" /></p>
+
+        <h5>(The dotted line indicates the minimum SFT set in the parameter, and the inventory also adjusts to this.)</h5>
+
+        <p> <strong>Effective:</strong><img src="imguse/imagesib4en.png" alt="Stock simulation" />  </p>
+
+        <h5>
+            (The safety stock is calculated on a rolling basis and reflects the changing standard deviation over the entire simulation period.
+            The SiB fluctuates and even goes beyond the planning horizon.)
+        </h5>
+
+        <p><strong>Effectively dynamic</strong></p>
+        <img src="imguse/imagesib5.png" alt="Stock simulation" />
+
+        <h5>
+            (The SiB rises continuously between the order date
+            and the availability date and falls as soon as new goods become available.)
+        </h5>
+
+        <p><strong>Dynamic:</strong></p>
+        <img src="imguse/imagesib6.png" alt="Stock simulation" />
+
+        <h5>
+            (There is a forecast inaccuracy here, and from a certain point in time,
+            when the standard deviation increases, the value rises “monotonically”).
+        </h5>
+
+        <p><strong>Max. departure:</strong></p>
+        <img src="imguse/imagesib7.png" alt="Stock simulation" />
+
+        <h5>(The SFT type Max. Departure only provides results if daily historical data is available)</h5>
+
+        <p><strong>Disposal amount in WBZ::</strong></p>
+        <img src="imguse/imagesib8.png" alt="Bestandssimulation" />
+        <h5>
+            (The SFT is continuously maintained at the level of the sum of historical values within the WBZ,
+            provided that these exceed the minimum SFT.)
+        </h5>
+    </section>
+
+    <section id="UseCaseOrderRhythmButton">
+
+        <h1>Order-/Delivery Rhythm</h1>
+
+        <p>
+            An order or delivery rhythm is a regular series of orders or deliveries.
+            This “series” can be set in the conditions window.
+
+        </p>
+
+        <h3><u>Order-Rhythm</u></h3>
+
+        <p>
+            If you select “Order” as the rhythm in the “Order Schedule” tab in the conditions window, an order rhythm is created, and orders are generated that are always placed within the defined period.
+        </p>
+
+        <h3> <u>Delivery-Rhythm</u></h3>
+
+        <p>If you select “Delivery” as the rhythm in the “Order Schedule” tab in the conditions window, a delivery rhythm is created, and orders are generated that are always delivered within the defined period.  </p>
+
+        <h3><u>Union Delivery / Order Rhythm</u></h3>
+
+        <p>All order proposals for the next few days are summarized and proposed as a single order on the first order date. Unneeded SKUs are ordered in such a way that the rhythm of the Union is achieved.</p>
+
+        <h3>Rhythm Assistant</h3>
+
+        <p>
+            The rhythm is configured using the Rhythm Assistant.
+            Open the Rhythm Assistant by right-clicking in the lower area and then pressing “Insert”
+
+        </p>
+
+
+
+        <img src="imguse/imageliefryhth1en.png" alt="Settings" />
+
+        <img src="imguse/imageliefryhth2en.png" alt="Rhythmus-Assistent" />
+
+
+        <p>The rhythm assistant consists of 10 sections  </p>
+
+        <ol>
+            <li><strong> Rhythm length:</strong> Which period size should be used for calculation </li>
+            <li> <strong> Rhythm type:</strong> Which type of rhythm </li>
+            <li><strong> Order date:</strong> Date on which orders should always be placed + exception rule </li>
+            <li><strong> Transport/delivery date: :</strong> Date on which deliveries should always be made + exception rule </li>
+            <li><strong> Delivery time: </strong> Entered delivery time / new delivery time / exclusive delivery time </li>
+            <li> <strong> All </strong>Interval between 2 orders </li>
+            <li> <strong> If mandatory rhythm, rhythm start:</strong> Rhythm start is entered if the rhythm is to be maintained permanently, otherwise it can also be altered if LOGOMATE decides </li>
+            <li> <strong> Based on: </strong> Specify which of the two rhythm types in section 7 applies </li>
+            <li> <strong>  Combined rhythm: </strong> Order proposals are combined and ordered according to a defined rhythm (section 7 must be empty) </li>
+            <li> <strong>Validity range: </strong> Start & end of the rhythm</li>
+        </ol>
+    </section>
+
+    <section id="UseCaseResubmissionButton">
+
+        <h1>Follow-Ups</h1>
+
+        <p>LOGOMATE offers the option of setting follow-ups on nodes.</p>
+
+        <p>To do this, simply right-click on the desired node and select the “Memo/Follow-up” option.</p>
+
+        <img src="imguse/imagewie1en.png" alt="Knotenliste" />
+
+        <img src="imguse/imagewie2en.png" alt="Notiz/Wiedervorlage" />
+
+        <p>The date and text can be added there. And depending on what was entered as text, date, or on which level the follow-up was entered, the pin has a different color.  </p>
+
+        <img src="imguse/imagewie3en.png" alt="Erklärung" />
+
+        <p>After they have been created, the follow-ups are displayed in the Node-list. </p>
+    </section>
+
+
+    <section id="UseCasePrecursorButton">
+
+        <h1>Predecessor</h1>
+
+        <p>With a predecessor, the history is transferred from a predecessor SKU to a successor SKU. In addition, multiple time series can be linked.</p>
+
+        <p>A predecessor can be entered in LOGOMATE under the Tab “Miscellaneous” in the Parameters window</p>
+
+        <ul>
+            <li>Copy the predecessor SKU from the node list and paste the SKU into the Predecessor field under the Tab “Miscellaneous” in the Parameters window.</li>
+
+            <li>Alternative: Search directly in the predecessor selection list. Partial entries are supported. In large systems, the partial article numbers must be precise enough to ensure that the results list does not become too large (up to 100,000 entries!).</li>
+        </ul>
+
+        <img src="imguse/imagevor1en.png" alt="Einstellung" />
+
+        <p>In the forecast chart, the predecessor parts are highlighted in yellow</p>
+
+        <img src="imguse/imagevor2.png" alt="Prognose" />
+
+
+        <h3>Precursor factors  </h3>
+
+        <p> Each historical value is multiplied by the predecessor factor:</p>
+
+        <ul>
+            <li>Predecessor factor 1.0 = complete</li>
+
+            <li> Predecessor factor 0.5 = half</li>
+
+            <li> Predecessor factor 2.0 = double</li>
+        </ul>
+    </section>
+
+
+    <section id="UseCaseBufferStoreButton">
+
+        <h1>Buffer store logic</h1>
+
+
+        <p>
+            With buffer store logic, additional warehouses are created in LOGOMATE.
+            These can also be former branches or central warehouses that are no longer in operation.
+        </p>
+
+        <p>
+
+            The aim of these buffer stores is to use up their stock as quickly as possible.
+        </p>
+
+        <p>
+
+            This is implemented by transferring the demand from the active branches to the central warehouse.
+            The central warehouse then primarily uses the buffer store stocks before accessing its own stocks.
+
+
+        </p>
+
+        <h3> Requirements </h3>
+
+        <ol>
+            <li>
+                The branch SKU must be transferred to both the central warehouse and the buffer store via the parts
+                list with the type “Default” and assigned to the respective suppliers,
+                whereby the suppliers of the buffer stores should be deactivated.
+            </li>
+
+            <li>
+                The buffer store must receive the central warehouse SKU via the bill of materials with the type “buffer SKU” and must have the same supplier that was also transferred for the store SKU, but this time active.
+                In addition, the “Type” parameter under the ‘Status’ tab must be set to “Forecast only, no MRP” and the SKU must be active.
+
+
+            </li>
+        </ol>
+        <p>
+
+            If everything has been set up correctly, all store requirements should now be met primarily from the buffer stores.
+            Only when the buffer stores are empty should the central warehouse meet the requirements with its stock.
+        </p>
+
+        <p>
+            If the buffer stock is not yet empty and the demand from the branches cannot be met at the desired times, the following procedures are applied, depending on the system settings:
+            <br />[<strong>Note: </strong> <span class="SmallerText">Contact your REMIRA representative, who will set this up for you.</span>]
+        </p>
+
+
+        <p>
+            Scenario „Cutbacks “:
+
+        </p>
+
+        <p>
+
+            <span class="SmallerText">  <strong>Basic starting point:</strong></span>
+        </p>
+
+        <p>
+            <img src="imguse/imagepuflo1en.png" alt="Example" />
+
+        </p>
+
+        <p>In the “cutback” scenario, orders would be reduced so that each branch could be supplied with the remaining stock from one warehouse.</p>
+
+        <p>
+            <span></span> <strong> Note: </strong> The system parameter “partially unfulfillable branch order” must be set to “shorten.”
+
+        </p>
+
+        <p>
+
+            It would then look like this:
+
+        </p>
+        <p> <img src="imguse/imagepuflo2en.png" alt="Bespiel text" /></p>
+
+        <p>
+
+            In the case of one-time calculations, an additional order for 30 items is created for the central warehouse in order to obtain the missing 30 items for the needs of the branches.
+        </p>
+
+        <p>
+            If a second calculation is performed or the system setting “Calculate twice if necessary” is activated, the export table looks as follows:
+
+        </p>
+
+        <p>
+
+            <img src="imguse/imagepuflo3en.png" alt="Export Table" />
+
+        </p>
+        <p>
+            Branch 1 is reduced to 20 items because buffer store 2 has a stock of 20.
+            Branch 2 is reduced to 10 units because buffer warehouse 3 has a stock of 10.
+            Branch 3 will not be supplied because all buffer warehouses are empty and the central warehouse has more stock than Branch 3 needs.
+
+
+        </p>
+
+
+
+        <h3>   <strong> Scenario „Splitting “: </strong> </h3>
+
+        <p><strong> Basic starting point: </strong></p>
+
+        <p><img src="imguse/imagepuflo4en.png" alt="Table" /></p>
+
+        <p>
+            In the “split” scenario, all stores would be supplied with existing stock,
+            and the missing quantities would be reordered and delivered to the relevant stores.
+        </p>
+
+        <p> <strong>Note: </strong> The system parameter “partially unfulfillable branch order” must be set to “split.”.. </p>
+
+        <p>It would look like this:</p>
+
+        <p><img src="imguse/imagepuflo5en.png" alt="Export Table" /> </p>
+
+        <p>Orders with shorter delivery dates are generally prioritized. In cases such as this, where all orders have the same delivery date, the SKU at the top is prioritized.</p>
+        <p>As a result, this means that...</p>
+
+
+        <p>
+            Store 1 is first supplied from the buffer store and the remaining demand is covered by the central warehouse.<br />
+            Branch 2 is supplied entirely from the central warehouse, as all buffer warehouses are empty.<br />
+            Branch 3 is supplied with the remaining stock from the central warehouse, and the rest is delivered later by the central warehouse, which reorders the missing 30 items.
+        </p>
+
+        <h3>(From version 8.5-11)  „Move“ scenario </h3>
+
+        <p> <strong>Basic starting point:</strong></p>
+
+
+        <img src="imguse/imagepuflo6en.png" alt="Example" />
+
+        <p>In the “Move” scenario, the stocks would be distributed to the branches that can be supplied completely and most quickly.</p>
+
+
+        <p><strong>Note:</strong>The system parameter “partially unfulfillable store order” must be set to “postpone.”</p>
+
+        <p>It would look like this:</p>
+
+        <p> After calculating with „splitting“:</p>
+
+        <img src="imguse/imagepuflo7en.png" alt=" Table" />
+
+        <p>
+            Since branch LP92 has no stock, the central warehouse prefers to order LP92 and delivers its 2 items. <br />
+            This means that the order from branch LP91 will be postponed until July 19, as the central warehouse first has to replenish its stock with an order.
+        </p>
+
+        <p><span class="SmallerText">Subsequent calculation with  „Move“:</span></p>
+
+        <img src="imguse/imagepuflo8en.png" alt="Table" />
+
+
+        <p>Since the order from branch LP91 can be fulfilled immediately, it will be given priority.</p>
+
+        <p>The delivery of the LP92 order will be postponed to July 18, as the central warehouse will have built up sufficient stock by then to fulfill this order, thanks to the delivery on July 16.</p>
+
+
+    </section>
 
 </body>
 </html>
