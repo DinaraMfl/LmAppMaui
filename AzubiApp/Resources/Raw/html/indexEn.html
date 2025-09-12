@@ -144,6 +144,116 @@
 
     </section>
 
+    <section id="UseCaseInheritanceButton">
+
+        <h1>Inheritance</h1>
+
+        <p>
+            Values can be inherited within a LOGOMATE cockpit. In general, all values from higher groups are inherited by all groups below them.
+        </p>
+
+        <p>
+            When a value has been inherited, the parameter in question is highlighted in color. Depending on the type of inheritance, a different color is displayed:
+        </p>
+
+        <ul>
+            <li> Blue = LOGOMATE default value</li>
+
+            <li> Blue underlined = The value was inherited from a higher level (tooltip shows the level)</li>
+
+            <li> Black = Manually entered value</li>
+
+            <li> Green = The value was inherited from a class</li>
+
+            <li> Gray = Multiple SKUs with different values were selected</li>
+        </ul>
+
+        <p>When the mouse pointer is held over an inherited parameter, a tooltip is displayed showing through which layer the value is inherited.</p>
+
+        <img src="imguse/imagever1en.png" alt="Gruppenbaum paramater" />
+
+        <p>If you press CTRL while clicking on the parameter, you will jump to the layer that inherits the value.</p>
+
+        <img src="imguse/imagever2en.png" alt="Gruppenbaum Parameter" />
+
+    </section>
+
+    <section id="UseCasePromotionsButton">
+
+        <h1>Promotions (types)</h1>
+
+        <p>In retail, promotions are generally understood to be sales-promoting measures. In LOGOMATE, however, all planned requirements are referred to as promotions.</p>
+
+        <p>LOGOMATE recognizes unusual sales or consumption patterns and can compensate for them with automatic promotions..</p>
+
+        <h3>Automatic/Key date promotions</h3>
+
+        <p>Automatic actions are used to correct historical values through OoS adjustment, handling outliers, setting negative historical values to zero, and through key date actions.</p>
+
+        <p>Key date promotions are future actions that are created by defining a variable season using key dates and replace the forecast.</p>
+
+        <p> <strong>Attention! </strong>Automatic actions cannot be added manually or removed directly.</p>
+
+        <h3>Manual promotions</h3>
+
+        <p>
+            Manual promotions are promotions with a known time period and a fixed quantity. For future promotions, a value is required in the Expected Quantity or Relative Expected Quantity field;
+            these quantities are usually positive and are added to the forecast value as an addition (on top).
+            Past promotion require an entry in the Quantity or Rel. Quantity field; the action quantity can be positive or negative and is used to correct the sales value.
+        </p>
+
+        <h4>Semi-Aktionen</h4>
+
+        <p>Semi-promotion are actions with a fixed time period but an unknown scope. If their time periods lie in the past, they are not included in the forecast.</p>
+
+        <h4>Calculation of semi-promotion</h4>
+
+        <p>These parameters determine how the action quantities are calculated, but the parameter only affects semi-actions that lie in the past.</p>
+
+        <img src="imguse/imageakt1en.png" alt="Alternate Text" />
+
+        <h3>Types of semi-promotions</h3>
+
+        <h4>Relative to non-promotional periods</h4>
+
+        <p>The promotional volumes are calculated based on the ratio of sales during the promotional period to sales in non-promotional periods.</p>
+
+        <h4>Relative to non-promotional period and set info if necessary</h4>
+
+        <p>No calculation is performed; if the semi-promotion ends before the first sale, it is converted into an info promotion.</p>
+
+        <h4>Rel. to ex-post fcst.</h4>
+
+        <p>The promotional quantities are calculated based on the ratio between sales and the ex-post forecast.</p>
+
+        <h4>Rel. to non-promotional period with OoS correction</h4>
+
+        <p>Historical data is required for this parameter; lost promotional quantities are calculated based on the ratio of sales during the promotional period to sales during non-promotional periods.</p>
+
+        <h4>Relative to ex-post fcst. with OoS correction</h4>
+
+        <p>Historical data is required for this parameter; lost promotion volumes are calculated based on the ratio between sales and the ex-post forecast.</p>
+
+        <h3>Info promotionInfo promotion</h3>
+
+        <p>Info promotion serve only to identify actions and have no effect; however, if the action type is changed from Semi to Info, previously unconsidered periods, including sales and promotions, can be included in the forecast.</p>
+
+        <h3>Exclusive promotion</h3>
+
+        <p>Exclusive promotion allows you to specify periods during which outliers are not corrected despite outlier detection being activated; if the promotion type is changed from Outlier to Exclusive, the calculated action quantity remains unchanged.</p>
+
+        <p> <strong>Example: </strong></p>
+
+        <img src="imguse/imageakt2en.png" alt="Aktionen" />
+
+        <p> <strong> LOGOMATE </strong>has identified several outliers in the historical sales data and corrected them accordingly.</p>
+
+        <img src="imguse/imageakt3en.png" alt="Aktionen" />
+
+        <p>To prevent promotional quantities from being adjusted by automatic promotions in the future, the promotion type for two promotions was changed from Outlier to Exclusive.</p>
+
+    </section>
+
     <section id="UseCaseCompositeOrderButton">
 
         <h1>Compound Order</h1>

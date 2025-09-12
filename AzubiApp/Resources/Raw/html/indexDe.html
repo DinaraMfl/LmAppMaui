@@ -123,7 +123,7 @@
     </section>
 
     <section id="UseCaseContainerOptimizationButton">
-        
+
         <h1>Containeroptimierung</h1>
         <p>
             Eine Containeroptimierung ermittelt eine kostengünstige
@@ -142,7 +142,7 @@
         </p>
 
         <img src="imguse/imagecow.png" alt="Einstellung in den Konditionen" />
-        
+
         <h5>Einstellung in den Konditionen</h5>
 
         <p>
@@ -197,16 +197,16 @@
     </section>
 
     <section id="UseCaseSftTypesButton">
-        
+
         <h1>SiB-Typen</h1>
         <p>
             Der Sicherheitsbestand (SiB) ist die Mindestlagerhaltung, die erforderlich ist, um eine Out-of-Stock-Situation zu vermeiden.
             [Bestandssimulation].
             Angesichts der vorliegenden Parameter und Konditionen.
         </p>
-        
+
         <img src="imguse/imagesib1.png" alt="text" />
-        
+
         <h5>(Der SiB wird in LM durch die blau gestrichelte, gerade Linie dargestellt.)</h5>
 
         <p>
@@ -272,7 +272,7 @@
 
         <p><strong>Abgangssumme in WBZ:</strong></p>
         <img src="imguse/imagesib9.png" alt="test" />
-        
+
         <h5>
             (Der SiB wird kontinuierlich auf der Höhe der summierten historischen Werte innerhalb der WBZ gehalten,
             sofern diese den minimalen SiB überschreiten.)
@@ -394,7 +394,7 @@
         <p>
             Das würde wie folgt aussehen:
         </p>
-        
+
         <p> <img src="imguse/imagepuflo2.png" alt="Bespiel text" /></p>
 
         <p>
@@ -408,7 +408,7 @@
         <p>
             <img src="imguse/imagepuflo3.png" alt="alternaitver text" />
         </p>
-        
+
         <p>
             Filiale 1 wird auf 20 Stück gekürzt da Pufferlager 2 einen Bestand von 20 hat
             Filiale 2 wird auf 10 Stück gekürzt da Pufferlager 3 einen Bestand von 10 hat
@@ -498,7 +498,7 @@
         <h3> N-Klasse</h3>
 
         <p> Die N-Klasse umfasst alle SKUs, die im ausgewählten Zeitraum entweder keinen Umsatz oder erstmals einen Umsatz (durch Abverkauf oder Lieferung) verzeichnet haben.</p>
-        
+
         <ul>
             <li>	Wird eine SKU der N-Klasse zugeordnet, bedeutet dies, dass sie in den letzten 180 Tagen zum ersten Mal geliefert wurde.</li>
         </ul>
@@ -635,40 +635,6 @@
         <p> <strong>Wichtig:</strong> Die Funktionen <strong>„#Pos. Letzte“ und „#Abg.-Tage letzte“</strong> funktionieren nur wenn Lieferantendaten an LOGOMATE übergeben werden. </p>
     </section>
 
-    <section id="UseCaseInheritanceButton">
-
-        <h1>Vererbung</h1>
-
-        <p>
-            Innerhalb eines LOGOMATE-Cockpits können Werte weitervererbt werden.
-            Grundsätzlich werden alle Werte von höheren Gruppen auf alle Gruppen da drunter vererbt.
-        </p>
-
-        <p>
-            Wenn ein Wert vererbt wurde wird der betroffene Parameter farblich markiert.
-            Je nach Art der Vererbung wird eine andere Farbe angezeigt:
-        </p>
-
-        <ul>
-            <li> Blau = Standardwert von LOGOMATE </li>
-
-            <li> Blau unterstrichen = Der Wert wurde von einer höheren Ebene vererbt (Tooltip zeigt die Ebene an)  </li>
-
-            <li> Grün = Der Wert wurde von einer Klasse geerbt</li>
-
-            <li> Grau = Mehrere SKUs wurden ausgewählt die verschiedene Werte haben </li>
-        </ul>
-       
-        <p> Wenn der Maus-Zeiger über einen geerbten Parameter gehalten wird, wird ein Tooltip angezeigt der zeigt durch welche Ebene der Wert vererbt wird. </p>
-
-        <img src="imguse/imagever1.png" alt="Gruppenbaum paramater" />
-
-        <p>Drückt man zusätzlich STRG, während man auf den Parameter drückt, springt man auf die Ebene, die den Wert vererbt.</p>
-
-        <img src="imguse/imagever2.png" alt="Gruppenbaum Parameter" />
-
-    </section>
-
     <section id="UseCaseOrderRhythmButton">
 
         <h1>Bestell-/Lieferrhythmus</h1>
@@ -722,7 +688,7 @@
     <section id="UseCasePartitionButton">
 
         <h1>Partitionen</h1>
-        
+
         <p>Mit Partitionen können Reservierungen 1:1 zu einer Bestellung erstellt werden die direkt einem Auftrag zugeordnet werden kann.</p>
 
         <p> Um Partitionen nutzen zu können muss folgendes erfüllt werden: </p>
@@ -739,7 +705,7 @@
         </p>
 
         <img src="imguse/imagepar2.png" alt="Güterkriterium" />
-        
+
         <p>
             3. Es muss bei der Reservierung ein AddOn-Lieferant über die Spalte „L.-Typ“ sowie eine Partitionsnummer über die Spalte „Partition“ übergeben werden
         </p>
@@ -896,6 +862,42 @@
 
             <li> Vorläufer-Faktor 2.0 = das Doppelte</li>
         </ul>
+    </section>
+
+    <section id="UseCaseInheritanceButton">
+
+        <h1>Vererbung</h1>
+
+        <p>
+            Innerhalb eines LOGOMATE-Cockpits können Werte weitervererbt werden.
+            Grundsätzlich werden alle Werte von höheren Gruppen auf alle Gruppen da drunter vererbt.
+        </p>
+
+        <p>
+            Wenn ein Wert vererbt wurde wird der betroffene Parameter farblich markiert.
+            Je nach Art der Vererbung wird eine andere Farbe angezeigt:
+        </p>
+
+        <ul>
+            <li> Blau = Standardwert von LOGOMATE </li>
+
+            <li> Blau unterstrichen = Der Wert wurde von einer höheren Ebene vererbt (Tooltip zeigt die Ebene an)  </li>
+
+            <li> Schwarz = manuell eingetragener Wert</li>
+
+            <li> Grün = Der Wert wurde von einer Klasse geerbt</li>
+
+            <li> Grau = Mehrere SKUs wurden ausgewählt die verschiedene Werte haben </li>
+        </ul>
+
+        <p> Wenn der Maus-Zeiger über einen geerbten Parameter gehalten wird, wird ein Tooltip angezeigt der zeigt durch welche Ebene der Wert vererbt wird. </p>
+
+        <img src="imguse/imagever1.png" alt="Gruppenbaum paramater" />
+
+        <p>Drückt man zusätzlich STRG, während man auf den Parameter drückt, springt man auf die Ebene, die den Wert vererbt.</p>
+
+        <img src="imguse/imagever2.png" alt="Gruppenbaum Parameter" />
+
     </section>
 
     <section id="UseCasePromotionsButton">
@@ -1111,7 +1113,7 @@
         <h5>Max. Abstandsabweichung</h5>
 
         <p>Maximal erlaubte Standardabweichung des zeitlichen Abstands – anders gesagt: Zu große Lücken sind nicht zulässig.</p>
-        
+
     </section>
 
     <section id="UseCaseDueDatesButton">
@@ -1120,11 +1122,11 @@
 
         <p>
             Wenn LOGOMATE unübliche Abgänge in der Historie erkennt,
-            wird versucht diese zu korrigieren. Passiert das öfter in 
-            der gleichen Jahres-/Monats-/Wochen-Periode mit einer ähnlichen 
-            Abweichung von X% wird eine Saison erkannt. Das wirkt sich 
-            dementsprechend auch auf die Prognose aus, da dann mit 
-            dieser „Abweichung“ weitergerechnet wird. 
+            wird versucht diese zu korrigieren. Passiert das öfter in
+            der gleichen Jahres-/Monats-/Wochen-Periode mit einer ähnlichen
+            Abweichung von X% wird eine Saison erkannt. Das wirkt sich
+            dementsprechend auch auf die Prognose aus, da dann mit
+            dieser „Abweichung“ weitergerechnet wird.
         </p>
 
         <img src="imguse/imagesai1.png" alt="Prognose" />
@@ -1164,7 +1166,7 @@
         <p>Mit Saison-Erkennung/ Stichtag-Aktion: </p>
 
         <img src="imguse/imagesai6.png" alt="Prognosegrafik" />
-       
+
     </section>
 
 </body>
