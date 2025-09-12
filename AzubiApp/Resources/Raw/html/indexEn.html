@@ -144,6 +144,167 @@
 
     </section>
 
+    <section id="UseCaseAbcAnalysisButton">
+
+        <h1>ABC analysis</h1>
+
+        <p>ABC analysis is used to classify SKUs according to a freely definable key figure, known as the ABC value.</p>
+
+        <p>This value is calculated from a combination of relevant fields such as quantity and value—for example, the number of items sold over the last twelve months. The goal is to create an internal list in which all SKUs are sorted in descending order according to their ABC value.</p>
+
+        <p>
+            <img src="imguse/imageabc1en.png" alt="ABC-Analyse für Gruppe" />
+            <span class="LightGreycolor">  (Window in LOGOMATE) </span>
+        </p>
+
+        <h3><strong>With inactive</strong></h3>
+
+        <p>The ABC analysis also includes all inactive SKUs.</p>
+
+        <h3>N class</h3>
+
+        <p>The N class includes all SKUs that either had no sales or had sales for the first time (through sale or delivery) in the selected period.</p>
+
+        <ul>
+            <li> If an SKU is assigned to the N class, this means that it was delivered for the first time in the last 180 days.</li>
+        </ul>
+
+        <img src="imguse/imageabc2en.png" alt="N-Klasse" />
+
+        <h4>Period in days</h4>
+
+        <p>Here, the number of days is specified counting backwards from “today.” </p>
+
+        <p><strong>1st delivery in the period</strong></p>
+
+        <p>An item is considered an N item if its first delivery took place within the defined period.</p>
+
+        <img src="imguse/imageabc3en.png" alt="Lieferung im Zeitraum" />
+
+        <h4><strong>1st Departure during the period</strong></h4>
+
+        <p>An item is classified as an N item if its first sale took place during the defined period.</p>
+
+        <img src="imguse/imageabc4en.png" alt="Abgang im Zeitraum" />
+
+        <h4><strong>No delivery yet or 1st delivery in the period</strong></h4>
+
+        <p>An item is classified as an N item if either no delivery or the first delivery has taken place in the defined period.</p>
+
+        <img src="imguse/imageabc5en.png" alt="Kein Abgang bisher oder 1. Abgang im Zeitraum" />
+
+        <p><strong>No sales yet or 1st sale in the period</strong></p>
+
+        <p>An item is classified as an N item if either no sales have taken place or the first sale has taken place in the defined period.</p>
+
+        <img src="imguse/imageabc6en.png" alt="Kein Abgang bisher oder 1. Abgang im Zeitraum" />
+
+        <h3>D class</h3>
+
+        <p>
+            The D class includes all SKUs that were not sold during the defined period or did not reach their specified sales volumes.
+            It serves to specifically identify expired or “dead” items and bundle them into one class.
+        </p>
+
+        <img src="imguse/imageabc7en.png" alt="D-Klasse" />
+
+        <h5><strong>Period in days</strong></h5>
+
+        <p>Similar to the N class, this will also be output retroactively from today.</p>
+
+        <p>Under  <strong>„Maximum“</strong> you can select the following options:</p>
+
+        <h5><strong>Issues</strong></h5>
+
+        <p>The quantity in the period refers to the actual consumption or sales quantity in the base unit of the respective article or storage location.</p>
+
+        <img src="imguse/imageabc8en.png" alt="Abgangsmenge setting" />
+
+        <h5><strong># Positions</strong></h5>
+
+        <p>This is the number of consumptions or sales.</p>
+
+        <img src="imguse/imageabc9en.png" alt="# Positionen Setting" />
+
+        <h5><strong># Departure days</strong></h5>
+
+        <p>This function is only available if individual items such as supplier data are transferred to LOGOMATE.</p>
+
+        <img src="imguse/imageabc10en.png" alt="# Abgangstage Setting" />
+
+        <h5><strong>Quantity in period</strong></h5>
+
+        <p>Here you can enter the maximum total sales amount for the specified period.</p>
+
+        <h5><strong>0-forecast</strong></h5>
+
+        <p>Activating the 0 forecast for the D class requires a fully automatic zero forecast – the item must be classified as a 0 item.</p>
+
+        <h5><strong>Stock</strong></h5>
+
+        <p>Using the operators and the quantity requirement for stock, the D class can be further filtered based on the current stock.</p>
+
+        <h3><strong>ABC</strong></h3>
+
+        <img src="imguse/imageabc11en.png" alt="ABC setting" />
+
+        <h3>AB limit</h3>
+
+        <p>The AB limit is a percentage value that defines the proportion of A items in the total sum of A, B, and C items.</p>
+
+        <h3>BC limit</h3>
+
+        <p>The BC limit is a percentage that indicates the proportion of A and B items in the sum of all A, B, and C items.</p>
+
+        <h3><strong>Limits in terms of value <span class="SmallerText">(example)</span></strong></h3>
+
+        <img src="imguse/imageabc12.png" alt="Knotenliste" />
+
+        <p>Node list sorted in descending order by ABC value. The option <strong>“Limits by value”</strong> is not active.</p>
+
+        <img src="imguse/imageabc13.png" alt="Knotenliste" />
+
+        <p>The same list. The Limit by value option is active. The ABC classification has changed.</p>
+
+        <h3><strong>Ignore negative quantities</strong></h3>
+
+        <p>This option only works with the “Last issues” quantity option. Only when this option is set can the ABC classification change.</p>
+
+        <img src="imguse/imageabc14en.png" alt="ABC Settings" />
+
+        <h3><strong>Quantity</strong></h3>
+
+        <P>The observation period is specified under ‘Quantity’.</P>
+
+        <h5>Forecast Today</h5>
+
+        <p>Current forecast value</p>
+
+        <h5>Forecast Availability Date</h5>
+
+        <p>Forecast value at the time of the next availability date</p>
+
+        <h5>Forecast Average</h5>
+
+        <p>Average daily forecast</p>
+
+        <h5>Disposals Last</h5>
+
+        <p>Disposals from the last x days/weeks/months from today</p>
+
+        <h5># Pos. last</h5>
+
+        <p>Positions from the last x days/weeks/months starting from today</p>
+
+        <h5># Disposals last</h5>
+
+        <p>Disposal days from the last x days/weeks/months starting from today</p>
+
+        <p>
+            <strong>Attention:</strong>The functions <strong>„#Pos. Last“ und „#Disposals Last“</strong>only work if supplier data is transferred to LOGOMATE.
+        </p>
+    </section>
+
     <section id="UseCaseInheritanceButton">
 
         <h1>Inheritance</h1>

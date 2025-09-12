@@ -478,163 +478,6 @@
 
     </section>
 
-    <section id="UseCaseAbcAnalysisButton">
-
-        <h1> ABC-Analyse  </h1>
-
-        <p> Die ABC-Analyse dient der Klassifizierung von SKUs einer frei definierbaren Kennzahl, dem sogenannten ABC-Wert.   </p>
-
-        <p> Dieser Wert ergibt sich aus der Kombination relevanter Felder wie beispielsweise Menge und Wert – etwa den Abgängen der letzten zwölf Monate in Stückzahl. Ziel ist es, eine interne Liste zu erstellen, in der alle SKUs nach ihrem ABC-Wert in absteigender Reihenfolge sortiert sind. </p>
-
-        <p>
-            <img src="imguse/imageabc1.png" alt="ABC-Analyse für Gruppe" />
-            <span class="LightGreycolor">  (Fenster in LOGOMATE) </span>
-        </p>
-
-        <h3><strong>Mit Inaktiven</strong></h3>
-
-        <p> Bei der ABC-Analyse werden auch sämtliche inaktiven SKUs mit einbezogen. </p>
-
-        <h3> N-Klasse</h3>
-
-        <p> Die N-Klasse umfasst alle SKUs, die im ausgewählten Zeitraum entweder keinen Umsatz oder erstmals einen Umsatz (durch Abverkauf oder Lieferung) verzeichnet haben.</p>
-
-        <ul>
-            <li>	Wird eine SKU der N-Klasse zugeordnet, bedeutet dies, dass sie in den letzten 180 Tagen zum ersten Mal geliefert wurde.</li>
-        </ul>
-
-        <img src="imguse/imageabc2.png" alt="N-Klasse" />
-
-        <h4> Zeitraum in Tagen</h4>
-
-        <p> Hier wird die Anzahl Tage von "heute" ausgehend rückwärts angeben, </p>
-
-        <p><strong>1.Lieferung im Zeitraum</strong></p>
-
-        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum sein erstmaliger Abverkauf erfolgt ist. </p>
-
-        <img src="imguse/imageabc3.png" alt="Lieferung im Zeitraum" />
-
-        <h4><strong>1.Abgang im Zeitraum</strong></h4>
-
-        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum sein erstmaliger Abverkauf erfolgt ist. </p>
-
-        <img src="imguse/imageabc4.png" alt="Abgang im Zeitraum" />
-
-        <h4><strong>Keine Lieferung bisher oder 1. Lieferung im Zeitraum</strong></h4>
-
-        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum entweder keine oder die erste Lieferung erfolgt ist.</p>
-
-        <img src="imguse/imageabc5.png" alt="Kein Abgang bisher oder 1. Abgang im Zeitraum" />
-
-        <p><strong>Kein Abgang bisher oder 1. Abgang im Zeitraum</strong></p>
-
-        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum entweder kein Abverkauf stattgefunden hat oder der erste Abverkauf erfolgt ist.</p>
-
-        <img src="imguse/imageabc6.png" alt="Kein Abgang bisher oder 1. Abgang im Zeitraum" />
-
-        <h3>D-Klasse</h3>
-
-        <p>
-            Die D-Klasse umfasst alle SKUs, die im definierten Zeitraum nicht verkauft wurden oder deren vorgegebene Verkaufsmengen nicht erreicht haben.
-            Sie dient dazu, ausgelaufene oder „tote“ Artikel gezielt zu kennzeichnen und in einer Klasse zu bündeln.
-        </p>
-
-        <img src="imguse/imageabc7.png" alt="D-Klasse" />
-
-        <h5><strong>Zeitraum in Tagen</strong></h5>
-
-        <p>Ähnlich wie bei der N-Klasse wird dies auch rückwirkend von heute ausgeben.</p>
-
-        <p>Unter <strong>„Maximal“</strong> kann man folgende Optionen auswählen:</p>
-
-        <h5><strong>Abgangsmenge</strong></h5>
-
-        <p>Dabei bezieht sich die Menge im Zeitraum auf die tatsächliche Verbrauchs- bzw. Abverkaufsmenge in der Basiseinheit des jeweiligen Artikels bzw. Lagerplatzes. </p>
-
-        <img src="imguse/imageabc8.png" alt="Abgangsmenge setting" />
-
-        <h5><strong># Positionen</strong></h5>
-
-        <p> Dabei bezieht sich die Menge im Zeitraum auf die Anzahl der Verbräuche bzw. Abverkäufe. </p>
-
-        <img src="imguse/imageabc9.png" alt="# Positionen Setting" />
-
-        <h5><strong># Abgangstage</strong></h5>
-
-        <p>Diese Funktion ist nur verfügbar, wenn Einzelpositionen wie Lieferantendaten an LOGOMATE übergeben werden.</p>
-
-        <img src="imguse/imageabc10.png" alt="# Abgangstage Setting" />
-
-        <h5><strong> Menge im Zeitraum </strong></h5>
-
-        <p>Hier kann man eintragen, wie groß die Summe aller Abverkäufe im angegebenen Zeitraum höchstens sein darf.</p>
-
-        <h5><strong> 0-Prognose </strong></h5>
-
-        <p>Die Aktivierung der 0-Prognose für die D-Klasse setzt eine vollautomatische Null-Prognose voraus – der Artikel muss als 0-Artikel klassifiziert, sein.</p>
-
-        <h5><strong> Bestand </strong></h5>
-
-        <p>Mithilfe der Operatoren und der Mengenanforderung zum Bestand kann die D-Klasse zusätzlich gefiltert werden, bezogen auf den aktuellen Bestand.</p>
-
-        <h3><strong>ABC</strong></h3>
-
-        <img src="imguse/imageabc11.png" alt="ABC setting" />
-
-        <h3>AB-Grenze</h3>
-
-        <p>Die AB-Grenze ist ein Prozentwert, der den Anteil der A-Artikel an der Gesamtsumme der A-, B- und C-Artikel definiert.</p>
-
-        <h3>BC-Grenze</h3>
-
-        <p>Die BC-Grenze ist ein Prozentsatz, der den Anteil der A- und B-Artikel an der Summe aller A-, B- und C-Artikel angibt.</p>
-
-        <h3><strong>Grenzen Wertmäßig <span class="SmallerText">(Bsp.)</span></strong></h3>
-
-        <img src="imguse/imageabc12.png" alt="Knotenliste" />
-
-        <p>Knotenliste nach ABC-Wert Absteiegnd sotiert. Die Option <strong>Grenzen Wertmäßig</strong> ist nicht aktiv</p>
-
-        <img src="imguse/imageabc13.png" alt="Knotenliste" />
-
-        <h3><strong>Negative Mengen ignorieren</strong></h3>
-
-        <p>Diese Option wirkt nur mit der Mengenoption „Abgänge letzte“, erst wenn sie gesetzt ist, kann sich die ABC-Klassifizierung ändern.</p>
-
-        <img src="imguse/imageabc14.png" alt="ABC Settings" />
-
-        <h3><strong>Menge</strong></h3>
-
-        <P>Der Beobachtungszeitraum wird unter dem Punkt 'Menge' festgelegt.</P>
-
-        <h5> Prognose Heute</h5>
-
-        <p>aktueller Prognosewert</p>
-
-        <h5> Prognose V.-Termin</h5>
-
-        <p>Prognosewert zum Zeitpunkt des nächsten Verfügbarkeitstermins</p>
-
-        <h5>Prognose Mittelwert </h5>
-
-        <p>durchschnittliche Tages-Prognose</p>
-
-        <h5>Abgänge letzte</h5>
-
-        <p>Abgänge der letzten x Tage / Wochen / Monate von heute an</p>
-
-        <h5> # Pos. letzte  </h5>
-
-        <p>Positionen der letzten x Tage / Wochen / Monate von heute an</p>
-
-        <h5># Abg.-Tage letzte</h5>
-
-        <p> Abgangstage der letzten x Tage / Wochen / Monate von heute an </p>
-
-        <p> <strong>Wichtig:</strong> Die Funktionen <strong>„#Pos. Letzte“ und „#Abg.-Tage letzte“</strong> funktionieren nur wenn Lieferantendaten an LOGOMATE übergeben werden. </p>
-    </section>
-
     <section id="UseCaseOrderRhythmButton">
 
         <h1>Bestell-/Lieferrhythmus</h1>
@@ -862,6 +705,165 @@
 
             <li> Vorläufer-Faktor 2.0 = das Doppelte</li>
         </ul>
+    </section>
+
+    <section id="UseCaseAbcAnalysisButton">
+
+        <h1> ABC-Analyse  </h1>
+
+        <p> Die ABC-Analyse dient der Klassifizierung von SKUs einer frei definierbaren Kennzahl, dem sogenannten ABC-Wert.   </p>
+
+        <p> Dieser Wert ergibt sich aus der Kombination relevanter Felder wie beispielsweise Menge und Wert – etwa den Abgängen der letzten zwölf Monate in Stückzahl. Ziel ist es, eine interne Liste zu erstellen, in der alle SKUs nach ihrem ABC-Wert in absteigender Reihenfolge sortiert sind. </p>
+
+        <p>
+            <img src="imguse/imageabc1.png" alt="ABC-Analyse für Gruppe" />
+            <span class="LightGreycolor">  (Fenster in LOGOMATE) </span>
+        </p>
+
+        <h3><strong>Mit Inaktiven</strong></h3>
+
+        <p> Bei der ABC-Analyse werden auch sämtliche inaktiven SKUs mit einbezogen. </p>
+
+        <h3> N-Klasse</h3>
+
+        <p> Die N-Klasse umfasst alle SKUs, die im ausgewählten Zeitraum entweder keinen Umsatz oder erstmals einen Umsatz (durch Abverkauf oder Lieferung) verzeichnet haben.</p>
+
+        <ul>
+            <li>	Wird eine SKU der N-Klasse zugeordnet, bedeutet dies, dass sie in den letzten 180 Tagen zum ersten Mal geliefert wurde.</li>
+        </ul>
+
+        <img src="imguse/imageabc2.png" alt="N-Klasse" />
+
+        <h4> Zeitraum in Tagen</h4>
+
+        <p> Hier wird die Anzahl Tage von "heute" ausgehend rückwärts angeben, </p>
+
+        <p><strong>1.Lieferung im Zeitraum</strong></p>
+
+        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum sein erstmaliger Abverkauf erfolgt ist. </p>
+
+        <img src="imguse/imageabc3.png" alt="Lieferung im Zeitraum" />
+
+        <h4><strong>1.Abgang im Zeitraum</strong></h4>
+
+        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum sein erstmaliger Abverkauf erfolgt ist. </p>
+
+        <img src="imguse/imageabc4.png" alt="Abgang im Zeitraum" />
+
+        <h4><strong>Keine Lieferung bisher oder 1. Lieferung im Zeitraum</strong></h4>
+
+        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum entweder keine oder die erste Lieferung erfolgt ist.</p>
+
+        <img src="imguse/imageabc5.png" alt="Kein Abgang bisher oder 1. Abgang im Zeitraum" />
+
+        <p><strong>Kein Abgang bisher oder 1. Abgang im Zeitraum</strong></p>
+
+        <p>Ein Artikel wird als N-Artikel eingestuft, wenn im definierten Zeitraum entweder kein Abverkauf stattgefunden hat oder der erste Abverkauf erfolgt ist.</p>
+
+        <img src="imguse/imageabc6.png" alt="Kein Abgang bisher oder 1. Abgang im Zeitraum" />
+
+        <h3>D-Klasse</h3>
+
+        <p>
+            Die D-Klasse umfasst alle SKUs, die im definierten Zeitraum nicht verkauft wurden oder deren vorgegebene Verkaufsmengen nicht erreicht haben.
+            Sie dient dazu, ausgelaufene oder „tote“ Artikel gezielt zu kennzeichnen und in einer Klasse zu bündeln.
+        </p>
+
+        <img src="imguse/imageabc7.png" alt="D-Klasse" />
+
+        <h5><strong>Zeitraum in Tagen</strong></h5>
+
+        <p>Ähnlich wie bei der N-Klasse wird dies auch rückwirkend von heute ausgeben.</p>
+
+        <p>Unter <strong>„Maximal“</strong> kann man folgende Optionen auswählen:</p>
+
+        <h5><strong>Abgangsmenge</strong></h5>
+
+        <p>Dabei bezieht sich die Menge im Zeitraum auf die tatsächliche Verbrauchs- bzw. Abverkaufsmenge in der Basiseinheit des jeweiligen Artikels bzw. Lagerplatzes. </p>
+
+        <img src="imguse/imageabc8.png" alt="Abgangsmenge setting" />
+
+        <h5><strong># Positionen</strong></h5>
+
+        <p> Dabei bezieht sich die Menge im Zeitraum auf die Anzahl der Verbräuche bzw. Abverkäufe. </p>
+
+        <img src="imguse/imageabc9.png" alt="# Positionen Setting" />
+
+        <h5><strong># Abgangstage</strong></h5>
+
+        <p>Diese Funktion ist nur verfügbar, wenn Einzelpositionen wie Lieferantendaten an LOGOMATE übergeben werden.</p>
+
+        <img src="imguse/imageabc10.png" alt="# Abgangstage Setting" />
+
+        <h5><strong> Menge im Zeitraum </strong></h5>
+
+        <p>Hier kann man eintragen, wie groß die Summe aller Abverkäufe im angegebenen Zeitraum höchstens sein darf.</p>
+
+        <h5><strong> 0-Prognose </strong></h5>
+
+        <p>Die Aktivierung der 0-Prognose für die D-Klasse setzt eine vollautomatische Null-Prognose voraus – der Artikel muss als 0-Artikel klassifiziert, sein.</p>
+
+        <h5><strong> Bestand </strong></h5>
+
+        <p>Mithilfe der Operatoren und der Mengenanforderung zum Bestand kann die D-Klasse zusätzlich gefiltert werden, bezogen auf den aktuellen Bestand.</p>
+
+        <h3><strong>ABC</strong></h3>
+
+        <img src="imguse/imageabc11.png" alt="ABC setting" />
+
+        <h3>AB-Grenze</h3>
+
+        <p>Die AB-Grenze ist ein Prozentwert, der den Anteil der A-Artikel an der Gesamtsumme der A-, B- und C-Artikel definiert.</p>
+
+        <h3>BC-Grenze</h3>
+
+        <p>Die BC-Grenze ist ein Prozentsatz, der den Anteil der A- und B-Artikel an der Summe aller A-, B- und C-Artikel angibt.</p>
+
+        <h3><strong>Grenzen Wertmäßig <span class="SmallerText">(Bsp.)</span></strong></h3>
+
+        <img src="imguse/imageabc12.png" alt="Knotenliste" />
+
+        <p>Knotenliste nach ABC-Wert Absteiegnd sotiert. Die Option <strong>Grenzen Wertmäßig</strong> ist nicht aktiv</p>
+
+        <img src="imguse/imageabc13.png" alt="Knotenliste" />
+       
+        <p>Die gleiche Liste. Die Option <strong>Grenze Wertmäßig</strong> ist aktiv. Die ABC-Klassifizierung hat sich geändert.</p>
+
+        <h3><strong>Negative Mengen ignorieren</strong></h3>
+
+        <p>Diese Option wirkt nur mit der Mengenoption „Abgänge letzte“, erst wenn sie gesetzt ist, kann sich die ABC-Klassifizierung ändern.</p>
+
+        <img src="imguse/imageabc14.png" alt="ABC Settings" />
+
+        <h3><strong>Menge</strong></h3>
+
+        <P>Der Beobachtungszeitraum wird unter dem Punkt 'Menge' festgelegt.</P>
+
+        <h5> Prognose Heute</h5>
+
+        <p>aktueller Prognosewert</p>
+
+        <h5> Prognose V.-Termin</h5>
+
+        <p>Prognosewert zum Zeitpunkt des nächsten Verfügbarkeitstermins</p>
+
+        <h5>Prognose Mittelwert </h5>
+
+        <p>durchschnittliche Tages-Prognose</p>
+
+        <h5>Abgänge letzte</h5>
+
+        <p>Abgänge der letzten x Tage / Wochen / Monate von heute an</p>
+
+        <h5> # Pos. letzte  </h5>
+
+        <p>Positionen der letzten x Tage / Wochen / Monate von heute an</p>
+
+        <h5># Abg.-Tage letzte</h5>
+
+        <p> Abgangstage der letzten x Tage / Wochen / Monate von heute an </p>
+
+        <p> <strong>Wichtig:</strong> Die Funktionen <strong>„#Pos. Letzte“ und „#Abg.-Tage letzte“</strong> funktionieren nur wenn Lieferantendaten an LOGOMATE übergeben werden. </p>
     </section>
 
     <section id="UseCaseInheritanceButton">
