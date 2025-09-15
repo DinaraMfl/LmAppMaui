@@ -10,7 +10,7 @@ body {
 section {
   max-width: 800px;
   margin: auto;
-  backgr+ound: black;
+  background: black;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -40,7 +40,6 @@ li {
 
 ol {
     padding-left: 20px;
-
 }
 
 .LightGreycolor {
@@ -54,7 +53,6 @@ ol {
 
 .Blocksatz {
     text-align:justify;
-
 }
 
 .BlueColor {

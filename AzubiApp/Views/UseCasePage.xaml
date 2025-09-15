@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AzubiApp.Views.UseCasePage"
              Title="UseCasePage"
-             BackgroundColor="Black"                   >
+             BackgroundColor="Black">
 
     <!-- 2 Spalten: links für das Logo, rechts für den Button -->
     <Grid RowDefinitions="100,Auto,*"
@@ -22,10 +22,12 @@
         <!-- Zurück-Button ganz rechts in Spalte 1 -->
         <Button x:Name="UseCaseBackButton"
                 BackgroundColor="#FFCD00"
+                TextColor="Black"
                 Margin="20,10"
                 Grid.Row="0"
                 Grid.Column="1"
                 HorizontalOptions="End"
+                CornerRadius="20"
                 VerticalOptions="Center"
                 Clicked="OnBackButtonClicked" />
 
@@ -34,6 +36,7 @@
                  Grid.Row="2"
                  Grid.Column="0"
                  Grid.ColumnSpan="2"
+                 BackgroundColor="Black"
                  Margin="10" />
     </Grid>
 </ContentPage>
