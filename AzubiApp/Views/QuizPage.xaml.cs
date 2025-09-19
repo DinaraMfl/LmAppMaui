@@ -92,14 +92,19 @@ namespace AzubiApp.Views
 
             QuestionLabel.Text = lang == "de" ? question.TextDe : question.TextEn;
 
-            if (!string.IsNullOrEmpty(question.ImagePath))
+            if (lang == "de" && !string.IsNullOrEmpty(question.ImagePathDe))
             {
-                QuestionImage.Source = question.ImagePath;
+                QuestionImage.Source = $"Images/QuestionsImage/De/{question.ImagePathDe}";
+                QuestionImage.IsVisible = true;
+            }
+            else if (lang == "en" && !string.IsNullOrEmpty(question.ImagePathEn))
+            {
+                QuestionImage.Source = $"Images/QuestionsImage/En/{question.ImagePathEn}";
                 QuestionImage.IsVisible = true;
             }
             else
             {
-               QuestionImage.IsVisible = false;
+                QuestionImage.IsVisible = false;
             }
 
             var answerOptions = lang == "de"

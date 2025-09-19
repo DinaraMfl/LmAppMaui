@@ -9,7 +9,7 @@ namespace AzubiApp.Services
             var existingQuestions = await database.GetAllQuestionsAsync();
 
             var newQuestions = new List<Question>
-            {                
+            {
                 new Question
                 {
                     Number = 1,
@@ -28,7 +28,7 @@ namespace AzubiApp.Services
 
                     QuizCategory = new List<string> { "Bestellung", "Filter", "Allgemein" }
                 },
-                
+
                 new Question
                 {
                     Number = 2,
@@ -47,7 +47,7 @@ namespace AzubiApp.Services
 
                     QuizCategory = new List<string> { "Parameter" }
                 },
-                
+
                 new Question
                 {
                     Number = 3,
@@ -200,8 +200,8 @@ namespace AzubiApp.Services
                     QuizCategory = new List<string> { "Bestellung", "Parameter" }
                 },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 11,
 
                     TextDe = "Was passiert beim Berechnungstyp „nicht bestellen, ohne Bestand-Sim“?",
@@ -217,10 +217,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "No order proposals & stock simulation are generated",
 
                     QuizCategory = new List<string> { "Bestellung", "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 12,
 
                     TextDe = "Was passiert beim Berechnungstyp „Bestellmenge nullen vor Abfüllen“?",
@@ -236,10 +236,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "A requirement is calculated and order proposals receive an order quantity of 0",
 
                     QuizCategory = new List<string> { "Bestellung", "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 13,
 
                     TextDe = "Was macht die Optimierungs-Einheit?",
@@ -255,10 +255,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The optimization unit specifies the unit to be used for the calculation| Orders are placed with this unit",
 
                     QuizCategory = new List<string> { "Bestellung", "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 14,
 
                     TextDe = "Wie kann eine Mindestgrenze von 100 Stück (BE0) auf 100€ geändert werden? [Bis Version 8.8-01]",
@@ -274,10 +274,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Set the reference to “Value gross/net”",
 
                     QuizCategory = new List<string> { "Bestellung", "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 15,
 
                     TextDe = "Welche Parameter sollten eingestellt werden, wenn neue SKUs übergeben werden ohne bekannter Abgangshistorie?",
@@ -293,10 +293,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Mean value| Field “If forecast is possible”",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 16,
 
                     TextDe = "Was unterscheidet eine Filterklasse von einer Zuordnungsklasse?",
@@ -312,10 +312,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "A filter class has clearly defined conditions that an SKU must fulfill",
 
                     QuizCategory = new List<string> { "Filter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 17,
 
                     TextDe = "Was unterscheidet eine Zuordnungsklasse zu einer Filterklasse?",
@@ -331,10 +331,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "An assignment class must be filled manually",
 
                     QuizCategory = new List<string> { "Filter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {   
                     Number = 18,
 
                     TextDe = "Was wird inaktiviert, wenn die Kondition „Inaktiv“ gesetzt wird?",
@@ -350,10 +350,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The allocated supplier",
 
                     QuizCategory = new List<string> { "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 19,
 
                     TextDe = "Was wird inaktiviert, wenn der Parameter „Inaktiv“ gesetzt wird?",
@@ -369,10 +369,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The forecast calculation | The Replenishment calculation",
 
                     QuizCategory = new List<string> { "Bestellung", "Parameter", "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 20,
 
                     TextDe = "Was macht der Read-Only Modus?",
@@ -388,10 +388,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "This allows temporary changes to be made for test purposes",
 
                     QuizCategory = new List<string> { "Filter", "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 21,
 
                     TextDe = "Was bedeuten grüne  Zeilen in der Export-Tabelle?",
@@ -407,10 +407,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Does not necessarily mean anything as the color can be customized| The order shown was changed after creation/calculation",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 22,
 
                     TextDe = "Darf ich eine SKU löschen?",
@@ -426,10 +426,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "No, SKUs may only be set to inactive",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 23,
 
                     TextDe = "Was sind Ausreißer?",
@@ -445,10 +445,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Outliers are extreme values in the history",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 24,
 
                     TextDe = "Woran erkenne ich wie lang eine Saison ist?",
@@ -464,10 +464,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The number of periods before and after the reporting date defines the length of the season",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 25,
 
                     TextDe = "Wie viele Historienwerte sind erforderlich um einen Strukturbruch zu erkennen?",
@@ -483,10 +483,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "At least 8 history values",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 26,
 
                     TextDe = "Was korrigiert die Behandlungsgrenze?",
@@ -502,10 +502,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Outliers",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 27,
 
                     TextDe = "Welche Grenze sollte höher sein bei den Ausreißern, damit diese korrigiert wird?",
@@ -521,10 +521,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Treatment limit",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 28,
 
                     TextDe = "Wann kommen Vorläufer (normalerweise) zum Einsatz?",
@@ -540,10 +540,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "New Article variation SKUs without history| Replacement article SKUs without history",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 29,
 
                     TextDe = "Was bewirkt ein eingetragener Vorläufer?",
@@ -559,10 +559,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The history of the predecessor is transferred to the SKU",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 30,
 
                     TextDe = "Wie kann man LOGOMATE dazu bringen nur einen bestimmten Zeitraum der Historie für die Berechnung zu nutzen?",
@@ -578,10 +578,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "In the parameters under the “Forecast” tab, fill in the “History to use” box",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose", "Filter" }
-                 },
-                 
-                 new Question
-                 {
+                },
+
+                new Question
+                {
                     Number = 31,
 
                     TextDe = "Was bewirkt das Gütekriterium „Bestand minimieren“?",
@@ -597,10 +597,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Stock is kept as low as possible by proposing the smallest possible order quantity",
 
                     QuizCategory = new List<string> { "Bestellung", "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 32,
 
                     TextDe = "Was bewirkt das Gütekriterium „Kosten/ Warenwert minimieren“?",
@@ -616,10 +616,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Order quantities are reduced, but orders are placed more frequently in order to minimize warehousing costs| Order quantities are increased, but orders are placed less frequently to keep order costs low",
 
                     QuizCategory = new List<string> { "Bestellung", "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 33,
 
                     TextDe = "Wann tritt die Warnung  “Max. Prognose erreicht” auf?",
@@ -635,10 +635,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Appears when LM has “truncated” an inflated forecast including the standard deviation",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 34,
 
                     TextDe = "Wann wird ein Strukturbruch erkannt?",
@@ -654,10 +654,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "If there are several history values| If the volatility (fluctuation range) does not exceed the permissible value",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 35,
 
                     TextDe = "Wann tritt die Warnung  “Max. Prognose erreicht” auf?",
@@ -673,10 +673,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Occurs when too much is ordered",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 36,
 
                     TextDe = "Die Wiederbeschaffungszeit setzt sich zusammen aus:?",
@@ -692,10 +692,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Order Preparation Time (OPT) Delivery Time (DT) Transport Time (TT) Storage Time (ST)",
 
                     QuizCategory = new List<string> { "Filter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 37,
 
                     TextDe = "Was macht der Trend?",
@@ -711,10 +711,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "It allows the mean value to increase linearly",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 38,
 
                     TextDe = "Was ist die Voraussetzung für einen Trend?",
@@ -730,10 +730,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "An average value",
 
                     QuizCategory = new List<string> { "Paramter", "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 39,
 
                     TextDe = "Was macht der „Quadrat. Trend“?",
@@ -749,10 +749,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "It causes the average value to increase exponentially",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 40,
 
                     TextDe = "Ist es möglich sowohl Trend als auch Quadrat. Trend einzustellen? ",
@@ -768,10 +768,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Yes, because the quadratic trend does not work without a linear trend",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
-                 },
-                 
-                 new Question
-                 {
+                },
+
+                new Question
+                {
                     Number = 41,
 
                     TextDe = "Was sagt die ABC-Klasse über eine SKU aus?",
@@ -787,10 +787,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The ABC class shows which SKUs have the highest turnover",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 42,
 
                     TextDe = "Was sagt eine XYZ-Klasse über eine SKU aus?",
@@ -806,10 +806,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The ABC class shows which SKU can be predicted most accurately",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 43,
 
                     TextDe = "Was bewirkt der “Rhythmusanfang” in einem Bestellrhythmus?",
@@ -825,10 +825,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "It specifies the number of periods from which the ordering cycle should start",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 44,
 
                     TextDe = "Was muss erfüllt sein damit man im Kalender, die Wochentage & Feiertage bearbeiten kann?",
@@ -844,10 +844,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "“Separate calendar” must be checked",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 45,
 
                     TextDe = "Was kann auch ohne „Eigener Kalender“-Haken eingestellt werden?",
@@ -863,10 +863,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Dynamic calendar section (company vacations, special shifts, ...)",
 
                     QuizCategory = new List<string> { "Algemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 46,
 
                     TextDe = "Wo kann man den Werkskalender finden?",
@@ -882,10 +882,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Group tree| Store tree",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 47,
 
                     TextDe = "Wo kann man den Lieferanten-Kalender finden?",
@@ -901,10 +901,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Supplier tree",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 48,
 
                     TextDe = "Welche Kalender gibt es in LOGOMATE?",
@@ -920,10 +920,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Supplier tree| Site calendar",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 49,
 
                     TextDe = "Bei was unterstützt Sie die Vererbung in LOGOMATE?",
@@ -939,10 +939,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "It helps to quickly record and manage parameters and conditions",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 50,
 
                     TextDe = "Was sorgt dafür, dass eine Bestellung überfällig ist?",
@@ -958,10 +958,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "If no order arrives on time",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 51,
 
                     TextDe = "Welchen Vorteil hat die 2D-Ansicht?",
@@ -977,10 +977,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Better view of the forecast graphic",
 
                     QuizCategory = new List<string> { "Prognose", "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 52,
 
                     TextDe = "Wie viele Rhythmen kann ich in den Konditionen (Zeiten)auswählen?",
@@ -996,10 +996,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "4",
 
                     QuizCategory = new List<string> { "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 53,
 
                     TextDe = "Was ist ein Dispofehler?",
@@ -1015,10 +1015,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Too few delivery dates",
 
                     QuizCategory = new List<string> { "Bestellung", "Filter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 54,
 
                     TextDe = "Was ist die primäre Aufgabe der Verbund-Bestellung?",
@@ -1034,10 +1034,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "All SKUs that have been ordered should reach their safety stock at the same time so that the SKUs can be ordered again at the same time",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 55,
 
                     TextDe = "Was bewirkt der Parameter „Kein Auslöseartikel“?",
@@ -1053,10 +1053,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The SKU to which this parameter was applied must not trigger an order| The SKU may only be ordered with a compound order",
 
                     QuizCategory = new List<string> { "Bestellung", "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 56,
 
                     TextDe = "Was unterscheidet eine Verbund- Bestellung zu einer „normalen“ Bestellung?",
@@ -1072,10 +1072,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "A compound order consists of several items that are ordered",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 57,
 
                     TextDe = "Was kann man machen bei SKUs in einer Verbund-Gruppe, mit jeweils unterschiedlichen Konditionen?",
@@ -1091,10 +1091,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Form compound subgroups with SKUs that have the same conditions| Remove SKUs that have unique conditions from the compound group",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 58,
 
                     TextDe = "Woran erkennt man eine Verbund-Gruppe?",
@@ -1110,10 +1110,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "On the light blue version of the original symbol",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 59,
 
                     TextDe = "Wie können Verbund-Gruppen erstellt werden?",
@@ -1129,10 +1129,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "“Desired group“->right-click->New group->”Compound group” checkbox| “Desired group”->right-click->Edit group/user->check “Compound”",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 60,
 
                     TextDe = "Was zeigt eine rote Schrift in den Bestellungen an (standardmäßig)?",
@@ -1148,10 +1148,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The order has missed its availability date and is now considered overdue",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 61,
 
                     TextDe = "Was zeigt eine hellrote Schrift in den Bestellungen an (standardmäßig)?",
@@ -1167,10 +1167,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The order has been changed & has exceeded your availability date",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 62,
 
                     TextDe = "Was zeigt eine grüne Schrift in den Bestellungen an (standardmäßig)?",
@@ -1186,10 +1186,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The order proposal has been exported| The order was output as a report and exported| The order has been imported",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 63,
 
                     TextDe = "Was zeigt eine hellgrüne Schrift in den Bestellungen an (standardmäßig)?",
@@ -1205,12 +1205,12 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The order has been changed after it has already been exported",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 64,
-                 
+
                     TextDe = "Was zeigt eine schwarze Schrift in den Bestellungen an (standardmäßig)?",
                     Answer1De = "Die Bestellung hat Ihren Bestellzeitpunkt noch nicht erreicht und wurde noch nicht exportiert",
                     Answer2De = "Der Verfügbarkeitstermin der Bestellung ist heute",
@@ -1224,10 +1224,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The order has not yet reached your order date and has not yet been exported",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 65,
 
                     TextDe = "Was bewirkt das Gütekriterium „Auf Max. auffüllen“?",
@@ -1243,10 +1243,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Order proposals are generated until the maximum stock level is reached",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 66,
 
                     TextDe = "Was bewirkt das Gütekriterium „Auf Max. + Reserv. auffüllen“?",
@@ -1262,10 +1262,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 67,
 
                     TextDe = "Welche Funktion hat das Auto-Store-Verfahren?",
@@ -1281,10 +1281,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The unit factor is kept as low as possible| Order proposals are generated from several optimization units",
 
                     QuizCategory = new List<string> { "Paramter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 68,
 
                     TextDe = "Wie und wo wird das Auto-Store-Verfahren aktiviert?",
@@ -1300,10 +1300,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Parameters->Dispo->Quality criterion->“Auto-store method” select",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 69,
 
                     TextDe = "Was bewirkt das Gütekriterium „Container-Optimierung“?",
@@ -1319,10 +1319,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Order proposals are generated with the lowest possible order costs",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 70,
 
                     TextDe = "Was bewirkt das Gütekriterium „Mit Partitionierung“?",
@@ -1338,10 +1338,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Order proposals are generated for remaining quantities of orders (optimization unit is taken into account!)",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 71,
 
                     TextDe = "Was bewirkt das Gütekriterium „Partitionen verwenden Anfangsbestand nicht“?",
@@ -1357,10 +1357,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Orders are converted 1:1 into purchase orders, regardless of stock and open purchase orders",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 72,
 
                     TextDe = "Was muss erfüllt werden damit das Auto-Store-Verfahren ordnungsgemäß ausgeführt werden kann?",
@@ -1376,10 +1376,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The optimization units to be used must not have a mix hook| The difference between the optimization units to be used must increase towards the top",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 73,
 
                     TextDe = "Was ist der Unterschied zwischen Auto-Store-Verfahren und Container-Optimierung?",
@@ -1395,12 +1395,12 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The auto-store method optimizes the unit factor| Container optimization optimizes the ordering costs",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 74,
-                    
+
                     TextDe = "Welche Kombinationen sind bei einer Container-Optimierung möglich, nach der optimiert werden soll?",
                     Answer1De = "Volumen / Gewicht",
                     Answer2De = "Faktor / Volumen",
@@ -1414,10 +1414,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Volume / weight| Weight / factor",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
-                 
-                 new Question
-                 {
+                },
+
+                new Question
+                {
                     Number = 75,
 
                     TextDe = "Was ändert sich im Bestellfenster wenn Reservierungen eine Partition besitzen?",
@@ -1433,10 +1433,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "A reservation with a partition gets its own order and can be assigned directly to an item",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
-                 
-                 new Question
-                 {
+                },
+
+                new Question
+                {
                     Number = 76,
 
                     TextDe = "Wofür werden Pseudo-Kontrakte verwendet?",
@@ -1452,10 +1452,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "This can be used to define an additional Sft",
 
                     QuizCategory = new List<string> { "Paramter", "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 77,
 
                     TextDe = "Wie viele Kontrakte kann ein Artikel haben?",
@@ -1471,10 +1471,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "An article can have multiple contracts",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 78,
 
                     TextDe = "Wie viele Lieferanten können einer SKU zugeordnet werden?",
@@ -1490,12 +1490,12 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "There is no limit",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 79,
-                    
+
                     TextDe = "Wie kann ich Lieferkontrakte splitten?",
                     Answer1De = "Parameter -> Dispo -> Kontraktart die Option \"Lieferantenauswahl\" und / oder \"Max. Menge\"",
                     Answer2De = "Parameter -> Dispo -> Kontraktauswahl die Option \"Nach Restmenge\"",
@@ -1509,10 +1509,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Parameters -> Replenishment -> Contract type: \"Select Supplier\" and / or \"Max. Quantity\"",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 80,
 
                     TextDe = "Was bedeutet in der Kontraktauswahl \"Nach Vertragsende\"?",
@@ -1528,10 +1528,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "It is ordered from the supplier with the next contract end date if the contract is still open",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 81,
 
                     TextDe = "Was bedeutet in der Kontraktart \"Dauerauftrag/Bestellungsaufteilung\"?",
@@ -1547,10 +1547,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Order quantities for SKUs with multiple suppliers can be split between standing order and order splitting; also combined",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 82,
 
                     TextDe = "Was bewirkt die Kontraktart \"Max.Menge\"?",
@@ -1566,10 +1566,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The maximum quantity that can be requested from the supplier is ordered until the contact has been fulfilled",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 83,
 
                     TextDe = "Welche Farbe haben negative Aktionen in der Prognosegrafik? (standardgemäß)",
@@ -1585,10 +1585,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "white",
 
                     QuizCategory = new List<string> { "Prognose"}
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 84,
 
                     TextDe = "Was sind Semi-Aktionen?",
@@ -1604,10 +1604,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "\"Semi-promotions\" are promotions where the time period is known but the quantity is unknown| Semi-promotions are always located in the past",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 85,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses blau & unterstrichen angezeigt wird?",
@@ -1623,10 +1623,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The value was passed on from a higher level",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 86,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses grün & unterstrichen angezeigt wird?",
@@ -1642,10 +1642,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The value was passed on from a class",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 87,
 
                     TextDe = "Automatische Aktionen, die Vergangenheitswerte korrigieren, können entstehen…",
@@ -1661,10 +1661,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "through the OoS correction",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 88,
 
                     TextDe = "Was machen Info-Aktionen?",
@@ -1680,10 +1680,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "This allows you to use previously unconsidered periods with their sales and promotions for the forecast calculation",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 89,
 
                     TextDe = "Was sind Stichtage?",
@@ -1699,10 +1699,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Due dates allow variable seasons",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 90,
 
                     TextDe = "Welche Aussage stimmt nicht?",
@@ -1718,10 +1718,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The Sft is the average stock level during a month| The Sft indicates the quantity that must be ordered to avoid an OoS situation",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 91,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Dienstag?",
@@ -1736,13 +1736,14 @@ namespace AzubiApp.Services
                     Answer3En = "11 Days",
                     CorrectAnswersEn = "11 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_091_1_wbz.png",
+                    ImagePathDe = "question_091_1_wbz.png",
+                    ImagePathEn = "question_091_1_wbz_en.png",
 
                     QuizCategory = new List<string> { "Bestellung", "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 92,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses blau angezeigt wird?",
@@ -1758,10 +1759,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The value in the field is set by default",
 
                     QuizCategory = new List<string> { "Parameter", "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 93,
 
                     TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses schwarz angezeigt wird?",
@@ -1777,10 +1778,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The value in the field was entered manually",
 
                     QuizCategory = new List<string> { "Parameter", "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 94,
 
                     TextDe = "Welchen Unterschied macht es, wenn ein Konditions- / Parameter-Feld unterstrichen wird oder nicht?",
@@ -1796,10 +1797,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "If a field is underlined, it means that this value was passed on from a higher level",
 
                     QuizCategory = new List<string> { "Parameter", "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 95,
 
                     TextDe = "Welche Auswirkung hat eine Kontraktart?",
@@ -1815,10 +1816,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The contract type defines how contracts should be handled",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 96,
 
                     TextDe = "Welche Auswirkung hat eine Kontraktauswahl?",
@@ -1834,10 +1835,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The select contract function determines which contracts are to be chosen",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 97,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „Nach Restmenge“?",
@@ -1853,10 +1854,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The contract with the largest remaining quantity is used",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 98,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „RMge / RLfz“?",
@@ -1872,10 +1873,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The contract with the highest average remaining quantity per day is used",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 99,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „RMge / GMge“?",
@@ -1891,10 +1892,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The contract with the highest remaining quantity in % is used",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 100,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „(RMge / GMge) * (1 / RLfz)“?",
@@ -1910,10 +1911,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The contract with the lowest remaining quantity in % per day is used",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 101,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „(RMge / GMge) * (GLfz / RLfz)“?",
@@ -1929,10 +1930,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The contract with the highest increasing average remaining quantity per day is used",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 102,
 
                     TextDe = "Was bewirkt die Kontraktauswahl „Bestell-Verhältnis“?",
@@ -1948,10 +1949,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The order quantity is divided among several suppliers in the specified ratio",
 
                     QuizCategory = new List<string> { "Paramter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 103,
 
                     TextDe = "Welche Kontraktart muss ausgewählt sein damit die Kontraktauswahl verwendet wird?",
@@ -1967,10 +1968,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Select Supplier| Max. Qty + Select Supplier",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 104,
 
                     TextDe = "Was bewirkt die Kontraktart „Kontrakte ignorieren“?",
@@ -1986,10 +1987,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Contracts will not be used",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 105,
 
                     TextDe = "Was bewirkt die Kontraktart „Max. Menge u. Lieferantenauswahl“?",
@@ -2005,10 +2006,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The contract that matches the decision criterion of the select contract best is chosen and the maximum quantity that is available is then ordered",
 
                     QuizCategory = new List<string> { "Paramter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 106,
 
                     TextDe = "Was macht der Parameter \"Berechnung von Semi-Aktionen\"?",
@@ -2024,10 +2025,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "You use these parameters to define the types of how the promotion quantities are calculated",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 107,
 
                     TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit'' bei der Berechnung von Semi-Aktionen?",
@@ -2043,10 +2044,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The promotion quantity is calculated by comparing sales during the promotion with sales during non-promotion periods",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 108,
 
                     TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit + ggf. Info setzen'' bei der Berechnung von Semi-Aktionen?",
@@ -2062,10 +2063,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 109,
 
                     TextDe = "Was macht der Typ ''Rel zu Ex-Post-Prognose'' bei der Berechnung von Semi-Aktionen?",
@@ -2081,10 +2082,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast",
 
                     QuizCategory = new List<string> { "Paramter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 110,
 
                     TextDe = "Was macht der Typ ''Rel. zu aktionsfreier Zeit mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
@@ -2100,10 +2101,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 111,
 
                     TextDe = "Was macht der Typ ''Rel. zur Ex-Post-Prognose mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
@@ -2119,10 +2120,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 112,
 
                     TextDe = "Wo kann ich die Ausreißererkennung deaktivieren?",
@@ -2138,10 +2139,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Parameters -> Structure break/ Outlier -> Outlier detection",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 113,
 
                     TextDe = "Wie viele SiB-Typen gibt es?",
@@ -2157,10 +2158,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "9",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 114,
 
                     TextDe = "Wie kann ich die Prognose-Einstellungen mit übernehmen? (Saison)",
@@ -2176,10 +2177,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The setting is not activated by default.| To do this, you must call LM support, as global system settings are required for this",
 
                     QuizCategory = new List<string> { "", "" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 115,
 
                     TextDe = "Was bedeuten die roten Striche am unteren Rand der Bestandssimulation?",
@@ -2194,13 +2195,13 @@ namespace AzubiApp.Services
                     Answer3En = "Always marks the beginning of the week",
                     CorrectAnswersEn = "Public holidays, usually weekends on which there are no sales at all",
 
-                    ImagePath = "Images/QuestionsImage/question_115_1_best.png",
+                    ImagePathDe = "question_115_1_best.png",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 116,
 
                     TextDe = "Was stellen die schwarzen Striche oben bei der Prognose dar?",
@@ -2215,13 +2216,13 @@ namespace AzubiApp.Services
                     Answer3En = "The relative departure option",
                     CorrectAnswersEn = "The standard deviation",
 
-                    ImagePath = "Images/QuestionsImage/question_116_3_balk.png",
+                    ImagePathDe = "question_116_3_balk.png",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 117,
 
                     TextDe = "Wo kann ich die Farben der Prognosegrafik ändern?",
@@ -2237,10 +2238,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Under Extras",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 118,
 
                     TextDe = "Was bedeutet ein Prognose-Faktor von 2.0?",
@@ -2256,10 +2257,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "a duplication of the forecast",
 
                     QuizCategory = new List<string> { "", "" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 119,
 
                     TextDe = "Was bedeutet ''Sofort bestellen'' in den Konditionen?",
@@ -2275,10 +2276,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "All open orders will be ordered today",
 
                     QuizCategory = new List<string> { "", "" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 120,
 
                     TextDe = "Was sind die Vorraussetzung für die Kontraktauswahl: “Bestellverhältnis” ?",
@@ -2294,10 +2295,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "You need two suppliers| The contract type must also be adjusted",
 
                     QuizCategory = new List<string> { "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 121,
 
                     TextDe = "Werden historische Aktionen bei der Prognose berücksichtigt?",
@@ -2313,10 +2314,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Yes",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 122,
 
                     TextDe = "Man kann eine variable Saison erkennen, wenn…?",
@@ -2332,10 +2333,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "e.g. if school vacations begin| clear increases/decreases are recognizable in certain time periods",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 123,
 
                     TextDe = "Was stellen die dunkelgrünen Balkenanteile dar?",
@@ -2350,13 +2351,13 @@ namespace AzubiApp.Services
                     Answer3En = "The outlier treatment limit",
                     CorrectAnswersEn = "Positive promotions in the event of outlier detection",
 
-                    ImagePath = "Images/QuestionsImage/question_123_2_balk.png",
+                    ImagePathDe = "question_123_2_balk.png",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 124,
 
                     TextDe = "Was macht der Typ “SiB-Erhöhung” bei der Behandlung Aktionsbestellung?",
@@ -2372,10 +2373,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The Sft is increased by the promotion quantity × percentage between the available-from date and the start of the promotion and is immediately reduced again at the start of the promotion",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 125,
 
                     TextDe = "Was macht der Typ “SiB-Erhöhung m. langsamen Abfall” bei der Behandlung Aktionsbestellung?",
@@ -2391,10 +2392,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Like Sft increase, but the Sft is reduced slowly and evenly over the entire promotion period",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 126,
 
                     TextDe = "Was macht der Typ “Reservierungsdatum vordatieren” bei der Behandlung Aktionsbestellung?",
@@ -2410,10 +2411,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "If the order quantity is sufficient for the promotional period, the reservation date of all items is set to the available from date after the dispo",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 127,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
@@ -2428,13 +2429,13 @@ namespace AzubiApp.Services
                     Answer3En = "19 Days",
                     CorrectAnswersEn = "17 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_127_2_wbz.png",
+                    ImagePathDe = "question_127_2_wbz.png",
 
                     QuizCategory = new List<string> { "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 128,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
@@ -2449,13 +2450,13 @@ namespace AzubiApp.Services
                     Answer3En = "27 Days",
                     CorrectAnswersEn = "27 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_128_3_wbz.png",
+                    ImagePathDe = "question_128_3_wbz.png",
 
                     QuizCategory = new List<string> { "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 129,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
@@ -2470,13 +2471,13 @@ namespace AzubiApp.Services
                     Answer3En = "13 Days",
                     CorrectAnswersEn = "11 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_129_4_wbz.png",
+                    ImagePathDe = "question_129_4_wbz.png",
 
                     QuizCategory = new List<string> { "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 130,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
@@ -2491,13 +2492,13 @@ namespace AzubiApp.Services
                     Answer3En = "17 Days",
                     CorrectAnswersEn = "13 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_130_5_wbz.png",
+                    ImagePathDe = "question_130_5_wbz.png",
 
                     QuizCategory = new List<string> { "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 131,
 
                     TextDe = "Wie lange würde die Wiederbeschaffungszeit sein, wenn mit folgenden Konditionen eine Bestellung getätigt wird an einem Montag?",
@@ -2512,13 +2513,13 @@ namespace AzubiApp.Services
                     Answer3En = "13 Days",
                     CorrectAnswersEn = "13 Days",
 
-                    ImagePath = "Images/QuestionsImage/question_131_6_wbz.png",
+                    ImagePathDe = "question_131_6_wbz.png",
 
                     QuizCategory = new List<string> { "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 132,
 
                     TextDe = "Welcher dieser Balken zeigt eine Ausreißer-Korrektur?",
@@ -2533,13 +2534,13 @@ namespace AzubiApp.Services
                     Answer3En = "Both",
                     CorrectAnswersEn = "Both",
 
-                    ImagePath = "Images/QuestionsImage/question_132_1_balk.png",
+                    ImagePathDe = "question_132_1_balk.png",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 133,
 
                     TextDe = "Welche Warnung wird erzeugt?",
@@ -2554,13 +2555,13 @@ namespace AzubiApp.Services
                     Answer3En = "Max. Planning horizon exceeded",
                     CorrectAnswersEn = "Max. Stock is exceeded",
 
-                    ImagePath = "Images/QuestionsImage/question_133_1_warn.png",
+                    ImagePathDe = "question_133_1_warn.png",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 134,
 
                     TextDe = "Welche Warnung wird erzeugt?",
@@ -2575,13 +2576,13 @@ namespace AzubiApp.Services
                     Answer3En = "Reservations cannot be fulfilled",
                     CorrectAnswersEn = "Probably OoS| Reservations cannot be fulfilled",
 
-                    ImagePath = "Images/QuestionsImage/question_134_2_warn.png",
+                    ImagePathDe = "question_134_2_warn.png",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 135,
 
                     TextDe = "Wofür wird dieser Block benutzt?",
@@ -2596,13 +2597,13 @@ namespace AzubiApp.Services
                     Answer3En = "To limit for how far into the future orders may be generated",
                     CorrectAnswersEn = "To determine how much of the issue history should be used for the forecast calculation",
 
-                    ImagePath = "Images/QuestionsImage/question_135_1_para.png",
+                    ImagePathDe = "question_135_1_para.png",
 
                     QuizCategory = new List<string> { "Bestellung", "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 136,
 
                     TextDe = "Welche Warnungen werden erzeugt?",
@@ -2617,13 +2618,13 @@ namespace AzubiApp.Services
                     Answer3En = "Strongly rising forecast",
                     CorrectAnswersEn = "Outliers| Strongly rising forecast",
 
-                    ImagePath = "Images/QuestionsImage/question_136_3_warn.png",
+                    ImagePathDe = "question_136_3_warn.png",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 137,
 
                     TextDe = "Welche Warnungen werden erzeugt?",
@@ -2638,13 +2639,13 @@ namespace AzubiApp.Services
                     Answer3En = "Currently no standard deviation",
                     CorrectAnswersEn = "Strongly rising forecast",
 
-                    ImagePath = "Images/QuestionsImage/question_137_4_warn.png",
+                    ImagePathDe = "question_137_4_warn.png",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 138,
 
                     TextDe = "Welche Warnungen werden erzeugt?",
@@ -2659,13 +2660,13 @@ namespace AzubiApp.Services
                     Answer3En = "Possible structure break",
                     CorrectAnswersEn = "Outlier",
 
-                    ImagePath = "Images/QuestionsImage/question_138_5_warn.png",
+                    ImagePathDe = "question_138_5_warn.png",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 139,
 
                     TextDe = "Welche Warnungen werden erzeugt?",
@@ -2680,13 +2681,13 @@ namespace AzubiApp.Services
                     Answer3En = "Structure break",
                     CorrectAnswersEn = "Outlier| Strongly rising forecast",
 
-                    ImagePath = "Images/QuestionsImage/question_139_6_warn.png",
+                    ImagePathDe = "question_139_6_warn.png",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 140,
 
                     TextDe = "Was zeigen die gestrichelten Linien an?",
@@ -2701,13 +2702,13 @@ namespace AzubiApp.Services
                     Answer3En = "The alternative Sft",
                     CorrectAnswersEn = "The outlier treatment threshold| The outlier warning threshold",
 
-                    ImagePath = "Images/QuestionsImage/question_140_1_grenz.png",
+                    ImagePathDe = "question_140_1_grenz.png",
 
                     QuizCategory = new List<string> { "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 141,
 
                     TextDe = "Welche Warnung wird erzeugt?",
@@ -2722,13 +2723,13 @@ namespace AzubiApp.Services
                     Answer3En = "Replenishment",
                     CorrectAnswersEn = "Overdue orders",
 
-                    ImagePath = "Images/QuestionsImage/question_141_7_warn.png",
+                    ImagePathDe = "question_141_7_warn.png",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 142,
 
                     TextDe = "Was bedeutet der graue Kasten im Bild?",
@@ -2742,14 +2743,14 @@ namespace AzubiApp.Services
                     Answer2En = "There should be no stock in the period",
                     Answer3En = "During this period are self-defined company vacations",
                     CorrectAnswersEn = "There should be no stock in the period",
-                    
-                    ImagePath = "Images/QuestionsImage/question_142_2_sim.png",
+
+                    ImagePathDe = "question_142_2_sim.png",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 143,
 
                     TextDe = "Welcher Graph zeigt den Min. SiB an? (temp/adrian.pawlak/App_Use-Case/Sim_3.png)",
@@ -2764,13 +2765,13 @@ namespace AzubiApp.Services
                     Answer3En = "Graph 1 & Graph 2",
                     CorrectAnswersEn = "Graph 2",
 
-                    ImagePath = "Images/QuestionsImage/question_143_3_sim.png",
+                    ImagePathDe = "question_143_3_sim.png",
 
                     QuizCategory = new List<string> { "Parameter", "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 144,
 
                     TextDe = "Was zeigen die vertikalen Striche an?",
@@ -2785,13 +2786,13 @@ namespace AzubiApp.Services
                     Answer3En = "These are the standard deviations of the stocks",
                     CorrectAnswersEn = "These are the dates when an order is triggered",
 
-                    ImagePath = "Images/QuestionsImage/question_144_4_sim.png",
+                    ImagePathDe = "question_144_4_sim.png",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 145,
 
                     TextDe = "Was zeigt die blaue Stecknadel an?",
@@ -2806,13 +2807,13 @@ namespace AzubiApp.Services
                     Answer3En = "A Memo that has been provided with a date in the future",
                     CorrectAnswersEn = "A Memo that was inherited and has no date",
 
-                    ImagePath = "Images/QuestionsImage/question_145_1_wied.png",
+                    ImagePathDe = "question_145_1_wied.png",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 146,
 
                     TextDe = "Was zeigt die schwarze Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_2.png)",
@@ -2827,14 +2828,13 @@ namespace AzubiApp.Services
                     Answer3En = "A Memo without a date",
                     CorrectAnswersEn = "A Memo without a date",
 
-                    ImagePath = "Images/QuestionsImage/question_146_2_wied.png",
+                    ImagePathDe = "question_146_2_wied.png",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
-
+                },
 
                 new Question
-                 {
+                {
                     Number = 147,
 
                     TextDe = "Was zeigt die graue Stecknadel an?",
@@ -2849,13 +2849,13 @@ namespace AzubiApp.Services
                     Answer3En = "A Memo that has been provided with a date in the future",
                     CorrectAnswersEn = "A Memo that has been provided with a date in the future",
 
-                    ImagePath = "Images/QuestionsImage/question_147_3_wied.png",
+                    ImagePathDe = "question_147_3_wied.png",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 148,
 
                     TextDe = "Was zeigt die rote Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_4.png)",
@@ -2871,10 +2871,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "A Memo that has exceeded its date",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 149,
 
                     TextDe = "Was zeigen die roten Pfeile in der Bestandssimulation an? (temp/adrian.pawlak/App_Use-Case/Sim_5.png)",
@@ -2890,10 +2890,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "They show the expiration of stocks of an SKU",
 
                     QuizCategory = new List<string> { "Kondition" }
-                 },
+                },
 
-                 new Question
-                 {
+                new Question
+                {
                     Number = 150,
 
                     TextDe = "Woran erkennt man, in der Bestandssimulation, wann eine Bestellung eintrifft? (temp/adrian.pawlak/App_Use-Case/Sim_6.png)",
@@ -2909,11 +2909,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "By the rising points of the graph",
 
                     QuizCategory = new List<string> { "Bestellung", "Allgemein" }
-             
-                 }, 
-            
-                  new Question
-                 {
+                },
+
+                new Question
+                {
                     Number = 151,
 
                     TextDe = "Was zeigt eine hellblaue Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_5.png)",
@@ -2929,10 +2928,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "A Memo that was inherited and has a date in the future",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                  new Question
-                 {
+                new Question
+                {
                     Number = 152,
 
                     TextDe = "Was zeigt eine lilane Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_6.png)",
@@ -2948,10 +2947,10 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "A Memo that has been inherited and has exceeded its date",
 
                     QuizCategory = new List<string> { "Allgemein" }
-                 },
+                },
 
-                  new Question
-                 {
+                new Question
+                {
                     Number = 153,
 
                     TextDe = "Was zeigt die türkise Farbe an? (temp/adrian.pawlak/App_Use-Case/Grp_1.png)",
@@ -2967,9 +2966,8 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "A compound group",
 
                     QuizCategory = new List<string> { "Bestellung", "Allgemein" }
-                 },
+                },
             };
-
 
             foreach (var question in newQuestions)
             {

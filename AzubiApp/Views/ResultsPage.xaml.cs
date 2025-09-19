@@ -48,8 +48,8 @@ namespace AzubiApp.Views
                 var question = questions[i];
                 var correctAnswers = (lang == "de" ? question.CorrectAnswersDe : question.CorrectAnswersEn)
                             .Split("|", StringSplitOptions.TrimEntries)
-                            .ToList(); 
-                
+                            .ToList();
+
                 var userSelected = userAnswers[i];
 
                 bool isCorrect = correctAnswers.All(userSelected.Contains) && correctAnswers.Count == userSelected.Count;
@@ -62,23 +62,33 @@ namespace AzubiApp.Views
 
                 var questionText = lang == "de" ? question.TextDe : question.TextEn;
 
+                string imagePath = null;
+                if (lang == "de" && !string.IsNullOrEmpty(question.ImagePathDe))
+                {
+                    imagePath = question.ImagePathDe;
+                }
+                else if (lang == "en" && !string.IsNullOrEmpty(question.ImagePathEn))
+                {
+                    imagePath = question.ImagePathEn;
+                }
+
                 Results.Add(new ResultItem
                 {
                     QuestionText = $"\t{i + 1}. {questionText}",
                     UserAnswerText = $"\t\t\t{yourAnswerTranlsate} \n{string.Join("\n", userSelected)}", // answers from user - 'Your questions'
-                    CorrectAnswerText = $"\n\t\t{correctAnswersTranlatetText} \n{ string.Join("\n", correctAnswers)}", // correct answers from database 'Right questions'
+                    CorrectAnswerText = $"\n\t\t{correctAnswersTranlatetText} \n{string.Join("\n", correctAnswers)}", // correct answers from database 'Right questions'
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red,
                     ShowCorrectAnswer = !isCorrect,
-                    ImagePath = string.IsNullOrEmpty(question.ImagePath) ? null : question.ImagePath
-                });         
-            }
+                    ImagePath = imagePath
+                });
 
-            ScoreLabel.Text = $"{correctCount} / {questions.Count}";
+                ScoreLabel.Text = $"{correctCount} / {questions.Count}";
 
-            if (!category)
-            {
-                UpdateStats(resultsToUpdate);
+                if (!category)
+                {
+                    UpdateStats(resultsToUpdate);
+                }
             }
         }
 
