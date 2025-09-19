@@ -21,6 +21,7 @@ namespace AzubiApp.Views
         private readonly string defaultLanguage = "en";
         private bool _isAlertShowing = false;
         private bool _isSelectAlertShowing = false;
+        private bool _isNavigating = false;
 
         public QuizPage(DatabaseService database, List<Question> questions, bool category = false)
         {
@@ -181,6 +182,8 @@ namespace AzubiApp.Views
 
         private async void OnNextClicked(object sender, EventArgs e)
         {
+            if (_isNavigating) return;
+
             if (!_isAnswerRevealed)
             {
                 if (_currentSelectedAnswers.Count == 0)
@@ -235,7 +238,9 @@ namespace AzubiApp.Views
             }
             else
             {
+                _isNavigating = true;
                 await Navigation.PushAsync(new ResultsPage(_selectedAnswers, _questions, new List<(int, bool)>(), _category));
+                _isNavigating = false;
             }
         }
 
