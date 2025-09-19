@@ -13,7 +13,7 @@ namespace AzubiApp.Views
         public ObservableCollection<ResultItem> Results { get; set; }
 
         public ResultsPage(List<List<string>> userAnswers, List<Question> questions, List<(int QuestionId, bool IsCorrect)> results, bool category = false)
-        {
+        {            
             InitializeComponent();
             _database = new DatabaseService();
             Shell.SetTabBarIsVisible(this, false);
@@ -64,12 +64,12 @@ namespace AzubiApp.Views
 
                 string imagePath = null;
                 if (lang == "de" && !string.IsNullOrEmpty(question.ImagePathDe))
-                {
-                    imagePath = question.ImagePathDe;
+                {                   
+                    imagePath = $"Images/QuestionsImage/De/{question.ImagePathDe}";
                 }
                 else if (lang == "en" && !string.IsNullOrEmpty(question.ImagePathEn))
                 {
-                    imagePath = question.ImagePathEn;
+                    imagePath = $"Images/QuestionsImage/En/{question.ImagePathEn}";
                 }
 
                 Results.Add(new ResultItem
@@ -80,15 +80,15 @@ namespace AzubiApp.Views
                     ResultText = isCorrect ? "Green" : "BackgroundColor= \"False\"",
                     ResultColor = isCorrect ? Colors.Green : Colors.Red,
                     ShowCorrectAnswer = !isCorrect,
-                    ImagePath = imagePath
-                });
+                    ImagePath = imagePath         
+                });              
+            }
 
-                ScoreLabel.Text = $"{correctCount} / {questions.Count}";
+            ScoreLabel.Text = $"{correctCount} / {questions.Count}";
 
-                if (!category)
-                {
-                    UpdateStats(resultsToUpdate);
-                }
+            if (!category)
+            {
+                UpdateStats(resultsToUpdate);
             }
         }
 
