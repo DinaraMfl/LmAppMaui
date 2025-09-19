@@ -20,6 +20,7 @@ namespace AzubiApp.Views
         private string currentLanguage = "en";
         private readonly string defaultLanguage = "en";
         private bool _isAlertShowing = false;
+        private bool _isSelectAlertShowing = false;
 
         public QuizPage(DatabaseService database, List<Question> questions, bool category = false)
         {
@@ -184,7 +185,12 @@ namespace AzubiApp.Views
             {
                 if (_currentSelectedAnswers.Count == 0)
                 {
+                    if (_isSelectAlertShowing) return;
+                    _isSelectAlertShowing = true;
+
                     await DisplayAlert(AppResources.AlertError, AppResources.AlertSelect, "OK");
+                    _isSelectAlertShowing = false;
+
                     return;
                 }
 
