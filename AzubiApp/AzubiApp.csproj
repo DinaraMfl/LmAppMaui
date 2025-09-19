@@ -93,32 +93,8 @@
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	    <CustomToolNamespace>user.svg</CustomToolNamespace>
 	  </MauiImage>
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_091_1_wbz.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_115_1_best.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_116_3_balk.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_123_2_balk.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_127_2_wbz.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_128_3_wbz.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_129_4_wbz.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_130_5_wbz.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_131_6_wbz.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_132_1_balk.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_133_1_warn.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_134_2_warn.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_135_1_para.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_136_3_warn.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_137_4_warn.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_138_5_warn.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_139_6_warn.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_140_1_grenz.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_141_7_warn.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_142_2_sim.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_143_3_sim.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_144_4_sim.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_145_1_wied.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_146_2_wied.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\De\question_147_3_wied.png" />
-		<MauiImage Include="Resources\Images\QuestionsImage\En\question_091_1_wbz_en.png" />
+		<MauiImage Include="Resources\Images\QuestionsImage\De\**" />	
+		<MauiImage Include="Resources\Images\QuestionsImage\En\**" />
 	</ItemGroup>
 
 	<ItemGroup>
