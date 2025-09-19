@@ -19,6 +19,7 @@ namespace AzubiApp.Views
         private readonly bool _category;
         private string currentLanguage = "en";
         private readonly string defaultLanguage = "en";
+        private bool _isAlertShowing = false;
 
         public QuizPage(DatabaseService database, List<Question> questions, bool category = false)
         {
@@ -29,7 +30,7 @@ namespace AzubiApp.Views
 
             if (questions == null || questions.Count == 0)
             {
-                DisplayAlert("Error", "The list of questions is empty. Check the database!", "OK");
+                DisplayAlert("", "The list of questions is empty. Check the database!", "OK");
                 return;
             }
 
@@ -73,7 +74,7 @@ namespace AzubiApp.Views
         {
             if (_questions == null || _questions.Count == 0)
             {
-                DisplayAlert("Fehler", "Keine Fragen gefunden!", "OK");
+                DisplayAlert("", "No questions found!", "OK");
                 return;
             }
 
@@ -242,7 +243,18 @@ namespace AzubiApp.Views
         {
             if (_currentIndex == 0)
             {
-                bool confirmExit = await DisplayAlert(AppResources.AlertError, AppResources.AlertLeaveQuiz, AppResources.AlertYes, AppResources.AlertNo);
+                if (_isAlertShowing) return;
+                _isAlertShowing = true;
+
+                bool confirmExit = await DisplayAlert(
+                    "",
+                    AppResources.AlertLeaveQuiz,
+                    AppResources.AlertYes,
+                    AppResources.AlertNo
+                );
+
+                _isAlertShowing = false;
+
                 if (confirmExit)
                 {
                     await Navigation.PopAsync();
@@ -260,7 +272,13 @@ namespace AzubiApp.Views
         {
             if (_currentIndex == 0)
             {
-                bool confirmExit = await DisplayAlert(AppResources.AlertError, AppResources.AlertLeaveQuiz,AppResources.AlertYes,AppResources.AlertNo);
+                if (_isAlertShowing) return;
+                _isAlertShowing = true;
+
+                bool confirmExit = await DisplayAlert("", AppResources.AlertLeaveQuiz,AppResources.AlertYes,AppResources.AlertNo);
+
+                _isAlertShowing = false;
+
                 if (confirmExit)
                 {
                     await Navigation.PopAsync();
@@ -276,7 +294,13 @@ namespace AzubiApp.Views
 
         private async void OnExitClicked(object sender, EventArgs e) // Die funktion ist normale zurück button mit alert
         {
-            bool confirmExit = await DisplayAlert(AppResources.AlertError, AppResources.AlertLeaveQuiz, AppResources.AlertYes, AppResources.AlertNo);
+            if (_isAlertShowing) return;
+            _isAlertShowing = true;
+
+            bool confirmExit = await DisplayAlert("", AppResources.AlertLeaveQuiz, AppResources.AlertYes, AppResources.AlertNo);
+
+            _isAlertShowing = false;
+
             if (confirmExit)
             {
                 await Navigation.PopAsync();
