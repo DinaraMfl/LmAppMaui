@@ -70,6 +70,16 @@
 	  <None Remove="Resources\Icons\quiz.svg" />
 	  <None Remove="Resources\Icons\study.svg" />
 	  <None Remove="Resources\Icons\user.svg" />
+	  <None Remove="Resources\Images\QuestionsImage\question_142_Sim_2.png" />
+	  <None Remove="Resources\Images\QuestionsImage\question_143_Sim_3.png" />
+	  <None Remove="Resources\Images\QuestionsImage\question_144_Sim_4.png" />
+	  <None Remove="Resources\Images\QuestionsImage\question_145_Wied_1.png" />
+	  <None Remove="Resources\Images\QuestionsImage\question_146_Wied_2.png" />
+	  <None Remove="Resources\Images\QuestionsImage\question_147_Wied_3.png" />
+	  <None Remove="Resources\Images\QuestionsImage\question_148_Wied_4.png" />
+	  <None Remove="Resources\Images\QuestionsImage\question_149_sim_5.png" />
+	  <None Remove="Resources\Images\QuestionsImage\question_150_sim_6.png" />
+	  <None Remove="Resources\Images\QuestionsImage\question_151_wied_5.png" />
 	  <None Remove="Resources\MipMap\logoicon.png" />
 	</ItemGroup>
 
@@ -112,6 +122,17 @@
 	  <MauiImage Include="Resources\Images\QuestionsImage\question_129_wbz_4.png" />
 	  <MauiImage Include="Resources\Images\QuestionsImage\question_130_wbz_5.png" />
 	  <MauiImage Include="Resources\Images\QuestionsImage\question_131_wbz_6.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_142_sim_2.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_143_sim_3.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_144_sim_4.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_145_wied_1.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_146_wied_2.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_147_wied_3.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_148_wied_4.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_149_sim_5.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_150_sim_6.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_151_wied_5.png" />
+	  <MauiImage Include="Resources\Images\QuestionsImage\question_152_wied_6.png" />
 	</ItemGroup>
 
 	<ItemGroup>

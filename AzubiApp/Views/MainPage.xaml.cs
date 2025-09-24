@@ -41,7 +41,7 @@ namespace AzubiApp.Views
 
             try
             {
-                int numberOfQuestions = 5;
+                int numberOfQuestions = 15;
 
                 List<Question> questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions); // Loading questions
 

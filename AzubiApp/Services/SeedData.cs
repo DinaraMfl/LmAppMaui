@@ -2752,13 +2752,13 @@ namespace AzubiApp.Services
                  {
                     Number = 143,
 
-                    TextDe = "Welcher Graph zeigt den Min. SiB an? (temp/adrian.pawlak/App_Use-Case/Sim_3.png)",
+                    TextDe = "Welcher Graph zeigt den Min. SiB an?",
                     Answer1De = "Graph 1",
                     Answer2De = "Graph 2",
                     Answer3De = "Graph 1 & Graph 2",
                     CorrectAnswersDe = "Graph 2",
 
-                    TextEn = "Which graph shows the min. SiB? (temp/adrian.pawlak/App_Use-Case/Sim_3.png)",
+                    TextEn = "Which graph shows the min. SiB? ",
                     Answer1En = "Graph 1",
                     Answer2En = "Graph 2",
                     Answer3En = "Graph 1 & Graph 2",
@@ -2786,6 +2786,7 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "These are the dates when an order is triggered",
 
                     ImagePath = "Images/QuestionsImage/question_144_Sim_4.png",
+                       
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -2815,13 +2816,13 @@ namespace AzubiApp.Services
                  {
                     Number = 146,
 
-                    TextDe = "Was zeigt die schwarze Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_2.png)",
+                    TextDe = "Was zeigt die schwarze Stecknadel an?",
                     Answer1De = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt ",
                     Answer2De = "Eine Wiedervorlage, die geerbt wurde und ihr Datum überschritten hat",
                     Answer3De = "Eine Wiedervorlage ohne Datum",
                     CorrectAnswersDe = "Eine Wiedervorlage ohne Datum",
 
-                    TextEn = "What does the black pin show? (temp/adrian.pawlak/App_Use-Case/Wied_2.png)",
+                    TextEn = "What does the black pin show? ",
                     Answer1En = "A Memo that was inherited and has no date",
                     Answer2En = "A Memo that has been inherited and has exceeded its date",
                     Answer3En = "A Memo without a date",
@@ -2858,19 +2859,19 @@ namespace AzubiApp.Services
                  {
                     Number = 148,
 
-                    TextDe = "Was zeigt die rote Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_4.png)",
+                    TextDe = "Was zeigt die rote Stecknadel an?",
                     Answer1De = "Eine Wiedervorlage, die geerbt wurde und ihr Datum überschritten hat",
                     Answer2De = "Eine Wiedervorlage, die ihr Datum überschritten hat",
                     Answer3De = "Eine Wiedervorlage ohne Datum",
                     CorrectAnswersDe = "Eine Wiedervorlage, die ihr Datum überschritten hat",
 
-                    TextEn = "What does the red pin show? (temp/adrian.pawlak/App_Use-Case/Wied_4.png)",
+                    TextEn = "What does the red pin show?",
                     Answer1En = "A Memo that has been inherited and has exceeded its date",
                     Answer2En = "A Memo that has exceeded its date",
                     Answer3En = "A Memo without a date",
                     CorrectAnswersEn = "A Memo that has exceeded its date",
 
-                    ImagePath = "Images/QuestionsImage/question_147_Wied_3.png",
+                    ImagePath = "Images/QuestionsImage/question_148_wied_4.png",
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -2879,13 +2880,13 @@ namespace AzubiApp.Services
                  {
                     Number = 149,
 
-                    TextDe = "Was zeigen die roten Pfeile in der Bestandssimulation an? (temp/adrian.pawlak/App_Use-Case/Sim_5.png)",
+                    TextDe = "Was zeigen die roten Pfeile in der Bestandssimulation an?",
                     Answer1De = "Sie zeigen den Verfall von Beständen einer SKU an",
                     Answer2De = "Sie zeigen an wann Reservierungen fällig sind",
                     Answer3De = "Sie zeigen den Zeitraum einer Aktion an",
                     CorrectAnswersDe = "Sie zeigen den Verfall von Beständen einer SKU an",
 
-                    TextEn = "What do the red arrows show in the stock simulation? (temp/adrian.pawlak/App_Use-Case/Sim_5.png)",
+                    TextEn = "What do the red arrows show in the stock simulation? App_Use-Case/Sim_5.png)",
                     Answer1En = "They show the expiration of stocks of an SKU",
                     Answer2En = "They show when reservations are due",
                     Answer3En = "They show the time period of an promotion",
@@ -2898,17 +2899,19 @@ namespace AzubiApp.Services
                  {
                     Number = 150,
 
-                    TextDe = "Woran erkennt man, in der Bestandssimulation, wann eine Bestellung eintrifft? (temp/adrian.pawlak/App_Use-Case/Sim_6.png)",
+                    TextDe = "Woran erkennt man, in der Bestandssimulation, wann eine Bestellung eintrifft?",
                     Answer1De = "An den gestrichelten vertikalen Linien",
                     Answer2De = "An den steigenden Stellen des Graphen",
                     Answer3De = "An der gestrichelten horizontalen Linie",
                     CorrectAnswersDe = "An den steigenden Stellen des Graphen",
 
-                    TextEn = "How do you recognize in the stock simulation when an order arrives? (temp/adrian.pawlak/App_Use-Case/Sim_6.png)",
+                    TextEn = "How do you recognize in the stock simulation when an order arrives?",
                     Answer1En = "By the dotted vertical lines",
                     Answer2En = "By the rising points of the graph",
                     Answer3En = "By the dotted horizontal line",
                     CorrectAnswersEn = "By the rising points of the graph",
+
+                    ImagePath  = "Images/QuestionsImage/question_150_sim_6.png",
 
                     QuizCategory = new List<string> { "Bestellung", "Allgemein" }
              
@@ -2918,17 +2921,19 @@ namespace AzubiApp.Services
                  {
                     Number = 151,
 
-                    TextDe = "Was zeigt eine hellblaue Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_5.png)",
+                    TextDe = "Was zeigt eine hellblaue Stecknadel an?",
                     Answer1De = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt",
                     Answer2De = "Eine Wiedervorlage, die geerbt wurde und ein Datum in der Zukunft hat",
                     Answer3De = "Eine Wiedervorlage die ein Datum in der Zukunft hat",
                     CorrectAnswersDe = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt",
 
-                    TextEn = "What does the light blue pin show? (temp/adrian.pawlak/App_Use-Case/Wied_5.png)",
+                    TextEn = "What does the light blue pin show?",
                     Answer1En = "A Memo that was inherited and has no date",
                     Answer2En = "A Memo that was inherited and has a date in the future",
                     Answer3En = "A Memo that has been provided with a date in the future",
                     CorrectAnswersEn = "A Memo that was inherited and has a date in the future",
+
+                    ImagePath  = "Images/QuestionsImage/question_151_wied_5.png",
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -2937,17 +2942,21 @@ namespace AzubiApp.Services
                  {
                     Number = 152,
 
-                    TextDe = "Was zeigt eine lilane Stecknadel an? (temp/adrian.pawlak/App_Use-Case/Wied_6.png)",
+                    TextDe = "Was zeigt eine lilane Stecknadel an?",
                     Answer1De = "Eine Wiedervorlage, die geerbt wurde und kein Datum besitzt",
                     Answer2De = "Eine Wiedervorlage, die geerbt wurde und ihr Datum überschritten hat",
                     Answer3De = "Eine Wiedervorlage die ein Datum in der Zukunft hat",
                     CorrectAnswersDe = "Eine Wiedervorlage, die geerbt wurde und ihr Datum überschritten hat",
 
-                    TextEn = "What does the purple pin show? (temp/adrian.pawlak/App_Use-Case/Wied_6.png)",
+                    TextEn = "What does the purple pin show?",
                     Answer1En = "A Memo that was inherited and has no date",
                     Answer2En = "A Memo that has been inherited and has exceeded its date",
                     Answer3En = "A Memo that has been provided with a date in the future",
                     CorrectAnswersEn = "A Memo that has been inherited and has exceeded its date",
+
+                    ImagePath  = "Images/QuestionsImage/question_152_wied_6.png",
+
+
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -2956,17 +2965,19 @@ namespace AzubiApp.Services
                  {
                     Number = 153,
 
-                    TextDe = "Was zeigt die türkise Farbe an? (temp/adrian.pawlak/App_Use-Case/Grp_1.png)",
+                    TextDe = "Was zeigt die türkise Farbe an?",
                     Answer1De = "Es hat keine Bedeutung, da man jeder Gruppe eine beliebige Farbe geben kann für eine individuelle Farbkodierung",
                     Answer2De = "Eine Verbund-Gruppe",
                     Answer3De = "Eine Gruppe auf den nur bestimmte User zugreifen können",
                     CorrectAnswersDe = "Eine Verbund-Gruppe",
 
-                    TextEn = "What does the turquoise color show? (temp/adrian.pawlak/App_Use-Case/Grp_1.png)",
+                    TextEn = "What does the turquoise color show?",
                     Answer1En = "It has no meaning, as you can give each group any color for individual color coding",
                     Answer2En = "A compound group",
                     Answer3En = "A group that only certain users can access",
                     CorrectAnswersEn = "A compound group",
+
+                     ImagePath  = "Images/QuestionsImage/question_153_grp_1.png", 
 
                     QuizCategory = new List<string> { "Bestellung", "Allgemein" }
                  },
