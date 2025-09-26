@@ -1,4 +1,5 @@
-﻿using AzubiApp.Models;
+﻿using System.ComponentModel.Design;
+using AzubiApp.Models;
 
 namespace AzubiApp.Services
 {
@@ -334,7 +335,7 @@ namespace AzubiApp.Services
                 },
 
                 new Question
-                {   
+                {
                     Number = 18,
 
                     TextDe = "Was wird inaktiviert, wenn die Kondition „Inaktiv“ gesetzt wird?",
@@ -3013,10 +3014,21 @@ namespace AzubiApp.Services
 
             foreach (var question in newQuestions)
             {
-                if (!existingQuestions.Any(q => q.Number == question.Number))
+                var existingQuestion = existingQuestions.FirstOrDefault(q => q.Number == question.Number);
+
+                if (existingQuestion == null)
                 {
                     await database.AddQuestionAsync(question);
                 }
+                // logik for adding new columns to existing questions
+                /* else
+                {
+                    if (existingQuestion.NEW_COLUMN != question.NEW_COLUMN)
+                    {
+                        existingQuestion.NEW_COLUMN = question.NEW_COLUMN;
+                        await database.UpdateQuestionAsync(existingQuestion);
+                    }
+                } */
             }
         }
     }

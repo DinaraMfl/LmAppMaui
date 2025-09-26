@@ -15,6 +15,13 @@ namespace AzubiApp.Services
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Question>().Wait();
 
+            // Check if the NEW_COLUMN column exists, and add it if it doesn't
+            /* var tableInfo = _database.GetTableInfoAsync("Question").Result;
+            if (!tableInfo.Any(x => x.Name == "NEW_COLUMN"))
+            {
+                _database.ExecuteAsync("ALTER TABLE Question ADD COLUMN NEW_COLUMN INTEGER NOT NULL DEFAULT 0").Wait();
+            } */
+
             try
             {
                 using (StreamReader reader = new StreamReader(dbPath))
