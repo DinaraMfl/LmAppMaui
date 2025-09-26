@@ -12,6 +12,7 @@ namespace AzubiApp.Views
         private bool isModuleClicked = false;
         private string currentLanguage = "en";
         private readonly string defaultLanguage = "en"; // Die Standard-/neutrale Sprache (z. B. Englisch)
+        private int _lastCompletedLevel = -1;
 
         public MainPage()
         {
@@ -58,6 +59,9 @@ namespace AzubiApp.Views
                     {
                         await _database.ClearUserProgressAsync();
                         await SeedData.Initialize(_database);
+
+                        _database.ResetCurrentDifficultyLevel();
+
 
                         questions = await _database.GetQuestionsForLanguageAsync(currentLanguage, numberOfQuestions);
 
@@ -131,11 +135,75 @@ namespace AzubiApp.Views
         private async void UpdateProgress()
         {
             string mainPageProgressText = AppResources.MainPageProgressText;
-            var questions = await _database.GetAllQuestionsAsync();
+
+            int currentLevel = await GetCurrentDifficultyLevelAsync();
+
+            var questions = (await _database.GetAllQuestionsAsync())
+                            .Where(q => q.DifficultyLevel == currentLevel)
+                            .ToList();
+            if (questions.Count == 0)
+            {
+                ProgressBar.Progress = 1;
+                ProgressLabel.Text = $"{mainPageProgressText}: 100% (Level {currentLevel})";
+                return;
+            }
+
             int completed = questions.Count(q => q.Points >= Question.MaxPoints);
             double progress = (double)completed / questions.Count;
             ProgressBar.Progress = progress;
-            ProgressLabel.Text = $"{mainPageProgressText}: {Math.Round(progress * 100)}%";
+            ProgressLabel.Text = $"{mainPageProgressText}: {Math.Round(progress * 100)}% (Level {currentLevel})";
+        }
+
+        private async Task<int> GetCurrentDifficultyLevelAsync()
+        {
+            var questions = await _database.GetAllQuestionsAsync();
+
+            var activeQuestions = questions.Where(q => !(q.Points >= Question.MaxPoints && q.Level == 0))
+                                           .OrderBy(q => q.DifficultyLevel)
+                                           .ToList();
+
+            if (activeQuestions.Count == 0)
+            {
+                int lastLevel = questions.Max(q => q.DifficultyLevel);
+
+                if (_lastCompletedLevel != lastLevel)
+                {
+                    _lastCompletedLevel = lastLevel;
+
+                    await MainThread.InvokeOnMainThreadAsync(async () =>
+                    {
+                        await Application.Current.MainPage.DisplayAlert(
+                            "Quiz Complete",
+                            "All levels are completed!",
+                            "OK");
+                    });
+                }
+
+                return lastLevel;
+            }
+
+            int currentLevel = activeQuestions.First().DifficultyLevel;
+
+            for (int level = 1; level < currentLevel; level++)
+            {
+                bool hasActive = questions.Any(q => q.DifficultyLevel == level &&
+                                                     !(q.Points >= Question.MaxPoints && q.Level == 0));
+
+                if (!hasActive && _lastCompletedLevel != level)
+                {
+                    _lastCompletedLevel = level;
+
+                    await MainThread.InvokeOnMainThreadAsync(async () =>
+                    {
+                        await Application.Current.MainPage.DisplayAlert(
+                            "Level Complete",
+                            $"Level {level} is completed!",
+                            "OK");
+                    });
+                }
+            }
+
+            return currentLevel;
         }
     }
 }

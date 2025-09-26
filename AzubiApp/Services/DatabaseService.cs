@@ -53,8 +53,8 @@ namespace AzubiApp.Services
                 var questions = await _database.QueryAsync<Question>($@"
                 SELECT * FROM Question
                 WHERE DifficultyLevel = {_currentDifficultyLevel}
-                  AND NOT (Points = {Question.MaxPoints} AND Level = 0)
-                ORDER BY (Level + 1) * RANDOM() DESC
+                AND NOT (Points = {Question.MaxPoints} AND Level = 0)
+                ORDER BY Level DESC, RANDOM()
                 LIMIT {numberOfQuestions}");
 
                 if (questions.Count > 0)
@@ -63,15 +63,6 @@ namespace AzubiApp.Services
                 }
                 else
                 {
-                    await MainThread.InvokeOnMainThreadAsync(async () =>
-                    {
-                        await Application.Current.MainPage.DisplayAlert(
-                            "Level Complete",
-                            $"Level {_currentDifficultyLevel} is finished!",
-                            "OK"
-                        );
-                    });
-
                     _currentDifficultyLevel++;
 
                     var countNextLevel = await _database.ExecuteScalarAsync<int>($@"
@@ -137,6 +128,11 @@ namespace AzubiApp.Services
                 question.Points = 0;
                 await _database.UpdateAsync(question);
             }
+        }
+
+        public void ResetCurrentDifficultyLevel()
+        {
+            _currentDifficultyLevel = 1;
         }
     }
 }
