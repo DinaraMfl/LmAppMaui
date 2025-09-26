@@ -43,5 +43,7 @@ namespace AzubiApp.Models
 
         public bool IsMaxPoints() => Points >= MaxPoints;
         public bool IsMaxLevel() => Level >= MaxLevel;
+
+        public int DifficultyLevel { get; set; }
     }
 }

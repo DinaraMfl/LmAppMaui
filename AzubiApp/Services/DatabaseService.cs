@@ -6,6 +6,7 @@ namespace AzubiApp.Services
     public class DatabaseService
     {
         private readonly SQLiteAsyncConnection _database;
+        private int _currentDifficultyLevel = 1;
 
         public DatabaseService()
         {
@@ -47,9 +48,42 @@ namespace AzubiApp.Services
 
         public async Task<List<Question>> GetShuffledQuestionsAsync(int numberOfQuestions = 15)
         {
-            // excludes questions with Point = 3 AND Level = 0 
-            var query = $" SELECT * FROM Question WHERE NOT (Points = {Question.MaxPoints} AND Level = 0) ORDER BY (Level + 1) * RANDOM() DESC LIMIT {numberOfQuestions}";
-            return await _database.QueryAsync<Question>(query);
+            while (true)
+            {
+                var questions = await _database.QueryAsync<Question>($@"
+                SELECT * FROM Question
+                WHERE DifficultyLevel = {_currentDifficultyLevel}
+                  AND NOT (Points = {Question.MaxPoints} AND Level = 0)
+                ORDER BY (Level + 1) * RANDOM() DESC
+                LIMIT {numberOfQuestions}");
+
+                if (questions.Count > 0)
+                {
+                    return questions;
+                }
+                else
+                {
+                    await MainThread.InvokeOnMainThreadAsync(async () =>
+                    {
+                        await Application.Current.MainPage.DisplayAlert(
+                            "Level Complete",
+                            $"Level {_currentDifficultyLevel} is finished!",
+                            "OK"
+                        );
+                    });
+
+                    _currentDifficultyLevel++;
+
+                    var countNextLevel = await _database.ExecuteScalarAsync<int>($@"
+                    SELECT COUNT(*) FROM Question
+                    WHERE DifficultyLevel = {_currentDifficultyLevel}");
+
+                    if (countNextLevel == 0)
+                    {
+                        return new List<Question>();
+                    }
+                }
+            }
         }
 
         public Task<int> AddQuestionAsync(Question question)
