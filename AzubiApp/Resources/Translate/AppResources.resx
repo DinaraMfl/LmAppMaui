@@ -285,4 +285,16 @@
   <data name="ExitModuleQuizButton" xml:space="preserve">
     <value>ExitModuleQuizButton</value>
   </data>
+  <data name="MainPageQuizComplete" xml:space="preserve">
+    <value>MainPageQuizComplete</value>
+  </data>
+  <data name="MainPageAllLevelsCompleted" xml:space="preserve">
+    <value>MainPageAllLevelsCompleted</value>
+  </data>
+  <data name="MainPageLevelComplete" xml:space="preserve">
+    <value>MainPageLevelComplete</value>
+  </data>
+  <data name="MainPageLevelXCompleted" xml:space="preserve">
+    <value>MainPageLevelXCompleted</value>
+  </data>
 </root>

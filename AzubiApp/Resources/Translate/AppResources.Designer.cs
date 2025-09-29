@@ -250,6 +250,33 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MainPageAllLevelsCompleted.
+        /// </summary>
+        internal static string MainPageAllLevelsCompleted {
+            get {
+                return ResourceManager.GetString("MainPageAllLevelsCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MainPageLevelComplete.
+        /// </summary>
+        internal static string MainPageLevelComplete {
+            get {
+                return ResourceManager.GetString("MainPageLevelComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MainPageLevelXCompleted.
+        /// </summary>
+        internal static string MainPageLevelXCompleted {
+            get {
+                return ResourceManager.GetString("MainPageLevelXCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MainPageOpenButton.
         /// </summary>
         internal static string MainPageOpenButton {
@@ -264,6 +291,15 @@ namespace AzubiApp.Resources.Translate {
         internal static string MainPageProgressText {
             get {
                 return ResourceManager.GetString("MainPageProgressText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MainPageQuizComplete.
+        /// </summary>
+        internal static string MainPageQuizComplete {
+            get {
+                return ResourceManager.GetString("MainPageQuizComplete", resourceCulture);
             }
         }
         

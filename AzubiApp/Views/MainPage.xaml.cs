@@ -83,18 +83,6 @@ namespace AzubiApp.Views
             }
         }
 
-        private void UpdateUI()
-        {
-            // prachressourcen aktualisieren
-            // Labels manuell mit den neuen Sprachressourcen aktualisieren
-            QuizSubtitle.Text = AppResources.QuizSubtitle; // Start from where you left off 
-            UseCasesSubtitle.Text = AppResources.UseCasesSubtitle; // Learn more about Logomate
-            ContinueQuizButton.Text = AppResources.ContinueQuizButton; // Continue
-            TopicsQuizButton.Text = AppResources.TopicsQuizButton;
-            MainPageOpenButton.Text = AppResources.MainPageOpenButton;
-            MainPageUseCaseTitle.Text = AppResources.MainPageUseCaseTitle;
-        }
-
         private void OnLanguageButtonClicked(object sender, EventArgs e)
         {
             // Sprache umschalten
@@ -173,8 +161,8 @@ namespace AzubiApp.Views
                     await MainThread.InvokeOnMainThreadAsync(async () =>
                     {
                         await Application.Current.MainPage.DisplayAlert(
-                            "Quiz Complete",
-                            "All levels are completed!",
+                            AppResources.MainPageQuizComplete,
+                            AppResources.MainPageAllLevelsCompleted,
                             "OK");
                     });
                 }
@@ -192,18 +180,31 @@ namespace AzubiApp.Views
                 if (!hasActive && _lastCompletedLevel != level)
                 {
                     _lastCompletedLevel = level;
+                    string message = string.Format(AppResources.MainPageLevelXCompleted, level);
 
                     await MainThread.InvokeOnMainThreadAsync(async () =>
                     {
                         await Application.Current.MainPage.DisplayAlert(
-                            "Level Complete",
-                            $"Level {level} is completed!",
+                            AppResources.MainPageLevelComplete,
+                            message,                          
                             "OK");
                     });
                 }
             }
 
             return currentLevel;
+        }
+
+        private void UpdateUI()
+        {
+            // prachressourcen aktualisieren
+            // Labels manuell mit den neuen Sprachressourcen aktualisieren
+            QuizSubtitle.Text = AppResources.QuizSubtitle; // Start from where you left off 
+            UseCasesSubtitle.Text = AppResources.UseCasesSubtitle; // Learn more about Logomate
+            ContinueQuizButton.Text = AppResources.ContinueQuizButton; // Continue
+            TopicsQuizButton.Text = AppResources.TopicsQuizButton;
+            MainPageOpenButton.Text = AppResources.MainPageOpenButton;
+            MainPageUseCaseTitle.Text = AppResources.MainPageUseCaseTitle;       
         }
     }
 }
