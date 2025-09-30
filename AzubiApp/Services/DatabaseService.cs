@@ -6,7 +6,6 @@ namespace AzubiApp.Services
     public class DatabaseService
     {
         private readonly SQLiteAsyncConnection _database;
-        private int _currentDifficultyLevel = 1;
 
         public DatabaseService()
         {
@@ -35,24 +34,24 @@ namespace AzubiApp.Services
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
-        }
-
-        public async Task<List<Question>> GetQuestionsForLanguageAsync(string languageCode, int numberOfQuestions = 15)
+        }      
+        
+        public async Task<List<Question>> GetQuestionsForLanguageAndLevelAsync(string languageCode, int difficultyLevel, int numberOfQuestions = 15)
         {
-            var questions = await GetShuffledQuestionsAsync(numberOfQuestions);
+            var questions = await GetShuffledQuestionsAsync(difficultyLevel, numberOfQuestions);
             return questions.Where(q =>
                 (languageCode == "de" && !string.IsNullOrWhiteSpace(q.TextDe)) ||
                 (languageCode == "en" && !string.IsNullOrWhiteSpace(q.TextEn))
             ).ToList();
         }
 
-        public async Task<List<Question>> GetShuffledQuestionsAsync(int numberOfQuestions = 15)
+        public async Task<List<Question>> GetShuffledQuestionsAsync( int difficultyLevel, int numberOfQuestions)
         {
             while (true)
             {
                 var questions = await _database.QueryAsync<Question>($@"
                 SELECT * FROM Question
-                WHERE DifficultyLevel = {_currentDifficultyLevel}
+                WHERE DifficultyLevel = {difficultyLevel}
                 AND NOT (Points = {Question.MaxPoints} AND Level = 0)
                 ORDER BY Level DESC, RANDOM()
                 LIMIT {numberOfQuestions}");
@@ -60,20 +59,7 @@ namespace AzubiApp.Services
                 if (questions.Count > 0)
                 {
                     return questions;
-                }
-                else
-                {
-                    _currentDifficultyLevel++;
-
-                    var countNextLevel = await _database.ExecuteScalarAsync<int>($@"
-                    SELECT COUNT(*) FROM Question
-                    WHERE DifficultyLevel = {_currentDifficultyLevel}");
-
-                    if (countNextLevel == 0)
-                    {
-                        return new List<Question>();
-                    }
-                }
+                }             
             }
         }
 
@@ -120,19 +106,16 @@ namespace AzubiApp.Services
             }
         }
 
-        public async Task ClearUserProgressAsync()
+        public async Task ClearUserProgressByLevelAsync(int selectedLevel)
         {
-            var questions = await _database.Table<Question>().ToListAsync();
+            var questions = await _database.Table<Question>()
+                                            .Where(q => q.DifficultyLevel == selectedLevel)
+                                            .ToListAsync();
             foreach (var question in questions)
             {
                 question.Points = 0;
                 await _database.UpdateAsync(question);
-            }
-        }
-
-        public void ResetCurrentDifficultyLevel()
-        {
-            _currentDifficultyLevel = 1;
-        }
+            }           
+        }       
     }
 }

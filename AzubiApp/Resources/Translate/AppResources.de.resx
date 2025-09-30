@@ -298,4 +298,10 @@
   <data name="MainPageLevelXCompleted" xml:space="preserve">
     <value>Level {0} ist abgeschlossen!</value>
   </data>
+  <data name="SelectLevelButton" xml:space="preserve">
+    <value>Level auswählen</value>
+  </data>
+  <data name="SelectYourLevelTitle" xml:space="preserve">
+    <value>Wählen Sie Ihr Level!</value>
+  </data>
 </root>

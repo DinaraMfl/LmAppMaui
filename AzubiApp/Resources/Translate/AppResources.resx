@@ -277,10 +277,10 @@
     <value>AlertResetProgress</value>
   </data>
   <data name="ModulePageTopicTitle" xml:space="preserve">
-    <value />
+    <value>ModulePageTopicTitle</value>
   </data>
   <data name="ModulePageHintForProgressBar" xml:space="preserve">
-    <value />
+    <value>ModulePageHintForProgressBar</value>
   </data>
   <data name="ExitModuleQuizButton" xml:space="preserve">
     <value>ExitModuleQuizButton</value>
@@ -296,5 +296,11 @@
   </data>
   <data name="MainPageLevelXCompleted" xml:space="preserve">
     <value>MainPageLevelXCompleted</value>
+  </data>
+  <data name="SelectLevelButton" xml:space="preserve">
+    <value>SelectLevelButton</value>
+  </data>
+  <data name="SelectYourLevelTitle" xml:space="preserve">
+    <value>SelectYourLevelTitle</value>
   </data>
 </root>

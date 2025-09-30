@@ -34,8 +34,8 @@
                         <Label x:Name="ProgressLabel" FontSize="14" TextColor="White"/>
                         <ProgressBar x:Name="ProgressBar" HeightRequest="5" BackgroundColor="Gray" />
 
-                        <Button x:Name="ContinueQuizButton" Text="{x:Static resx:AppResources.ContinueQuizButton}" Clicked="OnStartQuizClicked" BackgroundColor="#FFCD00" TextColor="Black" CornerRadius="20" />
-                        <Button x:Name="TopicsQuizButton" Text="{x:Static resx:AppResources.TopicsQuizButton}" Clicked="OnModuleClick" BackgroundColor="#FFCD00" TextColor="Black" CornerRadius="20" />
+                        <Button x:Name="SelectLevelButton" Text="{x:Static resx:AppResources.SelectLevelButton}" Clicked="OnSelectLevelClicked" BackgroundColor="#FFCD00" TextColor="Black" CornerRadius="20" />
+                        <Button x:Name="TopicsQuizButton" Text="{x:Static resx:AppResources.TopicsQuizButton}" Clicked="OnModuleClicked" BackgroundColor="#FFCD00" TextColor="Black" CornerRadius="20" />
                     </VerticalStackLayout>
                 </Frame>
 
