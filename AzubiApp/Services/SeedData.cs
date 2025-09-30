@@ -27,7 +27,8 @@ namespace AzubiApp.Services
                     Answer3En = "Additional order proposals are generated for today",
                     CorrectAnswersEn = "Orders will be brought forward to today| Order quantities are reduced where possible, depending on demand",
 
-                    QuizCategory = new List<string> { "Bestellung", "Filter", "Allgemein" }
+                    QuizCategory = new List<string> { "Bestellung", "Filter", "Allgemein" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -46,7 +47,9 @@ namespace AzubiApp.Services
                     Answer3En = "It shows the period in which the planned values were set",
                     CorrectAnswersEn = "It shows the period in which order proposals can be generated",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
+
                 },
 
                 new Question
@@ -65,7 +68,9 @@ namespace AzubiApp.Services
                     Answer3En = "TODAY + Entered planning horizon in calendar days",
                     CorrectAnswersEn = "TODAY + Entered planning horizon in calendar days",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
+
                 },
 
                 new Question
@@ -84,7 +89,8 @@ namespace AzubiApp.Services
                     Answer3En = "Monthly period",
                     CorrectAnswersEn = "Monthly period",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -103,7 +109,8 @@ namespace AzubiApp.Services
                     Answer3En = "Only one forecast and range is calculated",
                     CorrectAnswersEn = "Only a forecast is calculated, but no dispo",
 
-                    QuizCategory = new List<string> { "Parameter", "Prognose" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -122,7 +129,8 @@ namespace AzubiApp.Services
                     Answer3En = "The max. coverage (quantity) limits the stock of a SKU to x days without expecting another order in this period",
                     CorrectAnswersEn = "The max. coverage (quantity) limits the stock of a SKU to x days without expecting another order in this period",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -141,7 +149,8 @@ namespace AzubiApp.Services
                     Answer3En = "Because a location has used up its stock",
                     CorrectAnswersEn = "If I have a stock of 0 but the demand is > 0",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -160,7 +169,8 @@ namespace AzubiApp.Services
                     Answer3En = "Parameter>Default>Use season from",
                     CorrectAnswersEn = "Parameter>Dispo>Order quantity",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -179,9 +189,10 @@ namespace AzubiApp.Services
                     Answer3En = "No forecast and no dispo is calculated",
                     CorrectAnswersEn = "Both a forecast and an overdraft calculation are carried out",
 
-                    QuizCategory = new List<string> { "Parameter", "Prognose" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose" },
+                    DifficultyLevel = 1
                 },
-
+                /*
                 new Question
                 {
                     Number = 10,
@@ -3009,7 +3020,7 @@ namespace AzubiApp.Services
                     ImagePathEn = "question_153_en.png",
 
                     QuizCategory = new List<string> { "Bestellung", "Allgemein" }
-                },
+                },*/
             };
 
             foreach (var question in newQuestions)
