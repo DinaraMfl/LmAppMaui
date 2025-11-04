@@ -304,4 +304,7 @@
   <data name="SelectYourLevelTitle" xml:space="preserve">
     <value>Wählen Sie Ihr Level!</value>
   </data>
+  <data name="MultipleAnswers" xml:space="preserve">
+    <value>Mehrere Antworten möglich!</value>
+  </data>
 </root>

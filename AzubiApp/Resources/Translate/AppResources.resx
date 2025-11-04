@@ -303,4 +303,7 @@
   <data name="SelectYourLevelTitle" xml:space="preserve">
     <value>SelectYourLevelTitle</value>
   </data>
+  <data name="MultipleAnswers" xml:space="preserve">
+    <value>MultipleAnswers</value>
+  </data>
 </root>

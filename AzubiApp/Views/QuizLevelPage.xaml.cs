@@ -57,7 +57,7 @@ public partial class QuizLevelPage : ContentPage
 
         try
         {
-            int numberOfQuestions = 5;
+            int numberOfQuestions = 15;
 
             var allLevelQuestions = (await _database.GetAllQuestionsAsync())
                                     .Where(q => q.DifficultyLevel == selectedLevel)

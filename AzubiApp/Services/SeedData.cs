@@ -48,7 +48,7 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "It shows the period in which order proposals can be generated",
 
                     QuizCategory = new List<string> { "Parameter" },
-                    DifficultyLevel = 3
+                    DifficultyLevel = 1
 
                 },
 
@@ -69,7 +69,7 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "TODAY + Entered planning horizon in calendar days",
 
                     QuizCategory = new List<string> { "Parameter" },
-                    DifficultyLevel = 2
+                    DifficultyLevel = 1
 
                 },
 
@@ -90,7 +90,7 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Monthly period",
 
                     QuizCategory = new List<string> { "Prognose" },
-                    DifficultyLevel = 3
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -130,7 +130,7 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "The max. coverage (quantity) limits the stock of a SKU to x days without expecting another order in this period",
 
                     QuizCategory = new List<string> { "Parameter" },
-                    DifficultyLevel = 2
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -170,7 +170,7 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Parameter>Dispo>Order quantity",
 
                     QuizCategory = new List<string> { "Parameter" },
-                    DifficultyLevel = 3
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -192,7 +192,7 @@ namespace AzubiApp.Services
                     QuizCategory = new List<string> { "Parameter", "Prognose" },
                     DifficultyLevel = 1
                 },
-                /*
+                
                 new Question
                 {
                     Number = 10,
@@ -209,7 +209,8 @@ namespace AzubiApp.Services
                     Answer3En = "No order proposals are generated, but a stock simulation is generated",
                     CorrectAnswersEn = "No order proposals are generated, but a stock simulation is generated",
 
-                    QuizCategory = new List<string> { "Bestellung", "Parameter" }
+                    QuizCategory = new List<string> { "Bestellung", "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -228,7 +229,8 @@ namespace AzubiApp.Services
                     Answer3En = "No order proposals & stock simulation are generated",
                     CorrectAnswersEn = "No order proposals & stock simulation are generated",
 
-                    QuizCategory = new List<string> { "Bestellung", "Parameter" }
+                    QuizCategory = new List<string> { "Bestellung", "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -247,7 +249,8 @@ namespace AzubiApp.Services
                     Answer3En = "Orders are subsequently replaced with an order quantity of 0",
                     CorrectAnswersEn = "A requirement is calculated and order proposals receive an order quantity of 0",
 
-                    QuizCategory = new List<string> { "Bestellung", "Parameter" }
+                    QuizCategory = new List<string> { "Bestellung", "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -266,7 +269,8 @@ namespace AzubiApp.Services
                     Answer3En = "Orders are placed with this unit",
                     CorrectAnswersEn = "The optimization unit specifies the unit to be used for the calculation| Orders are placed with this unit",
 
-                    QuizCategory = new List<string> { "Bestellung", "Kondition" }
+                    QuizCategory = new List<string> { "Bestellung", "Kondition" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -285,7 +289,8 @@ namespace AzubiApp.Services
                     Answer3En = "Fill the value column with the desired value",
                     CorrectAnswersEn = "Set the reference to “Value gross/net”",
 
-                    QuizCategory = new List<string> { "Bestellung", "Kondition" }
+                    QuizCategory = new List<string> { "Bestellung", "Kondition" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -304,7 +309,8 @@ namespace AzubiApp.Services
                     Answer3En = "Set inactive until history available",
                     CorrectAnswersEn = "Mean value| Field “If forecast is possible”",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -323,7 +329,8 @@ namespace AzubiApp.Services
                     Answer3En = "A filter class has clearly defined conditions that an SKU must fulfill",
                     CorrectAnswersEn = "A filter class has clearly defined conditions that an SKU must fulfill",
 
-                    QuizCategory = new List<string> { "Filter" }
+                    QuizCategory = new List<string> { "Filter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -342,7 +349,8 @@ namespace AzubiApp.Services
                     Answer3En = "An assignment class is only temporary & is removed after LOGOMATE is restarted",
                     CorrectAnswersEn = "An assignment class must be filled manually",
 
-                    QuizCategory = new List<string> { "Filter" }
+                    QuizCategory = new List<string> { "Filter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -361,7 +369,8 @@ namespace AzubiApp.Services
                     Answer3En = "The Replenishment calculation",
                     CorrectAnswersEn = "The allocated supplier",
 
-                    QuizCategory = new List<string> { "Kondition" }
+                    QuizCategory = new List<string> { "Kondition" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -380,7 +389,8 @@ namespace AzubiApp.Services
                     Answer3En = "The allocated suppliert",
                     CorrectAnswersEn = "The forecast calculation | The Replenishment calculation",
 
-                    QuizCategory = new List<string> { "Bestellung", "Parameter", "Prognose" }
+                    QuizCategory = new List<string> { "Bestellung", "Parameter", "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -399,7 +409,8 @@ namespace AzubiApp.Services
                     Answer3En = "You can only display SKUs",
                     CorrectAnswersEn = "This allows temporary changes to be made for test purposes",
 
-                    QuizCategory = new List<string> { "Filter", "Allgemein" }
+                    QuizCategory = new List<string> { "Filter", "Allgemein" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -418,7 +429,8 @@ namespace AzubiApp.Services
                     Answer3En = "The order shown was changed after creation/calculation",
                     CorrectAnswersEn = "Does not necessarily mean anything as the color can be customized| The order shown was changed after creation/calculation",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -437,7 +449,8 @@ namespace AzubiApp.Services
                     Answer3En = "Yes, if they are filtered accordingly",
                     CorrectAnswersEn = "No, SKUs may only be set to inactive",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -456,7 +469,8 @@ namespace AzubiApp.Services
                     Answer3En = "Outliers are extreme values in the history",
                     CorrectAnswersEn = "Outliers are extreme values in the history",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -475,7 +489,8 @@ namespace AzubiApp.Services
                     Answer3En = "Periods are time periods in which no events take place",
                     CorrectAnswersEn = "The number of periods before and after the reporting date defines the length of the season",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -494,7 +509,8 @@ namespace AzubiApp.Services
                     Answer3En = "At least 5 history values",
                     CorrectAnswersEn = "At least 8 history values",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -513,7 +529,8 @@ namespace AzubiApp.Services
                     Answer3En = "Too few delivery dates",
                     CorrectAnswersEn = "Outliers",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -532,7 +549,8 @@ namespace AzubiApp.Services
                     Answer3En = "Max. limit",
                     CorrectAnswersEn = "Treatment limit",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -551,7 +569,8 @@ namespace AzubiApp.Services
                     Answer3En = "Replacement article SKUs without history",
                     CorrectAnswersEn = "New Article variation SKUs without history| Replacement article SKUs without history",
 
-                    QuizCategory = new List<string> { "Parameter", "Prognose" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -570,7 +589,8 @@ namespace AzubiApp.Services
                     Answer3En = "The SKU is deactivated and receives an “Info” warning called “Predecessor SKU”",
                     CorrectAnswersEn = "The history of the predecessor is transferred to the SKU",
 
-                    QuizCategory = new List<string> { "Parameter", "Prognose" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -589,7 +609,8 @@ namespace AzubiApp.Services
                     Answer3En = "In the conditions under the “Order schedule” tab, fill in the “Rhythm” field",
                     CorrectAnswersEn = "In the parameters under the “Forecast” tab, fill in the “History to use” box",
 
-                    QuizCategory = new List<string> { "Parameter", "Prognose", "Filter" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose", "Filter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -608,7 +629,8 @@ namespace AzubiApp.Services
                     Answer3En = "By default, it is assumed that a certain number of items are sold in a certain period & are then deducted from LOGOMATE",
                     CorrectAnswersEn = "Stock is kept as low as possible by proposing the smallest possible order quantity",
 
-                    QuizCategory = new List<string> { "Bestellung", "Parameter" }
+                    QuizCategory = new List<string> { "Bestellung", "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -627,7 +649,8 @@ namespace AzubiApp.Services
                     Answer3En = "Orders are optimized to achieve the highest possible volume discount in order to keep the purchasing costs per unit low",
                     CorrectAnswersEn = "Order quantities are reduced, but orders are placed more frequently in order to minimize warehousing costs| Order quantities are increased, but orders are placed less frequently to keep order costs low",
 
-                    QuizCategory = new List<string> { "Bestellung", "Parameter" }
+                    QuizCategory = new List<string> { "Bestellung", "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -646,7 +669,8 @@ namespace AzubiApp.Services
                     Answer3En = "Occurs if the entries in the Preset section are invalid",
                     CorrectAnswersEn = "Appears when LM has “truncated” an inflated forecast including the standard deviation",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -665,7 +689,8 @@ namespace AzubiApp.Services
                     Answer3En = "If the volatility (fluctuation range) does not exceed the permissible value",
                     CorrectAnswersEn = "If there are several history values| If the volatility (fluctuation range) does not exceed the permissible value",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -684,7 +709,8 @@ namespace AzubiApp.Services
                     Answer3En = "If the maximum range of the SKU was exceeded during the stock simulation",
                     CorrectAnswersEn = "Occurs when too much is ordered",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -703,7 +729,8 @@ namespace AzubiApp.Services
                     Answer3En = "Order Preparation Time (OPT) Just-in-Time (JiT) ABC Analysis (ABC) Storage Time (ST)",
                     CorrectAnswersEn = "Order Preparation Time (OPT) Delivery Time (DT) Transport Time (TT) Storage Time (ST)",
 
-                    QuizCategory = new List<string> { "Filter" }
+                    QuizCategory = new List<string> { "Filter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -722,7 +749,8 @@ namespace AzubiApp.Services
                     Answer3En = "It indicates places with unexpectedly high departures in the history",
                     CorrectAnswersEn = "It allows the mean value to increase linearly",
 
-                    QuizCategory = new List<string> { "Parameter", "Prognose" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -741,7 +769,8 @@ namespace AzubiApp.Services
                     Answer3En = "A start date from which the trend is to be used",
                     CorrectAnswersEn = "An average value",
 
-                    QuizCategory = new List<string> { "Paramter", "Prognose" }
+                    QuizCategory = new List<string> { "Paramter", "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -760,7 +789,8 @@ namespace AzubiApp.Services
                     Answer3En = "It indicates places with unexpectedly high departures in the history",
                     CorrectAnswersEn = "It causes the average value to increase exponentially",
 
-                    QuizCategory = new List<string> { "Parameter", "Prognose" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -779,7 +809,8 @@ namespace AzubiApp.Services
                     Answer3En = "No, you can only set one trend per SKU",
                     CorrectAnswersEn = "Yes, because the quadratic trend does not work without a linear trend",
 
-                    QuizCategory = new List<string> { "Parameter", "Prognose" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -798,7 +829,8 @@ namespace AzubiApp.Services
                     Answer3En = "The ABC class shows which SKUs have the highest turnover",
                     CorrectAnswersEn = "The ABC class shows which SKUs have the highest turnover",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -817,7 +849,8 @@ namespace AzubiApp.Services
                     Answer3En = "The ABC class shows which SKUs have the highest turnover",
                     CorrectAnswersEn = "The ABC class shows which SKU can be predicted most accurately",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -836,7 +869,8 @@ namespace AzubiApp.Services
                     Answer3En = "This is a special setting that allows you to start with a slower ordering rhythm",
                     CorrectAnswersEn = "It specifies the number of periods from which the ordering cycle should start",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -855,7 +889,8 @@ namespace AzubiApp.Services
                     Answer3En = "Der REMIRA Support muss einstellen, dass der Kalender bearbeitet werden darf",
                     CorrectAnswersEn = "“Separate calendar” must be checked",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -874,7 +909,8 @@ namespace AzubiApp.Services
                     Answer3En = "Dynamic calendar section (company vacations, special shifts, ...)",
                     CorrectAnswersEn = "Dynamic calendar section (company vacations, special shifts, ...)",
 
-                    QuizCategory = new List<string> { "Algemein" }
+                    QuizCategory = new List<string> { "Algemein" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -893,7 +929,8 @@ namespace AzubiApp.Services
                     Answer3En = "Article tree",
                     CorrectAnswersEn = "Group tree| Store tree",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -912,7 +949,8 @@ namespace AzubiApp.Services
                     Answer3En = "Article tree",
                     CorrectAnswersEn = "Supplier tree",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -931,7 +969,8 @@ namespace AzubiApp.Services
                     Answer3En = "Order calendar",
                     CorrectAnswersEn = "Supplier tree| Site calendar",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -950,7 +989,8 @@ namespace AzubiApp.Services
                     Answer3En = "Is responsible for departures",
                     CorrectAnswersEn = "It helps to quickly record and manage parameters and conditions",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -969,7 +1009,8 @@ namespace AzubiApp.Services
                     Answer3En = "If no order arrives on time",
                     CorrectAnswersEn = "If no order arrives on time",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 1
                 },
 
                 new Question
@@ -988,7 +1029,8 @@ namespace AzubiApp.Services
                     Answer3En = "Better view of the forecast graphic",
                     CorrectAnswersEn = "Better view of the forecast graphic",
 
-                    QuizCategory = new List<string> { "Prognose", "Allgemein" }
+                    QuizCategory = new List<string> { "Prognose", "Allgemein" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1007,7 +1049,8 @@ namespace AzubiApp.Services
                     Answer3En = "2",
                     CorrectAnswersEn = "4",
 
-                    QuizCategory = new List<string> { "Kondition" }
+                    QuizCategory = new List<string> { "Kondition" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1026,7 +1069,8 @@ namespace AzubiApp.Services
                     Answer3En = "Invalid action",
                     CorrectAnswersEn = "Too few delivery dates",
 
-                    QuizCategory = new List<string> { "Bestellung", "Filter" }
+                    QuizCategory = new List<string> { "Bestellung", "Filter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1045,7 +1089,8 @@ namespace AzubiApp.Services
                     Answer3En = "To keep the order costs per order as low as possible ",
                     CorrectAnswersEn = "All SKUs that have been ordered should reach their safety stock at the same time so that the SKUs can be ordered again at the same time",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1064,7 +1109,8 @@ namespace AzubiApp.Services
                     Answer3En = "The SKU to which this parameter was applied must not trigger an order",
                     CorrectAnswersEn = "The SKU to which this parameter was applied must not trigger an order| The SKU may only be ordered with a compound order",
 
-                    QuizCategory = new List<string> { "Bestellung", "Parameter" }
+                    QuizCategory = new List<string> { "Bestellung", "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1083,7 +1129,8 @@ namespace AzubiApp.Services
                     Answer3En = "Only one order is generated for a compound order, for all SKUs in the compound group",
                     CorrectAnswersEn = "A compound order consists of several items that are ordered",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1102,7 +1149,8 @@ namespace AzubiApp.Services
                     Answer3En = "Set the SKUs that hold up the compound order to inactive ",
                     CorrectAnswersEn = "Form compound subgroups with SKUs that have the same conditions| Remove SKUs that have unique conditions from the compound group",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1121,7 +1169,8 @@ namespace AzubiApp.Services
                     Answer3En = "An der Dispo-Warnung „Verbundkondition auf Lagerplatz vorhanden“",
                     CorrectAnswersEn = "On the light blue version of the original symbol",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1140,7 +1189,8 @@ namespace AzubiApp.Services
                     Answer3En = "Parameter->Status->“Network” checkbox",
                     CorrectAnswersEn = "“Desired group“->right-click->New group->”Compound group” checkbox| “Desired group”->right-click->Edit group/user->check “Compound”",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1159,7 +1209,8 @@ namespace AzubiApp.Services
                     Answer3En = "The order was changed after exporting",
                     CorrectAnswersEn = "The order has missed its availability date and is now considered overdue",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1178,7 +1229,8 @@ namespace AzubiApp.Services
                     Answer3En = "The order was output as a report before it was exported",
                     CorrectAnswersEn = "The order has been changed & has exceeded your availability date",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1197,7 +1249,8 @@ namespace AzubiApp.Services
                     Answer3En = "The order has been imported",
                     CorrectAnswersEn = "The order proposal has been exported| The order was output as a report and exported| The order has been imported",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1216,7 +1269,8 @@ namespace AzubiApp.Services
                     Answer3En = "The order has been changed after it has already been exported",
                     CorrectAnswersEn = "The order has been changed after it has already been exported",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1235,7 +1289,8 @@ namespace AzubiApp.Services
                     Answer3En = "The order has been canceled/deleted",
                     CorrectAnswersEn = "The order has not yet reached your order date and has not yet been exported",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1254,7 +1309,8 @@ namespace AzubiApp.Services
                     Answer3En = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached.",
                     CorrectAnswersEn = "Order proposals are generated until the maximum stock level is reached",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1273,7 +1329,8 @@ namespace AzubiApp.Services
                     Answer3En = "Order proposals are generated to satisfy all reservations",
                     CorrectAnswersEn = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1292,7 +1349,8 @@ namespace AzubiApp.Services
                     Answer3En = "The unit factor is kept as low as possible",
                     CorrectAnswersEn = "The unit factor is kept as low as possible| Order proposals are generated from several optimization units",
 
-                    QuizCategory = new List<string> { "Paramter" }
+                    QuizCategory = new List<string> { "Paramter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1311,7 +1369,8 @@ namespace AzubiApp.Services
                     Answer3En = "Conditions->Quantity, Prices, Costs->Select “Auto-store method",
                     CorrectAnswersEn = "Parameters->Dispo->Quality criterion->“Auto-store method” select",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1330,7 +1389,8 @@ namespace AzubiApp.Services
                     Answer3En = "Order proposals are generated with the highest value of goods per container unit",
                     CorrectAnswersEn = "Order proposals are generated with the lowest possible order costs",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1349,7 +1409,8 @@ namespace AzubiApp.Services
                     Answer3En = "Order proposals are generated for remaining quantities of orders (optimization unit is taken into account!)",
                     CorrectAnswersEn = "Order proposals are generated for remaining quantities of orders (optimization unit is taken into account!)",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1368,7 +1429,8 @@ namespace AzubiApp.Services
                     Answer3En = "An additional order is generated with the remaining quantity for all orders that take place in the current period",
                     CorrectAnswersEn = "Orders are converted 1:1 into purchase orders, regardless of stock and open purchase orders",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1387,7 +1449,8 @@ namespace AzubiApp.Services
                     Answer3En = "The optimization units to be used must not have a mix hook",
                     CorrectAnswersEn = "The optimization units to be used must not have a mix hook| The difference between the optimization units to be used must increase towards the top",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1406,7 +1469,8 @@ namespace AzubiApp.Services
                     Answer3En = "Container optimization optimizes the ordering costs",
                     CorrectAnswersEn = "The auto-store method optimizes the unit factor| Container optimization optimizes the ordering costs",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1425,7 +1489,8 @@ namespace AzubiApp.Services
                     Answer3En = "Weight / factor",
                     CorrectAnswersEn = "Volume / weight| Weight / factor",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1444,7 +1509,8 @@ namespace AzubiApp.Services
                     Answer3En = "A reservation with a partition is divided into several smaller orders",
                     CorrectAnswersEn = "A reservation with a partition gets its own order and can be assigned directly to an item",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1463,7 +1529,8 @@ namespace AzubiApp.Services
                     Answer3En = "These contracts can be used for comments",
                     CorrectAnswersEn = "This can be used to define an additional Sft",
 
-                    QuizCategory = new List<string> { "Paramter", "Kondition" }
+                    QuizCategory = new List<string> { "Paramter", "Kondition" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1482,7 +1549,8 @@ namespace AzubiApp.Services
                     Answer3En = "One contract per article",
                     CorrectAnswersEn = "An article can have multiple contracts",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1501,7 +1569,8 @@ namespace AzubiApp.Services
                     Answer3En = "There is no limit",
                     CorrectAnswersEn = "There is no limit",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1520,7 +1589,8 @@ namespace AzubiApp.Services
                     Answer3En = "Conditions -> Contracts -> Columns (Right Click): \"Ext. contract pos no\"",
                     CorrectAnswersEn = "Parameters -> Replenishment -> Contract type: \"Select Supplier\" and / or \"Max. Quantity\"",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1539,7 +1609,8 @@ namespace AzubiApp.Services
                     Answer3En = "Orders are only placed if the contract will be completely fulfilled",
                     CorrectAnswersEn = "It is ordered from the supplier with the next contract end date if the contract is still open",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1558,7 +1629,8 @@ namespace AzubiApp.Services
                     Answer3En = "Order quantities for SKUs with multiple suppliers can be split between standing order and order splitting; also combined",
                     CorrectAnswersEn = "Order quantities for SKUs with multiple suppliers can be split between standing order and order splitting; also combined",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1577,7 +1649,8 @@ namespace AzubiApp.Services
                     Answer3En = "The maximum quantity that can be requested from the supplier is ordered until the contact has been fulfilled",
                     CorrectAnswersEn = "The maximum quantity that can be requested from the supplier is ordered until the contact has been fulfilled",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1596,7 +1669,8 @@ namespace AzubiApp.Services
                     Answer3En = "red",
                     CorrectAnswersEn = "white",
 
-                    QuizCategory = new List<string> { "Prognose"}
+                    QuizCategory = new List<string> { "Prognose"},
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1615,7 +1689,8 @@ namespace AzubiApp.Services
                     Answer3En = "Semi-promotions are always located in the past",
                     CorrectAnswersEn = "\"Semi-promotions\" are promotions where the time period is known but the quantity is unknown| Semi-promotions are always located in the past",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1634,7 +1709,8 @@ namespace AzubiApp.Services
                     Answer3En = "The value was passed on from a higher level",
                     CorrectAnswersEn = "The value was passed on from a higher level",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1653,7 +1729,8 @@ namespace AzubiApp.Services
                     Answer3En = "The value was adopted from another SKU",
                     CorrectAnswersEn = "The value was passed on from a class",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1672,7 +1749,8 @@ namespace AzubiApp.Services
                     Answer3En = "through a structural break detection",
                     CorrectAnswersEn = "through the OoS correction",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1691,7 +1769,8 @@ namespace AzubiApp.Services
                     Answer3En = "An info campaign has no influence on the forecast, but has comments to point out special circumstances",
                     CorrectAnswersEn = "This allows you to use previously unconsidered periods with their sales and promotions for the forecast calculation",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1710,7 +1789,8 @@ namespace AzubiApp.Services
                     Answer3En = "Due dates are used to warn about price swings",
                     CorrectAnswersEn = "Due dates allow variable seasons",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1729,7 +1809,8 @@ namespace AzubiApp.Services
                     Answer3En = "The Sft indicates the quantity that must be ordered to avoid an OoS situation",
                     CorrectAnswersEn = "The Sft is the average stock level during a month| The Sft indicates the quantity that must be ordered to avoid an OoS situation",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1751,7 +1832,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_091.png",
                     ImagePathEn = "question_091_en.png",
 
-                    QuizCategory = new List<string> { "Bestellung", "Kondition" }
+                    QuizCategory = new List<string> { "Bestellung", "Kondition" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1770,7 +1852,8 @@ namespace AzubiApp.Services
                     Answer3En = "The field is not used",
                     CorrectAnswersEn = "The value in the field is set by default",
 
-                    QuizCategory = new List<string> { "Parameter", "Kondition" }
+                    QuizCategory = new List<string> { "Parameter", "Kondition" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1789,7 +1872,8 @@ namespace AzubiApp.Services
                     Answer3En = "The field is not used",
                     CorrectAnswersEn = "The value in the field was entered manually",
 
-                    QuizCategory = new List<string> { "Parameter", "Kondition" }
+                    QuizCategory = new List<string> { "Parameter", "Kondition" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1808,7 +1892,8 @@ namespace AzubiApp.Services
                     Answer3En = "There is no clear meaning",
                     CorrectAnswersEn = "If a field is underlined, it means that this value was passed on from a higher level",
 
-                    QuizCategory = new List<string> { "Parameter", "Kondition" }
+                    QuizCategory = new List<string> { "Parameter", "Kondition" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1827,7 +1912,8 @@ namespace AzubiApp.Services
                     Answer3En = "The contract type determines which contracts should be chosen",
                     CorrectAnswersEn = "The contract type defines how contracts should be handled",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1846,7 +1932,8 @@ namespace AzubiApp.Services
                     Answer3En = "The select contract function defines how contracts are to be handled",
                     CorrectAnswersEn = "The select contract function determines which contracts are to be chosen",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1865,7 +1952,8 @@ namespace AzubiApp.Services
                     Answer3En = "The contract with the lowest remaining quantity is used",
                     CorrectAnswersEn = "The contract with the largest remaining quantity is used",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1884,7 +1972,8 @@ namespace AzubiApp.Services
                     Answer3En = "The contract with the highest remaining quantity in % per day is used",
                     CorrectAnswersEn = "The contract with the highest average remaining quantity per day is used",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1903,7 +1992,8 @@ namespace AzubiApp.Services
                     Answer3En = "The contract with the highest average remaining quantity per day is used",
                     CorrectAnswersEn = "The contract with the highest remaining quantity in % is used",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1922,7 +2012,8 @@ namespace AzubiApp.Services
                     Answer3En = "The contract with the highest remaining quantity in % per day is used",
                     CorrectAnswersEn = "The contract with the lowest remaining quantity in % per day is used",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 2
                 },
 
                 new Question
@@ -1941,7 +2032,8 @@ namespace AzubiApp.Services
                     Answer3En = "The contract with the highest remaining quantity in % per day is used",
                     CorrectAnswersEn = "The contract with the highest increasing average remaining quantity per day is used",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -1960,7 +2052,8 @@ namespace AzubiApp.Services
                     Answer3En = "The contract from the main supplier is used",
                     CorrectAnswersEn = "The order quantity is divided among several suppliers in the specified ratio",
 
-                    QuizCategory = new List<string> { "Paramter" }
+                    QuizCategory = new List<string> { "Paramter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -1979,7 +2072,8 @@ namespace AzubiApp.Services
                     Answer3En = "Max. Qty + Select Supplier",
                     CorrectAnswersEn = "Select Supplier| Max. Qty + Select Supplier",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -1998,7 +2092,8 @@ namespace AzubiApp.Services
                     Answer3En = "The select contract is ignored",
                     CorrectAnswersEn = "Contracts will not be used",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2017,7 +2112,8 @@ namespace AzubiApp.Services
                     Answer3En = "The contract with the highest available quantity is selected",
                     CorrectAnswersEn = "The contract that matches the decision criterion of the select contract best is chosen and the maximum quantity that is available is then ordered",
 
-                    QuizCategory = new List<string> { "Paramter" }
+                    QuizCategory = new List<string> { "Paramter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2036,7 +2132,8 @@ namespace AzubiApp.Services
                     Answer3En = "The parameter is used to transfer promotions in the planning horizon",
                     CorrectAnswersEn = "You use these parameters to define the types of how the promotion quantities are calculated",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2055,7 +2152,8 @@ namespace AzubiApp.Services
                     Answer3En = "The promotion quantity is calculated by comparing sales during the promotion with sales during non-promotion periods",
                     CorrectAnswersEn = "The promotion quantity is calculated by comparing sales during the promotion with sales during non-promotion periods",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2074,7 +2172,8 @@ namespace AzubiApp.Services
                     Answer3En = "The semi-promotion remains active even if there is no sale",
                     CorrectAnswersEn = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2093,7 +2192,8 @@ namespace AzubiApp.Services
                     Answer3En = "The promotion quantity is calculated as the average of the sales from the previous year's promotion",
                     CorrectAnswersEn = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast",
 
-                    QuizCategory = new List<string> { "Paramter" }
+                    QuizCategory = new List<string> { "Paramter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2112,7 +2212,8 @@ namespace AzubiApp.Services
                     Answer3En = "Missed promotional quantities are determined on the basis of orders placed during the promotional period",
                     CorrectAnswersEn = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2131,7 +2232,8 @@ namespace AzubiApp.Services
                     Answer3En = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast",
                     CorrectAnswersEn = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2150,7 +2252,8 @@ namespace AzubiApp.Services
                     Answer3En = "Parameter -> Structure break/outlier -> Also correct last value",
                     CorrectAnswersEn = "Parameters -> Structure break/ Outlier -> Outlier detection",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2169,7 +2272,8 @@ namespace AzubiApp.Services
                     Answer3En = "30",
                     CorrectAnswersEn = "9",
 
-                    QuizCategory = new List<string> { "Parameter" }
+                    QuizCategory = new List<string> { "Parameter" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2188,7 +2292,8 @@ namespace AzubiApp.Services
                     Answer3En = "To do this, you must call LM support, as global system settings are required for this",
                     CorrectAnswersEn = "The setting is not activated by default.| To do this, you must call LM support, as global system settings are required for this",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "", "" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2210,7 +2315,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_115.png",
                     ImagePathEn = "question_115_en.png",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2232,7 +2338,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_116.png",
                     ImagePathEn = "question_116_en.png",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2251,7 +2358,8 @@ namespace AzubiApp.Services
                     Answer3En = "Under Parameters",
                     CorrectAnswersEn = "Under Extras",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2270,7 +2378,8 @@ namespace AzubiApp.Services
                     Answer3En = "A forecast that has an extended version",
                     CorrectAnswersEn = "a duplication of the forecast",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "", "" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2289,7 +2398,8 @@ namespace AzubiApp.Services
                     Answer3En = "All open orders will have an order rhythm",
                     CorrectAnswersEn = "All open orders will be ordered today",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "", "" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2308,7 +2418,8 @@ namespace AzubiApp.Services
                     Answer3En = "It must belong to a composite order",
                     CorrectAnswersEn = "You need two suppliers| The contract type must also be adjusted",
 
-                    QuizCategory = new List<string> { "Kondition" }
+                    QuizCategory = new List<string> { "Kondition" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2327,7 +2438,8 @@ namespace AzubiApp.Services
                     Answer3En = "No, these are only visible in the stock simulation",
                     CorrectAnswersEn = "Yes",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2346,7 +2458,8 @@ namespace AzubiApp.Services
                     Answer3En = "clear increases/decreases are recognizable in certain time periods",
                     CorrectAnswersEn = "e.g. if school vacations begin| clear increases/decreases are recognizable in certain time periods",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2368,7 +2481,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_123.png",
                     ImagePathEn = "question_123_en.png",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2387,7 +2501,8 @@ namespace AzubiApp.Services
                     Answer3En = "The Sft is only adjusted after the start of the campaign",
                     CorrectAnswersEn = "The Sft is increased by the promotion quantity × percentage between the available-from date and the start of the promotion and is immediately reduced again at the start of the promotion",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2406,7 +2521,8 @@ namespace AzubiApp.Services
                     Answer3En = "Like Sft increase, but the Sft is reduced slowly and evenly over the entire promotion period",
                     CorrectAnswersEn = "Like Sft increase, but the Sft is reduced slowly and evenly over the entire promotion period",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2425,7 +2541,8 @@ namespace AzubiApp.Services
                     Answer3En = "The reservation date will only be adjusted after the end of the promotional period",
                     CorrectAnswersEn = "If the order quantity is sufficient for the promotional period, the reservation date of all items is set to the available from date after the dispo",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2447,7 +2564,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_127.png",
                     ImagePathEn = "question_127_en.png",
 
-                    QuizCategory = new List<string> { "Kondition" }
+                    QuizCategory = new List<string> { "Kondition" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2469,7 +2587,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_128.png",
                     ImagePathEn = "question_128_en.png",
 
-                    QuizCategory = new List<string> { "Kondition" }
+                    QuizCategory = new List<string> { "Kondition" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2491,7 +2610,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_129.png",
                     ImagePathEn = "question_129_en.png",
 
-                    QuizCategory = new List<string> { "Kondition" }
+                    QuizCategory = new List<string> { "Kondition" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2513,7 +2633,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_130.png",
                     ImagePathEn = "question_130_en.png",
 
-                    QuizCategory = new List<string> { "Kondition" }
+                    QuizCategory = new List<string> { "Kondition" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2535,7 +2656,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_131.png",
                     ImagePathEn = "question_131_en.png",
 
-                    QuizCategory = new List<string> { "Kondition" }
+                    QuizCategory = new List<string> { "Kondition" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2557,7 +2679,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_132.png",
                     ImagePathEn = "question_132_en.png",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2579,7 +2702,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_133.png",
                     ImagePathEn = "question_133_en.png",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2601,7 +2725,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_134.png",
                     ImagePathEn = "question_134_en.png",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2623,7 +2748,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_135.png",
                     ImagePathEn = "question_135_en.png",
 
-                    QuizCategory = new List<string> { "Bestellung", "Prognose" }
+                    QuizCategory = new List<string> { "Bestellung", "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2645,7 +2771,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_136.png",
                     ImagePathEn = "question_136_en.png",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2667,7 +2794,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_137.png",
                     ImagePathEn = "question_137_en.png",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2689,7 +2817,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_138.png",
                     ImagePathEn = "question_138_en.png",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2711,7 +2840,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_139.png",
                     ImagePathEn = "question_139_en.png",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2733,7 +2863,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_140.png",
                     ImagePathEn = "question_140_en.png",
 
-                    QuizCategory = new List<string> { "Prognose" }
+                    QuizCategory = new List<string> { "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2755,7 +2886,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_141.png",
                     ImagePathEn = "question_141_en.png",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2777,7 +2909,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_142.png",
                     ImagePathEn = "question_142_en.png",
 
-                    QuizCategory = new List<string> { "Parameter", "Prognose" }
+                    QuizCategory = new List<string> { "Parameter", "Prognose" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2799,7 +2932,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_143.png",
                     ImagePathEn = "question_143_en.png",
 
-                    QuizCategory = new List<string> { "Parameter", "Allgemein" }
+                    QuizCategory = new List<string> { "Parameter", "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2821,7 +2955,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_144.png",
                     ImagePathEn = "question_144_en.png",
 
-                    QuizCategory = new List<string> { "Bestellung" }
+                    QuizCategory = new List<string> { "Bestellung" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2843,7 +2978,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_145.png",
                     ImagePathEn = "question_145_en.png",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2865,7 +3001,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_146.png",
                     ImagePathEn = "question_146_en.png",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2887,7 +3024,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_147.png",
                     ImagePathEn = "question_147_en.png",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2909,7 +3047,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_148.png",
                     ImagePathEn = "question_148_en.png",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2931,7 +3070,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_149.png",
                     ImagePathEn = "question_149_en.png",
 
-                    QuizCategory = new List<string> { "Kondition" }
+                    QuizCategory = new List<string> { "Kondition" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2953,7 +3093,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_150.png",
                     ImagePathEn = "question_150_en.png",
 
-                    QuizCategory = new List<string> { "Bestellung", "Allgemein" }
+                    QuizCategory = new List<string> { "Bestellung", "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2975,7 +3116,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_151.png",
                     ImagePathEn = "question_151_en.png",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -2997,7 +3139,8 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_152.png",
                     ImagePathEn = "question_152_en.png",
 
-                    QuizCategory = new List<string> { "Allgemein" }
+                    QuizCategory = new List<string> { "Allgemein" },
+                    DifficultyLevel = 3
                 },
 
                 new Question
@@ -3019,8 +3162,9 @@ namespace AzubiApp.Services
                     ImagePathDe = "question_153.png",
                     ImagePathEn = "question_153_en.png",
 
-                    QuizCategory = new List<string> { "Bestellung", "Allgemein" }
-                },*/
+                    QuizCategory = new List<string> { "Bestellung", "Allgemein" },
+                    DifficultyLevel = 3
+                },
             };
 
             foreach (var question in newQuestions)

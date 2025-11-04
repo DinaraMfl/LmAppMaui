@@ -331,6 +331,15 @@ namespace AzubiApp.Resources.Translate {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MultipleAnswers.
+        /// </summary>
+        internal static string MultipleAnswers {
+            get {
+                return ResourceManager.GetString("MultipleAnswers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to NextQuizButton.
         /// </summary>
         internal static string NextQuizButton {
