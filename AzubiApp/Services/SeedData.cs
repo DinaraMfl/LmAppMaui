@@ -1,4 +1,5 @@
-﻿using AzubiApp.Models;
+﻿using System.Reflection.Metadata;
+using AzubiApp.Models;
 
 namespace AzubiApp.Services
 {
@@ -18,7 +19,7 @@ namespace AzubiApp.Services
                     Answer1De = "Bestellungen werden auf den heutigen Tag vorgezogen",
                     Answer2De = "Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf",
                     Answer3De = "Es werden zusätzliche Bestellvorschläge für heute generiert",
-                    CorrectAnswersDe = "Bestellungen werden auf den heutigen Tag vorgezogen| Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf",
+                    CorrectAnswersDe = "Bestellungen werden auf den heutigen Tag vorgezogen| Bestellmengen werden, wenn möglich, reduziert abhängig vom Bedarf| Es werden zusätzliche Bestellvorschläge für heute generiert",
 
                     TextEn = "What happens if the “Order Now” option is selected?",
                     Answer1En = "Orders will be brought forward to today",
@@ -39,7 +40,7 @@ namespace AzubiApp.Services
                     Answer3De = "Er zeigt den Zeitraum an in die Planwerte eingestellt wurden",
                     CorrectAnswersDe = "Er zeigt den Zeitraum an in dem Bestellvorschläge generiert werden können",
 
-                    TextEn = "What is the function of the planning horizon?",
+                    TextEn = "What is the purpose of the planning horizon?",
                     Answer1En = "It displays the last order proposal",
                     Answer2En = "It shows the period in which order proposals can be generated",
                     Answer3En = "It shows the period in which the planned values were set",
@@ -52,13 +53,13 @@ namespace AzubiApp.Services
                 {
                     Number = 3,
 
-                    TextDe = "Wie wird der Planungshorizont berechnet?",
+                    TextDe = "Bis zu welchem Datum wird der festgelegte Planungshorizont in der Bestandssimulation angezeigt?",
                     Answer1De = "HEUTE + Eingetragener Planungshorizont in Werktagen",
-                    Answer2De = "Nächster Bestelltag + Eingetragener Planungshorizont",
-                    Answer3De = "HEUTE + Eingetragener Planungshorizont in Kalendertagen",
+                    Answer2De = "Nächster Bestelltag + Eingetragener Planungshorizont in Werktagen",
+                    Answer3De = "HEUTE + Eingetragener Planungshorizont in Kalendertagen?",
                     CorrectAnswersDe = "HEUTE + Eingetragener Planungshorizont in Kalendertagen",
 
-                    TextEn = "How is the planning horizon calculated?",
+                    TextEn = "Until what date is the defined planning horizon displayed in the Stock Chart?",
                     Answer1En = "TODAY + Entered planning horizon in working days",
                     Answer2En = "Next order date + entered planning horizon",
                     Answer3En = "TODAY + Entered planning horizon in calendar days",
@@ -71,13 +72,13 @@ namespace AzubiApp.Services
                 {
                     Number = 4,
 
-                    TextDe = "Mit welcher Periodenlänge hat man die niedrigste Standardabweichung bei der Prognose?",
+                    TextDe = "Mit welcher Periodenlänge hat man eine weniger schwankende Standardabweichung bei der Prognose?",
                     Answer1De = "Tagesperiode",
                     Answer2De = "Wochenperiode",
                     Answer3De = "Monatsperiode",
                     CorrectAnswersDe = "Monatsperiode",
 
-                    TextEn = "Which period length has the lowest standard deviation in the forecast?",
+                    TextEn = "With which period length do you have a less fluctuating standard deviation in the forecast??",
                     Answer1En = "Day period",
                     Answer2En = "Weekly period",
                     Answer3En = "Monthly period",
@@ -90,16 +91,16 @@ namespace AzubiApp.Services
                 {
                     Number = 5,
 
-                    TextDe = "Was passiert beim Berechnungstyp „nur Prognose, nicht disponieren“?",
+                    TextDe = "Was passiert beim Typ „nur Prognose, nicht disponieren“ aus dem Tab \"Status\" der Parameter?",
                     Answer1De = "Es wird nur nur eine Prognose gerechnet, aber keine Dispo",
                     Answer2De = "Es wird eine Prognose gerechnet & Bestellvorschläge generiert",
                     Answer3De = "Es wird nur eine Prognose und Reichweite berechnet",
                     CorrectAnswersDe = "Es wird nur nur eine Prognose gerechnet, aber keine Dispo",
 
-                    TextEn = "What happens with the “forecast only, not planning” calculation type?",
+                    TextEn = "What happens with the type \"only forecast, no replanish\" from the \"Status\" tab of the parameters?",
                     Answer1En = "Only a forecast is calculated, but no dispo",
                     Answer2En = "A forecast is calculated & order proposals are generated",
-                    Answer3En = "Only one forecast and range is calculated",
+                    Answer3En = "Only a forecast is calculated, but no dispo",
                     CorrectAnswersEn = "Only a forecast is calculated, but no dispo",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
@@ -109,15 +110,15 @@ namespace AzubiApp.Services
                 {
                     Number = 6,
 
-                    TextDe = "Welche Funktion hat die „Max. Reichweite“ in den Parametern?",
+                    TextDe = "Welche Funktion hat die „Max. Reichweite“ in den Parametern ?",
                     Answer1De = "Die Max. Reichweite gibt an wie lange die Lieferroute von Lager bis Filiale sein darf",
-                    Answer2De = "Das dort die Out-of-Stock Bereinigung stattfindet",
-                    Answer3De = "Die Max. Reichweite (Menge) limitiert den Bestand einer SKU auf x Tage, ohne eine weitere Bestellung zu erwarten im diesen Zeitraum",
-                    CorrectAnswersDe = "Die Max. Reichweite (Menge) limitiert den Bestand einer SKU auf x Tage, ohne eine weitere Bestellung zu erwarten im diesen Zeitraum",
+                    Answer2De = "Wird eine Max. Reichweite übergeben ist es möglich das eine OoS- Bereinigung stattfinden kann",
+                    Answer3De = "Die Max. Reichweite (Menge) limitiert den Bestand einer SKU auf x Tage, ohne eine weitere Bestellung zu erwarten in diesen Zeitraum",
+                    CorrectAnswersDe = "Die Max. Reichweite (Menge) limitiert den Bestand einer SKU auf x Tage, ohne eine weitere Bestellung zu erwarten in diesen Zeitraum",
 
                     TextEn = "What is the function of the “Max. coverage” in the parameters?",
                     Answer1En = "The max. coverage indicates how long the delivery route from the warehouse to the store may be",
-                    Answer2En = "That the out-of-stock cleanup takes place there",
+                    Answer2En = "If a maximum range is passed, it is possible that an OoS cleanup can take place",
                     Answer3En = "The max. coverage (quantity) limits the stock of a SKU to x days without expecting another order in this period",
                     CorrectAnswersEn = "The max. coverage (quantity) limits the stock of a SKU to x days without expecting another order in this period",
 
@@ -128,16 +129,16 @@ namespace AzubiApp.Services
                 {
                     Number = 7,
 
-                    TextDe = "Warum kriegt man eine OoS-Warnmeldung?",
-                    Answer1De = "Weil eine SKU keine Bestandsdaten hat",
+                    TextDe = "Wann kriegt man eine OoS-Warnmeldung?",
+                    Answer1De = "Wenn der Bestand einer SKU zum Teil aus abgelaufener Ware besteht",
                     Answer2De = "Wenn ich einen Bestand von 0 habe jedoch der Bedarf > 0 ist",
-                    Answer3De = "Weil ein Standort seinen Bestand aufgebraucht hat",
+                    Answer3De = "Wenn prognostiert wird das eine SKU in 7 Tagen Ihren ganzen Bestand aufgebraucht hat",
                     CorrectAnswersDe = "Wenn ich einen Bestand von 0 habe jedoch der Bedarf > 0 ist",
 
-                    TextEn = "Why do I get an OoS warning message?",
-                    Answer1En = "Because an SKU has no inventory data",
+                    TextEn = "When do you get an OoS warning?",
+                    Answer1En = "When a SKU's inventory is partly expired",
                     Answer2En = "If I have a stock of 0 but the demand is > 0",
-                    Answer3En = "Because a location has used up its stock",
+                    Answer3En = "If a SKU is forecast to have used up all your inventory in 7 days",
                     CorrectAnswersEn = "If I have a stock of 0 but the demand is > 0",
 
                     QuizCategory = new List<string> { "Prognose" }
@@ -147,13 +148,13 @@ namespace AzubiApp.Services
                 {
                     Number = 8,
 
-                    TextDe = "Wie kann ich das Gütekriterium ändern?",
+                    TextDe = "Wo kann ich das Gütekriterium ändern?",
                     Answer1De = "Parameter>Dispo>Bestellmenge",
                     Answer2De = "Konditionen>Lieferant>Lieferantenpriorität",
                     Answer3De = "Parameter>Vorgabe>Saison verwenden von",
                     CorrectAnswersDe = "Parameter>Dispo>Bestellmenge",
 
-                    TextEn = "How can I change the quality criterion?",
+                    TextEn = "Where can I change the quality criterion?",
                     Answer1En = "Parameter>Dispo>Order quantity",
                     Answer2En = "Conditions>Supplier>Supplier priority",
                     Answer3En = "Parameter>Default>Use season from",
@@ -166,17 +167,17 @@ namespace AzubiApp.Services
                 {
                     Number = 9,
 
-                    TextDe = "Was passiert beim Berechnungstyp „standard, Prognose + Dispo“?",
+                    TextDe = "Was passiert beim Typ „standard, Prognose + Dispo“ aus dem Tab \"Status\" der Parameter??",
                     Answer1De = "Es wird nur eine Prognose ohne Dispo gerechnet",
                     Answer2De = "Es wird sowohl eine Prognose als auch eine Dispo-Rechnung durchgeführt",
                     Answer3De = "Es wird keine Prognose und keine Dispo gerechnet",
                     CorrectAnswersDe = "Es wird sowohl eine Prognose als auch eine Dispo-Rechnung durchgeführt",
 
-                    TextEn = "What happens with the “standard, forecast + replenishment” calculation type?",
-                    Answer1En = "Only a forecast without overdraft is calculated",
-                    Answer2En = "Both a forecast and an overdraft calculation are carried out",
-                    Answer3En = "No forecast and no dispo is calculated",
-                    CorrectAnswersEn = "Both a forecast and an overdraft calculation are carried out",
+                    TextEn = "What happens with the type \"standard, forecast + replenishment\" from the \"Status\" tab of the parameters?",
+                    Answer1En = "Only a forecast without replenishment is calculated",
+                    Answer2En = "Both a forecast and an replenishment calculation is carried out",
+                    Answer3En = "No forecast and no replenishment is calculated",
+                    CorrectAnswersEn = "Both a forecast and an replenishment calculation is carried out",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
                 },
@@ -185,13 +186,13 @@ namespace AzubiApp.Services
                 {
                     Number = 10,
 
-                    TextDe = "Was passiert beim Berechnungstyp „nicht bestellen, mit Bestand-Sim“?",
+                    TextDe = "Was passiert beim Typ „nicht bestellen, mit Bestand-Sim“ aus dem \"Status\" Tab der Parameter?",
                     Answer1De = "Es werden keine Bestellvorschläge generiert, wenn es eine Bestandsimulation gibt",
                     Answer2De = "Es werden keine Bestellvorschläge & Bestandssimulation generiert",
                     Answer3De = "Es werden keine Bestellvorschläge, aber eine Bestandssimulation generiert",
                     CorrectAnswersDe = "Es werden keine Bestellvorschläge, aber eine Bestandssimulation generiert",
 
-                    TextEn = "What happens with the “No replenishment, do simulation” calculation type?",
+                    TextEn = "What happens with the type \"No replenishment, do simulation\" from the \"Status\" tab of the parameters?",
                     Answer1En = "No order proposals are generated if there is a stock simulation",
                     Answer2En = "No order proposals & stock simulation are generated",
                     Answer3En = "No order proposals are generated, but a stock simulation is generated",
@@ -204,15 +205,15 @@ namespace AzubiApp.Services
                  {
                     Number = 11,
 
-                    TextDe = "Was passiert beim Berechnungstyp „nicht bestellen, ohne Bestand-Sim“?",
+                    TextDe = "Was passiert beim Typ „nicht bestellen, ohne Bestand-Sim“ aus dem \"Status\" Tab der Parameter?",
                     Answer1De = "Es werden keine Bestellvorschläge, aber eine Bestandssimulation generiert",
-                    Answer2De = " Es werden keine Bestellvorschläge generiert, wenn es keine Bestandsimulation gibt",
+                    Answer2De = "Es werden keine Bestellvorschläge generiert, wenn es keine Bestandsimulation gibt",
                     Answer3De = "Es werden keine Bestellvorschläge & Bestandssimulation generiert",
                     CorrectAnswersDe = "Es werden keine Bestellvorschläge & Bestandssimulation generiert",
 
-                    TextEn = "What happens with the “No replenishment, no simulation” calculation type?",
+                    TextEn = "What happens with the type \"No replenishment, no simulation\" from the \"Status\" tab of the parameters?",
                     Answer1En = "No order proposals are generated, but a stock simulation is generated",
-                    Answer2En = " No order proposals are generated if there is no stock simulation",
+                    Answer2En = "No order proposals will be generated if there are no stock simulation",
                     Answer3En = "No order proposals & stock simulation are generated",
                     CorrectAnswersEn = "No order proposals & stock simulation are generated",
 
@@ -223,14 +224,14 @@ namespace AzubiApp.Services
                  {
                     Number = 12,
 
-                    TextDe = "Was passiert beim Berechnungstyp „Bestellmenge nullen vor Abfüllen“?",
+                    TextDe = "Was passiert beim Typ „Bestellmenge nullen vor Abfüllen“ aus dem \"Status\" Tab der Parameter?",
                     Answer1De = "Es wird ein Bedarf gerechnet und Bestellvorschläge erhalten eine Bestellmenge von 0",
                     Answer2De = "Es werden Bestellungen mit einer Bestellmenge von 0 entfernt",
                     Answer3De = "Bestellungen werden nachträglich mit einer Bestellmenge von 0 ersetzt",
                     CorrectAnswersDe = "Es wird ein Bedarf gerechnet und Bestellvorschläge erhalten eine Bestellmenge von 0",
 
-                    TextEn = "What happens with the calculation type “Set order to zero quantity before reducing down”?",
-                    Answer1En = "A requirement is calculated and order proposals receive an order quantity of 0",
+                    TextEn = "What happens with the type \"Set order to zero quantity before reducing down\" from the \"Status\" tab of the parameters?",
+                    Answer1En = "A demand is calculated and order proposals receive an order quantity of 0",
                     Answer2En = "Orders with an order quantity of 0 are removed",
                     Answer3En = "Orders are subsequently replaced with an order quantity of 0",
                     CorrectAnswersEn = "A requirement is calculated and order proposals receive an order quantity of 0",
@@ -242,22 +243,22 @@ namespace AzubiApp.Services
                  {
                     Number = 13,
 
-                    TextDe = "Was macht die Optimierungs-Einheit?",
+                    TextDe = "Wofür wird die Optimierungs-Einheit benutzt?",
                     Answer1De = "Die Optimierungs-Einheit gibt an mit welcher Einheit gerechnet werden soll",
                     Answer2De = "Die Optimierungs-Einheit zeigt an welche Einheit manuell angepasst werden soll",
-                    Answer3De = "Bestellungen werden mit dieser Einheit getätigt",
-                    CorrectAnswersDe = "Die Optimierungs-Einheit gibt an mit welcher Einheit gerechnet werden soll| Bestellungen werden mit dieser Einheit getätigt",
+                    Answer3De = "Bestellvorschläge werden mit dieser Einheit berechnet",
+                    CorrectAnswersDe = "Die Optimierungs-Einheit gibt an mit welcher Einheit gerechnet werden soll| Bestellvorschläge werden mit dieser Einheit berechnet",
 
-                    TextEn = "What does the optimization unit do?",
+                    TextEn = "What is the optimization unit used for?",
                     Answer1En = "The optimization unit specifies the unit to be used for the calculation",
                     Answer2En = "The optimization unit indicates which unit is to be adjusted manually",
-                    Answer3En = "Orders are placed with this unit",
-                    CorrectAnswersEn = "The optimization unit specifies the unit to be used for the calculation| Orders are placed with this unit",
+                    Answer3En = "Order proposals are calculated with this unit",
+                    CorrectAnswersEn = "The optimization unit specifies the unit to be used for the calculation| Order proposals are calculated with this unit",
 
                     QuizCategory = new List<string> { "Bestellung", "Kondition" }
                  },
 
-                 new Question
+                 /*new Question
                  {
                     Number = 14,
 
@@ -274,13 +275,13 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Set the reference to “Value gross/net”",
 
                     QuizCategory = new List<string> { "Bestellung", "Kondition" }
-                 },
+                 },*/
 
                  new Question
                  {
                     Number = 15,
 
-                    TextDe = "Welche Parameter sollten eingestellt werden, wenn neue SKUs übergeben werden ohne bekannter Abgangshistorie?",
+                    TextDe = "Parameter sollten eingestellt werden, wenn neue SKUs übergeben werden ohne bekannte Abgangshistorie?",
                     Answer1De = "Mittelwert",
                     Answer2De = "Feld “Wenn Prognose, möglich“",
                     Answer3De = "Inaktiv setzen bis Historie vorhanden",
@@ -289,7 +290,7 @@ namespace AzubiApp.Services
                     TextEn = "Which parameters should be set if new SKUs are transferred without a known retirement history?",
                     Answer1En = "Mean value",
                     Answer2En = "Field “If forecast is possible”",
-                    Answer3En = "Set inactive until history available",
+                    Answer3En = "Set inactive until history is available",
                     CorrectAnswersEn = "Mean value| Field “If forecast is possible”",
 
                     QuizCategory = new List<string> { "Parameter" }
@@ -301,7 +302,7 @@ namespace AzubiApp.Services
 
                     TextDe = "Was unterscheidet eine Filterklasse von einer Zuordnungsklasse?",
                     Answer1De = "Einer Filterklasse können mehr SKUs zugeordnet werden",
-                    Answer2De = "Eine Filterklasse ist nur temporär & wird nach erneuten Starten von LOGOMATE entfernt",
+                    Answer2De = "Eine Filterklasse ist nur temporär & wird nach erneuten Starten von F&R entfernt",
                     Answer3De = "Eine Filterklasse hat klar definierte Bedingungen, die eine SKU erfüllen muss",
                     CorrectAnswersDe = "Eine Filterklasse hat klar definierte Bedingungen, die eine SKU erfüllen muss",
 
@@ -320,14 +321,14 @@ namespace AzubiApp.Services
 
                     TextDe = "Was unterscheidet eine Zuordnungsklasse zu einer Filterklasse?",
                     Answer1De = "Eine Zuordnungsklasse muss manuell befüllt werden",
-                    Answer2De = "Eine Zuordnungsklasse können maximal 10 SKUs zugeordnet werden",
-                    Answer3De = "Eine Zuordnungsklasse ist nur temporär & wird nach erneuten Starten von LOGOMATE entfernt",
+                    Answer2De = "Einer Zuordnungsklasse können maximal 10 SKUs zugeordnet werden",
+                    Answer3De = "Eine Zuordnungsklasse ist nur temporär & wird nach erneuten Starten von F&R entfernt",
                     CorrectAnswersDe = "Eine Zuordnungsklasse muss manuell befüllt werden",
 
                     TextEn = "What is the difference between an assignment class and a filter class?",
                     Answer1En = "An assignment class must be filled manually",
                     Answer2En = "A maximum of 10 SKUs can be assigned to an assignment class",
-                    Answer3En = "An assignment class is only temporary & is removed after LOGOMATE is restarted",
+                    Answer3En = "An assignment class is only temporary & is removed after F&R is restarted",
                     CorrectAnswersEn = "An assignment class must be filled manually",
 
                     QuizCategory = new List<string> { "Filter" }
@@ -362,7 +363,7 @@ namespace AzubiApp.Services
                     Answer3De = "Der Zugeordnete Lieferant",
                     CorrectAnswersDe = "Die Prognose-Rechnung| Die Dispo-Rechnung",
 
-                    TextEn = "Was wird inaktiviert, wenn der Parameter „Inaktiv“ gesetzt wird?",
+                    TextEn = "What is deactivated when the “Inactive” parameter is set??",
                     Answer1En = "The forecast calculation",
                     Answer2En = "The Replenishment calculation",
                     Answer3En = "The allocated suppliert",
@@ -384,13 +385,13 @@ namespace AzubiApp.Services
                     TextEn = "What does the read-only mode do?",
                     Answer1En = "You can use it to export orders",
                     Answer2En = "This allows temporary changes to be made for test purposes",
-                    Answer3En = "You can only display SKUs",
+                    Answer3En = "You can only see SKUs",
                     CorrectAnswersEn = "This allows temporary changes to be made for test purposes",
 
                     QuizCategory = new List<string> { "Filter", "Allgemein" }
                  },
 
-                 new Question
+                 /*new Question
                  {
                     Number = 21,
 
@@ -407,23 +408,23 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "Does not necessarily mean anything as the color can be customized| The order shown was changed after creation/calculation",
 
                     QuizCategory = new List<string> { "Bestellung" }
-                 },
+                 },*/
 
                  new Question
                  {
                     Number = 22,
 
-                    TextDe = "Darf ich eine SKU löschen?",
-                    Answer1De = "Nein, SKUs darf man nur auf inaktiv setzen",
+                    TextDe = "Ist es sinnvoll eine SKU, die in Benutzung war oder ist, zu löschen??",
+                    Answer1De = "Nein, SKUs sollte man nur auf inaktiv setzen",
                     Answer2De = "Ja, um Rechenleistung zu sparen",
-                    Answer3De = "Ja, wenn diese entsprechend gefiltert werden",
-                    CorrectAnswersDe = "Nein, SKUs darf man nur auf inaktiv setzen",
+                    Answer3De = "Ja, wenn Sie mindestens 1 Monat inaktiv war.",
+                    CorrectAnswersDe = "Nein, SKUs sollte man nur auf inaktiv setzen",
 
-                    TextEn = "Can I delete an SKU?",
-                    Answer1En = "No, SKUs may only be set to inactive",
+                    TextEn = "Does it make sense to delete a SKU that was or is in use?",
+                    Answer1En = "No, SKUs should only be set to inactive",
                     Answer2En = "Yes, to save computing power",
-                    Answer3En = "Yes, if they are filtered accordingly",
-                    CorrectAnswersEn = "No, SKUs may only be set to inactive",
+                    Answer3En = "Yes, if it has been inactive for at least 1 month",
+                    CorrectAnswersEn = "No, SKUs should only be set to inactive",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -439,8 +440,8 @@ namespace AzubiApp.Services
                     CorrectAnswersDe = "Ausreißer sind Extrem-Werte in der Historie",
 
                     TextEn = "What are outliers?",
-                    Answer1En = "Recognize outliers SKUs that exist twice",
-                    Answer2En = "Delete outliers Disposals that result in stocks falling below the Sft",
+                    Answer1En = "Outliers recognize SKUs that exist twice",
+                    Answer2En = "Outliers delete Issues that result in stocks falling below the SFT",
                     Answer3En = "Outliers are extreme values in the history",
                     CorrectAnswersEn = "Outliers are extreme values in the history",
 
@@ -451,17 +452,17 @@ namespace AzubiApp.Services
                  {
                     Number = 24,
 
-                    TextDe = "Woran erkenne ich wie lang eine Saison ist?",
-                    Answer1De = "Die Anzahl der Perioden vor und nach dem Stichtag definiert die Länge der Saison",
-                    Answer2De = "Die Anzahl der Perioden bezieht sich ausschließlich auf die letzten zwei Jahre",
-                    Answer3De = "Perioden sind Zeiträume in  denen kein Ereignisse stattfinden",
-                    CorrectAnswersDe = "Die Anzahl der Perioden vor und nach dem Stichtag definiert die Länge der Saison",
+                    TextDe = "Wie kann ich die Länge einer variablen Saison steuern?",
+                    Answer1De = "Indem ich ein \"Vorher\" & \"Nachher\"-Wert bei den Stichtagen hinterlege",
+                    Answer2De = "Die Länge kann nicht manuell gesteuert werden, da die Länge von F&R berechnet wird",
+                    Answer3De = "Indem man zwei Stichtage miteinander verknüpft",
+                    CorrectAnswersDe = "Indem ich ein \"Vorher\" & \"Nachher\"-Wert bei den Stichtagen hinterlege",
 
-                    TextEn = "How can I tell how long a season is?",
-                    Answer1En = "The number of periods before and after the reporting date defines the length of the season",
-                    Answer2En = "The number of periods relates exclusively to the last two years",
-                    Answer3En = "Periods are time periods in which no events take place",
-                    CorrectAnswersEn = "The number of periods before and after the reporting date defines the length of the season",
+                    TextEn = "How can I control the length of a variable season?",
+                    Answer1En = "By storing a \"before\" & \"after\" value in the key dates",
+                    Answer2En = "The length cannot be controlled manually, as the length is calculated by F&R",
+                    Answer3En = "By linking two key dates",
+                    CorrectAnswersEn = "By storing a \"before\" & \"after\" value in the key dates",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -489,17 +490,17 @@ namespace AzubiApp.Services
                  {
                     Number = 26,
 
-                    TextDe = "Was korrigiert die Behandlungsgrenze?",
-                    Answer1De = "Ausreißer",
-                    Answer2De = "Ungültige Planwerte",
-                    Answer3De = "Zu wenig Liefertermine",
-                    CorrectAnswersDe = "Ausreißer",
+                    TextDe = "Was passiert wenn die definierte Behandlungsgrenze überschritten wird?",
+                    Answer1De = "Die Ausreißer werden korrigiert",
+                    Answer2De = "Ungültige Planwerte werden korrigiert",
+                    Answer3De = "Es werden mehr Liefertermine generiert weil zu wenige Vorhanden sind um den Bedarf zu decken.",
+                    CorrectAnswersDe = "Die Ausreißer werden korrigiert",
 
-                    TextEn = "What corrects the treatment limit?",
-                    Answer1En = "Outliers",
-                    Answer2En = "Invalid plan values",
-                    Answer3En = "Too few delivery dates",
-                    CorrectAnswersEn = "Outliers",
+                    TextEn = "What happens if the defined treatment limit is exceeded?",
+                    Answer1En = "The outliers will be corrected",
+                    Answer2En = "Invalid plan values will be corrected",
+                    Answer3En = "More delivery dates are generated because there are too few to meet the demand.",
+                    CorrectAnswersEn = "The outliers will be corrected",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -508,17 +509,17 @@ namespace AzubiApp.Services
                  {
                     Number = 27,
 
-                    TextDe = "Welche Grenze sollte höher sein bei den Ausreißern, damit diese korrigiert wird?",
+                    TextDe = "Welche Grenze muss gepflegt sein bei den Ausreißern, damit der Ausreißer korrigiert werden kann?                                              ?",
                     Answer1De = "Behandlungsgrenze",
                     Answer2De = "Warnungsgrenze",
                     Answer3De = "Max.-Grenze",
                     CorrectAnswersDe = "Behandlungsgrenze",
 
-                    TextEn = "Which limit should be higher for the outliers so that this is corrected?",
-                    Answer1En = "Treatment limit",
-                    Answer2En = "Warning limit ",
-                    Answer3En = "Max. limit",
-                    CorrectAnswersEn = "Treatment limit",
+                    TextEn = "What threshold must be maintained for the outliers so that the outlier can be corrected?                                  ",
+                    Answer1En = "Correction threshold",
+                    Answer2En = "Warning threshold",
+                    Answer3En = "Max. Stock threshold",
+                    CorrectAnswersEn = "Treatment threshold",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -529,15 +530,15 @@ namespace AzubiApp.Services
 
                     TextDe = "Wann kommen Vorläufer (normalerweise) zum Einsatz?",
                     Answer1De = "Neue SKUs ohne Historie",
-                    Answer2De = "Neu Artikel-Variation-SKUs ohne Historie",
-                    Answer3De = "Ablöse-Artikel-SKUs ohne Historie",
-                    CorrectAnswersDe = "Neu Artikel-Variation-SKUs ohne Historie| Ablöse-Artikel-SKUs ohne Historie",
+                    Answer2De = "Neue SKUs ohne Historie für Artikel-Variationen",
+                    Answer3De = "Nachfolger-SKUs ohne Historie",
+                    CorrectAnswersDe = "Neue SKUs ohne Historie für Artikel-Variationen| Nachfolger-SKUs ohne Historie",
 
-                    TextEn = "When are precursors (normally) used?",
+                    TextEn = "When are predecessors (normally) used?",
                     Answer1En = "New SKUs without history",
                     Answer2En = "New Article variation SKUs without history",
-                    Answer3En = "Replacement article SKUs without history",
-                    CorrectAnswersEn = "New Article variation SKUs without history| Replacement article SKUs without history",
+                    Answer3En = "Successor SKUs without history",
+                    CorrectAnswersEn = "New SKUs without history for an article variation| Successor SKUs without history",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
                  },
@@ -547,13 +548,13 @@ namespace AzubiApp.Services
                     Number = 29,
 
                     TextDe = "Was bewirkt ein eingetragener Vorläufer?",
-                    Answer1De = "Die Vorläufer-SKU wird ab dem eingetragenen Datum inaktiv gelöscht & wird dann ersetzt mit der SKU, die diese SKU als Vorläufer eingetragen hat",
+                    Answer1De = "Die Vorläufer-SKU wird ab dem eingetragenen Datum gelöscht & wird dann ersetzt mit der SKU, die diese SKU als Vorläufer eingetragen hat.",
                     Answer2De = "Die Historie vom Vorläufer wird übertragen auf die SKU",
                     Answer3De = "Die SKU wird inaktiviert und erhält eine „Info“-Warnung, die „Vorläufer-SKU“ heißt",
                     CorrectAnswersDe = "Die Historie vom Vorläufer wird übertragen auf die SKU",
 
-                    TextEn = "What does a registered forerunner do?",
-                    Answer1En = "The predecessor SKU is deleted from the date entered as inactive & is then replaced with the SKU that entered this SKU as the predecessor",
+                    TextEn = "What does a registered predecessor do?",
+                    Answer1En = "The predecessor SKU will be deleted from the passed date and will then be replaced with the SKU that passed that SKU as a predecessor",
                     Answer2En = "The history of the predecessor is transferred to the SKU",
                     Answer3En = "The SKU is deactivated and receives an “Info” warning called “Predecessor SKU”",
                     CorrectAnswersEn = "The history of the predecessor is transferred to the SKU",
@@ -565,15 +566,15 @@ namespace AzubiApp.Services
                  {
                     Number = 30,
 
-                    TextDe = "Wie kann man LOGOMATE dazu bringen nur einen bestimmten Zeitraum der Historie für die Berechnung zu nutzen?",
+                    TextDe = "Wie kann man F&R dazu bringen nur einen bestimmten Zeitraum der Historie für die Berechnung zu nutzen?",
                     Answer1De = "Bei den Parametern unter dem Reiter „Prognose“ den Kasten „Zu verwendende Historie“ befüllen",
                     Answer2De = "Bei den Parametern unter dem Reiter „Vorgabe“ das Feld „Plan verwenden“ befüllen",
                     Answer3De = "Bei den Konditionen unter dem Reiter „Zeiten“ das Feld „Rhythmus“ befüllen",
                     CorrectAnswersDe = "Bei den Parametern unter dem Reiter „Prognose“ den Kasten „Zu verwendende Historie“ befüllen",
 
-                    TextEn = "How can LOGOMATE be made to use only a certain period of the history for the calculation?",
+                    TextEn = "How can F&R be set up to use only a certain period of the history for the calculation?",
                     Answer1En = "In the parameters under the “Forecast” tab, fill in the “History to use” box",
-                    Answer2En = "In the parameters under the “ Preset” tab, fill in the “Use plan” field",
+                    Answer2En = "In the parameters under the “Preset” tab, fill in the “Use plan” field",
                     Answer3En = "In the conditions under the “Order schedule” tab, fill in the “Rhythm” field",
                     CorrectAnswersEn = "In the parameters under the “Forecast” tab, fill in the “History to use” box",
 
@@ -585,15 +586,15 @@ namespace AzubiApp.Services
                     Number = 31,
 
                     TextDe = "Was bewirkt das Gütekriterium „Bestand minimieren“?",
-                    Answer1De = "Der Bestand wird so niedrig wie möglich gehalten, indem die kleinstmöglich Bestellmenge vorgeschlagen wird",
-                    Answer2De = "Der Bestand, der nach einer bestimmten Anzahl an Tagen noch nicht verkauft wurde, wird aus LOGOMATE entfernt",
-                    Answer3De = "Es wird standardmäßig davon ausgegangen das eine bestimmte Anzahl Artikel in einer bestimmten Periode verkauft werden & werden daraufhin von LOGOMATE abgezogen",
-                    CorrectAnswersDe = "Der Bestand wird so niedrig wie möglich gehalten, indem die kleinstmöglich Bestellmenge vorgeschlagen wird",
+                    Answer1De = "Der Bestand wird so niedrig wie möglich gehalten, indem die kleinstmögliche Bestellmenge vorgeschlagen wird",
+                    Answer2De = "Der Bestand, der nach einer bestimmten Anzahl an Tagen noch nicht verkauft wurde, wird aus F&R entfernt",
+                    Answer3De = "Es wird standardmäßig davon ausgegangen das eine bestimmte Anzahl Artikel in einer bestimmten Periode verkauft werden & werden daraufhin von F&R abgezogen",
+                    CorrectAnswersDe = "Der Bestand wird so niedrig wie möglich gehalten, indem die kleinstmögliche Bestellmenge vorgeschlagen wird",
 
                     TextEn = "What does the “minimize stock” quality criterion do?",
                     Answer1En = "Stock is kept as low as possible by proposing the smallest possible order quantity",
-                    Answer2En = "The stock that has not been sold after a certain number of days is removed from LOGOMATE",
-                    Answer3En = "By default, it is assumed that a certain number of items are sold in a certain period & are then deducted from LOGOMATE",
+                    Answer2En = "The stock that has not been sold after a certain number of days is removed from F&R",
+                    Answer3En = "By default, it is assumed that a certain number of items are sold in a certain period & are then deducted from F&R",
                     CorrectAnswersEn = "Stock is kept as low as possible by proposing the smallest possible order quantity",
 
                     QuizCategory = new List<string> { "Bestellung", "Parameter" }
@@ -622,17 +623,17 @@ namespace AzubiApp.Services
                  {
                     Number = 33,
 
-                    TextDe = "Wann tritt die Warnung  “Max. Prognose erreicht” auf?",
+                    TextDe = "Wann tritt die Warnung  \"Max. Prognose erreicht\" auf?",
                     Answer1De = "Tritt auf, wenn die Prognose einem starken Trend oder quadratischen Trend nach oben unterliegt",
-                    Answer2De = "Erscheint, wenn LM eine überhöhte Prognose einschließlich der Standardabweichung „abgeschnitten“ hat",
+                    Answer2De = "Sobald der Wert, der im Feld \"Max.Prognose\" definiert ist, überschritten werden würde",
                     Answer3De = "Tritt auf, wenn die Einträge im Abschnitt Vorgaben ungültig sind",
-                    CorrectAnswersDe = "Erscheint, wenn LM eine überhöhte Prognose einschließlich der Standardabweichung „abgeschnitten“ hat",
+                    CorrectAnswersDe = "Sobald der Wert, der im Feld \"Max.Prognose\" definiert ist, überschritten werden würde",
 
                     TextEn = "When does the warning “Max. forecast reached” appear?",
                     Answer1En = "Occurs when the forecast is subject to a strong upward trend or quadratic trend",
-                    Answer2En = "Appears when LM has “truncated” an inflated forecast including the standard deviation",
+                    Answer2En = "Once the value defined in the Max Forecast field would be exceeded",
                     Answer3En = "Occurs if the entries in the Preset section are invalid",
-                    CorrectAnswersEn = "Appears when LM has “truncated” an inflated forecast including the standard deviation",
+                    CorrectAnswersEn = "Once the value defined in the Max Forecast field would be exceeded",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -641,17 +642,17 @@ namespace AzubiApp.Services
                  {
                     Number = 34,
 
-                    TextDe = "Wann wird ein Strukturbruch erkannt?",
+                    TextDe = "Wodurch wird ein Strukturbruch erkannt?",
                     Answer1De = "Dies ist ausschließlich nur in der Prognosegrafik zu erkennen",
-                    Answer2De = "Wenn es mehrere Historienwerte gibt",
+                    Answer2De = "Wenn mindestens 4 Historienwerte vorliegen die die definerte Niveau-Änderung erreichen",
                     Answer3De = "Wenn die Volatilität (Schwankungsbreite) den zulässigen Wert nicht übersteigt",
-                    CorrectAnswersDe = "Wenn es mehrere Historienwerte gibt| Wenn die Volatilität (Schwankungsbreite) den zulässigen Wert nicht übersteigt",
+                    CorrectAnswersDe = "Wenn mindestens 4 Historienwerte vorliegen die die definerte Niveau-Änderung erreichen| Wenn die Volatilität (Schwankungsbreite) den zulässigen Wert nicht übersteigt",
 
                     TextEn = "When is a structural break recognized?",
                     Answer1En = "This can only be seen in the forecast chart",
-                    Answer2En = "If there are several history values",
+                    Answer2En = "If there are at least 4 history values that reach the defined level change",
                     Answer3En = "If the volatility (fluctuation range) does not exceed the permissible value",
-                    CorrectAnswersEn = "If there are several history values| If the volatility (fluctuation range) does not exceed the permissible value",
+                    CorrectAnswersEn = "If there are at least 4 history values that reach the defined level change| If the volatility (fluctuation range) does not exceed the permissible value",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -660,16 +661,16 @@ namespace AzubiApp.Services
                  {
                     Number = 35,
 
-                    TextDe = "Wann tritt die Warnung  “Max. Prognose erreicht” auf?",
+                    TextDe = "Wann tritt die Warnung  \"Max. Bestand wir überschritten\" auf?",
                     Answer1De = "Tritt auf, wenn zu viel bestellt wird",
                     Answer2De = "Tritt auf, falls ein Prognosefehler entdeckt wurde",
                     Answer3De = "Wenn die maximale Reichweite der SKU bei der Bestandssimulation überschritten wurde",
                     CorrectAnswersDe = "Tritt auf, wenn zu viel bestellt wird",
 
-                    TextEn = "When does the warning “Max. forecast reached” appear?",
+                    TextEn = "When does the warning “Max. Stock reached” appear?",
                     Answer1En = "Occurs when too much is ordered",
                     Answer2En = "Occurs if a forecast error has been detected",
-                    Answer3En = "If the maximum range of the SKU was exceeded during the stock simulation",
+                    Answer3En = "If the maximum coverage of the SKU was exceeded during the stock simulation",
                     CorrectAnswersEn = "Occurs when too much is ordered",
 
                     QuizCategory = new List<string> { "Prognose" }
@@ -680,16 +681,16 @@ namespace AzubiApp.Services
                     Number = 36,
 
                     TextDe = "Die Wiederbeschaffungszeit setzt sich zusammen aus:?",
-                    Answer1De = "Auftragsvorbereitungszeit (AVZ) Lieferzeit (LFZ) Transporttagen (TT) Einlagerungszeit (ELZ)",
-                    Answer2De = "Auftragsvorbereitungszeit (AVZ) Lieferzeit (LFZ) ABC-Analyse (ABC) Einlagerungszeit (ELZ)",
-                    Answer3De = "Auftragsvorbereitungszeit (AVZ) Just-in-Time (JiT) ABC-Analyse (ABC) Einlagerungszeit (ELZ)",
-                    CorrectAnswersDe = "Auftragsvorbereitungszeit (AVZ) Lieferzeit (LFZ) Transporttagen (TT) Einlagerungszeit (ELZ)",
+                    Answer1De = "Auftragsvorbereitungszeit (AVZ) Lieferzeit (LFZ)\r\nTransporttagen (TT)\r\nEinlagerungszeit (ELZ)",
+                    Answer2De = "Auftragsvorbereitungszeit (AVZ) Lieferzeit (LFZ)\r\nABC-Analyse (ABC)\r\nEinlagerungszeit (ELZ)",
+                    Answer3De = "Auftragsvorbereitungszeit (AVZ)\r\n Just-in-Time (JiT)\r\nABC-Analyse (ABC)\r\nEinlagerungszeit (ELZ)",
+                    CorrectAnswersDe = "Auftragsvorbereitungszeit (AVZ) Lieferzeit (LFZ)\r\nTransporttagen (TT)\r\nEinlagerungszeit (ELZ)",
 
-                    TextEn = "The replacement time is made up of:?",
-                    Answer1En = "Order Preparation Time (OPT) Delivery Time (DT) Transport Time (TT) Storage Time (ST)",
-                    Answer2En = "Order Preparation Time (OPT) Delivery Time (DT) ABC Analysis (ABC) Storage Time (ST)",
-                    Answer3En = "Order Preparation Time (OPT) Just-in-Time (JiT) ABC Analysis (ABC) Storage Time (ST)",
-                    CorrectAnswersEn = "Order Preparation Time (OPT) Delivery Time (DT) Transport Time (TT) Storage Time (ST)",
+                    TextEn = "The replenishment time consists of: ?",
+                    Answer1En = "Order Preparation Time (OPT)\r\nDelivery Time (DT)\r\nABC Analysis (ABC)\r\nStorage Time (ST)",
+                    Answer2En = "Order Preparation Time (OPT)\r\nDelivery Time (DT)\r\nTransport Time (TT)\r\nStorage Time (ST)",
+                    Answer3En = "Order Preparation Time (OPT)\r\nJust-in-Time (JiT)\r\nABC Analysis (ABC)\r\nStorage Time (ST)",
+                    CorrectAnswersEn = "Order Preparation Time (OPT)\r\nDelivery Time (DT)\r\nTransport Time (TT)\r\nStorage Time (ST)",
 
                     QuizCategory = new List<string> { "Filter" }
                  },
@@ -698,16 +699,16 @@ namespace AzubiApp.Services
                  {
                     Number = 37,
 
-                    TextDe = "Was macht der Trend?",
-                    Answer1De = "Er lässt den Mittelwert linear steigen",
-                    Answer2De = "Er lässt den Mittelwert exponentiell steigen",
-                    Answer3De = "Er zeigt Stellen an mit unerwartet hohen Abgängen in der Historie an",
-                    CorrectAnswersDe = "Er lässt den Mittelwert linear steigen",
+                    TextDe = "Was passiert wenn ein Wert bei dem Parameter \"Trend\" definiert wird??",
+                    Answer1De = "Der Mittelwert steigt linear",
+                    Answer2De = "Der Mittelwert steigt exponentiell",
+                    Answer3De = "Stellen mit unerwartet hohen Abgängen in der Historie werden angezeigt",
+                    CorrectAnswersDe = "Der Mittelwert steigt linear",
 
-                    TextEn = "What is the trend doing?",
-                    Answer1En = "It allows the mean value to increase linearly",
+                    TextEn = "What happens when a value is defined in the \"Trend\" parameter?",
+                    Answer1En = "It causes the mean value to rise linearly",
                     Answer2En = "It causes the mean value to rise exponentially",
-                    Answer3En = "It indicates places with unexpectedly high departures in the history",
+                    Answer3En = "It highlights places with unexpectedly high issues in the history",
                     CorrectAnswersEn = "It allows the mean value to increase linearly",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
@@ -723,11 +724,11 @@ namespace AzubiApp.Services
                     Answer3De = "Ein Startdatum, ab dem der Trend benutzt werden soll",
                     CorrectAnswersDe = "Ein Mittelwert",
 
-                    TextEn = "What is the prerequisite for a trend?",
-                    Answer1En = "An average value",
+                    TextEn = "What is the requirement for a trend?",
+                    Answer1En = "A mean value",
                     Answer2En = "A history of at least 10 periods",
                     Answer3En = "A start date from which the trend is to be used",
-                    CorrectAnswersEn = "An average value",
+                    CorrectAnswersEn = "An mean value",
 
                     QuizCategory = new List<string> { "Paramter", "Prognose" }
                  },
@@ -742,11 +743,11 @@ namespace AzubiApp.Services
                     Answer3De = "Er zeigt Stellen an mit unerwartet hohen Abgängen in der Historie an",
                     CorrectAnswersDe = "Er lässt den Mittelwert exponentiell steigen",
 
-                    TextEn = "What does the “square trend” do?",
-                    Answer1En = "It allows the average value to increase linearly",
-                    Answer2En = "It causes the average value to increase exponentially",
-                    Answer3En = "It indicates places with unexpectedly high departures in the history",
-                    CorrectAnswersEn = "It causes the average value to increase exponentially",
+                    TextEn = "What happens if a \"square trend\" is defined?",
+                    Answer1En = "It causes the mean value to rise linearly",
+                    Answer2En = "It causes the mean value to rise exponentially",
+                    Answer3En = "It highlights places with unexpectedly high issues in the history",
+                    CorrectAnswersEn = "It causes the mean value to increase exponentially",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
                  },
@@ -756,16 +757,16 @@ namespace AzubiApp.Services
                     Number = 40,
 
                     TextDe = "Ist es möglich sowohl Trend als auch Quadrat. Trend einzustellen? ",
-                    Answer1De = "Ja, weil der Quadratische Trend ohne linearen Trend nicht funktioniert",
-                    Answer2De = "Ja, beide schließen sich nicht aus",
-                    Answer3De = "Nein, man kann pro SKU nur einen Trend einstellen",
-                    CorrectAnswersDe = "Ja, weil der Quadratische Trend ohne linearen Trend nicht funktioniert",
+                    Answer1De = "Ja, weil der Quadratische Trend ohne linearen Trend nicht funktionieren würde",
+                    Answer2De = "Nein, weil verschiedene Prognose-Verfahren verwendet werden für die Berechnung des Trends",
+                    Answer3De = "Nein, man kann pro SKU nur einen der beiden Trend-Parameter benutzen",
+                    CorrectAnswersDe = "Ja, weil der Quadratische Trend ohne linearen Trend nicht funktionieren würde",
 
-                    TextEn = "Is it possible to set both trend and square trend? ",
-                    Answer1En = "Yes, because the quadratic trend does not work without a linear trend",
-                    Answer2En = "Yes, the two are not mutually exclusive",
+                    TextEn = "Is it possible to set both trend and square trend?  ",
+                    Answer1En = "Yes, because the square trend does not work without a linear trend",
+                    Answer2En = "No, because different forecasting methods are used to calculate the trend",
                     Answer3En = "No, you can only set one trend per SKU",
-                    CorrectAnswersEn = "Yes, because the quadratic trend does not work without a linear trend",
+                    CorrectAnswersEn = "Yes, because the square trend does not work without a linear trend",
 
                     QuizCategory = new List<string> { "Parameter", "Prognose" }
                  },
@@ -775,10 +776,10 @@ namespace AzubiApp.Services
                     Number = 41,
 
                     TextDe = "Was sagt die ABC-Klasse über eine SKU aus?",
-                    Answer1De = "Die ABC-Klasse zeigt welche SKU am genausten prognostiziert werden kann",
-                    Answer2De = "Die ABC-Klasse zeigt welche SKU meisten bestellt wird",
-                    Answer3De = "Die ABC-Klasse zeigt welche SKUs am umsatzstärksten sind",
-                    CorrectAnswersDe = "Die ABC-Klasse zeigt welche SKUs am umsatzstärksten sind",
+                    Answer1De = "Die ABC-Klasse zeigt an welche SKUs am genausten prognostiziert werden können",
+                    Answer2De = "Die ABC-Klasse zeigt an welche SKUs am meisten bestellt werden",
+                    Answer3De = "Die ABC-Klasse zeigt an welche SKUs am umsatzstärksten sind",
+                    CorrectAnswersDe = "Die ABC-Klasse zeigt an welche SKUs am umsatzstärksten sind",
 
                     TextEn = "What does the ABC class say about an SKU?",
                     Answer1En = "The ABC class shows which SKU can be predicted most accurately",
@@ -794,10 +795,10 @@ namespace AzubiApp.Services
                     Number = 42,
 
                     TextDe = "Was sagt eine XYZ-Klasse über eine SKU aus?",
-                    Answer1De = "Die ABC-Klasse zeigt welche SKU am genausten prognostiziert werden kann",
-                    Answer2De = "Die ABC-Klasse zeigt welche SKU meisten bestellt wird",
-                    Answer3De = "Die ABC-Klasse zeigt welche SKUs am umsatzstärksten sind",
-                    CorrectAnswersDe = "Die ABC-Klasse zeigt welche SKU am genausten prognostiziert werden kann",
+                    Answer1De = "Die XYZ-Klasse zeigt an welche SKU am genausten prognostiziert werden kann",
+                    Answer2De = "Die XYZ-Klasse zeigt an welche SKU meisten bestellt wird",
+                    Answer3De = "Die XYZ-Klasse zeigt an welche SKUs am umsatzstärksten sind",
+                    CorrectAnswersDe = "Die XYZ-Klasse zeigt welche SKU am genausten prognostiziert werden kann",
 
                     TextEn = "What does an XYZ class say about an SKU?",
                     Answer1En = "The ABC class shows which SKU can be predicted most accurately",
@@ -812,17 +813,17 @@ namespace AzubiApp.Services
                  {
                     Number = 43,
 
-                    TextDe = "Was bewirkt der “Rhythmusanfang” in einem Bestellrhythmus?",
-                    Answer1De = "Er gibt an ab welcher Periodenzahl der Bestellrhythmus anfangen soll",
-                    Answer2De = "Der Rhythmusanfang gibt ab welchem Datum der Bestellrhythmus starten soll",
-                    Answer3De = "Das ist eine Sondereinstellung, die ermöglicht mit einem langsameren Bestellrhythmus anzufangen",
-                    CorrectAnswersDe = "Er gibt an ab welcher Periodenzahl der Bestellrhythmus anfangen soll",
+                    TextDe = "Welche Funktion hat der \"Rhythmusanfang\" bei einem Bestellrhytmus?",
+                    Answer1De = "Der Bestellrhythmus fängt ab dem definierten Datum an",
+                    Answer2De = "Bei der ersten Bestellung innerhalb des Bestellrhythmus wird ein Vielfaches der definierten Bestellmenge bestellt",
+                    Answer3De = "Der Bestellrhythmus wird gestartet sobald die definierte Starbedingung erfüllt ist",
+                    CorrectAnswersDe = "Der Bestellrhythmus fängt ab dem definierten Datum an",
 
-                    TextEn = "What is the effect of the “start of rhythm” in an order rhythm?",
-                    Answer1En = "It specifies the number of periods from which the ordering cycle should start",
-                    Answer2En = "The start of rhythm specifies the date from which the order rhythm should start",
+                    TextEn = "What is the function of the field \"Rhythm starts at\" in an Order rhythm?",
+                    Answer1En = "It specifies when the order cycle should start",
+                    Answer2En = "For the first order within the order rhythm, a multiple of the defined order quantity is ordered",
                     Answer3En = "This is a special setting that allows you to start with a slower ordering rhythm",
-                    CorrectAnswersEn = "It specifies the number of periods from which the ordering cycle should start",
+                    CorrectAnswersEn = "It specifies when the order cycle should start",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -832,15 +833,15 @@ namespace AzubiApp.Services
                     Number = 44,
 
                     TextDe = "Was muss erfüllt sein damit man im Kalender, die Wochentage & Feiertage bearbeiten kann?",
-                    Answer1De = "„Eigener Kalender“ muss angehakt sein",
-                    Answer2De = "Es gibt keine Voraussetzungen, man kann ständig den Kalender bearbeiten",
-                    Answer3De = "Der REMIRA Support muss einstellen, dass der Kalender bearbeitet werden darf",
-                    CorrectAnswersDe = "„Eigener Kalender“ muss angehakt sein",
+                    Answer1De = "Im \"Kalender\" Fenster muss das Feld „Eigener Kalender“ angehakt sein",
+                    Answer2De = "Es gibt keine Voraussetzungen, man kann den Kalender ständig bearbeiten",
+                    Answer3De = "Der REMIRA Support muss einstellen, dass diese Felder bearbeitet werden dürfen",
+                    CorrectAnswersDe = "Im \"Kalender\" Fenster muss das Feld „Eigener Kalender“ angehakt sein",
 
                     TextEn = "What must be fulfilled so that you can edit the weekdays and public holidays in the calendar?",
-                    Answer1En = "“Separate calendar” must be checked",
-                    Answer2En = "There are no prerequisites, you can always edit the calendar",
-                    Answer3En = "Der REMIRA Support muss einstellen, dass der Kalender bearbeitet werden darf",
+                    Answer1En = "“Separate calendar” must be ticked",
+                    Answer2En = "There are no requirements, you can always edit the calendar",
+                    Answer3En = "REMIRA Support has to set up the system to be able to edit the calendar",
                     CorrectAnswersEn = "“Separate calendar” must be checked",
 
                     QuizCategory = new List<string> { "Allgemein" }
@@ -850,13 +851,13 @@ namespace AzubiApp.Services
                  {
                     Number = 45,
 
-                    TextDe = "Was kann auch ohne „Eigener Kalender“-Haken eingestellt werden?",
-                    Answer1De = "Wochentage",
-                    Answer2De = "Feiertage",
-                    Answer3De = "Dynamischer Kalenderteil (Bertriebsferien, Sonderschichten, …)",
-                    CorrectAnswersDe = "Dynamischer Kalenderteil (Bertriebsferien, Sonderschichten, …)",
+                    TextDe = "Welche Besonderheit hat der Werkskalender?",
+                    Answer1De = "Der Werkskalender kann gleichzeitig im Gruppenbaum als auch im Lagerbaum abgerufen werden",
+                    Answer2De = "Der Werkskalender kann entweder über den Gruppenbaum oder über den Lagerbaum abgerufen werden",
+                    Answer3De = "Der Werkskalender hat einen 4.Abschnitt in dem eigene Feiertage oder Betriebsferien übergeben werden können",
+                    CorrectAnswersDe = "Der Werkskalender kann entweder über den Gruppenbaum oder über den Lagerbaum abgerufen werden",
 
-                    TextEn = "What can be set without the “Separate calendar” tick?",
+                    TextEn = "What can be set without the “Separate calendar\" tick?",
                     Answer1En = "Weekdays",
                     Answer2En = "Holidays",
                     Answer3En = "Dynamic calendar section (company vacations, special shifts, ...)",
@@ -907,7 +908,7 @@ namespace AzubiApp.Services
                  {
                     Number = 48,
 
-                    TextDe = "Welche Kalender gibt es in LOGOMATE?",
+                    TextDe = "Welche Kalender gibt es in F&R?",
                     Answer1De = "Lieferanten-Kalender",
                     Answer2De = "Werkskalender",
                     Answer3De = "Bestell-Kalender",
@@ -926,17 +927,17 @@ namespace AzubiApp.Services
                  {
                     Number = 49,
 
-                    TextDe = "Bei was unterstützt Sie die Vererbung in LOGOMATE?",
-                    Answer1De = "Sie verweist auf die letzten Bestellungen vor ca. ein Jahr",
-                    Answer2De = "Es hilft, die Parameter und Konditionen schnell zu erfassen und zu verwalten",
-                    Answer3De = "Ist für die Abgänge zuständig",
+                    TextDe = "Bei was unterstützt Sie die Vererbung in F&R?",
+                    Answer1De = "Sie verweist auf die letzten Bestellungen vor ca. einem Jahr",
+                    Answer2De = "Es hilft, die Parameter und Konditionen schneller zu erfassen und zu verwalten",
+                    Answer3De = "Sie vererbt die Abverkaufhistorie auf die unteren Ebenen",
                     CorrectAnswersDe = "Es hilft, die Parameter und Konditionen schnell zu erfassen und zu verwalten",
 
-                    TextEn = "What does inheritance in LOGOMATE help you with?",
-                    Answer1En = "She refers to the last orders about a year ago",
-                    Answer2En = "It helps to quickly record and manage parameters and conditions",
-                    Answer3En = "Is responsible for departures",
-                    CorrectAnswersEn = "It helps to quickly record and manage parameters and conditions",
+                    TextEn = "What does inheritance in F&R help you with?",
+                    Answer1En = "It refers to the last orders about a year ago",
+                    Answer2En = "It helps to register and manage the parameters and conditions faster",
+                    Answer3En = "It inherits the sales history to the lower levels",
+                    CorrectAnswersEn = "It helps to register and manage the parameters and conditions faster",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -948,14 +949,14 @@ namespace AzubiApp.Services
                     TextDe = "Was sorgt dafür, dass eine Bestellung überfällig ist?",
                     Answer1De = "Warenüberschuss",
                     Answer2De = "MHD ist abgelaufen",
-                    Answer3De = "Wenn keine Bestellung rechtzeitig ankommt",
-                    CorrectAnswersDe = "Wenn keine Bestellung rechtzeitig ankommt",
+                    Answer3De = "Wenn das Lieferdatum überschritten wird",
+                    CorrectAnswersDe = "Wenn das Lieferdatum überschritten wird",
 
                     TextEn = "What makes an order overdue?",
-                    Answer1En = "Surplus of goods ",
-                    Answer2En = "BBD has expiredn",
-                    Answer3En = "If no order arrives on time",
-                    CorrectAnswersEn = "If no order arrives on time",
+                    Answer1En = "Excessive goods",
+                    Answer2En = "BBD has been expired",
+                    Answer3En = "If the delivery date is exceeded",
+                    CorrectAnswersEn = "If the delivery date is exceeded",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -965,13 +966,13 @@ namespace AzubiApp.Services
                     Number = 51,
 
                     TextDe = "Welchen Vorteil hat die 2D-Ansicht?",
-                    Answer1De = "Nur damit ist die Prognosegrafik richtig dargestellt",
+                    Answer1De = "Die dargestellte Farbe ist intensiver",
                     Answer2De = "Hat keinen Vorteil",
-                    Answer3De = "Bessere Ansicht der Prognosegrafik",
-                    CorrectAnswersDe = "Bessere Ansicht der Prognosegrafik",
+                    Answer3De = "Genauere Ansicht der Prognosegrafik",
+                    CorrectAnswersDe = "Genauere Ansicht der Prognosegrafik",
 
                     TextEn = "What is the advantage of the 2D view?",
-                    Answer1En = "This is the only way to show the forecast chart correctly",
+                    Answer1En = "The color shown is more intense",
                     Answer2En = "Has no advantage",
                     Answer3En = "Better view of the forecast graphic",
                     CorrectAnswersEn = "Better view of the forecast graphic",
@@ -983,13 +984,13 @@ namespace AzubiApp.Services
                  {
                     Number = 52,
 
-                    TextDe = "Wie viele Rhythmen kann ich in den Konditionen (Zeiten)auswählen?",
+                    TextDe = "Wie viele verschiedene Rhythmen kann man in den Konditionen auswählen?",
                     Answer1De = "5",
                     Answer2De = "4",
                     Answer3De = "2",
                     CorrectAnswersDe = "4",
 
-                    TextEn = "How many rhythms can I select in the conditions (order schedule)?",
+                    TextEn = "How many different rhythm option do I have in the conditions (Order schedule)?",
                     Answer1En = "5",
                     Answer2En = "4",
                     Answer3En = "2",
@@ -1002,7 +1003,7 @@ namespace AzubiApp.Services
                  {
                     Number = 53,
 
-                    TextDe = "Was ist ein Dispofehler?",
+                    TextDe = "Welcher der genannten ist ein Dispofehler?",
                     Answer1De = "Überfällige Bestellungen",
                     Answer2De = "Zu wenig Liefertermine",
                     Answer3De = "Ungültige Aktion",
@@ -1011,7 +1012,7 @@ namespace AzubiApp.Services
                     TextEn = "What is a Replenishment error?",
                     Answer1En = "Overdue orders",
                     Answer2En = "Too few delivery dates",
-                    Answer3En = "Invalid action",
+                    Answer3En = "Invalid promotion",
                     CorrectAnswersEn = "Too few delivery dates",
 
                     QuizCategory = new List<string> { "Bestellung", "Filter" }
@@ -1028,10 +1029,10 @@ namespace AzubiApp.Services
                     CorrectAnswersDe = "Alle SKUs die bestellt wurden, sollen gleichzeitig ihren SiB erreichen, um die SKUs wieder gleichzeitig bestellen zu können",
 
                     TextEn = "What is the primary task of the compound order?",
-                    Answer1En = "All SKUs that have been ordered should reach their safety stock at the same time so that the SKUs can be ordered again at the same time",
+                    Answer1En = "All SKUs that have been ordered should reach their SFT at the same time so that the SKUs can be ordered again at the same time",
                     Answer2En = "Generate an order from all existing SKUs of the compound group",
                     Answer3En = "To keep the order costs per order as low as possible ",
-                    CorrectAnswersEn = "All SKUs that have been ordered should reach their safety stock at the same time so that the SKUs can be ordered again at the same time",
+                    CorrectAnswersEn = "All SKUs that have been ordered should reach their SFT at the same time so that the SKUs can be ordered again at the same time",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -1041,16 +1042,16 @@ namespace AzubiApp.Services
                     Number = 55,
 
                     TextDe = "Was bewirkt der Parameter „Kein Auslöseartikel“?",
-                    Answer1De = "Die SKU darf nur bei einer Verbund-Bestellung mitbestellt werden",
-                    Answer2De = "Dies SKU löst keine OoS-Korrektur aus",
+                    Answer1De = "Die SKU darf nur bei einer Verbund-Bestellung mitbestellt werden ",
+                    Answer2De = "Diese SKU löst keine OoS-Korrektur aus",
                     Answer3De = "Die SKU auf die dieser Parameter angewandt wurde darf keine Bestellung auslösen",
-                    CorrectAnswersDe = "Die SKU auf die dieser Parameter angewandt wurde darf keine Bestellung auslösen| Die SKU darf nur bei einer Verbund-Bestellung mitbestellt werden",
+                    CorrectAnswersDe = "Die SKU auf die dieser Parameter angewandt wurde darf keine Bestellung auslösen| Die SKU darf nur bei einer Verbund-Bestellung mitbestellt werden ",
 
                     TextEn = "What does the “No order trigger” parameter do?",
-                    Answer1En = "The SKU may only be ordered with a compound order",
+                    Answer1En = "The SKU can only be ordered with a compound order ",
                     Answer2En = "This SKU does not trigger an OoS correction",
-                    Answer3En = "The SKU to which this parameter was applied must not trigger an order",
-                    CorrectAnswersEn = "The SKU to which this parameter was applied must not trigger an order| The SKU may only be ordered with a compound order",
+                    Answer3En = "The SKU to which this parameter was applied can't trigger an order",
+                    CorrectAnswersEn = "The SKU to which this parameter was applied can't trigger an order| The SKU can only be ordered with a compound order ",
 
                     QuizCategory = new List<string> { "Bestellung", "Parameter" }
                  },
@@ -1062,13 +1063,13 @@ namespace AzubiApp.Services
                     TextDe = "Was unterscheidet eine Verbund- Bestellung zu einer „normalen“ Bestellung?",
                     Answer1De = "Mit Verbund-Bestellungen kriegt man einen Mengen-Rabatt, da mehrere Artikel auf einmal bestellt werden",
                     Answer2De = "Eine Verbund-Bestellung besteht aus mehreren Artikeln, die bestellt werden",
-                    Answer3De = "Bei einer Verbund-Bestellung wird nur eine Bestellung generiert, für alle SKUs in der Verbund-Gruppe",
+                    Answer3De = "Nur bei Verbund-Bestellungen werden Vielfachen der Optimierungseinheit verwendet",
                     CorrectAnswersDe = "Eine Verbund-Bestellung besteht aus mehreren Artikeln, die bestellt werden",
 
                     TextEn = "What is the difference between a compound order and a “normal” order?",
                     Answer1En = "With compound orders you get a quantity discount, as several items are ordered at once",
                     Answer2En = "A compound order consists of several items that are ordered",
-                    Answer3En = "Only one order is generated for a compound order, for all SKUs in the compound group",
+                    Answer3En = "Only for compound orders are multiples of the optimization unit used",
                     CorrectAnswersEn = "A compound order consists of several items that are ordered",
 
                     QuizCategory = new List<string> { "Bestellung" }
@@ -1078,11 +1079,11 @@ namespace AzubiApp.Services
                  {
                     Number = 57,
 
-                    TextDe = "Was kann man machen bei SKUs in einer Verbund-Gruppe, mit jeweils unterschiedlichen Konditionen?",
-                    Answer1De = "Verbund-Untergruppen bilden, bei SKUs die die gleichen Konditionen besitzen",
-                    Answer2De = "SKUs, die einzigartige Konditionen besitzen, aus der Verbund-Gruppe entfernen",
-                    Answer3De = "Die SKUs, die die Verbund-Bestellung aufhalten, inaktiv setzen",
-                    CorrectAnswersDe = "Verbund-Untergruppen bilden, bei SKUs die die gleichen Konditionen besitzen| SKUs, die einzigartige Konditionen besitzen, aus der Verbund-Gruppe entfernen",
+                    TextDe = "Was kann man machen bei SKUs die in der gleichen Verbund-Gruppe liegen, aber verschiedene Konditionen besitzen?",
+                    Answer1De = "SKUs mit gleichen Konditionen einer Verbund-Untergruppe zuordnen",
+                    Answer2De = "SKUs mit einzigartigen Konditionen aus der Verbund-Gruppe entfernen",
+                    Answer3De = "Alle SKUs, die eine Verbund-Bestellung aufhalten, inaktiv setzen in den Parametern",
+                    CorrectAnswersDe = "SKUs mit gleichen Konditionen einer Verbund-Untergruppe zuordnen| SKUs mit einzigartigen Konditionen aus der Verbund-Gruppe entfernen",
 
                     TextEn = "What can be done with SKUs in a compound group, each with different conditions?",
                     Answer1En = "Form compound subgroups with SKUs that have the same conditions",
@@ -1100,14 +1101,14 @@ namespace AzubiApp.Services
                     TextDe = "Woran erkennt man eine Verbund-Gruppe?",
                     Answer1De = "An der hellgrünen Schriftfarbe der Gruppe",
                     Answer2De = "An der hellblauen Variante des Ursprungsymbols",
-                    Answer3De = "An der Dispo-Warnung „Verbundkondition auf Lagerplatz vorhanden“",
+                    Answer3De = "An der Dispo-Warnung „Verbund-SKU“",
                     CorrectAnswersDe = "An der hellblauen Variante des Ursprungsymbols",
 
                     TextEn = "How can you recognize a compound group?",
                     Answer1En = "The light green font color of the group",
-                    Answer2En = "On the light blue version of the original symbol",
-                    Answer3En = "An der Dispo-Warnung „Verbundkondition auf Lagerplatz vorhanden“",
-                    CorrectAnswersEn = "On the light blue version of the original symbol",
+                    Answer2En = "By the light blue version of the original symbol",
+                    Answer3En = "At the replenishment warning \"Compound condition available at storage location\"“",
+                    CorrectAnswersEn = "By the light blue version of the original symbol",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -1116,7 +1117,7 @@ namespace AzubiApp.Services
                  {
                     Number = 59,
 
-                    TextDe = "Wie können Verbund-Gruppen erstellt werden?",
+                    TextDe = "Wie können \"Verbund\"-Gruppen erstellt werden",
                     Answer1De = "“Gewünschte Gruppe”->Rechtsklick->Gruppe/Benutzer ändern->“Verbund“ anhaken",
                     Answer2De = "“Gewünschte Gruppe”->Rechtsklick->Neue Gruppe->“Verbund“ anhaken",
                     Answer3De = "Parameter->Status->”Verbund” anhaken",
@@ -1124,9 +1125,9 @@ namespace AzubiApp.Services
 
                     TextEn = "How can compound groups be created?",
                     Answer1En = "“Desired group”->right-click->Edit group/user->check “Compound”",
-                    Answer2En = "“Desired group“->right-click->New group->”Compound group” checkbox",
-                    Answer3En = "Parameter->Status->“Network” checkbox",
-                    CorrectAnswersEn = "“Desired group“->right-click->New group->”Compound group” checkbox| “Desired group”->right-click->Edit group/user->check “Compound”",
+                    Answer2En = "“Desired group“->right-click->New group->”Compound” checkbox",
+                    Answer3En = "Parameter->Status->“Compound” checkbox",
+                    CorrectAnswersEn = "“Desired group“->right-click->New group->”Compound” checkbox| “Desired group”->right-click->Edit group/user->check “Compound”",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -1138,10 +1139,10 @@ namespace AzubiApp.Services
                     TextDe = "Was zeigt eine rote Schrift in den Bestellungen an (standardmäßig)?",
                     Answer1De = "Die Bestellung hat ihren Verfügbarkeitstermin verpasst und gilt jetzt als überfällig",
                     Answer2De = "Die Bestellung wurde, bevor sie exportiert wurde, als Report ausgegeben",
-                    Answer3De = "Die Bestellung wurde nach dem Exportieren geändert",
+                    Answer3De = "Die Bestellung wurde nach dem exportieren geändert",
                     CorrectAnswersDe = "Die Bestellung hat ihren Verfügbarkeitstermin verpasst und gilt jetzt als überfällig",
 
-                    TextEn = "What does a red font in the orders indicate (by default)?",
+                    TextEn = "What does a red font show in the orders (by default)?",
                     Answer1En = "The order has missed its availability date and is now considered overdue",
                     Answer2En = "The order was output as a report before it was exported",
                     Answer3En = "The order was changed after exporting",
@@ -1154,17 +1155,17 @@ namespace AzubiApp.Services
                  {
                     Number = 61,
 
-                    TextDe = "Was zeigt eine hellrote Schrift in den Bestellungen an (standardmäßig)?",
+                    TextDe = "Was zeigt eine hellrote Schrift in den Bestellungen an (standardmäßig)??",
                     Answer1De = "Die Bestellung hat ihren Verfügbarkeitstermin verpasst und gilt jetzt als überfällig",
                     Answer2De = "Die Bestellung ist geändert worden & hat Ihren Verfügbarkeitstermin überschritten",
                     Answer3De = "Die Bestellung wurde, bevor sie exportiert wurde, als Report ausgegeben",
                     CorrectAnswersDe = "Die Bestellung ist geändert worden & hat Ihren Verfügbarkeitstermin überschritten",
 
-                    TextEn = "What does a light red font in the orders indicate (by default)?",
+                    TextEn = "What does a light red font show in the orders (by default)?",
                     Answer1En = "The order has missed its availability date and is now considered overdue",
-                    Answer2En = "The order has been changed & has exceeded your availability date",
+                    Answer2En = "The order has been changed & has exceeded its availability date",
                     Answer3En = "The order was output as a report before it was exported",
-                    CorrectAnswersEn = "The order has been changed & has exceeded your availability date",
+                    CorrectAnswersEn = "The order has been changed & has exceeded its availability date",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -1179,11 +1180,11 @@ namespace AzubiApp.Services
                     Answer3De = "Die Bestellung wurde importiert",
                     CorrectAnswersDe = "Der Bestellvorschlag wurde exportiert| Die Bestellung wurde importiert| Die Bestellung wurde als Report ausgegeben und exportiert",
 
-                    TextEn = "What does a green font in the orders indicate (by default)?",
+                    TextEn = "What does a green font show in the orders (by default)?",
                     Answer1En = "The order proposal has been exported",
                     Answer2En = "The order was output as a report and exported",
                     Answer3En = "The order has been imported",
-                    CorrectAnswersEn = "The order proposal has been exported| The order was output as a report and exported| The order has been imported",
+                    CorrectAnswersEn = "The order proposal has been exported | The order has been imported | The order was output as a report and exported",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -1198,7 +1199,7 @@ namespace AzubiApp.Services
                     Answer3De = "Die Bestellung wurde geändert, nachdem sie bereits exportiert wurde",
                     CorrectAnswersDe = "Die Bestellung wurde geändert, nachdem sie bereits exportiert wurde",
 
-                    TextEn = "What does a light green font in the orders indicate (by default)?",
+                    TextEn = "What does a light green font show in the orders (by default)?",
                     Answer1En = "The order has been imported",
                     Answer2En = "The order was output as a report before it was exported",
                     Answer3En = "The order has been changed after it has already been exported",
@@ -1217,11 +1218,11 @@ namespace AzubiApp.Services
                     Answer3De = "Die Bestellung wurde storniert/ gelöscht",
                     CorrectAnswersDe = "Die Bestellung hat Ihren Bestellzeitpunkt noch nicht erreicht und wurde noch nicht exportiert",
 
-                    TextEn = "What does a black font in the orders indicate (by default)?",
-                    Answer1En = "The order has not yet reached your order date and has not yet been exported",
+                    TextEn = "What does a black font show in the orders (by default)?",
+                    Answer1En = "The order has not reached its order date and has not been exported yet",
                     Answer2En = "The availability date of the order is today",
                     Answer3En = "The order has been canceled/deleted",
-                    CorrectAnswersEn = "The order has not yet reached your order date and has not yet been exported",
+                    CorrectAnswersEn = "The order has not reached its order date and has not been exported yet",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -1232,11 +1233,11 @@ namespace AzubiApp.Services
 
                     TextDe = "Was bewirkt das Gütekriterium „Auf Max. auffüllen“?",
                     Answer1De = "Es wird die maximale Menge bestellt, die pro Bestellung getätigt werden darf",
-                    Answer2De = "Es werden Bestellvorschläge generiert, bis der maximale Bestand erreicht wird",
-                    Answer3De = "Es werden Bestellvorschläge generiert, bis alle Reservierungen befriedigt wurden und der Max. Bestand erreicht wurde",
-                    CorrectAnswersDe = "Es werden Bestellvorschläge generiert, bis der maximale Bestand erreicht wird",
+                    Answer2De = "Es werden so lange neue Bestellvorschläge generiert bis der Bestand seine maximale Menge erreicht hat",
+                    Answer3De = "Es werden Bestellvorschläge generiert, bis alle Reservierungen befriedigt wurden und der definierte Max. Bestand erreicht wurde",
+                    CorrectAnswersDe = "Es werden so lange neue Bestellvorschläge generiert bis der Bestand seine maximale Menge erreicht hat",
 
-                    TextEn = "What is the effect of the “Fill up to max.“quality criterion?”",
+                    TextEn = "What is the effect of the “Fill up to max.\" quality criterion?",
                     Answer1En = "The maximum quantity that may be ordered per order is ordered",
                     Answer2En = "Order proposals are generated until the maximum stock level is reached",
                     Answer3En = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached.",
@@ -1250,16 +1251,16 @@ namespace AzubiApp.Services
                     Number = 66,
 
                     TextDe = "Was bewirkt das Gütekriterium „Auf Max. + Reserv. auffüllen“?",
-                    Answer1De = "Es werden Bestellvorschläge generiert, bis der maximale Bestand erreicht wird",
-                    Answer2De = "Es werden Bestellvorschläge generiert, bis alle Reservierungen befriedigt wurden und der Max. Bestand erreicht wurde",
-                    Answer3De = "Es werden Bestellvorschläge generiert, um alle Reservierungen zu befriedigen",
-                    CorrectAnswersDe = "Es werden Bestellvorschläge generiert, bis alle Reservierungen befriedigt wurden und der Max. Bestand erreicht wurde",
+                    Answer1De = "Es werden so lange neue Bestellvorschläge generiert bis der Bestand seine maximale Menge erreicht hat",
+                    Answer2De = "Es werden Bestellvorschläge generiert, bis alle Reservierungen befriedigt wurden und der definierte Max. Bestand erreicht wurde",
+                    Answer3De = "Es wird die maximale Menge bestellt, die pro Bestellung getätigt werden darf",
+                    CorrectAnswersDe = "Es werden Bestellvorschläge generiert, bis alle Reservierungen befriedigt wurden und der definierte Max. Bestand erreicht wurde",
 
                     TextEn = "What is the effect of the quality criterion “Fill up to max. + reserv.”?",
                     Answer1En = "Order proposals are generated until the maximum stock level is reached",
-                    Answer2En = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached",
+                    Answer2En = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached. ",
                     Answer3En = "Order proposals are generated to satisfy all reservations",
-                    CorrectAnswersEn = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached",
+                    CorrectAnswersEn = "Order proposals are generated until all reservations have been satisfied and the max. stock level has been reached. ",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1268,15 +1269,15 @@ namespace AzubiApp.Services
                  {
                     Number = 67,
 
-                    TextDe = "Welche Funktion hat das Auto-Store-Verfahren?",
+                    TextDe = "Was passiert beim Auto-Store-Verfahren?",
                     Answer1De = "Es werden Bestellvorschläge, aus mehreren Optimierungseinheiten, generiert",
-                    Answer2De = "LOGOMATE entscheidet selbst bei welchem Lager die Bestellung eingelagert wird",
-                    Answer3De = "Der Einheiten-Faktor wird so niedrig wie möglich gehalten",
-                    CorrectAnswersDe = "Der Einheiten-Faktor wird so niedrig wie möglich gehalten| Es werden Bestellvorschläge, aus mehreren Optimierungseinheiten, generiert",
+                    Answer2De = "F&R entscheidet selbst bei welchem Lager die Bestellung eingelagert wird",
+                    Answer3De = "Für die Bestellvorschläge wird die Einheit bzw. Einheit-Kombination verwendet die am nächsten an der Nötigen Menge liegt",
+                    CorrectAnswersDe = "Für die Bestellvorschläge wird die Einheit bzw. Einheit-Kombination verwendet die am nächsten an der Nötigen Menge liegt| Es werden Bestellvorschläge, aus mehreren Optimierungseinheiten, generiert",
 
-                    TextEn = "What is the function of the auto-store procedure?",
+                    TextEn = "What is the function of the auto-store method?",
                     Answer1En = "Order proposals are generated from several optimization units",
-                    Answer2En = "LOGOMATE itself decides which warehouse to store the order at",
+                    Answer2En = "F&R itself decides which warehouse to store the order at",
                     Answer3En = "The unit factor is kept as low as possible",
                     CorrectAnswersEn = "The unit factor is kept as low as possible| Order proposals are generated from several optimization units",
 
@@ -1294,10 +1295,10 @@ namespace AzubiApp.Services
                     CorrectAnswersDe = "Parameter->Dispo->Gütekriterium->“Auto-Store-Verfahren“ auswählen",
 
                     TextEn = "How and where is the auto-store method activated?",
-                    Answer1En = "Parameters->Dispo->Quality criterion->“Auto-store method” select",
+                    Answer1En = "Parameters->Dispo->Quality criterion->Select “Auto-store method”",
                     Answer2En = "Conditions->Units->“Auto-store method” checkbox",
-                    Answer3En = "Conditions->Quantity, Prices, Costs->Select “Auto-store method",
-                    CorrectAnswersEn = "Parameters->Dispo->Quality criterion->“Auto-store method” select",
+                    Answer3En = "Conditions->Quantity, Prices, Costs->Select “Auto-store method\"",
+                    CorrectAnswersEn = "Parameters->Dispo->Quality criterion->Select “Auto-store method”",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1307,10 +1308,10 @@ namespace AzubiApp.Services
                     Number = 69,
 
                     TextDe = "Was bewirkt das Gütekriterium „Container-Optimierung“?",
-                    Answer1De = "Es werden Bestellvorschläge generiert mit den kleinstmöglichen Bestellkosten",
-                    Answer2De = "Es werden Bestellvorschläge generiert mit der kleinstmöglichen Anzahl an Einheiten",
+                    Answer1De = "Es werden Bestellvorschläge generiert mit den geringsten Bestellkosten",
+                    Answer2De = "Es werden Bestellvorschläge generiert mit der geringsten Anzahl an Einheiten",
                     Answer3De = "Es werden Bestellvorschläge generiert mit dem höchsten Warenwert pro Container-Einheit",
-                    CorrectAnswersDe = "Es werden Bestellvorschläge generiert mit den kleinstmöglichen Bestellkosten",
+                    CorrectAnswersDe = "Es werden Bestellvorschläge generiert mit den geringsten Bestellkosten",
 
                     TextEn = "What does the “container optimization” quality criterion do?",
                     Answer1En = "Order proposals are generated with the lowest possible order costs",
@@ -1327,15 +1328,15 @@ namespace AzubiApp.Services
 
                     TextDe = "Was bewirkt das Gütekriterium „Mit Partitionierung“?",
                     Answer1De = "Es wird eine zusätzliche Bestellung generiert für alle Aufträge, die in der aktuellen Periode stattfinden",
-                    Answer2De = "Es werden Bestellvorschläge für Aufträge generiert",
-                    Answer3De = "Es werden Bestellvorschläge für Restmengen von Aufträgen generiert (OE wird beachtet!)",
-                    CorrectAnswersDe = "Es werden Bestellvorschläge für Restmengen von Aufträgen generiert (OE wird beachtet!)",
+                    Answer2De = "Es werden 1:1 Bestellvorschläge für Aufträge generiert",
+                    Answer3De = "Reservierungen mit Partionsnummer werden einzeln disponiert unter Beachtung des aktuellen Bestands und der noch offenen Bestellungen",
+                    CorrectAnswersDe = "Reservierungen mit Partionsnummer werden einzeln disponiert unter Beachtung des aktuellen Bestands und der noch offenen Bestellungen",
 
                     TextEn = "What is the effect of the “Partitioning” quality criterion?",
-                    Answer1En = "An additional order is generated for all orders that take place in the current period",
-                    Answer2En = "Order proposals for orders are generated",
-                    Answer3En = "Order proposals are generated for remaining quantities of orders (optimization unit is taken into account!)",
-                    CorrectAnswersEn = "Order proposals are generated for remaining quantities of orders (optimization unit is taken into account!)",
+                    Answer1En = "An additional order is generated for all reservations that take place in the current period",
+                    Answer2En = "Order suggestions for reservations are generated 1:1",
+                    Answer3En = "Reservations with partion number are planned individually, taking into account the current stock and the open orders",
+                    CorrectAnswersEn = "Reservations with partion number are planned individually, taking into account the current stock and the open orders",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1346,15 +1347,15 @@ namespace AzubiApp.Services
 
                     TextDe = "Was bewirkt das Gütekriterium „Partitionen verwenden Anfangsbestand nicht“?",
                     Answer1De = "Aufträge werden, unabhängig vom Bestand und offenen Bestellungen, 1:1 zu Bestellungen umgewandelt",
-                    Answer2De = "Es werden Bestellvorschläge für Restmengen von Aufträgen generiert (OE wird beachtet!)",
+                    Answer2De = "Reservierungen mit Partionsnummer werden einzeln disponiert unter Beachtung des aktuellen Bestands und der noch offenen Bestellungen",
                     Answer3De = "Es wird eine zusätzliche Bestellung generiert mit der Restmenge für alle Aufträge, die in der aktuellen Periode stattfinden",
                     CorrectAnswersDe = "Aufträge werden, unabhängig vom Bestand und offenen Bestellungen, 1:1 zu Bestellungen umgewandelt",
 
                     TextEn = "What is the effect of the quality criterion “Partitioning stock only for default partition”?",
-                    Answer1En = "Orders are converted 1:1 into purchase orders, regardless of stock and open purchase orders",
-                    Answer2En = "Order proposals are generated for remaining quantities of orders (optimization unit is taken into account!)",
-                    Answer3En = "An additional order is generated with the remaining quantity for all orders that take place in the current period",
-                    CorrectAnswersEn = "Orders are converted 1:1 into purchase orders, regardless of stock and open purchase orders",
+                    Answer1En = "Resevations are converted 1:1 into orders, regardless of stock and open orders",
+                    Answer2En = "Reservations with partion number are planned individually, taking into account the current stock and the open orders",
+                    Answer3En = "An additional order is generated with the remaining quantity for all reservations that take place in the current period",
+                    CorrectAnswersEn = "Resevations are converted 1:1 into orders, regardless of stock and open orders",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1370,10 +1371,10 @@ namespace AzubiApp.Services
                     CorrectAnswersDe = "Die zu verwendenden Optimierungs-Einheiten dürfen kein Mix-Haken besitzen| Die Differenz zwischen den zu verwendenden Optimierungs-Einheiten muss nach oben hin größer werden",
 
                     TextEn = "What must be fulfilled for the auto-store method to be carried out properly?",
-                    Answer1En = "The difference between the optimization units to be used must increase towards the top",
-                    Answer2En = "The optimization units to be used must have a mix hook",
-                    Answer3En = "The optimization units to be used must not have a mix hook",
-                    CorrectAnswersEn = "The optimization units to be used must not have a mix hook| The difference between the optimization units to be used must increase towards the top",
+                    Answer1En = "The difference between the optimization units has increase towards the top",
+                    Answer2En = "The optimization units must have a mix hook",
+                    Answer3En = "The optimization units doesn't have a mix hook",
+                    CorrectAnswersEn = "The optimization units doesn't have a mix hook| The difference between the optimization units has increase towards the top",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1385,14 +1386,14 @@ namespace AzubiApp.Services
                     TextDe = "Was ist der Unterschied zwischen Auto-Store-Verfahren und Container-Optimierung?",
                     Answer1De = "Beim Auto-Store-Verfahren wird die Bestellmenge optimiert",
                     Answer2De = "Beim Auto-Store-Verfahren wird der Einheiten-Faktor optimiert",
-                    Answer3De = "Bei der Container-Optimierung werden die Bestellkosten optimiert",
-                    CorrectAnswersDe = "Beim Auto-Store-Verfahren wird der Einheiten-Faktor optimiert| Bei der Container-Optimierung werden die Bestellkosten optimiert",
+                    Answer3De = "Bei der Container-Optimierung werden die Bestellkosten minimiert",
+                    CorrectAnswersDe = "Beim Auto-Store-Verfahren wird der Einheiten-Faktor optimiert| Bei der Container-Optimierung werden die Bestellkosten minimiert",
 
                     TextEn = "What is the difference between the auto-store method and container optimization?",
                     Answer1En = "The auto-store method optimizes the order quantity",
                     Answer2En = "The auto-store method optimizes the unit factor",
-                    Answer3En = "Container optimization optimizes the ordering costs",
-                    CorrectAnswersEn = "The auto-store method optimizes the unit factor| Container optimization optimizes the ordering costs",
+                    Answer3En = "The container optimization optimizes the ordering costs",
+                    CorrectAnswersEn = "The auto-store method optimizes the unit factor | The container optimization optimizes the ordering costs",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1407,11 +1408,11 @@ namespace AzubiApp.Services
                     Answer3De = "Gewicht / Faktor",
                     CorrectAnswersDe = "Volumen / Gewicht| Gewicht / Faktor",
 
-                    TextEn = "What combinations are possible for a container optimization that is to be optimized?",
-                    Answer1En = "Volume / weight",
+                    TextEn = "What combinations are possible for the container optimization after which optimization is to be carried out?",
+                    Answer1En = "Volume / Weight",
                     Answer2En = "Factor / Volume",
-                    Answer3En = "Weight / factor",
-                    CorrectAnswersEn = "Volume / weight| Weight / factor",
+                    Answer3En = "Weight / Factor",
+                    CorrectAnswersEn = "Volume / Weight | Weight / Factor",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1420,17 +1421,17 @@ namespace AzubiApp.Services
                  {
                     Number = 75,
 
-                    TextDe = "Was ändert sich im Bestellfenster wenn Reservierungen eine Partition besitzen?",
+                    TextDe = "Was ist der Unterschied von einer Reservierung mit Partition & einer Reservierung ohne Partition?",
                     Answer1De = "Eine Reservierung mit Partition kriegt eine eigene Bestellung und kann direkt einem Auftrag zugeordnet werden",
                     Answer2De = "Eine Reservierung mit Partition wird zusammengefasst mit anderen Bestellungen im Bestellungs-Fenster",
-                    Answer3De = "Eine Reservierung mit Partition wird in mehrere kleinere Bestellungen aufgeteilt",
-                    CorrectAnswersDe = "Eine Reservierung mit Partition kriegt eine eigene Bestellung und kann direkt einem Auftrag zugeordnet werden",
+                    Answer3De = "Eine Reservierung ohne Partition wird zusammengefasst mit anderen Bestellungen im Bestellungs-Fenster",
+                    CorrectAnswersDe = "Eine Reservierung mit Partition kriegt eine eigene Bestellung und kann direkt einem Auftrag zugeordnet werden3| Eine Reservierung ohne Partition wird zusammengefasst mit anderen Bestellungen im Bestellungs-Fenster",
 
-                    TextEn = "How does the order window change when reservations have a partition?",
-                    Answer1En = "A reservation with a partition gets its own order and can be assigned directly to an item",
-                    Answer2En = "A reservation with partition is summarized with other orders in the order window",
-                    Answer3En = "A reservation with a partition is divided into several smaller orders",
-                    CorrectAnswersEn = "A reservation with a partition gets its own order and can be assigned directly to an item",
+                    TextEn = "How does a reservation with a partition differ from a reservation without a partition?",
+                    Answer1En = "A reservation with partition gets its own order and can be assigned directly to an order.",
+                    Answer2En = "A reservation with a partition is summarised with other orders in the order window",
+                    Answer3En = "A reservation without a partition is summarised with other orders in the order window",
+                    CorrectAnswersEn = "A reservation with partition gets its own order and can be assigned directly to an order.| A reservation without a partition is summarised with other orders in the order window",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1447,9 +1448,9 @@ namespace AzubiApp.Services
 
                     TextEn = "What are pseudo-contracts used for?",
                     Answer1En = "These are contracts that only certain users can access",
-                    Answer2En = "This can be used to define an additional Sft",
+                    Answer2En = "This can be used to define an additional SFT..",
                     Answer3En = "These contracts can be used for comments",
-                    CorrectAnswersEn = "This can be used to define an additional Sft",
+                    CorrectAnswersEn = "define an additional Sft",
 
                     QuizCategory = new List<string> { "Paramter", "Kondition" }
                  },
@@ -1460,7 +1461,7 @@ namespace AzubiApp.Services
 
                     TextDe = "Wie viele Kontrakte kann ein Artikel haben?",
                     Answer1De = "Ein Artikel kann mehrere Kontrakte haben",
-                    Answer2De = "Keine, da Kontrakte nicht auf Artikelebene laufen",
+                    Answer2De = "Keine, weil Kontrakte nicht auf der Artikelebene vergeben werden können",
                     Answer3De = "Ein Kontrakt pro Artikel",
                     CorrectAnswersDe = "Ein Artikel kann mehrere Kontrakte haben",
 
@@ -1496,13 +1497,13 @@ namespace AzubiApp.Services
                  {
                     Number = 79,
                     
-                    TextDe = "Wie kann ich Lieferkontrakte splitten?",
+                    TextDe = "Wo kann eingestellt werden dass Lieferantenkontrakte gesplittet werden können?",
                     Answer1De = "Parameter -> Dispo -> Kontraktart die Option \"Lieferantenauswahl\" und / oder \"Max. Menge\"",
                     Answer2De = "Parameter -> Dispo -> Kontraktauswahl die Option \"Nach Restmenge\"",
                     Answer3De = "Konditionen -> Kontrakte -> Spaltenauswahl die Option \"Ext. Kontrakt-Pos-Nr\".",
                     CorrectAnswersDe = "Parameter -> Dispo -> Kontraktart die Option \"Lieferantenauswahl\" und / oder \"Max. Menge\"",
 
-                    TextEn = "How can I split delivery contracts?",
+                    TextEn = "Where can I set up that supplier contracts should be split?",
                     Answer1En = "Parameters -> Replenishment -> Contract type: \"Select Supplier\" and / or \"Max. Quantity\"",
                     Answer2En = "Parameters -> Replenishment -> Select contract:  \"By rest quantity\"",
                     Answer3En = "Conditions -> Contracts -> Columns (Right Click): \"Ext. contract pos no\"",
@@ -1515,17 +1516,17 @@ namespace AzubiApp.Services
                  {
                     Number = 80,
 
-                    TextDe = "Was bedeutet in der Kontraktauswahl \"Nach Vertragsende\"?",
-                    Answer1De = "Es wird beim Lieferanten mit dem nächsten Vertragsende bestellt, wenn der Kontrakt offen ist",
+                    TextDe = "Was passiert mit dem Bestellverhalten bei der Kontraktauswahl \"Nach Vertragsende\"?",
+                    Answer1De = "Es wird bei dem Lieferanten bestellt dessen Kontrakt als nächstes endet, wenn der Kontrakt noch nicht erfüllt ist",
                     Answer2De = "Bestellt wird immer beim Lieferanten mit der kürzesten Wiederbeschaffungszeit (WBZ)",
-                    Answer3De = "Bestellt wird nur dann, wenn der Kontrakt vollständig erfüllt wird",
-                    CorrectAnswersDe = "Es wird beim Lieferanten mit dem nächsten Vertragsende bestellt, wenn der Kontrakt offen ist",
+                    Answer3De = "Bestellt wird nur dann, wenn der Kontrakt vollständig erfüllt wird.",
+                    CorrectAnswersDe = "Es wird bei dem Lieferanten bestellt dessen Kontrakt als nächstes endet, wenn der Kontrakt noch nicht erfüllt ist",
 
                     TextEn = "What does the Option \"By timeout contract\" mean at the field \"Select contract\"",
-                    Answer1En = "It is ordered from the supplier with the next contract end date if the contract is still open",
+                    Answer1En = "It is ordered from the supplier whose contract ends next if the contract has not been fulfilled yet",
                     Answer2En = "Orders are always placed with the supplier with the shortest Total Lead Time (TLT)",
-                    Answer3En = "Orders are only placed if the contract will be completely fulfilled",
-                    CorrectAnswersEn = "It is ordered from the supplier with the next contract end date if the contract is still open",
+                    Answer3En = "Orders are only placed if the contract will be than fully fulfilled",
+                    CorrectAnswersEn = "It is ordered from the supplier whose contract ends next if the contract has not been fulfilled yet",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1534,17 +1535,17 @@ namespace AzubiApp.Services
                  {
                     Number = 81,
 
-                    TextDe = "Was bedeutet in der Kontraktart \"Dauerauftrag/Bestellungsaufteilung\"?",
-                    Answer1De = "Bestellmengen für SKUs mit mehreren Lieferanten können nicht aufgeteilt werden, sondern nur vereinzelt",
-                    Answer2De = "Die Aufteilung der Bestellmengen erfolgt nur über Daueraufträge, eine Kombination ist nicht möglich",
-                    Answer3De = "Bestellmengen für SKUs mit mehreren Lieferanten können zwischen Dauerauftrag und Bestellungsaufteilung aufgeteilt werden, auch kombiniert",
-                    CorrectAnswersDe = "Bestellmengen für SKUs mit mehreren Lieferanten können zwischen Dauerauftrag und Bestellungsaufteilung aufgeteilt werden, auch kombiniert",
+                    TextDe = "Was passiert mit dem Bestellverhalten bei der Kontraktart \"Dauerauftrag/Bestellungsaufteilung\"?",
+                    Answer1De = "Bestellmengen für SKUs mit mehreren Lieferanten können nicht aufgeteilt werden",
+                    Answer2De = "Die Aufteilung der Bestellmengen einer einzelnen SKU auf mehrere Lieferanten ist möglich",
+                    Answer3De = "Es werden Bestellungen generiert mit einer festen Bestellmenge für den angegeben Zeitraum",
+                    CorrectAnswersDe = "Die Aufteilung der Bestellmengen einer einzelnen SKU auf mehrere Lieferanten ist möglich| Es werden Bestellungen generiert mit einer festen Bestellmenge für den angegebenen Zeitpunkt",
 
-                    TextEn = "What does the option “standing order/order split” mean in the field \"contract type\"?",
-                    Answer1En = "Order quantities for SKUs with several suppliers cannot be split, only individual ones",
-                    Answer2En = "The order quantities are only split via standing orders, a combination is not possible",
-                    Answer3En = "Order quantities for SKUs with multiple suppliers can be split between standing order and order splitting; also combined",
-                    CorrectAnswersEn = "Order quantities for SKUs with multiple suppliers can be split between standing order and order splitting; also combined",
+                    TextEn = "What does the contract type “Standing order/Order split” do?",
+                    Answer1En = "Order quantities for SKUs with multiple suppliers cannot be split",
+                    Answer2En = "It is possible to split the order quantities of a single SKU between several suppliers",
+                    Answer3En = "Orders are generated with a fixed order quantity for a specified period",
+                    CorrectAnswersEn = "It is possible to split the order quantities of a single SKU between several suppliers| Orders are generated with a fixed order quantity for a specified period",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1553,17 +1554,17 @@ namespace AzubiApp.Services
                  {
                     Number = 82,
 
-                    TextDe = "Was bewirkt die Kontraktart \"Max.Menge\"?",
-                    Answer1De = "Es wird immer soviel bestellt bis die Maximale Bestandskapazität erreicht wird von der SKU",
-                    Answer2De = "Mit diese Kontraktart kann eine Maximale Kontrakt-Abrufmenge festgelegt werden",
+                    TextDe = "Was passiert mit dem Bestellverhalten bei der Kontraktart \"Max.Menge\"?",
+                    Answer1De = "Es wird immer soviel bestellt dass der Max. Bestand erreicht wird von der SKU",
+                    Answer2De = "Mit diese Kontraktart kann eine maximale Abrufmenge der Kontrakt festgelegt werden",
                     Answer3De = "Es wird die maximal abrufbare Menge vom Lieferanten bestellt bis der Kontakt aufgebraucht wurde",
                     CorrectAnswersDe = "Es wird die maximal abrufbare Menge vom Lieferanten bestellt bis der Kontakt aufgebraucht wurde",
 
                     TextEn = "What does the contract type “Max. quantity” do?",
-                    Answer1En = "Orders are always placed until the maximum stock capacity of the SKU is reached",
-                    Answer2En = "A maximum contract release order quantity can be defined with this contract type",
-                    Answer3En = "The maximum quantity that can be requested from the supplier is ordered until the contact has been fulfilled",
-                    CorrectAnswersEn = "The maximum quantity that can be requested from the supplier is ordered until the contact has been fulfilled",
+                    Answer1En = "Orders are always placed until the maximum stock capacity of the SKU is reached.",
+                    Answer2En = "A maximum contract order quantity can be defined with this contract type",
+                    Answer3En = "The maximum quantity that can be requested from a supplier is ordered until the contact has been fulfilled",
+                    CorrectAnswersEn = "The maximum quantity that can be requested from a supplier is ordered until the contact has been fulfilled",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1594,14 +1595,14 @@ namespace AzubiApp.Services
                     TextDe = "Was sind Semi-Aktionen?",
                     Answer1De = "Semi-Aktionen werden angezeigt bei einer Ausreißer-Behandlung",
                     Answer2De = "Semi-Aktionen sind Aktionen, bei denen der Zeitraum bekannt ist aber die Menge unbekannt ist",
-                    Answer3De = "Semi-Aktionen befinden sich immer in der Vergangenheit",
-                    CorrectAnswersDe = "Semi-Aktionen sind Aktionen, bei denen sowohl der Zeitraum als auch die Menge unbekannt sind| Semi-Aktionen befinden sich immer in der Vergangenheit",
+                    Answer3De = "Semi-Aktionen sind Aktionen aus der Vergangenheit",
+                    CorrectAnswersDe = "Semi-Aktionen sind Aktionen, bei denen sowohl der Zeitraum als auch die Menge unbekannt sind.| Semi-Aktionen sind Aktionen aus der Vergangenheit",
 
                     TextEn = "What are semi-promotions?",
                     Answer1En = "Semi-promotions are displayed for outlier corrections",
                     Answer2En = "\"Semi-promotions\" are promotions where the time period is known but the quantity is unknown",
-                    Answer3En = "Semi-promotions are always located in the past",
-                    CorrectAnswersEn = "\"Semi-promotions\" are promotions where the time period is known but the quantity is unknown| Semi-promotions are always located in the past",
+                    Answer3En = "Semi-promotions are Promotions from the past",
+                    CorrectAnswersEn = "\"Semi-promotions\" are promotions where the time period is known but the quantity is unknown | Semi-promotions are Promotions from the past",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1610,10 +1611,10 @@ namespace AzubiApp.Services
                  {
                     Number = 85,
 
-                    TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses blau & unterstrichen angezeigt wird?",
-                    Answer1De = "Der Wert wurde auf der aktuellen Ebene erfasst",
-                    Answer2De = "Der Wert gehört zu einer Verbundgruppe",
-                    Answer3De = "Der Wert wurde von einer höheren Ebene geerbt",
+                    TextDe = "Was symbolisiert ein Parameter/Konditions-Feld, wenn dieses blau & unterstrichen angezeigt wird?",
+                    Answer1De = "Der Wert wurde auf der aktuellen Ebene erfasst.",
+                    Answer2De = "Der Wert gehört zu einer Verbundgruppe.",
+                    Answer3De = "Der Wert wurde von einer höheren Ebene geerbt.",
                     CorrectAnswersDe = "Der Wert wurde von einer höheren Ebene geerbt",
 
                     TextEn = "What does a parameter/condition field indicate when it is displayed in blue & underlined?",
@@ -1629,10 +1630,10 @@ namespace AzubiApp.Services
                  {
                     Number = 86,
 
-                    TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses grün & unterstrichen angezeigt wird?",
-                    Answer1De = "Der Wert wurde von einer Klasse geerbt",
-                    Answer2De = "Der Wert wurde auf der aktuellen Ebene erfasst",
-                    Answer3De = "Der Wert wurde von einer anderen SKU übernommen",
+                    TextDe = "Was symbolisiert ein Parameter/Konditions-Feld, wenn dieses grün & unterstrichen angezeigt wird?",
+                    Answer1De = "Der Wert wurde von einer Klasse geerbt.",
+                    Answer2De = "Der Wert wurde auf der aktuellen Ebene erfasst.",
+                    Answer3De = "Der Wert wurde von einer anderen SKU übernommen. ",
                     CorrectAnswersDe = "Der Wert wurde von einer Klasse geerbt",
 
                     TextEn = "What does a parameter/condition field indicate when it is displayed in green & underlined?",
@@ -1652,13 +1653,13 @@ namespace AzubiApp.Services
                     Answer1De = "durch die Prognose",
                     Answer2De = "durch die OoS-Bereinigung",
                     Answer3De = "durch eine Strukturbruch-Erkennung",
-                    CorrectAnswersDe = "durch die OoS-Bereinigung",
+                    CorrectAnswersDe = "durch die OoS-Bereinigung| durch die Behandlung von Ausreißern",
 
-                    TextEn = "Automatic promotions that correct historical values can arise...",
-                    Answer1En = "through the forecast",
-                    Answer2En = "through the OoS correction",
-                    Answer3En = "through a structural break detection",
-                    CorrectAnswersEn = "through the OoS correction",
+                    TextEn = "Automatic promotions that correct historical values can occur...",
+                    Answer1En = "by the forecast",
+                    Answer2En = "by the OoS correction",
+                    Answer3En = "by treating outliers",
+                    CorrectAnswersEn = "by the OoS correction | by treating outliers",
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -1667,17 +1668,17 @@ namespace AzubiApp.Services
                  {
                     Number = 88,
 
-                    TextDe = "Was machen Info-Aktionen?",
-                    Answer1De = "Damit kann man zuvor nicht berücksichtige Zeiträume mit ihren Abverkäufen und Aktionen für die Prognoserechnung verwenden",
-                    Answer2De = "Bei diesen Aktionen werden die Zeiträume anonymisiert",
+                    TextDe = "Welche Funktion haben Info-Aktionen?",
+                    Answer1De = "Semi-Aktionen die auf Info-Aktionen geändert werden, können für die Prognose mit berücksichtigt werden",
+                    Answer2De = "Zeiträume mit diesen Aktionen werden nicht für die Prognoserechnung verwendet",
                     Answer3De = "Eine Info-Aktion hat keinen Einfluss auf die Prognose, aber besitzt Kommentare um auf besondere Umstände hinzuweisen",
-                    CorrectAnswersDe = "Damit kann man zuvor nicht berücksichtige Zeiträume mit ihren Abverkäufen und Aktionen für die Prognoserechnung verwenden",
+                    CorrectAnswersDe = "Semi-Aktionen die auf Info-Aktionen geändert, werden können für die Prognose mit berücksichtigt werden",
 
-                    TextEn = "What do Info-Promotions do?",
-                    Answer1En = "This allows you to use previously unconsidered periods with their sales and promotions for the forecast calculation",
-                    Answer2En = "With these actions, the time periods are anonymized",
-                    Answer3En = "An info campaign has no influence on the forecast, but has comments to point out special circumstances",
-                    CorrectAnswersEn = "This allows you to use previously unconsidered periods with their sales and promotions for the forecast calculation",
+                    TextEn = "What is the function of info-promotions ?",
+                    Answer1En = "Semi-promotions that are changed to info actions can be included in the forecast",
+                    Answer2En = "Periods with these actions are not used for forecast calculation",
+                    Answer3En = "An info promotion has no influence on the forecast, but has comments to point out special circumstances",
+                    CorrectAnswersEn = "Semi-promotions that are changed to info actions can be included in the forecast",
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -1686,17 +1687,17 @@ namespace AzubiApp.Services
                  {
                     Number = 89,
 
-                    TextDe = "Was sind Stichtage?",
+                    TextDe = "Was bewirken Stichtage?",
                     Answer1De = "Stichtage ermöglichen variable Saisons",
                     Answer2De = "Stichtage verhindern, dass saisonale Schwankungen erkannt werden können",
                     Answer3De = "Stichtage werden verwendet um vor Preisschwankungen zu warnen",
                     CorrectAnswersDe = "Stichtage ermöglichen variable Saisons",
 
-                    TextEn = "What are due dates?",
-                    Answer1En = "Due dates allow variable seasons",
-                    Answer2En = "Due dates prevent the detection of seasonal swings",
-                    Answer3En = "Due dates are used to warn about price swings",
-                    CorrectAnswersEn = "Due dates allow variable seasons",
+                    TextEn = "What effect do \"Key Dates\" have?",
+                    Answer1En = "Key dates allow variable seasons",
+                    Answer2En = "Key dates prevent the detection of seasonal swings",
+                    Answer3En = "Key dates are used to warn about price swings",
+                    CorrectAnswersEn = "Key dates allow variable seasons",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1706,16 +1707,16 @@ namespace AzubiApp.Services
                     Number = 90,
 
                     TextDe = "Welche Aussage stimmt nicht?",
-                    Answer1De = "Der SiB ist die Menge, die auf Lager sein muss, um Abweichungen in den prognostizierten Abverkäufen aufzufangen",
-                    Answer2De = "Der SiB ist der durchschnittliche Lagerbestand während eines Monats",
+                    Answer1De = "Der SiB ist die Menge, die auf Lager sein muss, damit keine Out-of-Stock-Situation eintritt.",
+                    Answer2De = "Der SiB ist der durchschnittliche Lagerbestand während eines Monats.",
                     Answer3De = "Der SiB sagt aus welche Menge bestellt werden muss um einer OoS-Situation zu entgehen",
                     CorrectAnswersDe = "Der SiB ist der durchschnittliche Lagerbestand während eines Monats| Der SiB sagt aus welche Menge bestellt werden muss um einer OoS-Situation zu entgehen",
 
                     TextEn = "Which statement is not true?",
-                    Answer1En = "The Sft is the quantity that must be in stock in order to compensate for deviations in forecast sales",
-                    Answer2En = "The Sft is the average stock level during a month",
-                    Answer3En = "The Sft indicates the quantity that must be ordered to avoid an OoS situation",
-                    CorrectAnswersEn = "The Sft is the average stock level during a month| The Sft indicates the quantity that must be ordered to avoid an OoS situation",
+                    Answer1En = "The SFT is the quantity that must be in stock in order to compensate for deviations in forecast sales",
+                    Answer2En = "The SFT is the average stock level during a month",
+                    Answer3En = "The SFT indicates the quantity that must be ordered to avoid an OoS situation",
+                    CorrectAnswersEn = "The SFT is the average stock level during a month| The SFT indicates the quantity that must be ordered to avoid an OoS situation",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -1745,7 +1746,7 @@ namespace AzubiApp.Services
                  {
                     Number = 92,
 
-                    TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses blau angezeigt wird?",
+                    TextDe = "Was symbolisiert ein Parameter/Konditions-Feld, wenn dieses blau angezeigt wird?",
                     Answer1De = "Das Feld vererbt einen Wert",
                     Answer2De = "Der Wert im Feld wird standardmäßig übergeben",
                     Answer3De = "Das Feld wird nicht verwendet",
@@ -1764,7 +1765,7 @@ namespace AzubiApp.Services
                  {
                     Number = 93,
 
-                    TextDe = "Was zeigt ein Parameter/Konditions-Feld an, wenn dieses schwarz angezeigt wird?",
+                    TextDe = "Was symbolisiert ein Parameter/Konditions-Feld, wenn dieses schwarz angezeigt wird?",
                     Answer1De = "Der Wert im Feld wurde manuell eingepflegt",
                     Answer2De = "Der Wert im Feld wird standardmäßig übergeben",
                     Answer3De = "Das Feld wird nicht verwendet",
@@ -1846,7 +1847,7 @@ namespace AzubiApp.Services
                     Answer3De = "Der Kontrakt mit der niedrigsten Restmenge wird verwendet",
                     CorrectAnswersDe = "Der Kontrakt mit der größten Restmenge wird verwendet",
 
-                    TextEn = "What does the select contract function “By remaining quantity” do?",
+                    TextEn = "What does the select contract function “By rest quantity” do?",
                     Answer1En = "The contract with the lowest remaining duration is used",
                     Answer2En = "The contract with the largest remaining quantity is used",
                     Answer3En = "The contract with the lowest remaining quantity is used",
@@ -1901,9 +1902,9 @@ namespace AzubiApp.Services
                     Answer1De = "Der Kontrakt mit der höchsten durchschnittlichen Restmenge pro Tag wird verwendet",
                     Answer2De = "Der Kontrakt mit der niedrigsten prozentualen Restmenge pro Tag wird verwendet",
                     Answer3De = "Der Kontrakt mit der höchsten prozentualen Restmenge pro Tag wird verwendet",
-                    CorrectAnswersDe = "Der Kontrakt mit der niedrigsten prozentualen Restmenge pro Tag wird verwendet",
+                    CorrectAnswersDe = "Der Kontrakt mit der höchsten prozentualen Restmenge pro Tag wird verwendet",
 
-                    TextEn = "What is the effect of the select contract “(RQty / GLfz) * (1 / RTm)”?",
+                    TextEn = "What does the contract selection \"(RMge / GMge) * (1 / RLfz)\" do?",
                     Answer1En = "The contract with the highest average remaining quantity per day is used",
                     Answer2En = "The contract with the lowest remaining quantity in % per day is used",
                     Answer3En = "The contract with the highest remaining quantity in % per day is used",
@@ -1941,9 +1942,9 @@ namespace AzubiApp.Services
                     Answer3De = "Der Kontrakt vom Hauptlieferanten wird verwendet",
                     CorrectAnswersDe = "Die Bestellmenge wird auf mehrere Lieferanten aufgeteilt im angegebenen Verhältnis",
 
-                    TextEn = "What does the select contract “Order ratio” do?",
+                    TextEn = "What does the select contract \"Order Ratio\" do?",
                     Answer1En = "The order quantity is divided among several suppliers in the specified ratio",
-                    Answer2En = "The quantity of the selected contract will be used up and the remaining quantity will be filled with other contracts",
+                    Answer2En = "The contract quantity from the selected contract is consumed and the rest is replenished with other contracts",
                     Answer3En = "The contract from the main supplier is used",
                     CorrectAnswersEn = "The order quantity is divided among several suppliers in the specified ratio",
 
@@ -1957,14 +1958,14 @@ namespace AzubiApp.Services
                     TextDe = "Welche Kontraktart muss ausgewählt sein damit die Kontraktauswahl verwendet wird?",
                     Answer1De = "Lieferantenauswahl",
                     Answer2De = "Dauerauftrag/ Bestellungsaufteilung",
-                    Answer3De = "Max. Menge & Lieferantenauswahl",
-                    CorrectAnswersDe = "Lieferantenauswahl| Max. Menge & Lieferantenauswahl",
+                    Answer3De = "\"Max. Menge & Lieferantenauswahl\"",
+                    CorrectAnswersDe = "Lieferantenauswahl | \"Max. Menge & Lieferantenauswahl\"",
 
-                    TextEn = "Which contract type must be selected in order to use the select contract function?",
-                    Answer1En = "Select Supplier",
-                    Answer2En = "Standing Order / Order Split",
-                    Answer3En = "Max. Qty + Select Supplier",
-                    CorrectAnswersEn = "Select Supplier| Max. Qty + Select Supplier",
+                    TextEn = "Which contract type must be selected for the contract selection to be used?",
+                    Answer1En = "Supplier selection",
+                    Answer2En = "Standing order/ order splitting",
+                    Answer3En = "Max. Qty + Supplier selection",
+                    CorrectAnswersEn = "Supplier selection| Max. Qty + Supplier selection",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -1974,10 +1975,10 @@ namespace AzubiApp.Services
                     Number = 104,
 
                     TextDe = "Was bewirkt die Kontraktart „Kontrakte ignorieren“?",
-                    Answer1De = "Die Kontrakte werden bis zum nächsten Bestelltermin nicht verwendet ",
-                    Answer2De = "Kontrakte werden nicht verwendet",
-                    Answer3De = "Die Kontraktauswahl wird ignoriert",
-                    CorrectAnswersDe = "Kontrakte werden nicht verwendet",
+                    Answer1De = "Die Kontrakte werden bis zum nächsten Bestelltermin nicht verwendet",
+                    Answer2De = "Die in den Konditionen eingetragene Kontrakte werden nicht verwendet",
+                    Answer3De = "Die gewählte Kontraktauswahl wird ignoriert",
+                    CorrectAnswersDe = "Die in den Konditionen eingetragene Kontrakte werden nicht verwendet",
 
                     TextEn = "What does the contract type “Ignore contracts” do?",
                     Answer1En = "The contracts will not be used until the next order date",
@@ -1993,16 +1994,16 @@ namespace AzubiApp.Services
                     Number = 105,
 
                     TextDe = "Was bewirkt die Kontraktart „Max. Menge u. Lieferantenauswahl“?",
-                    Answer1De = "Es wird der Kontrakt mit der höchsten Kontraktmenge gewählt",
+                    Answer1De = "Es wird immer der Kontrakt mit der höchsten Kontraktmenge gewählt",
                     Answer2De = "Es wird der Kontrakt gewählt, der zum Entscheidungskriterium von der Kontraktauswahl am ehesten passt und es wird anschließend die maximal abrufbare Menge bestellt",
-                    Answer3De = "Es wird der Kontrakt mit der höchsten abrufbaren Menge gewählt",
+                    Answer3De = "Es wird immer der Kontrakt mit der höchsten abrufbaren Menge gewählt",
                     CorrectAnswersDe = "Es wird der Kontrakt gewählt, der zum Entscheidungskriterium von der Kontraktauswahl am ehesten passt und es wird anschließend die maximal abrufbare Menge bestellt",
 
-                    TextEn = "What is the effect of the contract type “Max. Qty + Select Supplier”?",
+                    TextEn = "What does the contract type \"Max Quantity & Supplier Selection\" do?",
                     Answer1En = "The contract with the highest contract quantity is selected",
-                    Answer2En = "The contract that matches the decision criterion of the select contract best is chosen and the maximum quantity that is available is then ordered",
-                    Answer3En = "The contract with the highest available quantity is selected",
-                    CorrectAnswersEn = "The contract that matches the decision criterion of the select contract best is chosen and the maximum quantity that is available is then ordered",
+                    Answer2En = "The contract that most closely matches the decision criterion of contract selection is selected and the maximum callable quantity is then ordered",
+                    Answer3En = "The contract with the highest callable quantity is always selected",
+                    CorrectAnswersEn = "The contract that most closely matches the decision criterion of contract selection is selected and the maximum callable quantity is then ordered",
 
                     QuizCategory = new List<string> { "Paramter" }
                  },
@@ -2011,17 +2012,17 @@ namespace AzubiApp.Services
                  {
                     Number = 106,
 
-                    TextDe = "Was macht der Parameter \"Berechnung von Semi-Aktionen\"?",
-                    Answer1De = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen ermittelt werden",
-                    Answer2De = "Damit erkennt man eine deutliche und beständige Niveau-Änderung in der Historie",
-                    Answer3De = "Mit dem Parameter werden im Planungshorizont Akionen mit übergeben",
-                    CorrectAnswersDe = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen ermittelt werden",
+                    TextDe = "Wofür wird der Parameter \"Berechnung von Semi-Aktionen\" benutzt?",
+                    Answer1De = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen berechnet werden sollen",
+                    Answer2De = "Damit kann man sich deutliche und beständige Niveau-Änderung in der Historie anzeigen lassen",
+                    Answer3De = "Mit dem Parameter werden, im Planungshorizont, Akionen mit berücksichtigt",
+                    CorrectAnswersDe = "Mit diesen Parameter legen Sie Typen fest, wie die \r\nAktionsmengen berechnet werden sollen",
 
-                    TextEn = "What does the “Calculation of semi-promotions” parameter do?",
-                    Answer1En = "You use these parameters to define the types of how the promotion quantities are calculated",
-                    Answer2En = "This shows a clear and consistent change in the historical level",
-                    Answer3En = "The parameter is used to transfer promotions in the planning horizon",
-                    CorrectAnswersEn = "You use these parameters to define the types of how the promotion quantities are calculated",
+                    TextEn = "What is the \"Semi-Promotion Calculation\" parameter used for?",
+                    Answer1En = "Use these parameters to define types, such as the promotion quantities to be calculated",
+                    Answer2En = "This allows you to display clear and consistent level changes in the history",
+                    Answer3En = "With this parameter, promotions are taken into account in the planning horizon",
+                    CorrectAnswersEn = "Use these parameters to define types, such as the Promotion quantities to be calculated",
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -2030,17 +2031,17 @@ namespace AzubiApp.Services
                  {
                     Number = 107,
 
-                    TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit'' bei der Berechnung von Semi-Aktionen?",
-                    Answer1De = "Aktionsmengen werden ausschließlich aus den Lagerbeständen während der Aktion berechnet",
+                    TextDe = "Wie werden die Aktionsmengen von Semi-Aktionen, bei dem Parameter-Typen \"Rel zu aktionsfreier Zeit\", berechnet?",
+                    Answer1De = "Aktionsmengen werden auf die mittlere Abgangsmenge der aktionsfreien Perioden reduziert.",
                     Answer2De = "Die Aktionsmenge ergibt sich aus dem durchschnittlichen Preisunterschied vor und während der Aktion",
                     Answer3De = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht",
                     CorrectAnswersDe = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht",
 
                     TextEn = "What does the type ''Rel to non-promotion time'' do when calculating semi-promotions?",
                     Answer1En = "Promotion quantities are calculated exclusively from the warehouse stocks during the promotion",
-                    Answer2En = "The promotion quantity is calculated from the average price difference before and during the promotion",
-                    Answer3En = "The promotion quantity is calculated by comparing sales during the promotion with sales during non-promotion periods",
-                    CorrectAnswersEn = "The promotion quantity is calculated by comparing sales during the promotion with sales during non-promotion periods",
+                    Answer2En = "The promotional quantity is the average price difference before and during the promotion",
+                    Answer3En = "The promotional quantity is calculated by comparing the sales during the promotion with the sales during non-promotional periods",
+                    CorrectAnswersEn = "The promotional quantity is calculated by comparing the sales during the promotion with the sales during non-promotional periods",
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -2049,16 +2050,16 @@ namespace AzubiApp.Services
                  {
                     Number = 108,
 
-                    TextDe = "Was macht der Typ ''Rel zu aktionsfreier Zeit + ggf. Info setzen'' bei der Berechnung von Semi-Aktionen?",
-                    Answer1De = "Wenn die Semi-Aktion nach dem ersten Abgang endet, wird sie automatisch gestoppt",
-                    Answer2De = "Eine Berechnung erfolgt nicht. Endet die Semi-Aktion, bevor der erste Abverkauf stattfindet, wird sie automatisch als Info-Aktion gewertet",
-                    Answer3De = "Die Semi-Aktion bleibt aktiv, auch wenn es keinen Abverkauf gibt",
-                    CorrectAnswersDe = "Eine Berechnung erfolgt nicht. Endet die Semi-Aktion, bevor der erste Abverkauf stattfindet, wird sie automatisch als Info-Aktion gewertet",
+                    TextDe = "Wie wird die Berechnung von Semi-Aktionen, bei dem Parameter-Typen, \"Rel zu aktionsfreier Zeit + ggf. Info setzen\", beeinflusst? ",
+                    Answer1De = "Aktionsmengen werden anhand von Info-Aktionen berechnet, falls welche vorhanden sind",
+                    Answer2De = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht. Endet die Semi-Aktion, bevor der erste \r\nAbverkauf stattfindet, wird sie automatisch zu einer Info-Aktion",
+                    Answer3De = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht",
+                    CorrectAnswersDe = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht. Endet die Semi-Aktion, bevor der erste \r\nAbverkauf stattfindet, wird sie automatisch zu einer Info-Aktion",
 
-                    TextEn = "What does the type ''Rel to non promotion time + set info if necessary'' do when calculating semi-promotions?",
-                    Answer1En = "If the semi-promotion ends after the first sale, it is automatically stopped",
-                    Answer2En = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion",
-                    Answer3En = "The semi-promotion remains active even if there is no sale",
+                    TextEn = "How is the calculation of semi-promotions affected, with the parameter type \"'Rel to non promotion time + set info if necessary\"?",
+                    Answer1En = "Promotion quantities are calculated using info actions, if any are available",
+                    Answer2En = "The promotional quantity is calculated by comparing the sales during the promotion with the sales during non-promotional periods. If the Semi-promotion ends before the first \r\nsale takes place, it automatically becomes an info promotion",
+                    Answer3En = "The promotional quantity is calculated by comparing the sales during the promotion with the sales during non-promotional periods",
                     CorrectAnswersEn = "No calculation is made. If the semi-promotion ends before the first sale takes place, it is automatically counted as an info promotion",
 
                     QuizCategory = new List<string> { "Parameter" }
@@ -2068,17 +2069,17 @@ namespace AzubiApp.Services
                  {
                     Number = 109,
 
-                    TextDe = "Was macht der Typ ''Rel zu Ex-Post-Prognose'' bei der Berechnung von Semi-Aktionen?",
-                    Answer1De = "Aktionsmengen basieren ausschließlich auf den ursprünglich geplanten Liefermengen",
+                    TextDe = "Wie werden die Aktionsmengen von Semi-Aktionen, bei dem Parameter-Typen \"Rel zu Ex-Post-Prognose\", berechnet?",
+                    Answer1De = "Aktionsmengen werden auf die mittlere Abgangsmenge der aktionsfreien Perioden reduziert.",
                     Answer2De = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet",
-                    Answer3De = "Die Aktionsmenge wird durch den Durchschnitt der Verkäufe aus der Vorjahresaktion berechnet",
+                    Answer3De = "Die Aktionsmenge wird durch den Durchschnitt der Verkäufe aus den vorherigen Aktionen berechnet",
                     CorrectAnswersDe = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet",
 
-                    TextEn = "What does the type ''Rel to ex-post forecast'' do in the calculation of semi-promotions?",
-                    Answer1En = "Promotional quantities are based exclusively on the originally planned delivery quantities",
-                    Answer2En = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast",
-                    Answer3En = "The promotion quantity is calculated as the average of the sales from the previous year's promotion",
-                    CorrectAnswersEn = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast",
+                    TextEn = "How are the promotion quantities of semi-promotions calculated for the parameter type \"Rel to Ex-Post Forecast\"?",
+                    Answer1En = "Promotion quantities are reduced to the average issue quantity of the promotion-free periods.",
+                    Answer2En = "Promotions quantities are calculated from the ratio of sales to the ex-post forecast",
+                    Answer3En = "The promotion quantity is calculated by the average of sales from the previous promotions",
+                    CorrectAnswersEn = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast.",
 
                     QuizCategory = new List<string> { "Paramter" }
                  },
@@ -2087,17 +2088,17 @@ namespace AzubiApp.Services
                  {
                     Number = 110,
 
-                    TextDe = "Was macht der Typ ''Rel. zu aktionsfreier Zeit mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
+                    TextDe = "Wie werden die Berechnung von Semi-Aktionen, bei dem Parameter-Typen ''Rel. zu aktionsfreier Zeit mit OoS-Korrektur'', beeinflusst?",
                     Answer1De = "Für diesen Parameter sind nur zukünftige Verkaufsprognosen notwendig",
-                    Answer2De = "Für diesen Parameter werden historische Bestandsdaten benötigt. Die entgangene Aktionsmenge wird berechnet, indem die Verkäufe während der Aktion mit denen außerhalb des Aktionszeitraums verglichen werden",
+                    Answer2De = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht. Hat eine Aktion während einer OoS-Periode stattgefunden, werden entgangene Aktionsmengen mit berechnet",
                     Answer3De = "Entgangene Aktionsmengen werden anhand der Bestellungen im Aktionszeitraum ermittelt",
-                    CorrectAnswersDe = "Für diesen Parameter werden historische Bestandsdaten benötigt. Die entgangene Aktionsmenge wird berechnet, indem die Verkäufe während der Aktion mit denen außerhalb des Aktionszeitraums verglichen werden",
+                    CorrectAnswersDe = "Die Aktionsmenge wird berechnet, indem man die Verkäufe während der Aktion mit den Verkäufen in Zeiten ohne Aktion vergleicht. Hat eine Aktion während einem OoS-Zeitpunkt stattgefunden, werden entgangene Aktionsmengen mit berechnet",
 
                     TextEn = "What does the type ''Rel. to non promotion time with OoS correction'' do when calculating semi-promotions?",
-                    Answer1En = "Only future sales forecasts are required for this parameter",
-                    Answer2En = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period",
-                    Answer3En = "Missed promotional quantities are determined on the basis of orders placed during the promotional period",
-                    CorrectAnswersEn = "Historical stock data is required for this parameter. The lost promotion quantity is calculated by comparing sales during the promotion with those outside the promotion period",
+                    Answer1En = "Only future sales forecasts are required for this parameter.",
+                    Answer2En = "The promotional quantity is calculated by comparing the sales during the promotion with the sales during non-promotional periods. If an promotion has taken place during an OoS period, lost promotion quantities are also calculated",
+                    Answer3En = "Missed promotional quantities are determined on the basis of orders placed during the promotional period.",
+                    CorrectAnswersEn = "The promotional quantity is calculated by comparing the sales during the promotion with the sales during non-promotional periods. If an promotion has taken place during an OoS period, lost promotion quantities are also calculated",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -2106,17 +2107,17 @@ namespace AzubiApp.Services
                  {
                     Number = 111,
 
-                    TextDe = "Was macht der Typ ''Rel. zur Ex-Post-Prognose mit OoS-Korrektur'' bei der Berechnung von Semi-Aktionen?",
-                    Answer1De = "Dieser Parameter funktioniert auch ohne historische Daten",
-                    Answer2De = "Entgangene Aktionsmengen basieren ausschließlich auf den geplanten Liefermengen",
-                    Answer3De = "Dieser Parameter setzt historische Bestandsdaten voraus. Die entgangenen Aktionsmengen werden ermittelt, indem die tatsächlichen Verkäufe mit der Ex-Post-Prognose verglichen werden",
-                    CorrectAnswersDe = "Dieser Parameter setzt historische Bestandsdaten voraus. Die entgangenen Aktionsmengen werden ermittelt, indem die tatsächlichen Verkäufe mit der Ex-Post-Prognose verglichen werden",
+                    TextDe = "Wie werden die Berechnung von Semi-Aktionen, bei dem Parameter-Typen ''Rel. zur Ex-Post-Prognose mit OoS-Korrektur'', beeinflusst?",
+                    Answer1De = "Dieser Parameter funktioniert auch ohne historische Daten.",
+                    Answer2De = "Entgangene Aktionsmengen basieren ausschließlich auf den geplanten Liefermengen.",
+                    Answer3De = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet. Hat eine Aktion während einem OoS-Zeitpunkt stattgefunden, werden entgangene Aktionsmengen mit berechnet",
+                    CorrectAnswersDe = "Aktionsmengen werden aus dem Verhältnis von Verkäufen zur Ex-Post-Prognose berechnet. Hat eine Aktion während einem OoS-Zeitpunkt stattgefunden, werden entgangene Aktionsmengen mit berechnet",
 
                     TextEn = "What does the type ''Rel. to ex-post forecast with OoS correction'' do when calculating semi-promotions?",
-                    Answer1En = "This parameter also works without historical data",
-                    Answer2En = "Missed promotion quantities are based exclusively on the planned delivery quantities",
-                    Answer3En = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast",
-                    CorrectAnswersEn = "This parameter requires historical inventory data. The lost promotion quantities are determined by comparing the actual sales with the ex-post forecast",
+                    Answer1En = "This parameter also works without historical data.",
+                    Answer2En = "Missed promotion quantities are based exclusively on the planned delivery quantities.",
+                    Answer3En = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast. If an promotion has taken place during an OoS time, lost action quantities are also calculated",
+                    CorrectAnswersEn = "Promotion quantities are calculated from the ratio of sales to the ex-post forecast. If an promotion has taken place during an OoS time, lost action quantities are also calculated",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
@@ -2125,22 +2126,22 @@ namespace AzubiApp.Services
                  {
                     Number = 112,
 
-                    TextDe = "Wo kann ich die Ausreißererkennung deaktivieren?",
+                    TextDe = "Wo kann ich die \"Ausreißer-Erkennung\" bearbeiten?",
                     Answer1De = "Parameter -> Strukturbruch/Ausreißer -> Strukturbrucherkennung",
                     Answer2De = "Parameter -> Strukturbruch/Ausreißer -> Ausreißererkennung",
-                    Answer3De = "Parameter -> Strukturbruch/Ausreißer -> Auch letzten Wert korrigieren",
+                    Answer3De = "Parameter -> Strukturbruch/Ausreißer -> OoS-Analyse",
                     CorrectAnswersDe = "Parameter -> Strukturbruch/Ausreißer -> Ausreißererkennung",
 
                     TextEn = "Where can I deactivate the outlier detection?",
                     Answer1En = "Parameters -> Structure break/ Outlier -> Structure break detection",
                     Answer2En = "Parameters -> Structure break/ Outlier -> Outlier detection",
-                    Answer3En = "Parameter -> Structure break/outlier -> Also correct last value",
+                    Answer3En = "Parameter -> Structure break/outlier -> OoS-Analysis",
                     CorrectAnswersEn = "Parameters -> Structure break/ Outlier -> Outlier detection",
 
                     QuizCategory = new List<string> { "Parameter" }
                  },
 
-                 new Question
+                 /*new Question
                  {
                     Number = 113,
 
@@ -2157,25 +2158,25 @@ namespace AzubiApp.Services
                     CorrectAnswersEn = "9",
 
                     QuizCategory = new List<string> { "Parameter" }
-                 },
+                 },*/
 
                  new Question
                  {
                     Number = 114,
 
-                    TextDe = "Wie kann ich die Prognose-Einstellungen mit übernehmen? (Saison)",
-                    Answer1De = "Standardmäßig ist die Einstellung nicht aktiviert",
-                    Answer2De = "Unter Extras, beim Prognose-Parameter die Periode ändern",
-                    Answer3De = "Dafür muss man den LM-Support anrufen, da hiefür globale Systemeinstellungen benötig werden",
-                    CorrectAnswersDe = "Standardmäßig ist die Einstellung nicht aktiviert.| Dafür muss man den LM-Support anrufen, da hiefür globale Systemeinstellungen benötig werden",
+                    TextDe = "Was passiert wenn der Parameter \"Prognose-Einstellungen mit übernehmen\" angehakt wird?",
+                    Answer1De = "Die Prognose-Einstellungen vom eingetragenen Vorläufer werden übernommen",
+                    Answer2De = "Die Prognose-Einstellungen von der SKU, von der die Saison übernommen wird, werden übernommen",
+                    Answer3De = "Alle SKUs einer Gruppe erhalten die gleichen Prognose-Einstellungen",
+                    CorrectAnswersDe = "Die Prognose-Einstellungen von der SKU, von der die Saison übernommen wird, werden übernommen",
 
-                    TextEn = "How can I apply the forecast settings? (season)",
-                    Answer1En = "The setting is not activated by default",
-                    Answer2En = "Under Extras, change the period for the forecast parameter",
-                    Answer3En = "To do this, you must call LM support, as global system settings are required for this",
-                    CorrectAnswersEn = "The setting is not activated by default.| To do this, you must call LM support, as global system settings are required for this",
+                    TextEn = "What happens if the parameter \"Also use forecast settings\" is checked?",
+                    Answer1En = "The forecast parameter settings from the entered predecessor are used",
+                    Answer2En = "The forecast parameter settings from the SKU that the season is taken from are used",
+                    Answer3En = "All SKUs in a group receive the same forecast parameter settings",
+                    CorrectAnswersEn = "The forecast parameter settings from the SKU that the season is taken from are used",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Allgemein" }
                  },
 
                  new Question
@@ -2184,9 +2185,9 @@ namespace AzubiApp.Services
 
                     TextDe = "Was bedeuten die roten Striche am unteren Rand der Bestandssimulation?",
                     Answer1De = "Ein alternativer SiB-Typ, der an jedem Wochenende pausiert",
-                    Answer2De = "Feiertage, meist sind es Wochenenden an dem gar kein Verkauf stattfindet",
-                    Answer3De = "Kennzeichnet immer den Anfang der Woche",
-                    CorrectAnswersDe = "Feiertage, meist sind es Wochenenden an dem gar kein Verkauf stattfindet",
+                    Answer2De = "Feiertage & Wochenenden an dem gar kein Verkauf stattfindet",
+                    Answer3De = "Kennzeichnet immer den Anfang der Woche.",
+                    CorrectAnswersDe = "Feiertage & Wochenenden an dem gar kein Verkauf stattfindet",
 
                     TextEn = "What does the red line at the bottom of the stock simulation mean?",
                     Answer1En = "An alternative Sft type who takes a break every weekend",
@@ -2206,13 +2207,13 @@ namespace AzubiApp.Services
                     TextDe = "Was stellen die schwarzen Striche oben bei der Prognose dar?",
                     Answer1De = "Der Prognosehorizont",
                     Answer2De = "Die Standardabweichung",
-                    Answer3De = "Die relative Abgangsmöglichkeit",
+                    Answer3De = "Die relative Abgangsmenge",
                     CorrectAnswersDe = "Die Standardabweichung",
 
-                    TextEn = "What does the black line at the top of the forecast represent?",
+                    TextEn = "What does the black line at the top of the forecast represent? ",
                     Answer1En = "The forecast horizon",
                     Answer2En = "The standard deviation",
-                    Answer3En = "The relative departure option",
+                    Answer3En = "The relative issue amount",
                     CorrectAnswersEn = "The standard deviation",
 
                     ImagePath = "Images/QuestionsImage/question_116_balk_3.png",
@@ -2225,16 +2226,16 @@ namespace AzubiApp.Services
                     Number = 117,
 
                     TextDe = "Wo kann ich die Farben der Prognosegrafik ändern?",
-                    Answer1De = "Unter dem Layout",
-                    Answer2De = "Unter Extras",
-                    Answer3De = "Im Parameter",
-                    CorrectAnswersDe = "Unter Extras",
+                    Answer1De = "Unter \"Layout\"",
+                    Answer2De = "Unter \"Extras\"",
+                    Answer3De = "Unter \"Parameter\"",
+                    CorrectAnswersDe = "Unter \"Extras\"",
 
                     TextEn = "Where can I change the colors of the forecast graphic?",
-                    Answer1En = "Under the layout",
-                    Answer2En = "Under Extras",
-                    Answer3En = "Under Parameters",
-                    CorrectAnswersEn = "Under Extras",
+                    Answer1En = "Under \"Layout\"",
+                    Answer2En = "Under \"Extras\"",
+                    Answer3En = "Under \"Parameters\"",
+                    CorrectAnswersEn = "Under \"Extras\"",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2243,55 +2244,55 @@ namespace AzubiApp.Services
                  {
                     Number = 118,
 
-                    TextDe = "Was bedeutet ein Prognose-Faktor von 2.0?",
-                    Answer1De = "eine Halbierung der Prognose",
-                    Answer2De = "eine Verdopplung der Prognose",
-                    Answer3De = "Eine Prognose die eine erweiterte Version hat",
-                    CorrectAnswersDe = "eine Verdopplung der Prognose",
+                    TextDe = "Was passiert mit einer Prognose die einen Prognose-Faktor von 2.0 hat?",
+                    Answer1De = "Die Prognose wird halbiert",
+                    Answer2De = "Die Prognose wird verdoppelt",
+                    Answer3De = "Die Prognose verwendet 2 Prognose-Verfahren",
+                    CorrectAnswersDe = "Die Prognose wird verdoppelt",
 
-                    TextEn = "What does a forecast factor of 2.0 mean?",
+                    TextEn = "What happens to a forecast that has a forecast factor of 2.0?",
                     Answer1En = "a reduction by half for the forecast",
                     Answer2En = "a duplication of the forecast",
-                    Answer3En = "A forecast that has an extended version",
+                    Answer3En = "Forecasting uses 2 forecasting methods",
                     CorrectAnswersEn = "a duplication of the forecast",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Prognose" }
                  },
 
                  new Question
                  {
                     Number = 119,
 
-                    TextDe = "Was bedeutet ''Sofort bestellen'' in den Konditionen?",
+                    TextDe = "Was passiert wenn ''Sofort bestellen'' in den Konditionen angehakt wird?",
                     Answer1De = "Alle offenen Bestellungen werden heute bestellt",
-                    Answer2De = "Alle offenen Bestellungen werden morgen bestellt",
-                    Answer3De = "Alle offenen Bestellungen werden ein Bestellryhtmus haben",
+                    Answer2De = "Alle Reservierungen werden auf heute vorgezogen",
+                    Answer3De = "Der Rhythmusanfang für alle offenen Bestellungen wird auf heute gesetzt",
                     CorrectAnswersDe = "Alle offenen Bestellungen werden heute bestellt",
 
                     TextEn = "What does ''order immediately'' mean in the conditions?",
                     Answer1En = "All open orders will be ordered today",
-                    Answer2En = "All open orders will be ordered tomorrow",
-                    Answer3En = "All open orders will have an order rhythm",
+                    Answer2En = "All reservations will be brought forward to today",
+                    Answer3En = "The start of the rhythm for all open orders is set to today",
                     CorrectAnswersEn = "All open orders will be ordered today",
 
-                    QuizCategory = new List<string> { "", "" }
+                    QuizCategory = new List<string> { "Kondition" }
                  },
 
                  new Question
                  {
                     Number = 120,
 
-                    TextDe = "Was sind die Vorraussetzung für die Kontraktauswahl: “Bestellverhältnis” ?",
+                    TextDe = "Welche Bedingungen gibt es damit die Kontaktauswahl \"Bestell-Verhältnis\" funktioniert?",
                     Answer1De = "Man benötigt zwei Lieferanten",
-                    Answer2De = "Die Kontraktart muss ebenfalls angepasst werden",
-                    Answer3De = "Es muss einer Verbundbestellung zu gehören",
-                    CorrectAnswersDe = "Man benötigt zwei Lieferanten| Die Kontraktart muss ebenfalls angepasst werden",
+                    Answer2De = "Die Kontraktart \"Lieferantenauswahl\" oder \"Max. Menge u. Lieferantenauswahl\" muss ausgewählt sein",
+                    Answer3De = "Mengen-Verhältnis bei den Kontrakten eintragen über das Feld \"Menge\" in den Konditionen",
+                    CorrectAnswersDe = "Die Kontraktart \"Lieferantenauswahl\" oder \"Max. Menge u. Lieferantenauswahl\" muss ausgewählt sein| Man benötigt zwei Lieferanten",
 
-                    TextEn = "What are the requirements for the select contract: “ order ratio” ?",
+                    TextEn = "What are the requirements for the select contract: “order ratio” ?",
                     Answer1En = "You need two suppliers",
                     Answer2En = "The contract type must also be adjusted",
-                    Answer3En = "It must belong to a composite order",
-                    CorrectAnswersEn = "You need two suppliers| The contract type must also be adjusted",
+                    Answer3En = "It must belong to a compound order",
+                    CorrectAnswersEn = "You need two suppliers | The contract type must also be adjusted",
 
                     QuizCategory = new List<string> { "Kondition" }
                  },
@@ -2319,17 +2320,17 @@ namespace AzubiApp.Services
                  {
                     Number = 122,
 
-                    TextDe = "Man kann eine variable Saison erkennen, wenn…?",
-                    Answer1De = "z.B. wenn Schulferien auftreten",
-                    Answer2De = "der Auffülltyp auf “Nicht auffüllen” gesetzt ist",
-                    Answer3De = "eindeutige Steigungen/Senkungen in bestimmten Zeitperioden erkennbar sind",
-                    CorrectAnswersDe = "z.B. wenn Schulferien auftreten| eindeutige Steigungen/Senkungen in bestimmten Zeitperioden erkennbar sind",
+                    TextDe = "Über welche Felder wird eine variable Saison eingetragen?",
+                    Answer1De = "Stichtage",
+                    Answer2De = "F&R bietet nur eine statische Saison",
+                    Answer3De = "Saison-Vorgabe",
+                    CorrectAnswersDe = "Stichtage",
 
-                    TextEn = "You can recognize a variable season when...?",
-                    Answer1En = "e.g. if school vacations begin",
-                    Answer2En = "the refill type is set to “Do not refill”",
-                    Answer3En = "clear increases/decreases are recognizable in certain time periods",
-                    CorrectAnswersEn = "e.g. if school vacations begin| clear increases/decreases are recognizable in certain time periods",
+                    TextEn = "Which fields are used to enter a variable season?",
+                    Answer1En = "Key Dates",
+                    Answer2En = "F&R offers only one static season",
+                    Answer3En = "Season Specification",
+                    CorrectAnswersEn = "Key Dates",
 
                     QuizCategory = new List<string> { "Prognose" }
                  },
@@ -2359,17 +2360,17 @@ namespace AzubiApp.Services
                  {
                     Number = 124,
 
-                    TextDe = "Was macht der Typ “SiB-Erhöhung” bei der Behandlung Aktionsbestellung?",
+                    TextDe = "Wie wird der Sicherheitsbestand beeinflusst, wenn bei dem Parameter \"Behandlung Aktionsbestellung\" der Typ \"SiB-Erhöhung\" eingestellt wird?",
                     Answer1De = "Der SiB wird dauerhaft um die Aktionsmenge × Prozentsatz erhöht",
                     Answer2De = "Der SiB wird zwischen dem Verfügbar-ab-Datum und dem Aktionsbeginn um die Aktionsmenge × Prozentsatz erhöht und zum Aktionsstart sofort wieder gesenkt",
-                    Answer3De = "Die Anpassung des SiB erfolgt erst nach dem Aktionsbeginn",
-                    CorrectAnswersDe = "Der SiB wird zwischen dem Verfügbar-ab-Datum und dem Aktionsbeginn um die Aktionsmenge × Prozentsatz erhöht und zum Aktionsstart sofort wieder gesenkt",
+                    Answer3De = "Der Sicherheitsbestand wird um die Aktionsmenge erhöht",
+                    CorrectAnswersDe = "Der SiB wird zwischen dem Verfügbar-ab-Datum und dem \r\nAktionsbeginn um die Aktionsmenge × Prozentsatz erhöht \r\nund zum Aktionsstart sofort wieder gesenkt",
 
-                    TextEn = "What does the “Safety Stock increase” type do in the handling promotion order?",
+                    TextEn = "What does the “Safety Stock increase” type do in the \"handling promotion order\" parameter?",
                     Answer1En = "The Sft is permanently increased by the promotion quantity × percentage",
                     Answer2En = "The Sft is increased by the promotion quantity × percentage between the available-from date and the start of the promotion and is immediately reduced again at the start of the promotion",
-                    Answer3En = "The Sft is only adjusted after the start of the campaign",
-                    CorrectAnswersEn = "The Sft is increased by the promotion quantity × percentage between the available-from date and the start of the promotion and is immediately reduced again at the start of the promotion",
+                    Answer3En = "Safety stock is increased by the promotion quantity",
+                    CorrectAnswersEn = "The Sft is increased between the available-from date and the \r\nstart of the promotion by the promotion quantity × percentage \r\nand immediately reduced again at the start of the promotion",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -2378,15 +2379,15 @@ namespace AzubiApp.Services
                  {
                     Number = 125,
 
-                    TextDe = "Was macht der Typ “SiB-Erhöhung m. langsamen Abfall” bei der Behandlung Aktionsbestellung?",
-                    Answer1De = "Die Reduktion des Sicherheitsbestands beginnt erst nach Ende der Aktion",
-                    Answer2De = "Der Sicherheitsbestand bleibt während des gesamten Aktionszeitraums konstant auf dem erhöhten Niveau",
-                    Answer3De = "Wie SiB-Erhöhung, aber der SiB wird langsam und gleichmäßig über den gesamten Aktions-Zeitraum verringert",
-                    CorrectAnswersDe = "Wie SiB-Erhöhung, aber der SiB wird langsam und gleichmäßig über den gesamten Aktions-Zeitraum verringert",
+                    TextDe = "Wie wird der Sicherheitsbestand beeinflusst, wenn bei dem Parameter \"Behandlung Aktionsbestellung\" der Typ \"SiB-Erhöhung m. langsamen Abfall\" eingestellt wird?",
+                    Answer1De = "Wie \"SiB-Erhöhung\", aber die Reduktion des Sicherheitsbestands beginnt erst nach Ende der Aktion",
+                    Answer2De = "Wie \"SiB-Erhöhung\", aber der Sicherheitsbestand bleibt während des gesamten Aktionszeitraums konstant auf dem erhöhten Niveau",
+                    Answer3De = "Wie \"SiB-Erhöhung\", aber der SiB wird langsam und gleichmäßig über den gesamten Aktions-Zeitraum verringert",
+                    CorrectAnswersDe = "Wie \"SiB-Erhöhung\", aber der SiB wird langsam und gleichmäßig über den gesamten Aktions-Zeitraum verringert",
 
-                    TextEn = "What does the type “Sft increase w. slow decline” do in the handling promotion order?",
-                    Answer1En = "The reduction of the safety stock only begins after the end of the campaign",
-                    Answer2En = "The safety stock remains constant at the increased level during the entire campaign period",
+                    TextEn = "What does the type “Sft increase w. slow decline” do in the \"handling promotion order\" parameter?",
+                    Answer1En = "Same as \"SiB increase\", but the reduction of safety stock only begins after the end of the action",
+                    Answer2En = "Same as \"SiB increase\", but the safety stock remains constant at the elevated level throughout the promotion period",
                     Answer3En = "Like Sft increase, but the Sft is reduced slowly and evenly over the entire promotion period",
                     CorrectAnswersEn = "Like Sft increase, but the Sft is reduced slowly and evenly over the entire promotion period",
 
@@ -2397,17 +2398,17 @@ namespace AzubiApp.Services
                  {
                     Number = 126,
 
-                    TextDe = "Was macht der Typ “Reservierungsdatum vordatieren” bei der Behandlung Aktionsbestellung?",
-                    Answer1De = "Reicht die Bestellmenge für den Aktionszeitraum, wird nach der Dispo das Reservierungsdatum aller Positionen auf das Verfügbar-ab-Datum gesetzt",
-                    Answer2De = "Das Reservierungsdatum wird nur für die erste Position auf das Verfügbar-ab-Datum gesetzt",
-                    Answer3De = "Das Reservierungsdatum wird erst nach Ende des Aktionszeitraums angepasst",
-                    CorrectAnswersDe = "Reicht die Bestellmenge für den Aktionszeitraum, wird nach der Dispo das Reservierungsdatum aller Positionen auf das Verfügbar-ab-Datum gesetzt",
+                    TextDe = "Wie werden Reservierungen beeinflusst, wenn bei dem Parameter \"Behandlung Aktionsbestellung\" der Typ \"Reservierungsdatum vordatieren\" eingestellt wird?",
+                    Answer1De = "Das Reservieungsdatum wird auf das Verfügbar-Ab-Datum der Aktion vorgezogen, wenn die Reservierung im Aktionszeitraum stattfindet",
+                    Answer2De = "Die Reservierung wird reduziert wenn der Gesamtbestand nicht ausreicht um die Aktionsmenge und die Reservierung zu befriedigen",
+                    Answer3De = "Das Reservierungsdatum wird erst nach Ende des Aktionszeitraums angepasst.",
+                    CorrectAnswersDe = "Das Reservieungsdatum wird auf das Verfügbar-Ab-Datum der Aktion vorgezogen, wenn die Reservierung im Aktionszeitraum stattfindet",
 
-                    TextEn = "What does the type “repone reservation date” do when handling promotional orders?",
-                    Answer1En = "If the order quantity is sufficient for the promotional period, the reservation date of all items is set to the available from date after the dispo",
-                    Answer2En = "The reservation date is only set for the first position to the available from date",
-                    Answer3En = "The reservation date will only be adjusted after the end of the promotional period",
-                    CorrectAnswersEn = "If the order quantity is sufficient for the promotional period, the reservation date of all items is set to the available from date after the dispo",
+                    TextEn = "How are reservations affected if the \"Handling promotion order\" parameter is set to \"Predate Reservation Date\"?",
+                    Answer1En = "The reservation date will be brought forward to the Available-From date of the promotion if the reservation takes place during the promotion period",
+                    Answer2En = "The reservation will be reduced if the total inventory is not sufficient to satisfy the promotional quantity and the reservation",
+                    Answer3En = "The reservation date will only be adjusted after the end of the promotional period.",
+                    CorrectAnswersEn = "The reservation date will be brought forward to the Available-From date of the promotion if the reservation takes place during the promotion period",
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -2521,11 +2522,11 @@ namespace AzubiApp.Services
                  {
                     Number = 132,
 
-                    TextDe = "Welcher dieser Balken zeigt eine Ausreißer-Korrektur?",
+                    TextDe = "Welcher dieser Balken zeigt eine Ausreißer-Korrektur an?",
                     Answer1De = "Der linke Balken",
                     Answer2De = "Der rechte Balken",
-                    Answer3De = "Beide",
-                    CorrectAnswersDe = "Beide",
+                    Answer3De = "Beide Balken",
+                    CorrectAnswersDe = "Beide Balken",
 
                     TextEn = "Which of these bars shows an outlier correction?",
                     Answer1En = "The left bar",
@@ -2545,11 +2546,11 @@ namespace AzubiApp.Services
                     TextDe = "Welche Warnung wird erzeugt?",
                     Answer1De = "Max. Reichweite wird überschritten",
                     Answer2De = "Max. Bestand wird überschritten",
-                    Answer3De = "Max. Planungshorizont überschritten",
+                    Answer3De = "Max. Planungshorizont wird überschritten",
                     CorrectAnswersDe = "Max. Bestand wird überschritten",
 
                     TextEn = "Which warning is generated?",
-                    Answer1En = "Max. Range is exceeded",
+                    Answer1En = "Max. Coverage is exceeded",
                     Answer2En = "Max. Stock is exceeded",
                     Answer3En = "Max. Planning horizon exceeded",
                     CorrectAnswersEn = "Max. Stock is exceeded",
@@ -2689,17 +2690,17 @@ namespace AzubiApp.Services
                  {
                     Number = 140,
 
-                    TextDe = "Was zeigen die gestrichelten Linien an?",
+                    TextDe = "Was zeigen die gestrichelten Linien an?",  
                     Answer1De = "Die Ausreißer-Behandlungsgrenze",
                     Answer2De = "Die Ausreißer-Warnungsgrenze",
-                    Answer3De = "Den Alternativen SiB",
-                    CorrectAnswersDe = "Die Ausreißer-Behandlungsgrenze| Die Ausreißer-Warnungsgrenze",
+                    Answer3De = "Den Sicherheitsbestand",
+                    CorrectAnswersDe = "Die Ausreißer-Behandlungsgrenze | Die Ausreißer-Warnungsgrenze",
 
                     TextEn = "What does the dotted lines show?",
                     Answer1En = "The outlier treatment threshold",
                     Answer2En = "The outlier warning threshold",
-                    Answer3En = "The alternative Sft",
-                    CorrectAnswersEn = "The outlier treatment threshold| The outlier warning threshold",
+                    Answer3En = "The SFT",
+                    CorrectAnswersEn = "The outlier treatment threshold | The outlier warning threshold",
 
                     ImagePath = "Images/QuestionsImage/question_140_grenz_1.png",
 
@@ -2719,7 +2720,7 @@ namespace AzubiApp.Services
                     TextEn = "Which warning is generated?",
                     Answer1En = "Overdue orders",
                     Answer2En = "Max. Stock is exceeded",
-                    Answer3En = "Replenishment",
+                    Answer3En = "Redispatching",
                     CorrectAnswersEn = "Overdue orders",
 
                     ImagePath = "Images/QuestionsImage/question_141_warn_7.png",
@@ -2901,11 +2902,11 @@ namespace AzubiApp.Services
 
                     TextDe = "Woran erkennt man, in der Bestandssimulation, wann eine Bestellung eintrifft?",
                     Answer1De = "An den gestrichelten vertikalen Linien",
-                    Answer2De = "An den steigenden Stellen des Graphen",
+                    Answer2De = "An den vertikal steigenden Stellen in der bestandssimulation",
                     Answer3De = "An der gestrichelten horizontalen Linie",
-                    CorrectAnswersDe = "An den steigenden Stellen des Graphen",
+                    CorrectAnswersDe = "An den vertikal steigenden Stellen in der Bestandssimulation",
 
-                    TextEn = "How do you recognize in the stock simulation when an order arrives?",
+                    TextEn = "How can you tell when an order arrives in the Stock simulation? ",
                     Answer1En = "By the dotted vertical lines",
                     Answer2En = "By the rising points of the graph",
                     Answer3En = "By the dotted horizontal line",
