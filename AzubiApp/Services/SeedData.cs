@@ -27,7 +27,8 @@ namespace AzubiApp.Services
                     Answer3En = "Additional order proposals are generated for today",
                     CorrectAnswersEn = "Orders will be brought forward to today| Order quantities are reduced where possible, depending on demand",
 
-                    QuizCategory = new List<string> { "Bestellung", "Filter", "Allgemein" }
+                    QuizCategory = new List<string> { "Bestellung", "Filter", "Allgemein" },
+                    DifficultyLevel = 3
                 },
                 
                 new Question
@@ -2807,9 +2808,10 @@ namespace AzubiApp.Services
                     Answer2En = "These are the dates when an order will be delivered",
                     Answer3En = "These are the standard deviations of the stocks",
                     CorrectAnswersEn = "These are the dates when an order is triggered",
+       
+                    ImagePathDe = "question_144.png",
+                    ImagePathEn = "question_144_en.png",
 
-                    ImagePath = "Images/QuestionsImage/question_144_Sim_4.png",
-                       
 
                     QuizCategory = new List<string> { "Bestellung" }
                  },
@@ -2897,7 +2899,8 @@ namespace AzubiApp.Services
                     Answer3En = "A Memo without a date",
                     CorrectAnswersEn = "A Memo that has exceeded its date",
 
-                    ImagePath = "Images/QuestionsImage/question_148_wied_4.png",
+                    ImagePathDe = "question_148.png",
+                    ImagePathEn = "question_148_en.png",
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -2941,7 +2944,8 @@ namespace AzubiApp.Services
                     Answer3En = "By the dotted horizontal line",
                     CorrectAnswersEn = "By the rising points of the graph",
 
-                    ImagePath  = "Images/QuestionsImage/question_150_sim_6.png",
+                    ImagePathDe = "question_150.png",
+                    ImagePathEn = "question_150_en.png",
 
                     QuizCategory = new List<string> { "Bestellung", "Allgemein" }
              
@@ -2963,7 +2967,8 @@ namespace AzubiApp.Services
                     Answer3En = "A Memo that has been provided with a date in the future",
                     CorrectAnswersEn = "A Memo that was inherited and has a date in the future",
 
-                    ImagePath  = "Images/QuestionsImage/question_151_wied_5.png",
+                    ImagePathDe = "question_151.png",
+                    ImagePathEn = "question_151_en.png",
 
                     QuizCategory = new List<string> { "Allgemein" }
                  },
@@ -2984,8 +2989,8 @@ namespace AzubiApp.Services
                     Answer3En = "A Memo that has been provided with a date in the future",
                     CorrectAnswersEn = "A Memo that has been inherited and has exceeded its date",
 
-                    ImagePath  = "Images/QuestionsImage/question_152_wied_6.png",
-
+                    ImagePathDe = "question_152.png",
+                    ImagePathEn = "question_152_en.png",
 
 
                     QuizCategory = new List<string> { "Allgemein" }
@@ -3007,8 +3012,8 @@ namespace AzubiApp.Services
                     Answer3En = "A group that only certain users can access",
                     CorrectAnswersEn = "A compound group",
 
-                     ImagePath  = "Images/QuestionsImage/question_153_grp_1.png", 
-
+                    ImagePathDe = "question_153.png",
+                    ImagePathEn = "question_153_en.png",
                     QuizCategory = new List<string> { "Bestellung", "Allgemein" }
                  },
             };
