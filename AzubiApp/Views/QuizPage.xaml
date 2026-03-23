@@ -31,7 +31,7 @@
                            HorizontalOptions="End"
                            VerticalOptions="Center"
                            Padding="20"
-                           Margin="0,0,0,20"/>       
+                           Margin="0,0,0,20"/>
                 </Grid>
             </VerticalStackLayout>
 
@@ -42,8 +42,9 @@
                     <Label x:Name="QuestionLabel" FontSize="18" FontAttributes="Bold" TextColor="White"
                     HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 </Frame>
-
+                
                 <Image x:Name="QuestionImage" HeightRequest="200" Aspect="AspectFit" IsVisible="False"/>
+                <Label x:Name="MultipleAnswers" TextColor="Gray" FontSize="14" HorizontalOptions="Center"/>
 
                 <VerticalStackLayout Spacing="30">
                     <HorizontalStackLayout Spacing="10" VerticalOptions="Center">

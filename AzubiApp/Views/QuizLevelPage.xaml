@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AzubiApp.Views.QuizLevelPage"
+             xmlns:resx="clr-namespace:AzubiApp.Resources.Translate"
+             Title="QuizLevelPage">
+    <ScrollView>
+
+        <Grid BackgroundColor="Black" RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="*">
+
+            <Grid Grid.Row="0" RowDefinitions="100,Auto,*" ColumnDefinitions="*,*">
+
+                <!-- Logo oben links -->
+                <Image Source="logo_white.png" 
+                      WidthRequest="200" 
+                      HeightRequest="200" 
+                      Margin="70,0,0,0"
+                      Grid.Row="0" 
+                      Grid.Column="0"/>
+            </Grid>
+
+            <Label x:Name="SelectYourLevelTitle"
+                   Text="{x:Static resx:AppResources.SelectYourLevelTitle}"
+                   Style="{StaticResource Headline}"
+                   TextColor="White" 
+                   HorizontalOptions="Center"
+                   FontAutoScalingEnabled="False"
+                   Padding="20"
+                   Margin="0,0,0,10"
+                   Grid.Row="1"/>
+
+            <Frame BackgroundColor="#3B3B3B" Padding="25" CornerRadius="20" WidthRequest="350"  Grid.Row="2">
+                <VerticalStackLayout x:Name="LevelSelectionLayout" Spacing="20">
+
+                    <RadioButton Content="Level 1" Value="1" FontSize="16"  GroupName="LevelGroup" TextColor="White" x:Name="Level1Radio" CheckedChanged="OnLevelCheckedChanged" />
+                    <Label x:Name="ProgressLabel1" FontSize="16" TextColor="White"/>
+                    <ProgressBar x:Name="ProgressBar1" HeightRequest="5" BackgroundColor="Gray" />
+
+                    <RadioButton Content="Level 2" Value="2" FontSize="16" GroupName="LevelGroup" TextColor="White" x:Name="Level2Radio" CheckedChanged="OnLevelCheckedChanged" />
+                    <Label x:Name="ProgressLabel2" FontSize="16" TextColor="White"/>
+                    <ProgressBar x:Name="ProgressBar2" HeightRequest="5" BackgroundColor="Gray" />
+
+                    <RadioButton Content="Level 3" Value="3" FontSize="16" GroupName="LevelGroup" TextColor="White" x:Name="Level3Radio" CheckedChanged="OnLevelCheckedChanged" />
+                    <Label x:Name="ProgressLabel3" FontSize="16" TextColor="White"/>
+                    <ProgressBar x:Name="ProgressBar3" HeightRequest="5" BackgroundColor="Gray" />
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Buttons Back / Continue -->
+            <HorizontalStackLayout Grid.Row="3" 
+                                   HorizontalOptions="Center" 
+                                   Spacing="60" 
+                                   Margin="0,80,0,40">
+
+                <Button x:Name="BackQuizButton" 
+                        Text="{x:Static resx:AppResources.BackQuizButton}" 
+                        Clicked="OnBackClicked" 
+                        BackgroundColor="#FFCD00" 
+                        TextColor="Black" 
+                        Padding="15,5" 
+                        FontSize="14" 
+                        CornerRadius="20" 
+                        WidthRequest="100"/>
+                <Button x:Name="ContinueQuizButton" 
+                        Text="{x:Static resx:AppResources.ContinueQuizButton}" 
+                        Clicked="OnStartQuizClicked" 
+                        BackgroundColor="#FFCD00" 
+                        TextColor="Black" 
+                        CornerRadius="20" 
+                        WidthRequest="120" />
+
+            </HorizontalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -337,6 +337,7 @@ namespace AzubiApp.Views
         {
             BackQuizButton.Text = AppResources.BackQuizButton; // Back / Zurück
             ExitModuleQuizButton.Text = AppResources.ExitModuleQuizButton; // Exit / Beenden
+            MultipleAnswers.Text = AppResources.MultipleAnswers; // Multiple Answers / Mehrfachauswahl
         }
     }
 }
